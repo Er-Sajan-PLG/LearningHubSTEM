@@ -1,7 +1,7 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-12T04:19:14+00:00",
+  "generated_at": "2026-08-12T04:43:02+00:00",
   "source": "content/",
   "entity_count": 5,
   "entities": [
@@ -11,21 +11,17 @@
       "name": "Acceleration",
       "domain": "physics",
       "status": "draft",
-      "definition": "The rate of change of velocity with respect to time.",
+      "definition": "The rate of change of velocity with respect to time; a vector quantity.",
+      "symbol": "a",
+      "unit": "metre per second squared (m/s²)",
+      "equation": "a = dv/dt",
+      "common_misconceptions": [
+        "Velocity and acceleration always point in the same direction (acceleration points in the direction of the change in velocity)."
+      ],
       "provenance": {
         "ai_drafted": true
       },
       "relationships": [
-        {
-          "type": "mathematically_requires",
-          "target": "lhs:phys.force",
-          "note": "a = F/m in Newtonian mechanics"
-        },
-        {
-          "type": "mathematically_requires",
-          "target": "lhs:phys.mass",
-          "note": "a = F/m"
-        },
         {
           "type": "appears_in_law",
           "target": "lhs:phys.newtons-second-law"
@@ -38,21 +34,17 @@
       "name": "Force",
       "domain": "physics",
       "status": "draft",
-      "definition": "An influence that can change the motion of a body. In classical mechanics the net force on a body equals the rate of change of its momentum.",
+      "definition": "An influence that can change the motion of a body. In classical mechanics the net force on a body equals the rate of change of its momentum (F = dp/dt).",
+      "symbol": "F",
+      "unit": "newton (N)",
+      "equation": "F = dp/dt",
+      "common_misconceptions": [
+        "A constant net force produces constant speed (it produces constant acceleration)."
+      ],
       "provenance": {
         "ai_drafted": true
       },
       "relationships": [
-        {
-          "type": "mathematically_requires",
-          "target": "lhs:phys.mass",
-          "note": "F = m·a involves mass"
-        },
-        {
-          "type": "mathematically_requires",
-          "target": "lhs:phys.acceleration",
-          "note": "F = m·a involves acceleration"
-        },
         {
           "type": "appears_in_law",
           "target": "lhs:phys.newtons-second-law"
@@ -60,7 +52,7 @@
         {
           "type": "related_to",
           "target": "lhs:phys.momentum",
-          "note": "impulse–momentum form F = dp/dt"
+          "note": "impulse–momentum form F = dp/dt connects force and momentum"
         }
       ]
     },
@@ -70,24 +62,20 @@
       "name": "Mass",
       "domain": "physics",
       "status": "draft",
-      "definition": "A property of a body that quantifies its resistance to acceleration in Newtonian mechanics.",
+      "definition": "A property of a body that quantifies its resistance to acceleration in Newtonian mechanics; an intrinsic property independent of location.",
+      "symbol": "m",
+      "unit": "kilogram (kg)",
+      "equation": null,
+      "common_misconceptions": [
+        "Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity)."
+      ],
       "provenance": {
         "ai_drafted": true
       },
       "relationships": [
         {
-          "type": "related_to",
-          "target": "lhs:phys.force",
-          "note": "force scales with mass at fixed acceleration"
-        },
-        {
           "type": "appears_in_law",
           "target": "lhs:phys.newtons-second-law"
-        },
-        {
-          "type": "mathematically_requires",
-          "target": "lhs:phys.acceleration",
-          "note": "acceleration is defined as rate of change of velocity, not of mass"
         }
       ]
     },
@@ -97,24 +85,30 @@
       "name": "Momentum",
       "domain": "physics",
       "status": "draft",
-      "definition": "The product of a body's mass and velocity; a conserved quantity in closed systems.",
+      "definition": "The product of a body's mass and velocity; a vector quantity that is conserved in closed systems.",
+      "symbol": "p",
+      "unit": "kilogram metre per second (kg·m/s)",
+      "equation": "p = m·v",
+      "common_misconceptions": [
+        "Momentum and kinetic energy are the same kind of quantity (momentum is a vector measured in kg·m/s; kinetic energy is a scalar measured in joules)."
+      ],
       "provenance": {
         "ai_drafted": true
       },
       "relationships": [
         {
           "type": "mathematically_requires",
-          "target": "lhs:phys.mass"
+          "target": "lhs:phys.mass",
+          "note": "p = m·v is defined using mass"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.newtons-second-law"
         },
         {
           "type": "related_to",
           "target": "lhs:phys.force",
           "note": "F = dp/dt connects force and momentum"
-        },
-        {
-          "type": "related_to",
-          "target": "lhs:phys.newtons-second-law",
-          "note": "law is most generally stated as rate of change of momentum"
         }
       ]
     },
@@ -125,6 +119,12 @@
       "domain": "physics",
       "status": "draft",
       "definition": "The net force acting on a body equals the rate of change of its momentum; at constant mass this reduces to F = m·a.",
+      "symbol": null,
+      "unit": null,
+      "equation": "F = dp/dt (general); F = m·a at constant mass",
+      "common_misconceptions": [
+        "F = m·a means the force is a property of the object itself (F is the net external force acting on the object)."
+      ],
       "provenance": {
         "ai_drafted": true
       },
@@ -142,9 +142,8 @@
           "target": "lhs:phys.acceleration"
         },
         {
-          "type": "related_to",
-          "target": "lhs:phys.momentum",
-          "note": "general (most inclusive) form is F = dp/dt"
+          "type": "applies_to",
+          "target": "lhs:phys.momentum"
         }
       ]
     }

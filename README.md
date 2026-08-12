@@ -3,12 +3,13 @@
 > **An open, structured, reusable STEM knowledge foundation.** Curriculum is external.
 > Products are external. Learning experiences are external. AI agents are consumers.
 
-## Status: SEED ONLY
+## Status: SEED ONLY + Phase 2 consumer proof
 
 This repository currently contains a **minimal proof** that the architecture works — five seed
-entities, a schema, a validator, and a regenerable JSON export. It is **not** an activated MVP.
-Do not expand it beyond the minimal seed without an explicit human decision
-(`docs/LEARNINGHUBSTEM-ROADMAP.md`).
+entities, a schema, a validator, and a regenerable JSON export — plus a **Phase 2 consumer proof**:
+STEM-TUITION consumes `exports/knowledge.json` through a versioned adapter without touching this
+repository's canonical content. It is **not** an activated MVP. Do not expand it beyond the
+minimal seed without an explicit human decision (`docs/LEARNINGHUBSTEM-ROADMAP.md`).
 
 ## What's here
 
@@ -58,6 +59,13 @@ The authoritative model for this repository lives in the workspace docs:
 - `../docs/decisions/` — foundation decision records (licensing, identity, vocabulary, …).
 - `../docs/LEARNINGHUBSTEM-ROADMAP.md` — phased plan; each phase requires activation.
 - `../docs/NORTHSTAR.md`, `../docs/GOVERNANCE.md` — north star and rules.
+
+## Consumers
+
+The first consumer proof is STEM-TUITION's shell app. The seam is documented in
+`../docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
+regeneration and test commands). LearningHubSTEM stays independent: it only publishes the export;
+consumers adapt it to their own curriculum and products.
 
 ## License
 

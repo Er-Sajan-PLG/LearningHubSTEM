@@ -5,21 +5,22 @@ name: Mass
 domain: physics
 status: draft
 definition: >-
-  A property of a body that quantifies its resistance to acceleration in Newtonian mechanics.
+  A property of a body that quantifies its resistance to acceleration in Newtonian mechanics;
+  an intrinsic property independent of location.
+symbol: m
+unit: kilogram (kg)
+equation: null
+common_misconceptions:
+  - Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity).
 provenance:
   ai_drafted: true
 relationships:
-  - type: related_to
-    target: lhs:phys.force
-    note: force scales with mass at fixed acceleration
   - type: appears_in_law
     target: lhs:phys.newtons-second-law
-  - type: mathematically_requires
-    target: lhs:phys.acceleration
-    note: acceleration is defined as rate of change of velocity, not of mass
 ---
 
 ## Notes
 
-This seed describes mass only as involved in force and acceleration relationships within the
-Newtonian model. Further relationships (gravitation, inertia, energy) are future content.
+Mass is a base quantity in the SI; it has no defining equation within this seed. The seed
+describes mass only as it participates in Newton's second law. Further relationships
+(gravitation, inertia, energy) are future content.

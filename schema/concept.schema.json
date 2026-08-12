@@ -23,6 +23,10 @@
     "deprecated_by": { "type": "string", "description": "Successor ID when deprecated/superseded" },
     "definition": { "type": "string", "description": "Curriculum-agnostic definition" },
     "examples": { "type": "array", "items": { "type": "string" } },
+    "equation": { "type": ["string", "null"], "default": null, "description": "Canonical mathematical form using defined symbols (optional)" },
+    "symbol": { "type": ["string", "null"], "default": null, "description": "Symbol(s) for the quantity or law (optional)" },
+    "unit": { "type": ["string", "null"], "default": null, "description": "SI unit of the quantity (optional)" },
+    "common_misconceptions": { "type": "array", "items": { "type": "string" }, "description": "Common false beliefs learners hold; knowledge-layer, not pedagogy (optional)" },
     "provenance": {
       "type": "object",
       "required": ["ai_drafted"],
