@@ -28,6 +28,18 @@
       "required": ["ai_drafted"],
       "properties": {
         "ai_drafted": { "type": "boolean" },
+        "source_kind": {
+          "enum": [
+            "human-authored",
+            "textbook",
+            "academic-or-research",
+            "institutional",
+            "standards-or-specification",
+            "ai-assisted-draft",
+            "other"
+          ],
+          "default": null
+        },
         "source": { "type": ["string", "null"], "default": null },
         "reviewer": { "type": ["string", "null"], "default": null },
         "reviewed_at": { "type": ["string", "null"], "default": null }

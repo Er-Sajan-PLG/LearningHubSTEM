@@ -55,6 +55,7 @@ The authoritative model for this repository lives in the workspace docs:
 
 - `../docs/LEARNINGHUBSTEM-SPECIFICATION.md` — canonical format, IDs, entity model,
   relationship semantics, provenance, validation, consumer contract.
+- `../docs/decisions/` — foundation decision records (licensing, identity, vocabulary, …).
 - `../docs/LEARNINGHUBSTEM-ROADMAP.md` — phased plan; each phase requires activation.
 - `../docs/NORTHSTAR.md`, `../docs/GOVERNANCE.md` — north star and rules.
 

@@ -49,6 +49,12 @@ REL_TYPES = {
 }
 REQUIRED = ["id", "type", "name", "domain", "status", "definition", "provenance"]
 
+SOURCE_KINDS = {
+    "human-authored", "textbook", "academic-or-research", "institutional",
+    "standards-or-specification", "ai-assisted-draft", "other",
+}
+REVIEWED_STATUSES = {"human_reviewed", "canonical"}
+
 
 def load_schema():
     if not HAVE_JSONSCHEMA or not SCHEMA.exists():
@@ -72,7 +78,7 @@ def parse_entity(path: Path) -> dict:
     return data
 
 
-def validate_entity(entity: dict, errors: list) -> None:
+def validate_entity(entity: dict, errors: list, filename_slug: str | None = None) -> None:
     here = f"{entity['_file']}:"
 
     # Required fields present and non-empty strings
@@ -86,6 +92,14 @@ def validate_entity(entity: dict, errors: list) -> None:
     if isinstance(_id, str) and not ID_RE.fullmatch(_id):
         errors.append(f"{here} invalid stable ID format: {_id!r} (expected lhs:<domain>.<slug>)")
 
+    # Filename must equal the final ID slug (canonical representation rule)
+    if isinstance(_id, str) and filename_slug:
+        slug = _id.rsplit(".", 1)[-1]
+        if filename_slug != slug:
+            errors.append(
+                f"{here} filename '{filename_slug}.md' does not match id slug '{slug}'"
+            )
+
     # Enums (schema would catch these too; keep checks independent of jsonschema)
     if entity.get("type") not in TYPES:
         errors.append(f"{here} unknown type: {entity.get('type')!r}")
@@ -96,9 +110,24 @@ def validate_entity(entity: dict, errors: list) -> None:
     prov = entity.get("provenance")
     if isinstance(prov, dict) and not isinstance(prov.get("ai_drafted"), bool):
         errors.append(f"{here} provenance.ai_drafted must be a boolean")
+    if isinstance(prov, dict) and prov.get("source_kind") is not None:
+        if prov.get("source_kind") not in SOURCE_KINDS:
+            errors.append(f"{here} provenance.source_kind not in vocabulary: {prov.get('source_kind')!r}")
     if isinstance(prov, dict) and prov.get("ai_drafted") is False:
         if not (prov.get("source") or prov.get("reviewer")):
             errors.append(f"{here} provenance needs source or reviewer when not AI-drafted")
+
+    # Reviewed/canonical status requires a named reviewer
+    if entity.get("status") in REVIEWED_STATUSES:
+        if not (isinstance(prov, dict) and prov.get("reviewer")):
+            errors.append(f"{here} status {entity.get('status')!r} requires provenance.reviewer")
+
+    # Aliases must be valid IDs and not equal the entity's own id
+    for alias in entity.get("aliases", []) or []:
+        if not isinstance(alias, str) or not ID_RE.fullmatch(alias):
+            errors.append(f"{here} alias is not a valid stable ID: {alias!r}")
+        elif alias == _id:
+            errors.append(f"{here} alias must not equal the entity's own id: {alias!r}")
 
     # Relationships
     for rel in entity.get("relationships", []) or []:
@@ -131,7 +160,7 @@ def main() -> int:
         except ValueError as exc:
             errors.append(f"{path.relative_to(ROOT)}: {exc}")
             continue
-        validate_entity(entity, errors)
+        validate_entity(entity, errors, filename_slug=path.stem)
         _id = entity.get("id")
         if isinstance(_id, str):
             if _id in entities:
@@ -147,12 +176,21 @@ def main() -> int:
             for err in validator.iter_errors(data):
                 errors.append(f"{entity['_file']}: schema violation: {err.message}")
 
-    # Dangling relationship targets
+    # Dangling relationship targets + semantic type rules
     for _id, entity in entities.items():
+        etype = entity.get("type")
         for rel in entity.get("relationships", []) or []:
             target = rel.get("target")
             if isinstance(target, str) and target not in entities:
                 errors.append(f"{entity['_file']}: dangling relationship target: {target} (from {_id})")
+                continue
+            rtype = rel.get("type")
+            target_type = entities.get(target, {}).get("type")
+            # Core semantic rules (specification §5.1)
+            if rtype == "applies_to" and etype != "law":
+                errors.append(f"{entity['_file']}: applies_to requires a 'law' source (found {etype})")
+            if rtype == "appears_in_law" and target_type != "law":
+                errors.append(f"{entity['_file']}: appears_in_law target must be a 'law' (found {target_type})")
 
     # Report
     if errors:
@@ -163,6 +201,7 @@ def main() -> int:
 
     # Regenerate derived export (sorted for determinism)
     payload = {
+        "export_version": "0.1",
         "schema_version": "0.1",
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "content/",
