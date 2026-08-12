@@ -47,26 +47,26 @@ Exit code `0` = valid. Errors are printed with file and reason.
 - Canonical knowledge lives only in `content/`. Everything under `exports/` is derived.
 - No curriculum, grade, course, or product appears in `content/`.
 - AI-drafted content is `status: draft` until a human reviews it (see
-  `../docs/LEARNINGHUBSTEM-SPECIFICATION.md` §6).
+  `docs/LEARNINGHUBSTEM-SPECIFICATION.md` §6).
 - A stable ID is never reused or silently reassigned.
 
 ## Governance
 
 The authoritative model for this repository lives in the workspace docs:
 
-- `../docs/LEARNINGHUBSTEM-SPECIFICATION.md` — canonical format, IDs, entity model,
+- `docs/LEARNINGHUBSTEM-SPECIFICATION.md` — canonical format, IDs, entity model,
   relationship semantics, provenance, validation, consumer contract.
-- `../docs/decisions/` — foundation decision records (licensing, identity, vocabulary, …).
-- `../docs/LEARNINGHUBSTEM-ROADMAP.md` — phased plan; each phase requires activation.
-- `../docs/NORTHSTAR.md`, `../docs/GOVERNANCE.md` — north star and rules.
+- `docs/decisions/` — foundation decision records (licensing, identity, vocabulary, …).
+- `docs/LEARNINGHUBSTEM-ROADMAP.md` — phased plan; each phase requires activation.
+- `docs/NORTHSTAR.md`, `docs/GOVERNANCE.md` — north star and rules.
 
 ## Consumers
 
 The first consumer proof is STEM-TUITION's shell app. The seam is documented in
-`../docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
+`docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
 regeneration and test commands). LearningHubSTEM stays independent: it only publishes the export;
 consumers adapt it to their own curriculum and products.
 
 ## License
 
-No license has been chosen yet — a human decision is pending (`../docs/GOVERNANCE.md`).
+No license has been chosen yet — a human decision is pending (`docs/GOVERNANCE.md`).
