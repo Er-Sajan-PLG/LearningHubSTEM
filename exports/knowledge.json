@@ -1,0 +1,151 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-08-11T21:50:29+00:00",
+  "source": "content/",
+  "entity_count": 5,
+  "entities": [
+    {
+      "id": "lhs:phys.acceleration",
+      "type": "quantity",
+      "name": "Acceleration",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The rate of change of velocity with respect to time.",
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.force",
+          "note": "a = F/m in Newtonian mechanics"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.mass",
+          "note": "a = F/m"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.newtons-second-law"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.force",
+      "type": "concept",
+      "name": "Force",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "An influence that can change the motion of a body. In classical mechanics the net force on a body equals the rate of change of its momentum.",
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.mass",
+          "note": "F = m·a involves mass"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.acceleration",
+          "note": "F = m·a involves acceleration"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.newtons-second-law"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.momentum",
+          "note": "impulse–momentum form F = dp/dt"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.mass",
+      "type": "quantity",
+      "name": "Mass",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A property of a body that quantifies its resistance to acceleration in Newtonian mechanics.",
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.force",
+          "note": "force scales with mass at fixed acceleration"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.newtons-second-law"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.acceleration",
+          "note": "acceleration is defined as rate of change of velocity, not of mass"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.momentum",
+      "type": "quantity",
+      "name": "Momentum",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The product of a body's mass and velocity; a conserved quantity in closed systems.",
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.mass"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.force",
+          "note": "F = dp/dt connects force and momentum"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.newtons-second-law",
+          "note": "law is most generally stated as rate of change of momentum"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.newtons-second-law",
+      "type": "law",
+      "name": "Newton's Second Law",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The net force acting on a body equals the rate of change of its momentum; at constant mass this reduces to F = m·a.",
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.force"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.mass"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.acceleration"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.momentum",
+          "note": "general (most inclusive) form is F = dp/dt"
+        }
+      ]
+    }
+  ]
+}

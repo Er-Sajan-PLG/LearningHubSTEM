@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learninghubstem.example/schema/concept.schema.json",
+  "title": "LearningHubSTEM canonical entity",
+  "description": "Schema for the YAML frontmatter of one canonical knowledge entity (v0.1).",
+  "type": "object",
+  "required": ["id", "type", "name", "domain", "status", "definition", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^lhs:[a-z][a-z0-9-]*\\.[a-z0-9][a-z0-9-]*$",
+      "description": "Stable identifier, namespace lhs:<domain>.<slug>. Never reused."
+    },
+    "type": {
+      "enum": ["concept", "quantity", "unit", "law", "equation", "misconception"]
+    },
+    "name": { "type": "string" },
+    "domain": { "type": "string", "description": "Subject area, e.g. physics" },
+    "status": {
+      "enum": ["draft", "machine_validated", "human_reviewed", "canonical", "deprecated", "superseded"]
+    },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "Historical IDs" },
+    "deprecated_by": { "type": "string", "description": "Successor ID when deprecated/superseded" },
+    "definition": { "type": "string", "description": "Curriculum-agnostic definition" },
+    "examples": { "type": "array", "items": { "type": "string" } },
+    "provenance": {
+      "type": "object",
+      "required": ["ai_drafted"],
+      "properties": {
+        "ai_drafted": { "type": "boolean" },
+        "source": { "type": ["string", "null"], "default": null },
+        "reviewer": { "type": ["string", "null"], "default": null },
+        "reviewed_at": { "type": ["string", "null"], "default": null }
+      },
+      "additionalProperties": false
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "target"],
+        "properties": {
+          "type": {
+            "enum": [
+              "logically_requires",
+              "mathematically_requires",
+              "part_of",
+              "derived_from",
+              "special_case_of",
+              "generalizes",
+              "equivalent_to",
+              "applies_to",
+              "appears_in_law",
+              "related_to"
+            ]
+          },
+          "target": { "type": "string", "pattern": "^lhs:" },
+          "note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
