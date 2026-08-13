@@ -1,26 +1,27 @@
-# GOVERNANCE — STEM Ecosystem Workspace
+# GOVERNANCE — LearningHubSTEM
 
-**Status:** Cross-project governance for everything under `/Projects`.
-**Applies to:** Humans and AI agents working in this workspace.
+**Status:** LearningHubSTEM repository governance (Level 2).
+**Applies to:** Humans and AI agents working inside this repository.
 **Related:** `AGENTS.md` (routing), `docs/NORTHSTAR.md` (north star),
 `docs/MASTER-VISION-LearningHubSTEM.md` (vision), `docs/LEARNINGHUBSTEM-SPECIFICATION.md`
 (technical spec), `docs/LEARNINGHUBSTEM-ROADMAP.md` (phasing),
 `docs/decisions/` (LearningHubSTEM decision records), `docs/REVIEW-RESPONSE.md`
-(reconciliation record).
+(reconciliation record). Generic workspace rules live in
+`../../docs/WORKSPACE-GOVERNANCE.md` and apply to all repositories, including this one.
 
 ---
 
 ## 1. Governance precedence
 
 ```
-LEVEL 1 — ECOSYSTEM INVARIANTS (non-overridable)
+LEVEL 1 — LEARNINGHUBSTEM INVARIANTS (non-overridable)
           ↓
 LEVEL 2 — PROJECT / REPOSITORY GOVERNANCE
           ↓
 LEVEL 3 — IMPLEMENTATION DETAILS
 ```
 
-### Level 1 — Ecosystem invariants (never overridden)
+### Level 1 — LearningHubSTEM invariants (never overridden)
 
 - LearningHubSTEM is an **independent, open, structured, reusable STEM knowledge foundation**.
 - LearningHubSTEM is **not** owned by, subordinate to, or a backend of any product.
