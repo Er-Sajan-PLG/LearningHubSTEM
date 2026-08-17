@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://learninghubstem.example/schema/concept.schema.json",
   "title": "LearningHubSTEM canonical entity",
-  "description": "Schema for the YAML frontmatter of one canonical knowledge entity (v0.1).",
+  "description": "Schema for the YAML frontmatter of one canonical knowledge entity (v0.2).",
   "type": "object",
   "required": ["id", "type", "name", "domain", "status", "definition", "provenance"],
   "properties": {
@@ -27,6 +27,21 @@
     "symbol": { "type": ["string", "null"], "default": null, "description": "Symbol(s) for the quantity or law (optional)" },
     "unit": { "type": ["string", "null"], "default": null, "description": "SI unit of the quantity (optional)" },
     "common_misconceptions": { "type": "array", "items": { "type": "string" }, "description": "Common false beliefs learners hold; knowledge-layer, not pedagogy (optional)" },
+    "learning_objectives": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What the learner should understand, calculate, predict, or explain. Knowledge-layer: intrinsic to the concept, not pedagogy."
+    },
+    "real_world_applications": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Real-world phenomena and technologies this concept explains or enables."
+    },
+    "key_experiments": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Classic experiments or demonstrations that establish this concept."
+    },
     "provenance": {
       "type": "object",
       "required": ["ai_drafted"],

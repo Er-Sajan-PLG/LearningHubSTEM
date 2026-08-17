@@ -1,0 +1,43 @@
+---
+id: lhs:phys.velocity
+type: quantity
+name: Velocity
+domain: physics
+status: draft
+definition: >-
+  The rate of change of displacement with respect to time. Velocity is a vector quantity — it has
+  both magnitude (speed) and direction.
+symbol: v
+unit: metre per second (m/s)
+equation: v = Δx / Δt
+common_misconceptions:
+  - Velocity is just speed with a direction (the vector nature has real mathematical consequences).
+  - Higher speed always means higher velocity (if directions differ, they are different velocities).
+  - Velocity must be constant to be defined (instantaneous velocity exists at every point).
+learning_objectives:
+  - Define velocity as a vector quantity.
+  - Calculate velocity from displacement and time.
+  - Distinguish between average and instantaneous velocity.
+  - Interpret velocity from position-time graphs (slope).
+real_world_applications:
+  - Navigation (ground speed vs. air speed).
+  - Ballistics (projectile velocity).
+  - Weather systems (wind velocity).
+key_experiments:
+  - Motion sensor experiments plotting position vs. time to extract velocity.
+provenance:
+  ai_drafted: true
+relationships:
+  - type: mathematically_requires
+    target: lhs:phys.displacement
+  - type: mathematically_requires
+    target: lhs:phys.time
+  - type: mathematically_requires
+    target: lhs:phys.speed
+  - type: related_to
+    target: lhs:phys.acceleration
+---
+
+## Notes
+
+Velocity is the central quantity in kinematics. Its rate of change is acceleration; its product with mass is momentum. Understanding velocity as a vector is essential for all further mechanics.

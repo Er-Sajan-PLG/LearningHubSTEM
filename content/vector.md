@@ -1,0 +1,35 @@
+---
+id: lhs:phys.vector
+type: concept
+name: Vector Quantity
+domain: physics
+status: draft
+definition: >-
+  A quantity that has both magnitude and direction, and follows specific rules of addition (vector
+  addition). Vectors represent quantities where direction matters as much as size.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Any quantity with direction is a vector (must also follow vector addition rules).
+  - Vectors are just arrows on paper (they represent physical quantities with real effects).
+learning_objectives:
+  - Distinguish vectors from scalars.
+  - Represent vectors graphically.
+  - Add vectors using the triangle or parallelogram method.
+real_world_applications:
+  - Navigation (wind velocity + aircraft velocity = ground velocity).
+  - Engineering forces (multiple forces on a structure).
+  - Physics of motion (velocity, acceleration, force are all vectors).
+provenance:
+  ai_drafted: true
+relationships:
+  - type: related_to
+    target: lhs:phys.displacement
+  - type: related_to
+    target: lhs:phys.scalar
+---
+
+## Notes
+
+Vectors are the mathematical language of direction-dependent quantities. Understanding vectors is prerequisite to understanding velocity, acceleration, force, and momentum.

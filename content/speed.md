@@ -1,0 +1,41 @@
+---
+id: lhs:phys.speed
+type: quantity
+name: Speed
+domain: physics
+status: draft
+definition: >-
+  The rate at which an object covers distance — the total distance traveled divided by the total time
+  taken. Speed is a scalar quantity.
+symbol: v
+unit: metre per second (m/s)
+equation: v = d / t
+common_misconceptions:
+  - Speed and velocity are always the same (velocity includes direction; speed does not).
+  - Speed is always constant (speed can change continuously).
+  - Average speed is the average of speeds (it is total distance divided by total time).
+learning_objectives:
+  - Calculate speed from distance and time.
+  - Distinguish between speed and velocity.
+  - Calculate average speed for multi-segment journeys.
+  - Interpret speed from distance-time graphs.
+real_world_applications:
+  - Speedometers in vehicles.
+  - Athletics (race times and speeds).
+  - Traffic engineering and speed limits.
+key_experiments:
+  - Measuring the speed of a moving object using a stopwatch and ruler.
+provenance:
+  ai_drafted: true
+relationships:
+  - type: mathematically_requires
+    target: lhs:phys.distance
+  - type: mathematically_requires
+    target: lhs:phys.time
+  - type: related_to
+    target: lhs:phys.velocity
+---
+
+## Notes
+
+Speed is the most intuitive measure of motion. It is the bridge between distance and time that begins the quantitative study of motion.

@@ -1,0 +1,38 @@
+---
+id: lhs:phys.measurement
+type: concept
+name: Measurement
+domain: physics
+status: draft
+definition: >-
+  The process of comparing an unknown quantity with a known standard (unit) to obtain a numerical
+  value. Measurement connects physical quantities to mathematics, enabling quantitative description
+  and prediction.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Measurement gives the exact true value of a quantity (all measurements have some uncertainty).
+  - Only laboratory instruments count as measurement (any comparison against a standard is measurement).
+learning_objectives:
+  - Explain the need for measurement in physics.
+  - Identify sources of measurement error.
+  - Distinguish between precision and accuracy.
+real_world_applications:
+  - Timekeeping (clocks, atomic clocks).
+  - Distance measurement (rulers, lasers, GPS).
+  - Medical diagnostics (thermometer, blood pressure).
+key_experiments:
+  - Measuring the same object multiple times and observing variation in results.
+provenance:
+  ai_drafted: true
+relationships:
+  - type: logically_requires
+    target: lhs:phys.unit
+  - type: related_to
+    target: lhs:phys.physical-quantity
+---
+
+## Notes
+
+Measurement is the bridge between physical reality and mathematical physics. No calculation is more reliable than the measurement that informs it.
