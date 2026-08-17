@@ -5,28 +5,43 @@ name: Momentum
 domain: physics
 status: draft
 definition: >-
-  The product of a body's mass and velocity; a vector quantity that is conserved in closed
-  systems.
+  The product of a body's mass and velocity; a vector quantity that is conserved in closed systems.
+  Momentum quantifies the "amount of motion" an object possesses.
 symbol: p
 unit: kilogram metre per second (kg·m/s)
 equation: p = m·v
 common_misconceptions:
   - Momentum and kinetic energy are the same kind of quantity (momentum is a vector measured in
     kg·m/s; kinetic energy is a scalar measured in joules).
+  - A heavier object always has more momentum (momentum depends on both mass and velocity).
+  - Momentum is conserved only in elastic collisions (it is conserved in all isolated systems).
+learning_objectives:
+  - Define momentum as a vector quantity.
+  - Calculate momentum from mass and velocity.
+  - Explain why momentum is a useful quantity in collisions.
+  - Apply the principle of conservation of momentum.
+real_world_applications:
+  - Car crashes (crumple zones increase collision time, reducing force).
+  - Sports (follow-through increases momentum transfer).
+  - Rocket propulsion (exhaust momentum propels rocket).
+  - Billiards and pool.
+key_experiments:
+  - Colliding trolleys on a frictionless track to demonstrate momentum conservation.
 provenance:
   ai_drafted: true
 relationships:
   - type: mathematically_requires
     target: lhs:phys.mass
-    note: p = m·v is defined using mass
-  - type: appears_in_law
+  - type: mathematically_requires
+    target: lhs:phys.velocity
+  - type: related_to
     target: lhs:phys.newtons-second-law
   - type: related_to
-    target: lhs:phys.force
-    note: F = dp/dt connects force and momentum
+    target: lhs:phys.impulse
 ---
 
 ## Notes
 
-Momentum's seed relationships deliberately stop at what the graph can support; velocity is not
-yet an entity in the seed.
+Momentum bridges kinematics and dynamics. It is conserved in all isolated systems, making it one
+of the most powerful tools in physics. Understanding momentum conservation explains phenomena from
+collisions to rocket propulsion.
