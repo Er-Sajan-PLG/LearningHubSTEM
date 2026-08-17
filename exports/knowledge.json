@@ -1,9 +1,9 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-17T10:45:45+00:00",
+  "generated_at": "2026-08-17T10:47:35+00:00",
   "source": "content/",
-  "entity_count": 62,
+  "entity_count": 71,
   "entities": [
     {
       "id": "lhs:phys.acceleration",
@@ -94,6 +94,47 @@
       ]
     },
     {
+      "id": "lhs:phys.atomic-structure",
+      "type": "concept",
+      "name": "Atomic Structure",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The structure of an atom as a dense, positively charged nucleus (containing protons and neutrons) surrounded by negatively charged electrons in orbitals. The number of protons determines the element.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Electrons orbit the nucleus in fixed paths like planets (electrons exist in probability clouds/orbitals).",
+        "The atom is mostly solid matter (the atom is mostly empty space).",
+        "All atoms of an element have the same number of neutrons (isotopes vary in neutron count)."
+      ],
+      "learning_objectives": [
+        "Describe the atom as a nucleus surrounded by electrons.",
+        "Distinguish between protons, neutrons, and electrons.",
+        "Define atomic number and mass number.",
+        "Explain isotopes."
+      ],
+      "real_world_applications": [
+        "Nuclear energy.",
+        "Medical imaging (PET scans, MRI).",
+        "Radiometric dating.",
+        "Semiconductor technology."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electric-charge"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.radioactivity"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.buoyancy",
       "type": "concept",
       "name": "Buoyancy",
@@ -139,6 +180,54 @@
         {
           "type": "related_to",
           "target": "lhs:phys.force"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.change-of-state",
+      "type": "concept",
+      "name": "Change of State",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The transition of matter between solid, liquid, and gas phases. During a change of state, temperature remains constant as energy is used to break or form intermolecular bonds.",
+      "symbol": null,
+      "unit": null,
+      "equation": "Q = m·L (L = latent heat)",
+      "common_misconceptions": [
+        "Temperature rises during melting/boiling (it stays constant until the change is complete).",
+        "Boiling only happens at 100°C (boiling point depends on pressure).",
+        "Steam at 100°C is not dangerous (it contains large amounts of latent heat)."
+      ],
+      "learning_objectives": [
+        "Describe melting, freezing, boiling, condensation, sublimation, and deposition.",
+        "Explain why temperature is constant during a change of state.",
+        "Calculate energy required for changes of state using Q = mL.",
+        "Interpret heating curves."
+      ],
+      "real_world_applications": [
+        "Refrigeration and air conditioning.",
+        "Cooking (boiling, steaming).",
+        "Ice production.",
+        "Distillation."
+      ],
+      "key_experiments": [
+        "Heating ice to water to steam and recording temperature over time."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.heat"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.temperature"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.specific-heat"
         }
       ]
     },
@@ -692,6 +781,54 @@
       ]
     },
     {
+      "id": "lhs:phys.energy-sources",
+      "type": "concept",
+      "name": "Energy Sources",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The origins of energy used by human civilization. Energy sources are classified as renewable (naturally replenished) or non-renewable (finite and depleting).",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Energy can be created (energy is only converted from one form to another).",
+        "Renewable energy has no environmental impact (all energy sources have some impact).",
+        "Fossil fuels are unlimited (they are finite and depleting)."
+      ],
+      "learning_objectives": [
+        "Distinguish between renewable and non-renewable energy sources.",
+        "Describe how common energy sources work.",
+        "Evaluate advantages and disadvantages of different energy sources.",
+        "Explain the importance of energy conservation."
+      ],
+      "real_world_applications": [
+        "Power generation (coal, gas, nuclear, hydro, solar, wind).",
+        "Transportation (petrol, electricity, hydrogen).",
+        "Heating and cooling."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.power"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fission"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fusion"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.force",
       "type": "concept",
       "name": "Force",
@@ -901,6 +1038,51 @@
         {
           "type": "related_to",
           "target": "lhs:phys.energy-loss"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.graphical-analysis",
+      "type": "concept",
+      "name": "Graphical Analysis of Motion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The use of graphs to represent and analyze motion. Distance-time and velocity-time graphs provide visual tools for understanding motion and extracting quantitative information.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "The slope of a distance-time graph is acceleration (it is velocity).",
+        "The area under a velocity-time graph is distance (it is displacement).",
+        "Curved graphs always mean acceleration (depends on the graph type)."
+      ],
+      "learning_objectives": [
+        "Plot and interpret distance-time graphs.",
+        "Plot and interpret velocity-time graphs.",
+        "Calculate speed/velocity from the slope of a distance-time graph.",
+        "Calculate acceleration from the slope of a velocity-time graph.",
+        "Calculate displacement from the area under a velocity-time graph."
+      ],
+      "real_world_applications": [
+        "Motion analysis in sports.",
+        "Traffic flow analysis.",
+        "Scientific data interpretation."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.distance"
+        },
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.velocity"
+        },
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.acceleration"
         }
       ]
     },
@@ -1425,6 +1607,51 @@
       ]
     },
     {
+      "id": "lhs:phys.mechanical-advantage",
+      "type": "concept",
+      "name": "Mechanical Advantage",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The factor by which a machine multiplies the input force. Mechanical advantage allows a smaller force to produce a larger force, though over a shorter distance.",
+      "symbol": "MA",
+      "unit": "null (dimensionless)",
+      "equation": "MA = F_output / F_input = d_input / d_output",
+      "common_misconceptions": [
+        "Machines create energy (they only transform force and distance).",
+        "Greater mechanical advantage always means easier work (it means less force over more distance).",
+        "Mechanical advantage can be greater than 100% efficient (efficiency is always less than 100%)."
+      ],
+      "learning_objectives": [
+        "Define mechanical advantage.",
+        "Calculate mechanical advantage for simple machines.",
+        "Explain the force-distance trade-off.",
+        "Calculate efficiency of machines."
+      ],
+      "real_world_applications": [
+        "Levers (crowbars, scissors).",
+        "Pulleys (cranes, elevators).",
+        "Inclined planes (ramps).",
+        "Wheel and axle (steering wheels)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.force"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.work"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy-loss"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.mirror",
       "type": "concept",
       "name": "Mirror",
@@ -1702,6 +1929,84 @@
       ]
     },
     {
+      "id": "lhs:phys.nuclear-fission",
+      "type": "concept",
+      "name": "Nuclear Fission",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The splitting of a heavy atomic nucleus into smaller nuclei, accompanied by the release of large amounts of energy. Fission is the process used in nuclear power plants.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Fission and fusion are the same (fission splits nuclei; fusion combines them).",
+        "Nuclear energy is the same as nuclear weapons (peaceful applications exist)."
+      ],
+      "learning_objectives": [
+        "Explain nuclear fission.",
+        "Describe chain reactions.",
+        "Explain how nuclear power plants work.",
+        "Discuss benefits and risks of nuclear energy."
+      ],
+      "real_world_applications": [
+        "Nuclear power plants.",
+        "Nuclear submarines.",
+        "Atomic bombs."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.radioactivity"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fusion"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.nuclear-fusion",
+      "type": "concept",
+      "name": "Nuclear Fusion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The combining of light atomic nuclei to form a heavier nucleus, accompanied by the release of large amounts of energy. Fusion is the process that powers the Sun and stars.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Fusion is currently used in power plants (fusion power is not yet commercially viable).",
+        "Fusion is the same as fission (fusion combines nuclei; fission splits them)."
+      ],
+      "learning_objectives": [
+        "Explain nuclear fusion.",
+        "Compare fusion and fission.",
+        "Describe fusion as the Sun's energy source.",
+        "Discuss potential of fusion as a clean energy source."
+      ],
+      "real_world_applications": [
+        "The Sun and stars.",
+        "Hydrogen bombs.",
+        "Experimental fusion reactors (ITER)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.radioactivity"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fission"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.ohms-law",
       "type": "law",
       "name": "Ohm's Law",
@@ -1932,6 +2237,98 @@
         {
           "type": "related_to",
           "target": "lhs:phys.buoyancy"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.projectile-motion",
+      "type": "concept",
+      "name": "Projectile Motion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The motion of an object thrown or launched into the air, moving under the influence of gravity alone (neglecting air resistance). The horizontal and vertical components of motion are independent.",
+      "symbol": null,
+      "unit": null,
+      "equation": "Range = v²·sin(2θ)/g ; Time of flight = 2·v·sin(θ)/g ; Max height = v²·sin²(θ)/(2g)",
+      "common_misconceptions": [
+        "A projectile's horizontal speed decreases over time (it stays constant, neglecting air resistance).",
+        "The force of the throw continues to act on the projectile (only gravity acts after launch).",
+        "Heavier projectiles fall faster (all fall at the same rate in vacuum)."
+      ],
+      "learning_objectives": [
+        "Analyze projectile motion as independent horizontal and vertical components.",
+        "Calculate range, time of flight, and maximum height.",
+        "Explain why 45° gives maximum range.",
+        "Solve problems involving projectile motion."
+      ],
+      "real_world_applications": [
+        "Sports (basketball, soccer, javelin).",
+        "Ballistics.",
+        "Fountain design."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.free-fall"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.velocity"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.acceleration"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.radioactivity",
+      "type": "concept",
+      "name": "Radioactivity",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The spontaneous emission of radiation from an unstable atomic nucleus. The three main types are alpha particles, beta particles, and gamma rays.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Radioactivity is always man-made (it occurs naturally).",
+        "All radiation is harmful (we are exposed to natural background radiation daily).",
+        "Radioactive materials glow (they are invisible; only their effects can be detected)."
+      ],
+      "learning_objectives": [
+        "Describe radioactivity as spontaneous nuclear decay.",
+        "Distinguish between alpha, beta, and gamma radiation.",
+        "Explain half-life and calculate remaining amounts.",
+        "Describe uses and hazards of radiation."
+      ],
+      "real_world_applications": [
+        "Nuclear power.",
+        "Medical imaging and cancer treatment.",
+        "Carbon dating.",
+        "Sterilization of medical equipment."
+      ],
+      "key_experiments": [
+        "Detecting radiation using a Geiger-Muller tube."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.atomic-structure"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fission"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.nuclear-fusion"
         }
       ]
     },
