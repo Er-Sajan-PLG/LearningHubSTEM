@@ -1,9 +1,9 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-17T10:47:35+00:00",
+  "generated_at": "2026-08-17T10:53:36+00:00",
   "source": "content/",
-  "entity_count": 71,
+  "entity_count": 75,
   "entities": [
     {
       "id": "lhs:phys.acceleration",
@@ -493,6 +493,51 @@
         {
           "type": "related_to",
           "target": "lhs:phys.displacement"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.efficiency",
+      "type": "concept",
+      "name": "Efficiency",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The ratio of useful energy output to total energy input, expressed as a percentage. No real machine can be 100% efficient because some energy is always dissipated (usually as heat).",
+      "symbol": "η (eta)",
+      "unit": "null (dimensionless, or %)",
+      "equation": "η = (E_useful_out / E_total_in) × 100%",
+      "common_misconceptions": [
+        "Efficiency can exceed 100% (this would violate conservation of energy).",
+        "Inefficient machines destroy energy (energy is conserved; it just becomes less useful).",
+        "All energy losses can be eliminated (second law of thermodynamics prevents this)."
+      ],
+      "learning_objectives": [
+        "Define efficiency as the ratio of useful output to total input.",
+        "Calculate efficiency in energy conversion processes.",
+        "Explain why efficiency is always less than 100%.",
+        "Suggest ways to improve efficiency in real systems."
+      ],
+      "real_world_applications": [
+        "Engine design (improving fuel efficiency).",
+        "Electrical appliances (energy ratings).",
+        "Building insulation.",
+        "Renewable energy systems."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.power"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.conservation-of-energy"
         }
       ]
     },
@@ -1227,6 +1272,59 @@
       ]
     },
     {
+      "id": "lhs:phys.heating-effect",
+      "type": "concept",
+      "name": "Heating Effect of Electric Current",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The phenomenon by which electrical energy is converted to thermal energy when current flows through a conductor with resistance. The heat produced depends on the current, resistance, and time.",
+      "symbol": null,
+      "unit": null,
+      "equation": "H = I²·R·t (Joule's law of heating)",
+      "common_misconceptions": [
+        "All electrical energy becomes heat (some becomes light, mechanical energy, etc.).",
+        "Heating effect is always undesirable (it's useful in heaters, fuses, and bulbs).",
+        "Thicker wires heat more (thicker wires have less resistance and heat less)."
+      ],
+      "learning_objectives": [
+        "Explain the heating effect of electric current.",
+        "Calculate heat produced using H = I²Rt.",
+        "Describe applications: electric heaters, fuses, bulbs.",
+        "Explain why wires heat up when current flows."
+      ],
+      "real_world_applications": [
+        "Electric heaters and irons.",
+        "Fuses and circuit breakers.",
+        "Incandescent light bulbs.",
+        "Electric welding."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.resistance"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.time"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.power"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.impulse",
       "type": "quantity",
       "name": "Impulse",
@@ -1744,6 +1842,55 @@
       ]
     },
     {
+      "id": "lhs:phys.motion",
+      "type": "concept",
+      "name": "Motion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The change in position of an object with respect to time and a reference point. Motion is the most fundamental phenomenon studied in mechanics.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "An object at rest is not in motion relative to anything (motion is relative — it depends on the reference frame).",
+        "Motion requires a continuous force (Newton's first law: motion continues without net force).",
+        "All motion is along straight lines (motion can be curved or circular)."
+      ],
+      "learning_objectives": [
+        "Define motion as change in position over time.",
+        "Distinguish between different types of motion (linear, circular, periodic).",
+        "Use reference points to describe motion.",
+        "Classify motion as uniform or non-uniform."
+      ],
+      "real_world_applications": [
+        "Transportation.",
+        "Sports analysis.",
+        "Planetary motion.",
+        "Machinery operation."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.distance"
+        },
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.time"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.velocity"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.acceleration"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.newtons-first-law",
       "type": "law",
       "name": "Newton's First Law of Motion",
@@ -2050,6 +2197,46 @@
         {
           "type": "applies_to",
           "target": "lhs:phys.resistance"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.our-environment",
+      "type": "concept",
+      "name": "Our Environment",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The study of how physical processes interact with the natural environment, including energy flow, pollution, and the physics of climate and ecosystems.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Environmental problems are only biological (physics plays a major role in energy, climate, and pollution).",
+        "Energy flow in ecosystems is 100% efficient (most energy is lost at each trophic level)."
+      ],
+      "learning_objectives": [
+        "Describe energy flow through ecosystems.",
+        "Explain the greenhouse effect and global warming.",
+        "Discuss ozone layer depletion.",
+        "Analyze environmental impacts of energy use."
+      ],
+      "real_world_applications": [
+        "Climate science.",
+        "Renewable energy.",
+        "Pollution control.",
+        "Conservation efforts."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy-sources"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.conservation-of-energy"
         }
       ]
     },
