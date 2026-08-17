@@ -1,0 +1,41 @@
+---
+id: lhs:phys.refraction
+type: concept
+name: Refraction of Light
+domain: physics
+status: draft
+definition: >-
+  The bending of light as it passes from one medium to another, caused by a change in light's
+  speed in different media.
+symbol: null
+unit: null
+equation: "n = c/v (refractive index) ; Snell's law: n₁·sin(θ₁) = n₂·sin(θ₂)"
+common_misconceptions:
+  - Light bends because it changes direction randomly (bending is systematic and governed by Snell's law).
+  - Refraction only happens with glass (it happens at any boundary between different media).
+  - Refraction changes the color of light (dispersion does, not refraction itself).
+learning_objectives:
+  - Define refraction and explain why light bends.
+  - Use Snell's law to calculate angles of refraction.
+  - Explain apparent depth and other everyday refraction effects.
+  - Describe total internal reflection and its applications.
+real_world_applications:
+  - Lenses (glasses, cameras, microscopes).
+  - Optical fibers.
+  - Mirages.
+  - Apparent depth of swimming pools.
+key_experiments:
+  - Bending of light through a glass block.
+  - Apparent depth of a coin in water.
+provenance:
+  ai_drafted: true
+relationships:
+  - type: logically_requires
+    target: lhs:phys.light
+  - type: related_to
+    target: lhs:phys.reflection
+  - type: related_to
+    target: lhs:phys.lens
+---
+
+## Notes

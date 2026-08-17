@@ -1,9 +1,9 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-17T10:40:25+00:00",
+  "generated_at": "2026-08-17T10:45:45+00:00",
   "source": "content/",
-  "entity_count": 36,
+  "entity_count": 62,
   "entities": [
     {
       "id": "lhs:phys.acceleration",
@@ -61,6 +61,88 @@
       ]
     },
     {
+      "id": "lhs:phys.amplitude",
+      "type": "quantity",
+      "name": "Amplitude",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The maximum displacement of a wave from its equilibrium (rest) position. Amplitude determines the energy carried by the wave — greater amplitude means greater energy.",
+      "symbol": "A",
+      "unit": "metre (m)",
+      "equation": null,
+      "common_misconceptions": [
+        "Amplitude is the wavelength (amplitude is height; wavelength is distance between cycles).",
+        "Amplitude affects wave speed (wave speed depends on the medium, not amplitude)."
+      ],
+      "learning_objectives": [
+        "Define amplitude and identify it on a wave diagram.",
+        "Relate amplitude to wave energy.",
+        "Compare amplitudes of different waves."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.buoyancy",
+      "type": "concept",
+      "name": "Buoyancy",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The upward force exerted by a fluid on an object immersed in it. This force equals the weight of the fluid displaced by the object (Archimedes' principle).",
+      "symbol": null,
+      "unit": "newton (N)",
+      "equation": "F_buoyant = ρ_fluid · V_displaced · g",
+      "common_misconceptions": [
+        "Floating objects experience no buoyant force (they do — it equals their weight).",
+        "Only light objects float (shape matters — steel ships float).",
+        "Buoyancy depends on the object's mass (it depends on the fluid's density and displaced volume)."
+      ],
+      "learning_objectives": [
+        "Explain buoyancy as an upward force from a fluid.",
+        "State Archimedes' principle.",
+        "Calculate buoyant force.",
+        "Explain why objects float or sink."
+      ],
+      "real_world_applications": [
+        "Ships and submarines.",
+        "Hot air balloons.",
+        "Life jackets.",
+        "Hydrometers."
+      ],
+      "key_experiments": [
+        "Measuring buoyant force on an object in water.",
+        "Verifying Archimedes' principle."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.density"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.pressure"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.force"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.conservation-of-energy",
       "type": "law",
       "name": "Law of Conservation of Energy",
@@ -107,6 +189,145 @@
         {
           "type": "related_to",
           "target": "lhs:phys.work-energy-theorem"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.coulombs-law",
+      "type": "law",
+      "name": "Coulomb's Law",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The electrostatic force between two point charges is directly proportional to the product of their magnitudes and inversely proportional to the square of the distance between them.",
+      "symbol": null,
+      "unit": null,
+      "equation": "F = k·|q₁·q₂| / r² (k ≈ 9×10⁹ N·m²/C²)",
+      "common_misconceptions": [
+        "Coulomb's law applies to charges of any size (it is exact for point charges).",
+        "Force between charges depends on the medium (it does — the constant k changes).",
+        "Coulomb's law is the same as Newton's gravitation (both are inverse-square but differ in detail)."
+      ],
+      "learning_objectives": [
+        "State Coulomb's law.",
+        "Calculate electrostatic force between two charges.",
+        "Compare electrostatic and gravitational forces.",
+        "Explain the inverse-square nature of electrostatic force."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.electric-charge"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.force"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.newtons-law-of-gravitation"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.current",
+      "type": "quantity",
+      "name": "Electric Current",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The flow of electric charge through a conductor. Current is measured as the rate of flow of charge past a point in a circuit.",
+      "symbol": "I",
+      "unit": "ampere (A)",
+      "equation": "I = Q / t",
+      "common_misconceptions": [
+        "Current is \"used up\" by components (current is the same throughout a series circuit).",
+        "Current flows from negative to positive (conventional current flows from positive to negative).",
+        "Higher voltage always means more current (depends on resistance too)."
+      ],
+      "learning_objectives": [
+        "Define current as the rate of flow of charge.",
+        "Calculate current from charge and time.",
+        "Measure current using an ammeter.",
+        "Distinguish between conventional current and electron flow."
+      ],
+      "real_world_applications": [
+        "Electrical power distribution.",
+        "Fuses and circuit breakers.",
+        "Battery-powered devices."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.electric-charge"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.time"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.voltage"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.resistance"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.ohms-law"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.density",
+      "type": "quantity",
+      "name": "Density",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The mass per unit volume of a substance. Density determines whether objects float or sink in fluids.",
+      "symbol": "ρ (rho)",
+      "unit": "kilogram per cubic metre (kg/m³)",
+      "equation": "ρ = m / V",
+      "common_misconceptions": [
+        "Heavy objects always sink (it depends on density, not just mass).",
+        "Density is the same as weight (density is mass/volume; weight is a force).",
+        "All solids are denser than all liquids (ice floats on water — ice is less dense)."
+      ],
+      "learning_objectives": [
+        "Define density as mass per unit volume.",
+        "Calculate density from mass and volume.",
+        "Explain floating and sinking in terms of density.",
+        "Measure density of regular and irregular objects."
+      ],
+      "real_world_applications": [
+        "Ship design (steel ships float because they displace enough water).",
+        "Hot air balloons (less dense air rises).",
+        "Oil spills (oil floats on water).",
+        "Material identification."
+      ],
+      "key_experiments": [
+        "Measuring density of a regular solid and an irregular solid using displacement."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.mass"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.pressure"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.buoyancy"
         }
       ]
     },
@@ -183,6 +404,195 @@
         {
           "type": "related_to",
           "target": "lhs:phys.displacement"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.electric-charge",
+      "type": "quantity",
+      "name": "Electric Charge",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A fundamental property of matter that causes it to experience a force when placed in an electromagnetic field. Charge can be positive or negative; like charges repel, opposite charges attract.",
+      "symbol": "Q or q",
+      "unit": "coulomb (C)",
+      "equation": null,
+      "common_misconceptions": [
+        "Charge is created by friction (charge is transferred, not created).",
+        "A charged object always attracts uncharged objects (a charged object can attract a neutral one through polarization).",
+        "Electrons are the only charge carriers (ions can also carry charge)."
+      ],
+      "learning_objectives": [
+        "Describe electric charge as a fundamental property.",
+        "Explain charging by friction, conduction, and induction.",
+        "State Coulomb's law and calculate electrostatic force.",
+        "Distinguish between conductors and insulators."
+      ],
+      "real_world_applications": [
+        "Static electricity (lightning, photocopiers).",
+        "Capacitors.",
+        "Electrostatic painting."
+      ],
+      "key_experiments": [
+        "Charging a rod by friction and attracting small pieces of paper."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.voltage"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.coulombs-law"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.electromagnetic-induction",
+      "type": "concept",
+      "name": "Electromagnetic Induction",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The production of an electromotive force (voltage) across a conductor when it is exposed to a changing magnetic field. This is the principle behind electric generators.",
+      "symbol": null,
+      "unit": null,
+      "equation": "ε = -dΦ/dt (Faraday's law)",
+      "common_misconceptions": [
+        "A stationary magnet near a coil produces current (the magnetic field must be changing).",
+        "Induced voltage depends on the magnet's strength alone (it depends on the rate of change of flux)."
+      ],
+      "learning_objectives": [
+        "Explain electromagnetic induction.",
+        "Describe Faraday's law of induction.",
+        "Explain how generators produce electricity.",
+        "Apply Lenz's law to determine the direction of induced current."
+      ],
+      "real_world_applications": [
+        "Electric generators.",
+        "Transformers.",
+        "Induction cooktops.",
+        "Wireless charging."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.electromagnetism"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.voltage"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.magnetic-field"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.electromagnetic-spectrum",
+      "type": "concept",
+      "name": "Electromagnetic Spectrum",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The range of all types of electromagnetic radiation, ordered by wavelength or frequency. From longest wavelength to shortest: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays.",
+      "symbol": null,
+      "unit": null,
+      "equation": "c = f·λ (applies to all EM waves)",
+      "common_misconceptions": [
+        "All EM waves are the same (they differ in wavelength, frequency, and energy).",
+        "EM waves need a medium (they travel through vacuum).",
+        "Visible light is the only useful part of the spectrum (all parts have applications)."
+      ],
+      "learning_objectives": [
+        "Describe the EM spectrum in order of wavelength/frequency.",
+        "State that all EM waves travel at the speed of light in vacuum.",
+        "Identify uses and hazards of different parts of the spectrum.",
+        "Relate energy to frequency (higher frequency = higher energy)."
+      ],
+      "real_world_applications": [
+        "Radio and TV broadcasting.",
+        "Microwave ovens.",
+        "Medical imaging (X-rays).",
+        "Remote controls (infrared).",
+        "Sterilization (ultraviolet).",
+        "Cancer treatment (gamma rays)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.light"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wavelength"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.electromagnetism",
+      "type": "concept",
+      "name": "Electromagnetism",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The branch of physics dealing with the relationship between electricity and magnetism. A changing electric field produces a magnetic field, and a changing magnetic field produces an electric field.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Electricity and magnetism are separate phenomena (they are two aspects of the same force).",
+        "Only magnets produce magnetic fields (current-carrying wires also produce them)."
+      ],
+      "learning_objectives": [
+        "Explain that a current-carrying conductor produces a magnetic field.",
+        "Describe the magnetic effect of current (Oersted's experiment).",
+        "Explain the force on a current-carrying conductor in a magnetic field.",
+        "Describe applications: electric motor, loudspeaker."
+      ],
+      "real_world_applications": [
+        "Electric motors.",
+        "Loudspeakers.",
+        "Electromagnets (scrap yards, relays).",
+        "Maglev trains."
+      ],
+      "key_experiments": [
+        "Oersted's experiment (compass needle deflects near a current-carrying wire)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.magnetic-field"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electromagnetic-induction"
         }
       ]
     },
@@ -398,6 +808,47 @@
         {
           "type": "related_to",
           "target": "lhs:phys.gravitational-acceleration"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.frequency",
+      "type": "quantity",
+      "name": "Frequency",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The number of complete wave cycles passing a given point per unit time. Frequency determines the pitch of sound and the color of light.",
+      "symbol": "f or ν (nu)",
+      "unit": "hertz (Hz)",
+      "equation": "f = 1 / T (T = period)",
+      "common_misconceptions": [
+        "Higher frequency means larger waves (higher frequency means shorter wavelength).",
+        "Frequency depends on the medium (frequency is determined by the source; wavelength changes with medium)."
+      ],
+      "learning_objectives": [
+        "Define frequency and its unit (hertz).",
+        "Calculate frequency from period and vice versa.",
+        "Relate frequency to wave speed and wavelength."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.time"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wavelength"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave-speed"
         }
       ]
     },
@@ -731,6 +1182,185 @@
       ]
     },
     {
+      "id": "lhs:phys.lens",
+      "type": "concept",
+      "name": "Lens",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A transparent optical device that refracts light to converge or diverge rays. Convex (converging) lenses bring light to a focus; concave (diverging) lenses spread light apart.",
+      "symbol": null,
+      "unit": null,
+      "equation": "1/f = 1/v + 1/u (lens formula)",
+      "common_misconceptions": [
+        "All lenses magnify (concave lenses reduce image size).",
+        "Lenses work by reflection (they work by refraction).",
+        "Thicker lenses always have shorter focal length (depends on curvature and refractive index)."
+      ],
+      "learning_objectives": [
+        "Distinguish between convex and concave lenses.",
+        "Draw ray diagrams for image formation by lenses.",
+        "Use the lens formula to calculate image position.",
+        "Explain how lenses are used in optical instruments."
+      ],
+      "real_world_applications": [
+        "Eyeglasses and contact lenses.",
+        "Cameras.",
+        "Microscopes and telescopes.",
+        "Magnifying glasses."
+      ],
+      "key_experiments": [
+        "Finding the focal length of a convex lens.",
+        "Drawing ray diagrams for different object positions."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.refraction"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.light"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.mirror"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.light",
+      "type": "concept",
+      "name": "Light",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Electromagnetic radiation that is visible to the human eye. Light behaves both as a wave and as a particle (photon), though at Grade 10 the wave model predominates.",
+      "symbol": null,
+      "unit": null,
+      "equation": "c = f·λ (c = speed of light in vacuum ≈ 3×10⁸ m/s)",
+      "common_misconceptions": [
+        "Light needs a medium to travel (light travels through vacuum).",
+        "Light travels instantaneously (it has finite speed).",
+        "Light is only what we can see (visible light is a small part of the EM spectrum)."
+      ],
+      "learning_objectives": [
+        "Describe light as a form of electromagnetic radiation.",
+        "State the speed of light in vacuum.",
+        "Explain that light can travel through vacuum.",
+        "Distinguish between luminous and non-luminous objects."
+      ],
+      "real_world_applications": [
+        "Vision.",
+        "Fiber optics.",
+        "Solar energy.",
+        "Photography and imaging."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.reflection"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.refraction"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electromagnetic-spectrum"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.magnetic-field",
+      "type": "concept",
+      "name": "Magnetic Field",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The region around a magnet or current-carrying conductor where magnetic forces can be detected. Magnetic fields are represented by field lines that show the direction and strength of the field.",
+      "symbol": "B",
+      "unit": "tesla (T)",
+      "equation": null,
+      "common_misconceptions": [
+        "Magnetic field lines are real physical objects (they are a model to represent the field).",
+        "Magnetic fields only exist around magnets (current-carrying wires also produce them).",
+        "Magnetic field lines cross each other (they never cross)."
+      ],
+      "learning_objectives": [
+        "Describe the magnetic field as a field of force.",
+        "Plot magnetic field lines around bar magnets and current-carrying wires.",
+        "Use the right-hand rule to determine field direction.",
+        "Explain how magnetic field strength varies with distance."
+      ],
+      "real_world_applications": [
+        "Earth's magnetic field (compass).",
+        "Particle accelerators.",
+        "Mass spectrometers."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.magnetism"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electromagnetism"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.magnetism",
+      "type": "concept",
+      "name": "Magnetism",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The phenomenon by which materials exert attractive or repulsive forces on other materials. Magnetism is intimately connected to electricity — moving charges produce magnetic fields, and changing magnetic fields produce electric currents.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "All metals are magnetic (only iron, nickel, cobalt, and some alloys are ferromagnetic).",
+        "Magnets attract all metals (only magnetic materials).",
+        "Magnetic poles can exist independently (breaking a magnet produces two smaller magnets, each with both poles)."
+      ],
+      "learning_objectives": [
+        "Describe magnetic materials and their properties.",
+        "Identify magnetic poles and their interactions.",
+        "Map magnetic field lines around a bar magnet.",
+        "Distinguish between permanent magnets and electromagnets."
+      ],
+      "real_world_applications": [
+        "Compass navigation.",
+        "Electric motors and generators.",
+        "MRI (magnetic resonance imaging).",
+        "Magnetic storage (hard drives)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.magnetic-field"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electromagnetism"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.mass",
       "type": "quantity",
       "name": "Mass",
@@ -791,6 +1421,46 @@
         {
           "type": "related_to",
           "target": "lhs:phys.physical-quantity"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.mirror",
+      "type": "concept",
+      "name": "Mirror",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A surface that reflects light. Plane mirrors produce virtual images of the same size; curved (concave and convex) mirrors can produce real or virtual images of varying sizes.",
+      "symbol": null,
+      "unit": null,
+      "equation": "1/f = 1/v + 1/u (mirror formula)",
+      "common_misconceptions": [
+        "All mirrors produce the same type of image (image type depends on mirror shape and object position).",
+        "Curved mirrors always magnify (depends on object position)."
+      ],
+      "learning_objectives": [
+        "Distinguish between plane, concave, and convex mirrors.",
+        "Draw ray diagrams for image formation in curved mirrors.",
+        "Use the mirror formula to calculate image position.",
+        "Explain uses of different types of mirrors."
+      ],
+      "real_world_applications": [
+        "Rear-view mirrors (convex).",
+        "Shaving/makeup mirrors (concave).",
+        "Telescope mirrors (concave).",
+        "Security mirrors (convex)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.reflection"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.lens"
         }
       ]
     },
@@ -895,6 +1565,59 @@
       ]
     },
     {
+      "id": "lhs:phys.newtons-law-of-gravitation",
+      "type": "law",
+      "name": "Newton's Law of Universal Gravitation",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance between their centers.",
+      "symbol": null,
+      "unit": null,
+      "equation": "F = G·m₁·m₂ / r² (G ≈ 6.674×10⁻¹¹ N·m²/kg²)",
+      "common_misconceptions": [
+        "Gravity only exists on Earth (gravitation is universal).",
+        "Gravity requires air to act (gravitation acts through vacuum).",
+        "Heavier objects fall faster (in vacuum, all fall at the same rate)."
+      ],
+      "learning_objectives": [
+        "State Newton's law of universal gravitation.",
+        "Calculate gravitational force between two masses.",
+        "Explain why weight varies with location.",
+        "Relate gravitation to weight and free fall."
+      ],
+      "real_world_applications": [
+        "Planetary motion.",
+        "Tides.",
+        "Satellite orbits.",
+        "Space exploration."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.gravitation"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.mass"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.force"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.free-fall"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.coulombs-law"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.newtons-second-law",
       "type": "law",
       "name": "Newton's Second Law",
@@ -975,6 +1698,53 @@
         {
           "type": "related_to",
           "target": "lhs:phys.newtons-second-law"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.ohms-law",
+      "type": "law",
+      "name": "Ohm's Law",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The current through a conductor between two points is directly proportional to the voltage across the two points, provided the temperature remains constant. The constant of proportionality is the resistance.",
+      "symbol": null,
+      "unit": null,
+      "equation": "V = I·R",
+      "common_misconceptions": [
+        "Ohm's law applies to all conductors (only ohmic conductors show linear V-I relationship).",
+        "Resistance depends on voltage and current (for ohmic conductors, resistance is constant).",
+        "Ohm's law is always true (it breaks down at very high currents or for non-ohmic materials)."
+      ],
+      "learning_objectives": [
+        "State Ohm's law in words and mathematically.",
+        "Calculate voltage, current, or resistance using V = IR.",
+        "Plot and interpret V-I graphs for ohmic and non-ohmic conductors.",
+        "Distinguish between ohmic and non-ohmic conductors."
+      ],
+      "real_world_applications": [
+        "Circuit design.",
+        "Fuse and breaker sizing.",
+        "Sensor design (thermistors, LDRs)."
+      ],
+      "key_experiments": [
+        "Measuring V and I for a fixed resistor to verify Ohm's law."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.voltage"
+        },
+        {
+          "type": "applies_to",
+          "target": "lhs:phys.resistance"
         }
       ]
     },
@@ -1118,6 +1888,191 @@
       ]
     },
     {
+      "id": "lhs:phys.pressure",
+      "type": "quantity",
+      "name": "Pressure",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The force applied per unit area on a surface. Pressure explains how forces are distributed over areas.",
+      "symbol": "P",
+      "unit": "pascal (Pa)",
+      "equation": "P = F / A",
+      "common_misconceptions": [
+        "Pressure and force are the same (force is total; pressure is force per unit area).",
+        "Pressure always acts downward (pressure acts equally in all directions in a fluid).",
+        "Larger area means more pressure (larger area means less pressure for the same force)."
+      ],
+      "learning_objectives": [
+        "Define pressure as force per unit area.",
+        "Calculate pressure from force and area.",
+        "Explain everyday examples of pressure (knives, shoes, hydraulic systems).",
+        "Distinguish between pressure, force, and area."
+      ],
+      "real_world_applications": [
+        "Hydraulic systems (brakes, jacks).",
+        "Knives and cutting tools (small area = high pressure).",
+        "Snowshoes and camel feet (large area = low pressure).",
+        "Atmospheric pressure."
+      ],
+      "key_experiments": [
+        "Pressure in fluids increases with depth."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.force"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.density"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.buoyancy"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.reflection",
+      "type": "concept",
+      "name": "Reflection of Light",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The bouncing back of light from a surface. The law of reflection states that the angle of incidence equals the angle of reflection.",
+      "symbol": null,
+      "unit": null,
+      "equation": "θ_i = θ_r",
+      "common_misconceptions": [
+        "Reflection only happens from mirrors (all surfaces reflect some light).",
+        "The angle of incidence is measured from the surface (it is measured from the normal).",
+        "Rough surfaces do not reflect (they reflect diffusely)."
+      ],
+      "learning_objectives": [
+        "State the law of reflection.",
+        "Draw ray diagrams for reflection from plane mirrors.",
+        "Distinguish between regular and diffuse reflection.",
+        "Explain how images are formed in plane mirrors."
+      ],
+      "real_world_applications": [
+        "Mirrors.",
+        "Periscopes.",
+        "Rear-view mirrors.",
+        "Optical instruments."
+      ],
+      "key_experiments": [
+        "Verifying the law of reflection using a plane mirror and ray box."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.light"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.refraction"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.refraction",
+      "type": "concept",
+      "name": "Refraction of Light",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The bending of light as it passes from one medium to another, caused by a change in light's speed in different media.",
+      "symbol": null,
+      "unit": null,
+      "equation": "n = c/v (refractive index) ; Snell's law: n₁·sin(θ₁) = n₂·sin(θ₂)",
+      "common_misconceptions": [
+        "Light bends because it changes direction randomly (bending is systematic and governed by Snell's law).",
+        "Refraction only happens with glass (it happens at any boundary between different media).",
+        "Refraction changes the color of light (dispersion does, not refraction itself)."
+      ],
+      "learning_objectives": [
+        "Define refraction and explain why light bends.",
+        "Use Snell's law to calculate angles of refraction.",
+        "Explain apparent depth and other everyday refraction effects.",
+        "Describe total internal reflection and its applications."
+      ],
+      "real_world_applications": [
+        "Lenses (glasses, cameras, microscopes).",
+        "Optical fibers.",
+        "Mirages.",
+        "Apparent depth of swimming pools."
+      ],
+      "key_experiments": [
+        "Bending of light through a glass block.",
+        "Apparent depth of a coin in water."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.light"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.reflection"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.lens"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.resistance",
+      "type": "quantity",
+      "name": "Electrical Resistance",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The opposition to the flow of electric current in a conductor. Resistance converts electrical energy to thermal energy.",
+      "symbol": "R",
+      "unit": "ohm (Ω)",
+      "equation": "R = V / I",
+      "common_misconceptions": [
+        "Resistance is the same as voltage (resistance is opposition; voltage is potential difference).",
+        "Thicker wires always have less resistance (all else equal, yes — but length and material also matter).",
+        "Resistance is always undesirable (resistance enables heating, lighting, and control)."
+      ],
+      "learning_objectives": [
+        "Define resistance as opposition to current.",
+        "Calculate resistance from voltage and current.",
+        "Explain factors affecting resistance (material, length, cross-sectional area, temperature).",
+        "Use the resistance formula R = ρL/A."
+      ],
+      "real_world_applications": [
+        "Heating elements (toasters, heaters).",
+        "Resistors in electronic circuits.",
+        "Fuses."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.voltage"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.ohms-law"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.scalar",
       "type": "concept",
       "name": "Scalar Quantity",
@@ -1152,6 +2107,59 @@
         {
           "type": "related_to",
           "target": "lhs:phys.distance"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.sound",
+      "type": "concept",
+      "name": "Sound",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A mechanical wave produced by vibrating objects, transmitted through a material medium (solid, liquid, or gas) as a longitudinal wave. Sound cannot travel through vacuum.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Sound can travel through space (sound needs a medium; it cannot travel through vacuum).",
+        "Sound travels faster than light (sound is much slower: ~343 m/s vs. 3×10⁸ m/s).",
+        "Sound always travels at the same speed (speed varies with medium and temperature)."
+      ],
+      "learning_objectives": [
+        "Explain that sound is produced by vibrations.",
+        "Describe how sound travels through different media.",
+        "Explain why sound cannot travel through vacuum.",
+        "Relate loudness to amplitude and pitch to frequency."
+      ],
+      "real_world_applications": [
+        "Musical instruments.",
+        "Ultrasound imaging.",
+        "SONAR (underwater detection).",
+        "Noise control and acoustics."
+      ],
+      "key_experiments": [
+        "Tuning fork in water (vibrations create waves).",
+        "Bell jar experiment (sound needs a medium)."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.amplitude"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave-speed"
         }
       ]
     },
@@ -1506,6 +2514,189 @@
         {
           "type": "related_to",
           "target": "lhs:phys.acceleration"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.voltage",
+      "type": "quantity",
+      "name": "Potential Difference (Voltage)",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The work done per unit charge to move a charge between two points in an electric circuit. Voltage is the \"push\" that drives current through a circuit.",
+      "symbol": "V",
+      "unit": "volt (V)",
+      "equation": "V = W / Q",
+      "common_misconceptions": [
+        "Voltage and current are the same (voltage is potential difference; current is flow).",
+        "A battery creates current (a battery provides voltage; current depends on resistance).",
+        "Voltage is \"used up\" in a circuit (voltage drops across components, but energy is conserved)."
+      ],
+      "learning_objectives": [
+        "Define potential difference as work done per unit charge.",
+        "Calculate voltage from work and charge.",
+        "Measure voltage using a voltmeter.",
+        "Explain why voltage drives current."
+      ],
+      "real_world_applications": [
+        "Batteries (1.5V, 9V, 12V).",
+        "Electrical outlets (120V or 230V depending on country).",
+        "Voltage regulation in electronics."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.electric-charge"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.work"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.current"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.resistance"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.ohms-law"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.wave",
+      "type": "concept",
+      "name": "Wave",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "A disturbance that transfers energy through a medium or through space, without permanently displacing the medium. Waves transfer energy and information from one place to another.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Waves carry matter (waves carry energy; the medium oscillates but does not travel with the wave).",
+        "All waves need a medium (electromagnetic waves travel through vacuum).",
+        "Waves always move in straight lines (waves can diffract and refract)."
+      ],
+      "learning_objectives": [
+        "Define wave as a disturbance that transfers energy.",
+        "Distinguish between transverse and longitudinal waves.",
+        "Identify wavelength, frequency, amplitude, and speed on a wave diagram.",
+        "Relate wave speed, frequency, and wavelength using v = f·λ."
+      ],
+      "real_world_applications": [
+        "Communication (radio, mobile phones, Wi-Fi).",
+        "Medical imaging (ultrasound).",
+        "Seismology (earthquake waves).",
+        "Music and acoustics."
+      ],
+      "key_experiments": [
+        "Ripple tank experiments demonstrating reflection, refraction, and diffraction of water waves."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wavelength"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.amplitude"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave-speed"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.wave-speed",
+      "type": "quantity",
+      "name": "Wave Speed",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The speed at which a wave propagates through a medium. Wave speed depends on the properties of the medium, not on frequency or amplitude.",
+      "symbol": "v",
+      "unit": "metre per second (m/s)",
+      "equation": "v = f·λ",
+      "common_misconceptions": [
+        "Higher frequency waves always travel faster (in the same medium, all waves of the same type travel at the same speed).",
+        "Wave speed is infinite (all waves have finite speed — light travels at 3×10⁸ m/s in vacuum)."
+      ],
+      "learning_objectives": [
+        "Calculate wave speed from frequency and wavelength.",
+        "Explain why wave speed depends on the medium.",
+        "Compare wave speeds in different media."
+      ],
+      "real_world_applications": [
+        "Thunder and lightning (light travels much faster than sound).",
+        "Echos and sonar.",
+        "Seismic wave analysis."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.wavelength"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.wavelength",
+      "type": "quantity",
+      "name": "Wavelength",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The distance between two consecutive points in phase on a wave — for example, crest to crest or trough to trough. Wavelength determines the character of the wave (color of light, pitch of sound).",
+      "symbol": "λ (lambda)",
+      "unit": "metre (m)",
+      "equation": null,
+      "common_misconceptions": [
+        "Wavelength is the height of a wave (height is amplitude; wavelength is distance between cycles).",
+        "All waves have the same wavelength (wavelength varies enormously — from kilometers to nanometers)."
+      ],
+      "learning_objectives": [
+        "Define wavelength and identify it on a wave diagram.",
+        "Relate wavelength to frequency and wave speed.",
+        "Compare wavelengths of different types of waves."
+      ],
+      "provenance": {
+        "ai_drafted": true
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wave-speed"
         }
       ]
     },
