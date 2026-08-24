@@ -24,14 +24,18 @@ class ExplorerApp {
     this.showLoading(true);
 
     try {
-      // 1. Fetch export data (relative path fallback)
-      this.exportData = await loadKnowledgeExport('../exports/knowledge.json').catch(async () => {
-        return await loadKnowledgeExport('/exports/knowledge.json');
-      });
+      // Try /exports/knowledge.json first, then relative fallback
+      try {
+        this.exportData = await loadKnowledgeExport('/exports/knowledge.json');
+      } catch (err) {
+        console.warn('Primary fetch /exports/knowledge.json failed, trying ./exports/knowledge.json...', err);
+        this.exportData = await loadKnowledgeExport('./exports/knowledge.json');
+      }
       
       this.showLoading(false);
       this.initUI();
     } catch (err) {
+      console.error('Failed to load LearningHubSTEM knowledge export:', err);
       this.showLoading(false);
       this.showError((err as Error).message);
     }
@@ -56,10 +60,15 @@ class ExplorerApp {
 
     // 2. Init 3D Graph View
     const graphContainer = document.getElementById('graphCanvas')!;
-    this.graphView = new GraphView({
-      container: graphContainer,
-      onNodeSelect: (id) => this.stateManager.selectConcept(id)
-    });
+    try {
+      this.graphView = new GraphView({
+        container: graphContainer,
+        onNodeSelect: (id) => this.stateManager.selectConcept(id)
+      });
+    } catch (err) {
+      console.error('Failed to initialize 3D Force Graph WebGL context:', err);
+      this.showError(`WebGL/3D Renderer Error: ${(err as Error).message}. You can switch to accessible list mode.`);
+    }
 
     // 3. Init Inspector View
     const inspectorContainer = document.getElementById('inspector')!;
@@ -83,7 +92,7 @@ class ExplorerApp {
   }
 
   private onStateChange(state: ExplorerState): void {
-    if (!this.exportData || !this.graphView || !this.inspectorView || !this.searchFilterBar || !this.accessibleListView) {
+    if (!this.exportData || !this.inspectorView || !this.searchFilterBar || !this.accessibleListView) {
       return;
     }
 
@@ -98,12 +107,6 @@ class ExplorerApp {
       );
     }
 
-    // Auto-select if search narrows to 1 exact match
-    if (state.searchQuery && matchingEntities.length === 1 && state.selectedConceptId !== matchingEntities[0]!.id) {
-      this.stateManager.selectConcept(matchingEntities[0]!.id);
-      return;
-    }
-
     // Projection
     const projection = projectKnowledgeGraph(
       { ...this.exportData, entities: matchingEntities },
@@ -112,7 +115,10 @@ class ExplorerApp {
       state.activeMode
     );
 
-    this.graphView.updateProjection(projection, state.selectedConceptId);
+    if (this.graphView) {
+      this.graphView.updateProjection(projection, state.selectedConceptId);
+    }
+
     this.accessibleListView.render(matchingEntities, state.selectedConceptId);
 
     // Update Inspector
