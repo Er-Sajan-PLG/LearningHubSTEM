@@ -1,0 +1,36 @@
+---
+id: lhs:phys.generator
+type: concept
+name: Electric Generator
+domain: physics
+status: draft
+definition: >-
+  A machine that converts mechanical energy into electrical energy using electromagnetic induction, forcing
+  electric charge to flow through an external circuit by rotating a coil in a magnetic field.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Generators create electric charge (generators move existing free charges in conductors via magnetic induction).
+  - Generators produce 100% efficient electrical power (some mechanical energy is dissipated as thermal energy).
+learning_objectives:
+  - Explain how mechanical rotation induces an alternating electromotive force (AC voltage).
+  - Compare alternating current (AC) generators (slip rings) with direct current (DC) generators (split-ring commutator).
+  - Apply Fleming's right-hand rule to predict direction of induced current.
+real_world_applications:
+  - Hydroelectric, wind turbine, and thermal power plant generators.
+  - Portable emergency power generators and bicycle dynamos.
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: IEEE / IUPAP Physics Education Standards
+relationships:
+  - type: logically_requires
+    target: lhs:phys.electromagnetic-induction
+  - type: related_to
+    target: lhs:phys.magnetic-flux
+---
+
+## Notes
+
+Electric generators operate as the inverse of electric motors.

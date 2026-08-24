@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearningHubSTEM — 3D Interactive Knowledge Graph Explorer</title>
+    <script type="module" crossorigin src="/assets/index-DYjUL9Rl.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DU7Tt8oC.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Toolbar Header -->
+      <div id="toolbar"></div>
+
+      <!-- Two-Pane Main Layout -->
+      <main class="main-layout">
+        <!-- Left 3D Canvas / Graph Pane -->
+        <section class="graph-container" aria-label="3D Knowledge Graph Canvas">
+          <div id="graphCanvas"></div>
+          <div id="accessibleList" style="display:none;width:100%;height:100%;"></div>
+
+          <!-- Loading & Error Overlays -->
+          <div id="loadingOverlay" class="overlay-state" style="display:none;">
+            <div class="spinner"></div>
+            <div style="font-weight:600;font-size:0.95rem;">Loading Canonical Knowledge Graph...</div>
+          </div>
+
+          <div id="errorOverlay" class="overlay-state" style="display:none;">
+            <div style="font-size:2rem;">⚠️</div>
+            <div id="errorTitle" style="font-weight:700;font-size:1.1rem;color:#fca5a5;">Failed to Load Knowledge Graph</div>
+            <div id="errorMessage" style="font-size:0.9rem;color:#d1d5db;max-width:400px;text-align:center;"></div>
+            <button id="retryBtn" class="action-btn" style="margin-top:12px;">Retry Loading</button>
+          </div>
+        </section>
+
+        <!-- Right Concept Inspector Pane -->
+        <aside id="inspector" class="inspector-container" aria-label="Concept Inspector"></aside>
+      </main>
+    </div>
+
+  </body>
+</html>

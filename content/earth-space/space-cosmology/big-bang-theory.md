@@ -1,0 +1,36 @@
+---
+id: lhs:earth.big-bang-theory
+type: concept
+name: Big Bang Theory
+domain: earth-space
+status: draft
+definition: >-
+  The prevailing cosmological model describing the early development and metric expansion of the universe from an
+  extremely hot, dense state approximately 13.8 billion years ago.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - The Big Bang was an explosion into pre-existing space (the Big Bang describes the expansion of space itself everywhere).
+  - The universe expands into empty outer space (space itself is expanding between distant galaxy clusters).
+learning_objectives:
+  - "Summarize key observational evidence supporting the Big Bang: cosmic microwave background radiation (CMB) and galactic redshift (Hubble's law)."
+  - Describe the age and continuous metric expansion of the observable universe.
+  - Distinguish scientific cosmological consensus from speculative hypotheses.
+real_world_applications:
+  - Radio astronomy telescope development and satellite microwave detectors.
+  - Fundamental physics research into elemental nucleosynthesis.
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: International Astronomical Union (IAU) / NASA Cosmology Framework
+relationships:
+  - type: logically_requires
+    target: lhs:phys.electromagnetic-spectrum
+  - type: related_to
+    target: lhs:phys.gravitation
+---
+
+## Notes
+
+Cosmic microwave background radiation and redshift of distant galaxies provide empirical support for the Big Bang.

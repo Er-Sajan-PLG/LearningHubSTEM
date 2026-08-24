@@ -154,7 +154,7 @@ def main() -> int:
         print(f"error: content directory not found: {CONTENT}", file=sys.stderr)
         return 1
 
-    for path in sorted(CONTENT.glob("*.md")):
+    for path in sorted(CONTENT.rglob("*.md")):
         try:
             entity = parse_entity(path)
         except ValueError as exc:

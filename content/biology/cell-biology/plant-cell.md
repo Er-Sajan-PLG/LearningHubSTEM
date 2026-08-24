@@ -1,0 +1,36 @@
+---
+id: lhs:bio.plant-cell
+type: concept
+name: Plant Cell
+domain: biology
+status: draft
+definition: >-
+  A eukaryotic cell characteristic of plants, distinguished by a rigid cellulose cell wall, a large central
+  vacuole for turgor pressure, and plastids such as chloroplasts for photosynthesis.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Plant cells do not perform cellular respiration (plant cells perform both photosynthesis and respiration).
+  - Plant cells lack cell membranes (plant cells have a cell membrane inside the rigid cell wall).
+learning_objectives:
+  - Identify key structures unique to plant cells (cell wall, chloroplasts, central vacuole).
+  - Explain the role of the cell wall and vacuole in providing mechanical support.
+  - Compare plant cell structures with animal cells.
+real_world_applications:
+  - Agriculture and crop yield optimization.
+  - Biofuel development and plant tissue culture.
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: International Union of Biological Sciences
+relationships:
+  - type: special_case_of
+    target: lhs:bio.cell
+  - type: logically_requires
+    target: lhs:bio.cell
+---
+
+## Notes
+
+Plant cells utilize cellulose in cell walls to resist osmotic pressure.

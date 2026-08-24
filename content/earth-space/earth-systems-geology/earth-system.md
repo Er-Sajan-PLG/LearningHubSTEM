@@ -1,0 +1,38 @@
+---
+id: lhs:earth.earth-system
+type: concept
+name: Earth System
+domain: earth-space
+status: draft
+definition: >-
+  The integrated complex of physical, chemical, biological, and geological processes interacting across
+  Earth's four major interconnected spheres: the geosphere, hydrosphere, atmosphere, and biosphere.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Earth's spheres operate independently of one another (they are constantly exchanging matter and energy).
+  - Human activity is external to the Earth system (human activities are an integral component of biosphere interactions).
+learning_objectives:
+  - Identify and describe the four primary Earth spheres.
+  - Explain examples of energy and matter transport between spheres (e.g. water and carbon cycles).
+  - Analyze human impacts on Earth system feedback mechanisms.
+real_world_applications:
+  - Global climate modeling and weather forecasting.
+  - Natural resource management and environmental policy.
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: NASA Earth System Science Framework / AGU
+relationships:
+  - type: logically_requires
+    target: lhs:chem.matter
+  - type: related_to
+    target: lhs:bio.cell
+  - type: related_to
+    target: lhs:phys.conservation-of-energy
+---
+
+## Notes
+
+System interactions drive global energy balance, nutrient cycles, and climate dynamics.

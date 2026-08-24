@@ -27,7 +27,7 @@ key_experiments:
 provenance:
   ai_drafted: true
 relationships:
-  - type: logically_requires
+  - type: related_to
     target: lhs:phys.measurement
   - type: related_to
     target: lhs:phys.unit

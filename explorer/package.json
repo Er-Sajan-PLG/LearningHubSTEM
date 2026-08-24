@@ -1,0 +1,24 @@
+{
+  "name": "learninghubstem-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LearningHubSTEM 3D Interactive Knowledge Graph Explorer",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/sync-export.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/sync-export.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "3d-force-graph": "^1.80.0",
+    "three": "^0.165.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.165.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}
