@@ -42,7 +42,7 @@ export class GraphView {
       .nodeVal((node: any) => node.val)
       .linkColor((link: any) => link.color)
       .linkWidth((link: any) => link.width)
-      .linkDirectionalArrowLength(4)
+      .linkDirectionalArrowLength((link: any) => link.directional ? 4 : 0)
       .linkDirectionalArrowRelPos(0.9)
       .linkCurvature('curvature')
       .onNodeClick((node: any) => {

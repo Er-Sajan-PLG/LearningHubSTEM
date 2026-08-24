@@ -17,6 +17,7 @@ export interface GraphLink {
   target: string;
   relationship: string;
   color: string;
+  directional: boolean;
   curvature: number;
   width: number;
 }
@@ -93,6 +94,7 @@ export function projectKnowledgeGraph(
         target: rel.target,
         relationship: rel.type,
         color: style.color,
+        directional: !!style.directional,
         curvature: rel.type === 'logically_requires' ? 0 : 0.1,
         width: style.width
       });
