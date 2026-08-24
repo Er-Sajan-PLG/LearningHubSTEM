@@ -24,7 +24,6 @@ class ExplorerApp {
     this.showLoading(true);
 
     try {
-      // Try /exports/knowledge.json first, then relative fallback
       try {
         this.exportData = await loadKnowledgeExport('/exports/knowledge.json');
       } catch (err) {
@@ -66,6 +65,7 @@ class ExplorerApp {
         container: graphContainer,
         onNodeSelect: (id) => this.stateManager.selectConcept(id)
       });
+      this.attachHudCameraControls();
     } catch (err) {
       console.error('Failed to initialize 3D Force Graph WebGL context:', err);
       this.showError(`WebGL/3D Renderer Error: ${(err as Error).message}. You can switch to accessible list mode.`);
@@ -92,6 +92,38 @@ class ExplorerApp {
     this.onStateChange(this.stateManager.getState());
   }
 
+  private attachHudCameraControls(): void {
+    const btnZoomIn = document.getElementById('btnZoomIn');
+    const btnZoomOut = document.getElementById('btnZoomOut');
+    const btnRecenter = document.getElementById('btnRecenter');
+    const btnRotate = document.getElementById('btnRotate');
+
+    if (btnZoomIn && this.graphView) {
+      btnZoomIn.onclick = () => this.graphView?.zoomIn();
+    }
+
+    if (btnZoomOut && this.graphView) {
+      btnZoomOut.onclick = () => this.graphView?.zoomOut();
+    }
+
+    if (btnRecenter && this.graphView) {
+      btnRecenter.onclick = () => this.graphView?.resetView();
+    }
+
+    if (btnRotate && this.graphView) {
+      btnRotate.onclick = () => {
+        const isRotating = this.graphView?.toggleAutoRotate();
+        if (isRotating) {
+          btnRotate.style.background = 'rgba(56, 189, 248, 0.3)';
+          btnRotate.style.borderColor = 'var(--accent-cyan)';
+        } else {
+          btnRotate.style.background = 'rgba(15, 23, 42, 0.85)';
+          btnRotate.style.borderColor = 'var(--border-glass)';
+        }
+      };
+    }
+  }
+
   private onStateChange(state: ExplorerState): void {
     if (!this.exportData || !this.inspectorView || !this.searchFilterBar || !this.accessibleListView) {
       return;
@@ -102,9 +134,14 @@ class ExplorerApp {
     // Toggle 3D graph vs accessible list pane based on viewMode
     const graphPane = document.getElementById('graphCanvas')!;
     const listPane = document.getElementById('accessibleList')!;
+    const hudCamera = document.getElementById('hudCameraControls')!;
+    const hudLegend = document.getElementById('hudDomainLegend')!;
+
     const useList = state.viewMode === 'list';
     graphPane.style.display = useList ? 'none' : 'block';
     listPane.style.display = useList ? 'block' : 'none';
+    if (hudCamera) hudCamera.style.display = useList ? 'none' : 'flex';
+    if (hudLegend) hudLegend.style.display = useList ? 'none' : 'flex';
 
     // Filter entities for search
     let matchingEntities = this.exportData.entities;
@@ -122,6 +159,12 @@ class ExplorerApp {
       state.relationshipFilter,
       state.activeMode
     );
+
+    // Update HUD Stats
+    const countEl = document.getElementById('hudConceptCount');
+    const edgeEl = document.getElementById('hudEdgeCount');
+    if (countEl) countEl.innerText = `${projection.nodes.length} Concepts`;
+    if (edgeEl) edgeEl.innerText = `${projection.links.length} Edges`;
 
     if (!useList && this.graphView) {
       this.graphView.updateProjection(projection, state.selectedConceptId);

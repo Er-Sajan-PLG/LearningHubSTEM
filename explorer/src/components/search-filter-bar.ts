@@ -1,4 +1,5 @@
 import { ExplorerState, ExplorerMode } from '../state/explorer-state';
+import { GRAPH_THEME } from '../styles/theme';
 
 export interface SearchFilterBarOptions {
   container: HTMLElement;
@@ -26,48 +27,90 @@ export class SearchFilterBar {
       <div class="explorer-header">
         <div class="brand-title">
           <div class="brand-logo"></div>
-          <span>LearningHubSTEM <span style="font-weight:400;color:var(--text-muted);font-size:0.85rem;">3D Explorer</span></span>
+          <span>LearningHubSTEM</span>
+          <span class="brand-sub">3D Explorer</span>
         </div>
 
         <div class="toolbar-controls">
-          <input type="text" id="searchInput" class="search-input" placeholder="Search concepts (e.g. force)..." />
+          <!-- Search Input with Clear button -->
+          <div class="search-wrapper">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search concepts (e.g. force)..." />
+            <button id="searchClear" class="search-clear">✕</button>
+          </div>
 
+          <!-- Domain Dropdown -->
           <select id="domainSelect" class="select-control">
-            <option value="all">All Domains</option>
-            <option value="physics">Physics</option>
-            <option value="chemistry">Chemistry</option>
-            <option value="biology">Biology</option>
-            <option value="earth-space">Earth & Space</option>
-            <option value="scientific-practice">Practices</option>
-            <option value="engineering">Engineering</option>
+            <option value="all">🌐 All Domains</option>
+            <option value="physics">⚡ Physics</option>
+            <option value="chemistry">🧪 Chemistry</option>
+            <option value="biology">🧬 Biology</option>
+            <option value="earth-space">🪐 Earth & Space</option>
+            <option value="scientific-practice">📐 Practices</option>
+            <option value="engineering">⚙️ Engineering</option>
           </select>
 
+          <!-- Relationship Filter -->
           <select id="relSelect" class="select-control">
-            <option value="all">All Relationships</option>
-            <option value="logically_requires">Prerequisites (Logical)</option>
-            <option value="mathematically_requires">Prerequisites (Math)</option>
-            <option value="part_of">Part Of</option>
-            <option value="special_case_of">Special Case Of</option>
-            <option value="related_to">Related</option>
+            <option value="all">🔗 All Relationships</option>
+            <option value="logically_requires">⬅️ Prerequisites (Logical)</option>
+            <option value="mathematically_requires">📐 Prerequisites (Math)</option>
+            <option value="part_of">🧩 Part Of</option>
+            <option value="special_case_of">🔍 Special Case Of</option>
+            <option value="related_to">➡️ Related</option>
           </select>
 
-          <div class="mode-btn-group">
+          <!-- Mode Group -->
+          <div class="mode-btn-group" role="group" aria-label="Explorer Mode">
             <button class="mode-btn active" data-mode="explore">Explore</button>
-            <button class="mode-btn" data-mode="prerequisites">Prereqs</button>
-            <button class="mode-btn" data-mode="domain">Domain</button>
+            <button class="mode-btn" data-mode="prerequisites">Prereqs DAG</button>
+            <button class="mode-btn" data-mode="domain">Domains</button>
           </div>
 
-          <div class="mode-btn-group" id="viewToggle" role="group" aria-label="View mode">
-            <button class="mode-btn active" data-view="3d">3D</button>
-            <button class="mode-btn" data-view="list">List</button>
+          <!-- View Toggle Group -->
+          <div class="mode-btn-group" id="viewToggle" role="group" aria-label="View Mode">
+            <button class="mode-btn active" data-view="3d">🌌 3D</button>
+            <button class="mode-btn" data-view="list">📋 List</button>
           </div>
 
-          <button id="resetBtn" class="action-btn">Reset View</button>
+          <button id="resetBtn" class="action-btn" title="Reset Filters and View">↺ Reset View</button>
         </div>
       </div>
     `;
 
+    this.renderDomainLegend();
     this.attachEvents();
+  }
+
+  private renderDomainLegend(): void {
+    const legendContainer = document.getElementById('hudDomainLegend');
+    if (!legendContainer) return;
+
+    let html = `
+      <div class="legend-pill active" data-domain="all">
+        <span class="legend-dot" style="background:#ffffff;"></span>
+        <span>All</span>
+      </div>
+    `;
+
+    for (const [key, theme] of Object.entries(GRAPH_THEME.domains)) {
+      html += `
+        <div class="legend-pill" data-domain="${key}">
+          <span class="legend-dot" style="background:${theme.color};"></span>
+          <span>${theme.name.split(' ')[0]}</span>
+        </div>
+      `;
+    }
+
+    legendContainer.innerHTML = html;
+
+    // Attach domain legend click handlers
+    const legendPills = legendContainer.querySelectorAll('.legend-pill');
+    legendPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const domain = pill.getAttribute('data-domain');
+        if (domain) this.options.onDomainChange(domain);
+      });
+    });
   }
 
   public updateState(state: ExplorerState): void {
@@ -101,16 +144,46 @@ export class SearchFilterBar {
         btn.classList.remove('active');
       }
     });
+
+    // Update legend pills active state
+    const legendContainer = document.getElementById('hudDomainLegend');
+    if (legendContainer) {
+      const pills = legendContainer.querySelectorAll('.legend-pill');
+      pills.forEach(p => {
+        if (p.getAttribute('data-domain') === state.domainFilter) {
+          p.classList.add('active');
+        } else {
+          p.classList.remove('active');
+        }
+      });
+    }
   }
 
   private attachEvents(): void {
     const searchInput = this.container.querySelector('#searchInput') as HTMLInputElement;
+    const searchClear = this.container.querySelector('#searchClear') as HTMLButtonElement;
+
     if (searchInput) {
       searchInput.addEventListener('input', () => {
         if (this.debounceTimer) window.clearTimeout(this.debounceTimer);
         this.debounceTimer = window.setTimeout(() => {
           this.options.onSearch(searchInput.value.trim());
-        }, 200);
+        }, 150);
+      });
+
+      // Shortcut key '/' or 'Control+k' focus search
+      window.addEventListener('keydown', (evt) => {
+        if ((evt.key === '/' || (evt.ctrlKey && evt.key === 'k')) && document.activeElement !== searchInput) {
+          evt.preventDefault();
+          searchInput.focus();
+        }
+      });
+    }
+
+    if (searchClear && searchInput) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        this.options.onSearch('');
       });
     }
 

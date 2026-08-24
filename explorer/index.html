@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearningHubSTEM — 3D Interactive Knowledge Graph Explorer</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- KaTeX for rendering equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/src/styles/explorer.css" />
   </head>
   <body>
@@ -18,16 +25,34 @@
           <div id="graphCanvas"></div>
           <div id="accessibleList" style="display:none;width:100%;height:100%;"></div>
 
+          <!-- Floating HUD Controls Over Canvas -->
+          <div class="hud-top-left" id="hudStats">
+            <span class="hud-dot"></span>
+            <span id="hudConceptCount">112 Concepts</span>
+            <span class="hud-divider">•</span>
+            <span id="hudEdgeCount">240 Edges</span>
+          </div>
+
+          <div class="hud-bottom-left" id="hudCameraControls">
+            <button class="hud-btn" id="btnZoomIn" title="Zoom In">+</button>
+            <button class="hud-btn" id="btnZoomOut" title="Zoom Out">−</button>
+            <button class="hud-btn" id="btnRecenter" title="Recenter View">🎯</button>
+            <button class="hud-btn" id="btnRotate" title="Toggle Auto-Rotation">🔄</button>
+          </div>
+
+          <!-- Domain Legend Bar Floating Bottom Center -->
+          <div class="hud-bottom-center" id="hudDomainLegend"></div>
+
           <!-- Loading & Error Overlays -->
           <div id="loadingOverlay" class="overlay-state" style="display:none;">
             <div class="spinner"></div>
-            <div style="font-weight:600;font-size:0.95rem;">Loading Canonical Knowledge Graph...</div>
+            <div style="font-weight:600;font-size:1rem;font-family:'Outfit',sans-serif;letter-spacing:0.02em;">Constructing 3D Knowledge Graph...</div>
           </div>
 
           <div id="errorOverlay" class="overlay-state" style="display:none;">
-            <div style="font-size:2rem;">⚠️</div>
-            <div id="errorTitle" style="font-weight:700;font-size:1.1rem;color:#fca5a5;">Failed to Load Knowledge Graph</div>
-            <div id="errorMessage" style="font-size:0.9rem;color:#d1d5db;max-width:400px;text-align:center;"></div>
+            <div style="font-size:2.5rem;">⚠️</div>
+            <div id="errorTitle" style="font-weight:700;font-size:1.15rem;color:#fca5a5;font-family:'Outfit',sans-serif;">Failed to Load Knowledge Graph</div>
+            <div id="errorMessage" style="font-size:0.9rem;color:#d1d5db;max-width:420px;text-align:center;line-height:1.5;"></div>
             <button id="retryBtn" class="action-btn" style="margin-top:12px;">Retry Loading</button>
           </div>
         </section>

@@ -3,43 +3,89 @@ export interface DomainTheme {
   name: string;
   badgeBg: string;
   badgeBorder: string;
+  glowColor: string;
+  icon: string;
 }
 
 export const GRAPH_THEME = {
   domains: {
-    physics: { color: '#3b82f6', name: 'Physics', badgeBg: 'rgba(59, 130, 246, 0.15)', badgeBorder: 'rgba(59, 130, 246, 0.4)' },
-    chemistry: { color: '#10b981', name: 'Chemistry', badgeBg: 'rgba(16, 185, 129, 0.15)', badgeBorder: 'rgba(16, 185, 129, 0.4)' },
-    biology: { color: '#ec4899', name: 'Biology', badgeBg: 'rgba(236, 72, 153, 0.15)', badgeBorder: 'rgba(236, 72, 153, 0.4)' },
-    'earth-space': { color: '#f59e0b', name: 'Earth & Space Science', badgeBg: 'rgba(245, 158, 11, 0.15)', badgeBorder: 'rgba(245, 158, 11, 0.4)' },
-    'scientific-practice': { color: '#8b5cf6', name: 'Scientific Practice', badgeBg: 'rgba(139, 92, 246, 0.15)', badgeBorder: 'rgba(139, 92, 246, 0.4)' },
-    engineering: { color: '#06b6d4', name: 'Engineering', badgeBg: 'rgba(6, 182, 212, 0.15)', badgeBorder: 'rgba(6, 182, 212, 0.4)' }
+    physics: {
+      color: '#38bdf8',
+      name: 'Physics',
+      badgeBg: 'rgba(56, 189, 248, 0.12)',
+      badgeBorder: 'rgba(56, 189, 248, 0.4)',
+      glowColor: 'rgba(56, 189, 248, 0.6)',
+      icon: '⚡'
+    },
+    chemistry: {
+      color: '#34d399',
+      name: 'Chemistry',
+      badgeBg: 'rgba(52, 211, 153, 0.12)',
+      badgeBorder: 'rgba(52, 211, 153, 0.4)',
+      glowColor: 'rgba(52, 211, 153, 0.6)',
+      icon: '🧪'
+    },
+    biology: {
+      color: '#f472b6',
+      name: 'Biology',
+      badgeBg: 'rgba(244, 114, 182, 0.12)',
+      badgeBorder: 'rgba(244, 114, 182, 0.4)',
+      glowColor: 'rgba(244, 114, 182, 0.6)',
+      icon: '🧬'
+    },
+    'earth-space': {
+      color: '#fbbf24',
+      name: 'Earth & Space',
+      badgeBg: 'rgba(251, 191, 36, 0.12)',
+      badgeBorder: 'rgba(251, 191, 36, 0.4)',
+      glowColor: 'rgba(251, 191, 36, 0.6)',
+      icon: '🪐'
+    },
+    'scientific-practice': {
+      color: '#a78bfa',
+      name: 'Scientific Practice',
+      badgeBg: 'rgba(167, 139, 250, 0.12)',
+      badgeBorder: 'rgba(167, 139, 250, 0.4)',
+      glowColor: 'rgba(167, 139, 250, 0.6)',
+      icon: '📐'
+    },
+    engineering: {
+      color: '#22d3ee',
+      name: 'Engineering',
+      badgeBg: 'rgba(34, 211, 238, 0.12)',
+      badgeBorder: 'rgba(34, 211, 238, 0.4)',
+      glowColor: 'rgba(34, 211, 238, 0.6)',
+      icon: '⚙️'
+    }
   } as Record<string, DomainTheme>,
-  
+
   edges: {
-    logically_requires: { color: '#60a5fa', opacity: 0.8, directional: true, dash: false, width: 2 },
-    mathematically_requires: { color: '#34d399', opacity: 0.8, directional: true, dash: false, width: 2 },
-    part_of: { color: '#a78bfa', opacity: 0.6, directional: true, dash: true, width: 1.5 },
-    special_case_of: { color: '#f472b6', opacity: 0.6, directional: true, dash: true, width: 1.5 },
-    applies_to: { color: '#fbbf24', opacity: 0.6, directional: true, dash: false, width: 1.5 },
-    appears_in_law: { color: '#fbbf24', opacity: 0.5, directional: false, dash: false, width: 1 },
-    related_to: { color: '#6b7280', opacity: 0.4, directional: false, dash: false, width: 1 },
-    default: { color: '#9ca3af', opacity: 0.4, directional: false, dash: false, width: 1 }
+    logically_requires: { color: '#38bdf8', opacity: 0.8, directional: true, particleSpeed: 0.006, width: 2.2 },
+    mathematically_requires: { color: '#34d399', opacity: 0.8, directional: true, particleSpeed: 0.007, width: 2.2 },
+    part_of: { color: '#a78bfa', opacity: 0.5, directional: true, particleSpeed: 0.003, width: 1.5 },
+    special_case_of: { color: '#f472b6', opacity: 0.5, directional: true, particleSpeed: 0.003, width: 1.5 },
+    applies_to: { color: '#fbbf24', opacity: 0.6, directional: true, particleSpeed: 0.004, width: 1.8 },
+    appears_in_law: { color: '#fbbf24', opacity: 0.4, directional: false, particleSpeed: 0, width: 1.2 },
+    related_to: { color: '#64748b', opacity: 0.35, directional: false, particleSpeed: 0, width: 1.0 },
+    default: { color: '#94a3b8', opacity: 0.3, directional: false, particleSpeed: 0, width: 1.0 }
   },
 
   canvas: {
-    background: '#090d16',
-    nodeHighlightColor: '#ffffff',
-    dimmedOpacity: 0.15
+    background: '#030712',
+    gridColor: 'rgba(56, 189, 248, 0.03)',
+    dimmedOpacity: 0.12
   }
 };
 
 export function getDomainTheme(domain: string): DomainTheme {
   return (
     GRAPH_THEME.domains[domain] ?? {
-      color: '#9ca3af',
+      color: '#94a3b8',
       name: domain,
-      badgeBg: 'rgba(156, 163, 175, 0.15)',
-      badgeBorder: 'rgba(156, 163, 175, 0.4)'
+      badgeBg: 'rgba(148, 163, 184, 0.12)',
+      badgeBorder: 'rgba(148, 163, 184, 0.4)',
+      glowColor: 'rgba(148, 163, 184, 0.6)',
+      icon: '📌'
     }
   );
 }
