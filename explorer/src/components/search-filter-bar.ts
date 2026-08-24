@@ -6,6 +6,7 @@ export interface SearchFilterBarOptions {
   onDomainChange: (domain: string) => void;
   onRelationshipChange: (rel: string) => void;
   onModeChange: (mode: ExplorerMode) => void;
+  onViewToggle: (view: '3d' | 'list') => void;
   onReset: () => void;
 }
 
@@ -56,6 +57,11 @@ export class SearchFilterBar {
             <button class="mode-btn" data-mode="domain">Domain</button>
           </div>
 
+          <div class="mode-btn-group" id="viewToggle" role="group" aria-label="View mode">
+            <button class="mode-btn active" data-view="3d">3D</button>
+            <button class="mode-btn" data-view="list">List</button>
+          </div>
+
           <button id="resetBtn" class="action-btn">Reset View</button>
         </div>
       </div>
@@ -76,10 +82,20 @@ export class SearchFilterBar {
     const relSelect = this.container.querySelector('#relSelect') as HTMLSelectElement;
     if (relSelect) relSelect.value = state.relationshipFilter;
 
-    const modeBtns = this.container.querySelectorAll('.mode-btn');
+    const modeBtns = this.container.querySelectorAll('.mode-btn[data-mode]');
     modeBtns.forEach(btn => {
       const mode = btn.getAttribute('data-mode');
       if (mode === state.activeMode) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    const viewBtns = this.container.querySelectorAll('.mode-btn[data-view]');
+    viewBtns.forEach(btn => {
+      const view = btn.getAttribute('data-view');
+      if (view === state.viewMode) {
         btn.classList.add('active');
       } else {
         btn.classList.remove('active');
@@ -112,11 +128,19 @@ export class SearchFilterBar {
       });
     }
 
-    const modeBtns = this.container.querySelectorAll('.mode-btn');
+    const modeBtns = this.container.querySelectorAll('.mode-btn[data-mode]');
     modeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const mode = btn.getAttribute('data-mode') as ExplorerMode;
         if (mode) this.options.onModeChange(mode);
+      });
+    });
+
+    const viewBtns = this.container.querySelectorAll('.mode-btn[data-view]');
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = btn.getAttribute('data-view') as '3d' | 'list';
+        if (view) this.options.onViewToggle(view);
       });
     });
 

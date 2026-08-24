@@ -63,7 +63,8 @@ export class ExplorerStateManager {
       domainFilter: 'all',
       relationshipFilter: 'all',
       searchQuery: '',
-      activeMode: 'explore'
+      activeMode: 'explore',
+      viewMode: '3d'
     });
   }
 

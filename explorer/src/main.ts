@@ -52,6 +52,7 @@ class ExplorerApp {
       onDomainChange: (d) => this.stateManager.setDomainFilter(d),
       onRelationshipChange: (r) => this.stateManager.setRelationshipFilter(r),
       onModeChange: (m) => this.stateManager.setMode(m),
+      onViewToggle: (v) => this.stateManager.setState({ viewMode: v }),
       onReset: () => {
         this.stateManager.resetFilters();
         if (this.graphView) this.graphView.resetView();
@@ -98,6 +99,13 @@ class ExplorerApp {
 
     this.searchFilterBar.updateState(state);
 
+    // Toggle 3D graph vs accessible list pane based on viewMode
+    const graphPane = document.getElementById('graphCanvas')!;
+    const listPane = document.getElementById('accessibleList')!;
+    const useList = state.viewMode === 'list';
+    graphPane.style.display = useList ? 'none' : 'block';
+    listPane.style.display = useList ? 'block' : 'none';
+
     // Filter entities for search
     let matchingEntities = this.exportData.entities;
     if (state.searchQuery) {
@@ -115,7 +123,7 @@ class ExplorerApp {
       state.activeMode
     );
 
-    if (this.graphView) {
+    if (!useList && this.graphView) {
       this.graphView.updateProjection(projection, state.selectedConceptId);
     }
 
