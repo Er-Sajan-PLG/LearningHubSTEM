@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: c = f·λ (c = speed of light in vacuum ≈ 3×10⁸ m/s)
+examples:
+  - "Seeing a bulb because light from it reaches your eye; your face in a plane mirror."
+  - "Fibre-optic cables carry light by total internal reflection."
+key_experiments:
+  - "Pinhole camera: light travels in straight lines, producing an inverted image."
 common_misconceptions:
   - Light needs a medium to travel (light travels through vacuum).
   - Light travels instantaneously (it has finite speed).

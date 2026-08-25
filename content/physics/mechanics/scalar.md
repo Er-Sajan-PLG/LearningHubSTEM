@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Temperature 30 °C, speed 50 km/h and mass 5 kg are scalars — no direction."
+  - "Energy and time are scalars."
+key_experiments:
+  - "Sort a list of physical quantities into scalars and vectors."
 common_misconceptions:
   - Scalars are less important than vectors (both are essential; many key quantities are scalars).
   - All numbers in physics are scalars (quantities like velocity have both magnitude and direction).

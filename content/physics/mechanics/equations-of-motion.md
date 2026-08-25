@@ -12,6 +12,11 @@ definition: >-
 symbol: v, u, a, s, t
 unit: null
 equation: v = u + at;  s = ut + ½at²;  v² = u² + 2as;  s = ½(u+v)t
+examples:
+  - "A ball dropped from rest falls with v = g·t after t seconds."
+  - "Estimating a car's braking distance from its speed and deceleration using v² = u² + 2as."
+key_experiments:
+  - "Braking/accelerating cart on a linear track: measure times and distances to verify v = u + at."
 common_misconceptions:
   - Equations of motion apply whenever an object moves (they are valid only for uniform, constant acceleration).
   - u and v are interchangeable (u is the initial velocity and v is the final velocity; swapping them changes the answer).

@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A drop of ink spreads through water on its own."
+  - "Oxygen diffuses from lung air into the blood across thin membranes."
+key_experiments:
+  - "Drop potassium permanganate into hot and cold water: diffusion is faster at higher temperature."
 common_misconceptions:
   - Diffusion happens only in gases (diffusion occurs in gases, liquids, and across solutions).
   - Particles move because they are pushed toward empty space (particles move randomly; net flow arises from statistical imbalance, not repulsion).

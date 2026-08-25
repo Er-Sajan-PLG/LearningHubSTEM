@@ -10,6 +10,11 @@ definition: >-
 symbol: p
 unit: kilogram metre per second (kg·m/s)
 equation: p = m·v
+examples:
+  - "A heavy truck and a light car at the same speed — the truck has more momentum and is harder to stop."
+  - "A water jet from a hose carries small momentum but can wash soil away."
+key_experiments:
+  - "Collision carts: send one cart into an identical at-rest cart and observe the momentum exchange."
 common_misconceptions:
   - Momentum and kinetic energy are the same kind of quantity (momentum is a vector measured in
     kg·m/s; kinetic energy is a scalar measured in joules).
@@ -26,7 +31,7 @@ real_world_applications:
   - Rocket propulsion (exhaust momentum propels rocket).
   - Billiards and pool.
 key_experiments:
-  - Colliding trolleys on a frictionless track to demonstrate momentum conservation.
+  - "Colliding trolleys on a frictionless track to demonstrate momentum conservation."
 provenance:
   ai_drafted: true
 relationships:

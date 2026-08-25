@@ -10,6 +10,14 @@ definition: >-
 symbol: A
 unit: metre (m)
 equation: null
+real_world_applications:
+  - "Loudness of a sound depends on its amplitude."
+  - "Earthquake amplitude sets the shaking damage; radio signal strength is an amplitude measure."
+examples:
+  - "A loud drumbeat produces a wave with large amplitude."
+  - "A gentle ripple on water has a small amplitude."
+key_experiments:
+  - "Oscilloscope: a louder sound shows larger wave amplitude at the same frequency."
 common_misconceptions:
   - Amplitude is the wavelength (amplitude is height; wavelength is distance between cycles).
   - Amplitude affects wave speed (wave speed depends on the medium, not amplitude).

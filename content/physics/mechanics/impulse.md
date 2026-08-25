@@ -10,6 +10,11 @@ definition: >-
 symbol: J
 unit: newton second (N·s) or kilogram metre per second (kg·m/s)
 equation: J = F·Δt = Δp
+examples:
+  - "Pulling your hands back while catching a fast ball lengthens the catch time and softens the force."
+  - "Crash padding in a car dashboard lengthens impact time and lowers peak force."
+key_experiments:
+  - "Egg-drop landing on foam versus hard floor: same impulse, longer time, smaller force."
 common_misconceptions:
   - Impulse is the same as force (impulse is force × time; it measures total momentum change).
   - A small force cannot produce significant impulse (over a long enough time, even small forces

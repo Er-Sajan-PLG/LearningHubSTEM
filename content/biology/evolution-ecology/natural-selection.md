@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Peppered moths shifted to dark form during the Industrial Revolution."
+  - "Antibiotic-resistant bacteria spread through selection."
+key_experiments:
+  - "Camouflage 'predator-prey' activity with coloured beans on patterned cloth selects the well-hidden prey."
 common_misconceptions:
   - Natural selection involves intentional self-adaptation by individual organisms (adaptation occurs across populations over generations).
   - Natural selection leads to ultimate perfection in organisms (selection optimizes survival and reproduction relative to current environmental pressures).

@@ -10,6 +10,11 @@ definition: >-
 symbol: DNA
 unit: null
 equation: null
+examples:
+  - "DNA fingerprinting identifies people; PCR copies tiny DNA samples in forensic labs."
+  - "Each human cell nucleus packs about 2 m of DNA into chromosomes."
+key_experiments:
+  - "Extract DNA from a strawberry or banana using detergent and cold alcohol; observe the strands."
 common_misconceptions:
   - DNA is found in all body cells equally except red blood cells (mature human red blood cells lack nuclei and DNA).
   - Genes and DNA are separate materials (genes are specific functional segments of DNA molecules).

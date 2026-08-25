@@ -11,6 +11,11 @@ definition: >-
 symbol: U or Q
 unit: joule (J)
 equation: null
+examples:
+  - "Rubbing your hands converts mechanical energy into thermal energy."
+  - "Thermal energy from the Sun warms Earth's surface."
+key_experiments:
+  - "Compare how fast identical cans of hot water cool when wrapped in different insulators."
 common_misconceptions:
   - Thermal energy and temperature are the same (temperature is average kinetic energy per particle; thermal energy includes all particles).
   - Thermal energy is only in hot objects (all objects have thermal energy).

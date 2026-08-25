@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Eye colour and blood type are controlled by genes."
+  - "Sickle-cell disease results from a single-gene variant."
+key_experiments:
+  - "Model a cross with a Punnett square and trace how one gene maps to a protein-coding DNA segment."
 common_misconceptions:
   - Single genes strictly dictate complex traits like intelligence or behavior (most traits are polygenic and environmentally influenced).
   - Mutated genes are always harmful (mutations provide genetic variation essential for natural selection and evolution).

@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Distance-time graphs show a train at rest, moving steadily, and stopping."
+  - "The slope of a velocity-time graph gives acceleration."
+key_experiments:
+  - "Walk in front of a motion sensor to plot live distance-time and velocity-time graphs."
 common_misconceptions:
   - The slope of a distance-time graph is acceleration (it is velocity).
   - The area under a velocity-time graph is distance (it is displacement).

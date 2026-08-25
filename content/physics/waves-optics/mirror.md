@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: 1/f = 1/v + 1/u (mirror formula)
+examples:
+  - "A concave shaving mirror magnifies; convex wing mirrors give a wider field of view."
+  - "A periscope uses two plane mirrors at 45°."
+key_experiments:
+  - "Curved-mirror ray box: locate the focal point and verify ray diagrams for real and virtual images."
 common_misconceptions:
   - All mirrors produce the same type of image (image type depends on mirror shape and object position).
   - Curved mirrors always magnify (depends on object position).

@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Rusting of iron, burning wood and baking a cake are chemical reactions."
+  - "Photosynthesis is one of the most important natural chemical reactions."
+key_experiments:
+  - "Evidence-of-reaction stations: colour change, gas bubbles, precipitate formation and temperature change."
 common_misconceptions:
   - Atoms are destroyed or created during chemical reactions (atoms are only rearranged).
   - Mass changes significantly during chemical reactions in closed systems (mass is conserved).

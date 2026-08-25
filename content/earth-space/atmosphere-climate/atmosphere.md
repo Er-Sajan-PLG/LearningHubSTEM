@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Airlines fly in the troposphere while the ozone layer sits in the stratosphere."
+  - "Air at sea level exerts about 101 kPa of pressure."
+key_experiments:
+  - "Demonstrate air has mass and occupies space; read atmospheric pressure with a barometer and see it drop with altitude."
 common_misconceptions:
   - Space begins abruptly where the atmosphere stops (atmospheric density decreases continuously with altitude).
   - The greenhouse effect is entirely harmful (the natural greenhouse effect makes Earth habitable).

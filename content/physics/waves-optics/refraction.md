@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: "n = c/v (refractive index) ; Snell's law: n₁·sin(θ₁) = n₂·sin(θ₂)"
+examples:
+  - "A pencil in a glass of water looks bent."
+  - "A swimming pool looks shallower than it really is."
+key_experiments:
+  - "Ray box through a rectangular glass block: trace the rays, measure angles, and verify Snell's law."
 common_misconceptions:
   - Light bends because it changes direction randomly (bending is systematic and governed by Snell's law).
   - Refraction only happens with glass (it happens at any boundary between different media).
@@ -25,8 +30,8 @@ real_world_applications:
   - Mirages.
   - Apparent depth of swimming pools.
 key_experiments:
-  - Bending of light through a glass block.
-  - Apparent depth of a coin in water.
+  - "Bending of light through a glass block."
+  - "Apparent depth of a coin in water."
 provenance:
   ai_drafted: true
 relationships:

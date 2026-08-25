@@ -10,6 +10,11 @@ definition: >-
 symbol: p+
 unit: null
 equation: null
+examples:
+  - "The proton number defines the element — hydrogen has one proton."
+  - "The sodium ion Na⁺ has 11 protons but only 10 electrons."
+key_experiments:
+  - "Element-identification activity: given Z, name the element and build its atomic notation."
 common_misconceptions:
   - Protons leave the nucleus during ordinary chemical reactions (only outer electrons are transferred or shared).
   - Changing the number of protons does not change the element (proton count strictly determines elemental identity).

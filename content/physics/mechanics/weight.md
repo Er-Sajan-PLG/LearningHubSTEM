@@ -10,6 +10,11 @@ definition: >-
 symbol: W
 unit: newton (N)
 equation: W = m·g
+examples:
+  - "A 1 kg mass weighs about 9.8 N on Earth but only about 1.6 N on the Moon."
+  - "A spring balance reads weight; a beam balance reads mass."
+key_experiments:
+  - "Measure weight with a spring balance and mass with a beam balance for the same object and compare number values."
 common_misconceptions:
   - Weight and mass are the same thing (mass is intrinsic; weight is a force that varies with gravity).
   - Weight is measured in kilograms (kilograms measure mass; newtons measure weight).

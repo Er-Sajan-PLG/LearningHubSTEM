@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: E_initial = E_final ; KE_i + PE_i = KE_f + PE_f (conservative systems)
+examples:
+  - "A swinging pendulum never quite returns to its release height — energy is transferred, not lost."
+  - "A roller coaster trades height for speed all along the track."
+key_experiments:
+  - "Newton's cradle: the last ball swings out while the first stops — energy and momentum are transferred."
 common_misconceptions:
   - Energy can be "used up" (energy is conserved; it only changes form).
   - Perpetual motion machines are possible (they violate conservation of energy).

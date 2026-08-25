@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+key_experiments:
+  - "Magnetize a steel pin by stroking and observe north-south attraction and repulsion."
+examples:
+  - "A fridge magnet holds notes; a compass aligns with Earth's magnetic field."
+  - "Speaker magnets drive the cone to produce sound."
 common_misconceptions:
   - All metals are magnetic (only iron, nickel, cobalt, and some alloys are ferromagnetic).
   - Magnets attract all metals (only magnetic materials).

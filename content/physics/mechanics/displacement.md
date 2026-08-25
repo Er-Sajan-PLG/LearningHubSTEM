@@ -10,6 +10,11 @@ definition: >-
 symbol: Δx or s
 unit: metre (m)
 equation: Δx = x_final - x_initial
+examples:
+  - "A hiker who ends 3 km north of the start after a 7 km walk has displacement 3 km north."
+  - "A runner going once around a 400 m track has displacement zero."
+key_experiments:
+  - "Map/playground walk: compare path distance with straight-line displacement using a trundle wheel and a bearing."
 common_misconceptions:
   - Displacement is always equal to distance (they differ when the path curves or reverses).
   - Displacement depends on the path taken (displacement depends only on start and end points).

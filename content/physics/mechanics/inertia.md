@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A passenger lurches forward when a bus brakes suddenly."
+  - "Yanking a tablecloth leaves the dishes in place — they resist the change in motion."
+key_experiments:
+  - "Tablecloth pull / flick the bottom coin from a stack: the stack stays at rest."
 common_misconceptions:
   - Inertia is a force that pushes objects forward (inertia is resistance to change, not a force).
   - Heavier objects have more inertia because gravity pulls harder on them (inertia is mass, not weight).

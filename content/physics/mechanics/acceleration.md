@@ -10,6 +10,11 @@ definition: >-
 symbol: a
 unit: metre per second squared (m/s²)
 equation: a = Δv / Δt
+examples:
+  - "A car speeding up from rest at a traffic light."
+  - "A ball slowing as it rolls uphill (negative acceleration)."
+key_experiments:
+  - "Ticker-tape timer: the spacing of dots on a tape grows as velocity increases."
 common_misconceptions:
   - Velocity and acceleration always point in the same direction (acceleration points in the
     direction of the change in velocity).
@@ -31,8 +36,8 @@ real_world_applications:
   - Amusement park rides.
   - Spacecraft maneuvers.
 key_experiments:
-  - Rolling a ball down an inclined plane and measuring its increasing speed.
-  - Motion sensor experiments recording velocity vs. time during acceleration.
+  - "Rolling a ball down an inclined plane and measuring its increasing speed."
+  - "Motion sensor experiments recording velocity vs. time during acceleration."
 provenance:
   ai_drafted: true
 relationships:

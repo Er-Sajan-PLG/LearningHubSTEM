@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Predicting where a shadow falls using straight light rays."
+  - "Designing a simple periscope from plane mirrors."
+key_experiments:
+  - "Shadow-size and pinhole-image experiments with a bright bulb and a card."
 common_misconceptions:
   - Light rays are physical objects (light rays are idealized geometric constructs showing direction of energy travel).
   - Light only travels straight when observed (light travels straight in homogeneous media regardless of observation).

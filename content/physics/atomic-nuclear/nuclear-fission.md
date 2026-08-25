@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Nuclear power reactors split uranium-235 to generate electricity."
+  - "Fission released in a controlled chain reaction also underlies nuclear weapons."
+key_experiments:
+  - "Chain-reaction model (mousetraps and marbles) and how control rods absorb neutrons to keep the reaction steady."
 common_misconceptions:
   - Fission and fusion are the same (fission splits nuclei; fusion combines them).
   - Nuclear energy is the same as nuclear weapons (peaceful applications exist).

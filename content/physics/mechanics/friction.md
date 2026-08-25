@@ -11,6 +11,11 @@ definition: >-
 symbol: f
 unit: newton (N)
 equation: f = μ·N (for sliding friction; μ = coefficient of friction, N = normal force)
+examples:
+  - "A box is harder to start moving than to keep sliding."
+  - "Tyres grip the road; without friction a car cannot brake or corner."
+key_experiments:
+  - "Block on a surface: measure the force to start it moving versus the force to keep it moving steadily."
 common_misconceptions:
   - Friction always opposes motion (it opposes relative motion — it can also cause motion, e.g., walking).
   - Friction depends on contact area (for sliding friction, it depends primarily on normal force and materials).
@@ -29,8 +34,8 @@ real_world_applications:
   - Matches lighting.
   - Wear on machinery (friction as a source of energy loss).
 key_experiments:
-  - Measuring the force needed to start sliding an object (static friction) vs. keep it sliding (kinetic friction).
-  - Investigating how surface type and normal force affect friction.
+  - "Measuring the force needed to start sliding an object (static friction) vs. keep it sliding (kinetic friction)."
+  - "Investigating how surface type and normal force affect friction."
 provenance:
   ai_drafted: true
 relationships:

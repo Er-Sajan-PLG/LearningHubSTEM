@@ -10,6 +10,11 @@ definition: >-
 symbol: P
 unit: watt (W)
 equation: P = W / t = E / t
+examples:
+  - "A 60 W bulb transfers 60 J of energy every second."
+  - "A machine that does the same work in less time has more power."
+key_experiments:
+  - "Stair climb: measure your mass, the stair height and the time; compute power = mgh/t and compare walking vs running."
 common_misconceptions:
   - Power is the same as energy (energy is the total amount; power is the rate).
   - More powerful machines always do more work (work depends on power AND time).

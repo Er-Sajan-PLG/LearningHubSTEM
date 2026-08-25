@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+key_experiments:
+  - "Explore the periodic table by comparing group reactivity across elements using data or handled samples."
+examples:
+  - "Elements are arranged by increasing atomic number; elements in the same group share similar properties."
+  - "The halogens (F, Cl, Br, I) form one group with similar reactions."
 common_misconceptions:
   - Elements in the periodic table are ordered by atomic mass (they are strictly ordered by atomic number Z).
   - All elements in a group have identical physical states (groups share chemical reactivity patterns, but physical states vary).

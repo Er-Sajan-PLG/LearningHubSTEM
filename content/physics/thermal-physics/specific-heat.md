@@ -10,6 +10,11 @@ definition: >-
 symbol: c
 unit: joule per kilogram kelvin (J/(kg·K))
 equation: c = Q / (m·ΔT)
+examples:
+  - "Water heats and cools slowly — its high specific heat (~4200 J/kg·°C) moderates coastal climates."
+  - "Sand on a beach warms faster than the sea in sunshine."
+key_experiments:
+  - "Electric-heater method: measure electrical energy in (P·t), the temperature rise, and compute c = Q/(m·ΔT)."
 common_misconceptions:
   - Specific heat is the same for all substances (it varies significantly — water has very high specific heat).
   - Higher specific heat means the object is hotter (specific heat is about how much energy is needed to change temperature, not the temperature itself).
@@ -25,7 +30,7 @@ real_world_applications:
   - Cooking utensils (metals with low specific heat heat quickly).
   - Thermal storage systems.
 key_experiments:
-  - Calorimetry experiment to measure specific heat of a metal.
+  - "Calorimetry experiment to measure specific heat of a metal."
 provenance:
   ai_drafted: true
 relationships:

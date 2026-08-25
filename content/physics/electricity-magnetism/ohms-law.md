@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: V = I·R
+examples:
+  - "Doubling the voltage across a fixed resistor doubles the current."
+  - "Adding a series resistor dims a lamp — less current flows."
+key_experiments:
+  - "Vary voltage across a resistor, record current, and plot I against V; the slope is 1/R."
 common_misconceptions:
   - Ohm's law applies to all conductors (only ohmic conductors show linear V-I relationship).
   - Resistance depends on voltage and current (for ohmic conductors, resistance is constant).
@@ -25,7 +30,7 @@ real_world_applications:
   - Fuse and breaker sizing.
   - Sensor design (thermistors, LDRs).
 key_experiments:
-  - Measuring V and I for a fixed resistor to verify Ohm's law.
+  - "Measuring V and I for a fixed resistor to verify Ohm's law."
 provenance:
   ai_drafted: true
 relationships:

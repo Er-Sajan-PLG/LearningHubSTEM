@@ -10,6 +10,9 @@ definition: >-
 symbol: P
 unit: pascal (Pa)
 equation: P = F / A
+examples:
+  - "A drawing pin concentrates force onto a tiny point."
+  - "Tyres and balloons hold air at pressure above the atmosphere."
 common_misconceptions:
   - Pressure and force are the same (force is total; pressure is force per unit area).
   - Pressure always acts downward (pressure acts equally in all directions in a fluid).
@@ -25,7 +28,7 @@ real_world_applications:
   - Snowshoes and camel feet (large area = low pressure).
   - Atmospheric pressure.
 key_experiments:
-  - Pressure in fluids increases with depth.
+  - "Pressure in fluids increases with depth."
 provenance:
   ai_drafted: true
 relationships:

@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "The nucleus stores the DNA that directs cell activity."
+  - "A stained cheek-cell nucleus is clearly visible under the microscope."
+key_experiments:
+  - "Stain cheek cells with methylene blue and observe the nuclei; order a karyotype-style set of images by chromosome number."
 common_misconceptions:
   - Every cell has a nucleus (mature red blood cells and prokaryotes lack a nucleus).
   - The nucleus is the same as the whole cell's control in prokaryotes (prokaryotes have no nucleus at all; their genetic material floats in the cytoplasm).

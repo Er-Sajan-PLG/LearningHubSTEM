@@ -10,6 +10,11 @@ definition: >-
 symbol: R
 unit: ohm (Ω)
 equation: R = V / I
+examples:
+  - "A thin wire resists more than a thick one; metal conducts far better than wood."
+  - "Heater elements are deliberately high-resistance so they heat up."
+key_experiments:
+  - "Vary the voltage across a fixed resistor and plot current against voltage — straight line at constant temperature."
 common_misconceptions:
   - Resistance is the same as voltage (resistance is opposition; voltage is potential difference).
   - Thicker wires always have less resistance (all else equal, yes — but length and material also matter).

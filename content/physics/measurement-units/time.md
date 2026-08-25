@@ -10,6 +10,11 @@ definition: >-
 symbol: t
 unit: second (s)
 equation: null
+key_experiments:
+  - "Time repeated pendulum swings and average to measure the period with small error."
+examples:
+  - "Timing a 100 m sprint with a stopwatch."
+  - "The time for one complete pendulum swing is its period."
 common_misconceptions:
   - Time is the same as a clock reading (time is the dimension; clocks measure intervals of it).
   - Time passes at the same rate for all observers (at relativistic speeds, time dilation occurs — though this is beyond Grade 10).

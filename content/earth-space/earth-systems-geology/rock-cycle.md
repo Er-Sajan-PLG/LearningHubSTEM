@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Granite weathers to sand, becomes sandstone, and is buried and heated into metamorphic rock."
+  - "Marble is metamorphosed limestone; basalt is volcanic rock."
+key_experiments:
+  - "Lay down graded sediments in a jar to model sedimentary layering; identify rock samples and chart their cycle pathway."
 common_misconceptions:
   - Rocks are permanent and unchanging (rocks continuously transform between the three families over geological time).
   - The rock cycle moves only in one direction (rocks can take many different pathways through the cycle).

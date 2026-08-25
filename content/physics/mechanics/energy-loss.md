@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: joule (J)
 equation: null
+examples:
+  - "A bouncing ball never returns to its original drop height."
+  - "Heat builds in car brakes and tyres during hard braking."
+key_experiments:
+  - "Bouncing-ball experiment: record successive rebound heights with a ruler and observe the decay."
 common_misconceptions:
   - Energy is destroyed when it is "lost" (energy is conserved; it only becomes less useful).
   - Energy loss violates conservation of energy (it does not — total energy is conserved).

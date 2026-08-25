@@ -10,6 +10,11 @@ definition: >-
 symbol: V
 unit: volt (V)
 equation: V = W / Q
+examples:
+  - "A 9 V battery provides 9 V of potential difference across a circuit; household mains is roughly 230 V."
+  - "Voltage is the 'push' that drives charge around a circuit."
+key_experiments:
+  - "Measure the terminal voltage of a battery with a voltmeter at no load and under load."
 common_misconceptions:
   - Voltage and current are the same (voltage is potential difference; current is flow).
   - A battery creates current (a battery provides voltage; current depends on resistance).

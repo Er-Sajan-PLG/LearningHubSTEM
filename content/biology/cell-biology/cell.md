@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Bacteria are single cells; a human body contains trillions."
+  - "Cheek cells and onion skin cells are classic microscope specimens."
+key_experiments:
+  - "Prepare and observe cheek (animal) and onion (plant) cells under a microscope with a stain."
 common_misconceptions:
   - Cells are flat two-dimensional structures as seen under standard microscope slides (cells are 3D).
   - All cells are identical in size and shape (cells exhibit extreme specialization and diversity).

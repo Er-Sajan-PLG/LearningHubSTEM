@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: ΣF = 0 → a = 0
+examples:
+  - "A puck glides a long way on smooth ice before slowing."
+  - "A book stays on a table until pushed; a satellite coasts in orbit."
+key_experiments:
+  - "Flick a card out from under a coin: the coin stays put — an object resists change in motion."
 common_misconceptions:
   - An object in motion naturally comes to rest (friction is the external force stopping it).
   - No motion means no forces (forces can balance to zero net force).
@@ -24,8 +29,8 @@ real_world_applications:
   - Tablecloth trick (objects at rest tend to stay at rest).
   - Spacecraft coasting in deep space with engines off.
 key_experiments:
-  - Air track experiments showing nearly frictionless motion at constant velocity.
-  - Rolling a ball on increasingly smooth surfaces.
+  - "Air track experiments showing nearly frictionless motion at constant velocity."
+  - "Rolling a ball on increasingly smooth surfaces."
 provenance:
   ai_drafted: true
 relationships:

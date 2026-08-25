@@ -10,6 +10,11 @@ definition: >-
 symbol: T
 unit: kelvin (K) or degree Celsius (°C)
 equation: T(K) = T(°C) + 273.15
+examples:
+  - "A clinical thermometer reads 37 °C body temperature; a room thermostat is set near 20 °C."
+  - "Melting ice stays at 0 °C even while it absorbs heat."
+key_experiments:
+  - "Calibrate a thermometer at the ice point and the steam point."
 common_misconceptions:
   - Temperature measures heat (temperature measures average kinetic energy; heat is energy transfer).
   - Temperature depends on the size of the object (temperature is independent of mass — a small hot object can have higher temperature than a large cold one).

@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A dropped ball falls to the ground; the Moon is held in orbit by Earth's gravity."
+  - "Weight changes slightly between sea level and a mountain top."
+key_experiments:
+  - "Galileo-style inclined plane: uniform acceleration under gravity can be timed and graphed."
 common_misconceptions:
   - Gravity only exists on Earth (gravitation is universal — it acts between all masses).
   - Gravity requires air to act (gravitation acts through vacuum).

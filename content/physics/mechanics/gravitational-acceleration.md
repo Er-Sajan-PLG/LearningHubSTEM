@@ -10,6 +10,11 @@ definition: >-
 symbol: g
 unit: metre per second squared (m/s²)
 equation: g ≈ 9.8 m/s² (near Earth's surface)
+examples:
+  - "g ≈ 9.8 m/s² near Earth's surface — every freely falling object accelerates at this rate."
+  - "In vacuum a feather and a hammer have the same gravitational acceleration."
+key_experiments:
+  - "Measure g with a pendulum (T = 2π√(L/g)) or with free-fall timing gates."
 common_misconceptions:
   - g is the same everywhere in the universe (g varies with distance from a massive body).
   - g is a force (g is an acceleration; the force is weight = m·g).

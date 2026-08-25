@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: W_net = ΔKE = ½·m·v_f² - ½·m·v_i²
+examples:
+  - "Braking a car — friction does negative work, removing its kinetic energy."
+  - "A hammer driving a nail: the work done transfers kinetic energy into the wood."
+key_experiments:
+  - "Ramp-and-block: the work done pushing a block equals the kinetic energy it gains, within measurement error."
 common_misconceptions:
   - Work and kinetic energy are the same thing (work is the process of transferring energy; kinetic energy is the quantity).
   - Work-energy theorem only applies to constant forces (it applies to any force, constant or varying).

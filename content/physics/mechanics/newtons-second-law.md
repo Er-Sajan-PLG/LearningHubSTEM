@@ -10,6 +10,14 @@ definition: >-
 symbol: null
 unit: null
 equation: F = dp/dt (general); F = m·a at constant mass
+real_world_applications:
+  - "Larger vehicles need bigger engines because more mass needs more force for the same acceleration."
+  - "Smartphone accelerometers measure force per unit mass to detect motion."
+examples:
+  - "Doubling the push on a trolley roughly doubles its acceleration."
+  - "A loaded cart needs more force than a light one for the same acceleration (a = F/m)."
+key_experiments:
+  - "Dynamics cart + force sensor: log force against acceleration; the slope is the mass."
 common_misconceptions:
   - F = m·a means the force is a property of the object itself (F is the net external force
     acting on the object).

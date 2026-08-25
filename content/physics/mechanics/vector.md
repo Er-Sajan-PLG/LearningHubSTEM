@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Force '10 N north' and wind '40 km/h north-east' are vectors."
+  - "Displacement arrows drawn on a map."
+key_experiments:
+  - "Walk 3 m east then 4 m north: a 5 m resultant (3-4-5 triangle) demonstrates vector addition."
 common_misconceptions:
   - Any quantity with direction is a vector (must also follow vector addition rules).
   - Vectors are just arrows on paper (they represent physical quantities with real effects).

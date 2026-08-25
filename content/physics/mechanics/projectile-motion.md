@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: Range = v²·sin(2θ)/g ; Time of flight = 2·v·sin(θ)/g ; Max height = v²·sin²(θ)/(2g)
+examples:
+  - "A football kicked at an angle follows a curved parabolic path."
+  - "Water from a tilted hose forms projectile arcs."
+key_experiments:
+  - "Water fountain or ball launcher: photograph the trajectory and see the parabolic curve, with range depending on launch angle."
 common_misconceptions:
   - A projectile's horizontal speed decreases over time (it stays constant, neglecting air resistance).
   - The force of the throw continues to act on the projectile (only gravity acts after launch).

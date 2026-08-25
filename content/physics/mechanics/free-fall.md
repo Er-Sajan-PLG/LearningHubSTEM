@@ -11,6 +11,11 @@ definition: >-
 symbol: g
 unit: metre per second squared (m/s²)
 equation: v = g·t ; h = ½·g·t² ; v² = 2·g·h
+examples:
+  - "A dropped stone falls under gravity when air resistance is negligible."
+  - "A skydiver stops accelerating at terminal velocity."
+key_experiments:
+  - "Drop a feather and a coin in an evacuated tube — they fall together."
 common_misconceptions:
   - Heavier objects fall faster than lighter ones (in vacuum, all fall at the same rate).
   - Free fall means the object is falling downward (moving upward under gravity alone is also free fall).
@@ -26,8 +31,8 @@ real_world_applications:
   - Dropping objects to measure gravitational acceleration.
   - Sports (basketball arc, projectile motion).
 key_experiments:
-  - Dropping objects of different masses in a vacuum chamber.
-  - Measuring g using a falling object and timer.
+  - "Dropping objects of different masses in a vacuum chamber."
+  - "Measuring g using a falling object and timer."
 provenance:
   ai_drafted: true
 relationships:

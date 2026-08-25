@@ -10,6 +10,14 @@ definition: >-
 symbol: m
 unit: kilogram (kg)
 equation: null
+real_world_applications:
+  - "Cooking measures ingredients by mass rather than volume."
+  - "Mass sets inertia and weight (W = mg), and drives spacecraft fuel budgets in orbit."
+examples:
+  - "A 1 kg bag of rice has the same mass on Earth and the Moon."
+  - "A beam balance compares amount of matter, independent of gravity."
+key_experiments:
+  - "Balance an unknown mass against standard masses with a beam balance."
 common_misconceptions:
   - Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity).
 provenance:

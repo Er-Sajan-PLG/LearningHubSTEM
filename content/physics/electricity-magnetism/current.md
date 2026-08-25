@@ -10,6 +10,11 @@ definition: >-
 symbol: I
 unit: ampere (A)
 equation: I = Q / t
+examples:
+  - "A 2 A current flows through an electric iron; phone chargers draw fractions of an amp."
+  - "Household wiring carries alternating current."
+key_experiments:
+  - "Series circuit with an ammeter: the current is the same at every point in the loop."
 common_misconceptions:
   - Current is "used up" by components (current is the same throughout a series circuit).
   - Current flows from negative to positive (conventional current flows from positive to negative).

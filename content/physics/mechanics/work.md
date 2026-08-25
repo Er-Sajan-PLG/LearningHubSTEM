@@ -10,6 +10,11 @@ definition: >-
 symbol: W
 unit: joule (J)
 equation: W = F·d·cos(θ)
+examples:
+  - "Lifting a box onto a shelf does work against gravity."
+  - "Pushing a stalled car along the road does work; holding it still does not."
+key_experiments:
+  - "Pull a block with a spring balance through a measured distance; work = force × distance."
 common_misconceptions:
   - Holding a heavy object requires work (no displacement in the direction of force means no work by that force).
   - Work is a form of energy (work is the process of transferring energy; energy is the quantity).
