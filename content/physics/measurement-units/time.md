@@ -28,6 +28,8 @@ relationships:
     target: lhs:phys.measurement
   - type: related_to
     target: lhs:phys.scalar
+  - type: related_to
+    target: lhs:phys.frequency
 ---
 
 ## Notes

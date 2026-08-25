@@ -27,8 +27,8 @@ provenance:
 relationships:
   - type: special_case_of
     target: lhs:bio.cell
-  - type: logically_requires
-    target: lhs:bio.cell
+  - type: related_to
+    target: lhs:bio.animal-cell
 ---
 
 ## Notes

@@ -30,7 +30,7 @@ relationships:
     target: lhs:bio.plant-cell
   - type: logically_requires
     target: lhs:chem.chemical-reaction
-  - type: related_to
+  - type: logically_requires
     target: lhs:phys.light
   - type: related_to
     target: lhs:phys.conservation-of-energy

@@ -31,6 +31,8 @@ relationships:
     target: lhs:phys.electromagnetic-spectrum
   - type: related_to
     target: lhs:earth.earth-system
+  - type: related_to
+    target: lhs:phys.thermal-energy
 ---
 
 ## Notes
