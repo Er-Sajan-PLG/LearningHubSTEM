@@ -662,3 +662,46 @@ div#graphCanvas {
   transition: background 0.15s, color 0.15s;
 }
 .cluster-pill:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+/* Inspector tabs + chips + lists */
+.inspect-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 12px;
+  margin: 6px 0 2px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 8px;
+}
+.inspect-tab {
+  background: rgba(15,23,42,0.6);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.15s;
+}
+.inspect-tab:hover { color: #fff; border-color: var(--accent-cyan); }
+.inspect-tab.active {
+  background: rgba(56,189,248,0.16);
+  color: var(--accent-cyan);
+  border-color: rgba(56,189,248,0.4);
+}
+.inspect-body { padding: 2px 12px 12px; overflow-y: auto; max-height: 46vh; }
+.pill-chip {
+  background: rgba(15,23,42,0.6);
+  border: 1px solid var(--border-glass);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pill-chip span { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.pill-chip strong { font-size: 0.9rem; color: var(--accent-cyan); }
+.insp-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; line-height: 1.5; font-size: 0.88rem; color: #cbd5e1; }
+.muted { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }

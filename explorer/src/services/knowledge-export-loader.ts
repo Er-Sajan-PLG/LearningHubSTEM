@@ -25,6 +25,8 @@ export interface LhsEntity {
   common_misconceptions?: string[];
   learning_objectives?: string[];
   real_world_applications?: string[];
+  examples?: string[];
+  key_experiments?: string[];
   provenance?: LhsProvenance;
   relationships?: LhsRelationship[];
 }
