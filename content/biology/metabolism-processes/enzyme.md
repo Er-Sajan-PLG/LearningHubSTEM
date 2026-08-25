@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Salivary amylase digests starch in the mouth; catalase breaks down hydrogen peroxide in cells."
+  - "Some laundry detergents use enzymes to remove stains."
+key_experiments:
+  - "Catalase + hydrogen peroxide: bubbling rate drops as temperature rises past the optimum (denaturation); iodine test for amylase on starch."
 common_misconceptions:
   - Enzymes are alive or die when heated (enzymes are protein molecules that denature/lose active site shape at extreme heat or pH).
   - Enzymes work on any reactant (enzymes demonstrate high substrate specificity via lock-and-key / induced fit active sites).

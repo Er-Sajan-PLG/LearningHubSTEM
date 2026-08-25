@@ -10,6 +10,11 @@ definition: >-
 symbol: Φ
 unit: weber (Wb)
 equation: Φ = B · A · cos(θ)
+examples:
+  - "Pushing a magnet into a coil links flux and induces current; more turns give more flux linkage."
+  - "Transformer cores concentrate the magnetic flux."
+key_experiments:
+  - "Move a magnet in and out of a coil connected to a galvanometer — deflection grows with speed and number of turns."
 common_misconceptions:
   - Magnetic flux and magnetic field strength are identical (flux accounts for total area and orientation).
   - A stationary coil in a constant magnetic field has changing flux (flux only changes when field, area, or angle changes).

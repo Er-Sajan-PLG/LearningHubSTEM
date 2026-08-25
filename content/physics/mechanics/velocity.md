@@ -10,6 +10,11 @@ definition: >-
 symbol: v
 unit: metre per second (m/s)
 equation: v = Δx / Δt
+examples:
+  - "A plane flying 800 km/h due west — speed plus direction."
+  - "A car's velocity changes when it turns, even if speed is constant."
+key_experiments:
+  - "Motion sensor tracking a walk: velocity shows negative values when the walker reverses direction."
 common_misconceptions:
   - Velocity is just speed with a direction (the vector nature has real mathematical consequences).
   - Higher speed always means higher velocity (if directions differ, they are different velocities).
@@ -24,7 +29,7 @@ real_world_applications:
   - Ballistics (projectile velocity).
   - Weather systems (wind velocity).
 key_experiments:
-  - Motion sensor experiments plotting position vs. time to extract velocity.
+  - "Motion sensor experiments plotting position vs. time to extract velocity."
 provenance:
   ai_drafted: true
 relationships:

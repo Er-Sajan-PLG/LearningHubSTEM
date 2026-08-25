@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A scrapyard electromagnet lifts cars when current flows."
+  - "Electric doorbells and relays use electromagnets."
+key_experiments:
+  - "Wrap an iron nail in insulated wire to a cell: it picks up paperclips, and drops them when the current stops."
 common_misconceptions:
   - Electricity and magnetism are separate phenomena (they are two aspects of the same force).
   - Only magnets produce magnetic fields (current-carrying wires also produce them).
@@ -25,7 +30,7 @@ real_world_applications:
   - Electromagnets (scrap yards, relays).
   - Maglev trains.
 key_experiments:
-  - Oersted's experiment (compass needle deflects near a current-carrying wire).
+  - "Oersted's experiment (compass needle deflects near a current-carrying wire)."
 provenance:
   ai_drafted: true
 relationships:

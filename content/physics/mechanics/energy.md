@@ -10,6 +10,11 @@ definition: >-
 symbol: E
 unit: joule (J)
 equation: null
+examples:
+  - "Stored chemical energy in a battery powers a bulb as electrical and light energy."
+  - "Kinetic energy of a moving bicycle is turned into heat by the brakes."
+key_experiments:
+  - "Pendulum: height at release swaps into speed at the bottom and back — evidence of energy transfer between forms."
 common_misconceptions:
   - Energy is a substance (energy is a property of systems, not a material).
   - Energy can be "used up" (energy is conserved; it only changes form).

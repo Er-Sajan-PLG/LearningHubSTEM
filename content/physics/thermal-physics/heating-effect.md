@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: H = I²·R·t (Joule's law of heating)
+examples:
+  - "An electric kettle and toaster heat because current flows through resistance."
+  - "A bulb filament glows white-hot from the heating effect of current."
+key_experiments:
+  - "Immerse a resistor in water, pass a current, and measure the temperature rise over time (heating ∝ I²R)."
 common_misconceptions:
   - All electrical energy becomes heat (some becomes light, mechanical energy, etc.).
   - Heating effect is always undesirable (it's useful in heaters, fuses, and bulbs).

@@ -10,6 +10,11 @@ definition: >-
 symbol: B
 unit: tesla (T)
 equation: null
+examples:
+  - "Iron filings around a bar magnet trace its field lines; a compass aligns with Earth's field."
+  - "Speaker and fridge magnets have strong nearby fields."
+key_experiments:
+  - "Scatter iron filings (or use a plotting compass) to map the field lines around a bar magnet."
 common_misconceptions:
   - Magnetic field lines are real physical objects (they are a model to represent the field).
   - Magnetic fields only exist around magnets (current-carrying wires also produce them).

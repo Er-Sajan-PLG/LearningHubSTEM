@@ -10,6 +10,9 @@ definition: >-
 symbol: null
 unit: newton (N)
 equation: F_buoyant = ρ_fluid · V_displaced · g
+examples:
+  - "A ship floats because its average density is lower than water's."
+  - "A rubber duck floats; a stone sinks."
 common_misconceptions:
   - Floating objects experience no buoyant force (they do — it equals their weight).
   - Only light objects float (shape matters — steel ships float).
@@ -25,8 +28,8 @@ real_world_applications:
   - Life jackets.
   - Hydrometers.
 key_experiments:
-  - Measuring buoyant force on an object in water.
-  - Verifying Archimedes' principle.
+  - "Measuring buoyant force on an object in water."
+  - "Verifying Archimedes' principle."
 provenance:
   ai_drafted: true
 relationships:

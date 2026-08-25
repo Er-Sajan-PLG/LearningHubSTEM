@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "The water cycle moves water across the hydrosphere, atmosphere and biosphere."
+  - "Volcanic eruptions transfer matter from the geosphere into the atmosphere."
+key_experiments:
+  - "Trace one carbon or water atom's journey across the four spheres in a systems map."
 common_misconceptions:
   - Earth's spheres operate independently of one another (they are constantly exchanging matter and energy).
   - Human activity is external to the Earth system (human activities are an integral component of biosphere interactions).

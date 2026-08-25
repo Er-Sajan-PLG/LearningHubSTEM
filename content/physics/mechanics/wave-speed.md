@@ -10,6 +10,11 @@ definition: >-
 symbol: v
 unit: metre per second (m/s)
 equation: v = f·λ
+examples:
+  - "Sound travels at about 343 m/s in air; light at 3×10⁸ m/s."
+  - "Deep-ocean tsunami waves can travel at hundreds of km/h."
+key_experiments:
+  - "Ripple tank: measure frequency and wavelength and verify v = f·λ."
 common_misconceptions:
   - Higher frequency waves always travel faster (in the same medium, all waves of the same type travel at the same speed).
   - Wave speed is infinite (all waves have finite speed — light travels at 3×10⁸ m/s in vacuum).

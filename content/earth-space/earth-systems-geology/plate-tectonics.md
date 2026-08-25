@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "The Himalayas formed from continental collision; earthquakes cluster at plate boundaries."
+  - "The mid-Atlantic ridge spreads and widens the ocean a few centimetres a year."
+key_experiments:
+  - "Convection model: heat water with dye in a beaker to watch convection cells, then map plate boundaries on a globe."
 common_misconceptions:
   - Continents float on liquid ocean magma (tectonic plates consist of rigid lithospheric rock moving over ductile asthenosphere).
   - Tectonic plate movement is fast and noticeable daily (plates move at rates of 1–10 cm per year).

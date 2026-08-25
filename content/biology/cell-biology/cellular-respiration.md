@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP energy
+examples:
+  - "Exercise muscles oxidize glucose for energy; yeast ferments sugar to alcohol and CO₂ (anaerobic)."
+  - "Germinating seeds respire and give out heat."
+key_experiments:
+  - "Blow into or place germinating seeds in limewater — it turns milky, showing CO₂ from respiration."
 common_misconceptions:
   - Cellular respiration is breathing (breathing is gas exchange at the organism level; cellular respiration is energy release at the cell level).
   - Plants do not undergo cellular respiration (plants continuously undergo cellular respiration to power cell work).

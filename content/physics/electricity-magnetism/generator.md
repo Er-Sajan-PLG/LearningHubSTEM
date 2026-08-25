@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Bicycle dynamos light a lamp as the wheel spins the rotor."
+  - "Hydroelectric and thermal power stations rotate large generators."
+key_experiments:
+  - "Hand-crank a generator to light an LED; reversing the spin reverses the polarity."
 common_misconceptions:
   - Generators create electric charge (generators move existing free charges in conductors via magnetic induction).
   - Generators produce 100% efficient electrical power (some mechanical energy is dissipated as thermal energy).

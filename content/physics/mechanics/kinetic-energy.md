@@ -10,6 +10,11 @@ definition: >-
 symbol: KE or K
 unit: joule (J)
 equation: KE = ½·m·v²
+examples:
+  - "A moving truck has far more kinetic energy than a bicycle at the same speed."
+  - "Wind turns turbine blades — the air's kinetic energy becomes electricity."
+key_experiments:
+  - "Ramp-and-block: objects released from higher ramps (more KE = ½mv²) push a block farther."
 common_misconceptions:
   - Kinetic energy is directly proportional to speed (it depends on speed squared — doubling
     speed quadruples kinetic energy).

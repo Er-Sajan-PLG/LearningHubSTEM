@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Burning fossil fuels releases greenhouse gases that warm the planet."
+  - "Switching to renewable energy reduces pollution from power generation."
+key_experiments:
+  - "School energy audit: measure and rank electricity use and discuss where each unit's energy comes from."
 common_misconceptions:
   - Environmental problems are only biological (physics plays a major role in energy, climate, and pollution).
   - Energy flow in ecosystems is 100% efficient (most energy is lost at each trophic level).

@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Water and methane share electrons in covalent bonds."
+  - "Diamond, a giant covalent lattice, is the hardest natural substance."
+key_experiments:
+  - "Build molecular models of H₂O, CO₂ and CH₄ to visualize shared electron pairs."
 common_misconceptions:
   - Covalent bonding involves transfer of electrons (covalent bonding involves sharing of electron pairs).
   - All covalent compounds are simple small molecules (some form giant covalent network structures like diamond and quartz).

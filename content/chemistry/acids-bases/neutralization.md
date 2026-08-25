@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: H⁺(aq) + OH⁻(aq) → H₂O(l)
+examples:
+  - "Antacids relieve acid indigestion by neutralizing stomach acid."
+  - "Farmers spread lime on acidic soil to raise its pH."
+key_experiments:
+  - "Add acid to a base dropwise until the indicator turns neutral, then evaporate the water to recover salt crystals."
 common_misconceptions:
   - Neutralization always results in a solution of exactly pH 7 (neutralization of weak acids or bases can produce acidic or basic salt solutions).
   - Neutralization destroys energy (neutralization is exothermic and releases heat).

@@ -10,6 +10,11 @@ definition: >-
 symbol: Q or q
 unit: coulomb (C)
 equation: null
+examples:
+  - "A balloon rubbed on hair attracts small paper pieces."
+  - "Lightning is a large flow of charge between cloud and ground."
+key_experiments:
+  - "Electrostatics: charge a balloon or rod by rubbing and detect it with a pith-ball or electroscope."
 common_misconceptions:
   - Charge is created by friction (charge is transferred, not created).
   - A charged object always attracts uncharged objects (a charged object can attract a neutral one through polarization).
@@ -24,7 +29,7 @@ real_world_applications:
   - Capacitors.
   - Electrostatic painting.
 key_experiments:
-  - Charging a rod by friction and attracting small pieces of paper.
+  - "Charging a rod by friction and attracting small pieces of paper."
 provenance:
   ai_drafted: true
 relationships:

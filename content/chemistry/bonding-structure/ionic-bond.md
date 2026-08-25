@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Table salt is an ionic lattice of Na⁺ and Cl⁻ ions."
+  - "Ionic compounds conduct electricity when molten or dissolved in water."
+key_experiments:
+  - "Compare the conductivity of pure water, salt solution and molten salt with a bulb-and-electrodes circuit."
 common_misconceptions:
   - Ionic compounds consist of individual discrete molecules (ionic compounds form continuous 3D giant crystal lattices).
   - Ionic bonds exist in liquid solution without ion dissociation (in water, ionic lattices dissociate into solvated free ions).

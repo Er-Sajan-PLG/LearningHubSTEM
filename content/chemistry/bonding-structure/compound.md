@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Water (H₂O), carbon dioxide (CO₂) and table salt (NaCl) are compounds."
+  - "Sodium and chlorine are dangerous, yet the compound sodium chloride is table salt."
+key_experiments:
+  - "Electrolysis of water collects hydrogen and oxygen in a 2 : 1 volume ratio — decomposition of a compound."
 common_misconceptions:
   - Compounds retain the physical and chemical properties of their constituent elements (e.g., sodium and chlorine vs. table salt).
   - Mixtures and compounds are identical (mixtures are physically combined without fixed ratios or chemical bonds).

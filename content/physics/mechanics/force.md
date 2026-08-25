@@ -10,6 +10,11 @@ definition: >-
 symbol: F
 unit: newton (N)
 equation: F = dp/dt ; F = m·a (constant mass)
+examples:
+  - "Pushing a shopping trolley makes it accelerate."
+  - "A magnet pulls a pin toward it — a contact-free force."
+key_experiments:
+  - "Kick or push a dynamics cart and record its acceleration with a motion sensor (F∝a)."
 common_misconceptions:
   - A constant net force produces constant speed (it produces constant acceleration).
   - Force is a property of an object (force acts between objects; it is not possessed by one).
@@ -27,8 +32,8 @@ real_world_applications:
   - Engineering structures (forces in bridges, buildings).
   - Spacecraft propulsion.
 key_experiments:
-  - Measuring force using a spring balance.
-  - Investigating the relationship between force, mass, and acceleration using a trolley and ticker-timer.
+  - "Measuring force using a spring balance."
+  - "Investigating the relationship between force, mass, and acceleration using a trolley and ticker-timer."
 provenance:
   ai_drafted: true
 relationships:

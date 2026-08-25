@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A gold atom is about 0.3 nm across; iron atoms pack in a regular metal lattice."
+  - "Atoms of one element all share the same proton number."
+key_experiments:
+  - "Build atomic structure models and use the periodic table to find proton/neutron/electron counts."
 common_misconceptions:
   - Atoms are solid spheres with fixed orbits like solar systems (electrons exist in probability clouds).
   - Atoms can be seen with optical microscopes (atoms are smaller than wavelengths of visible light).

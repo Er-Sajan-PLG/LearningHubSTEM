@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Air, seawater and sand are mixtures with variable composition."
+  - "Filtering muddy water separates the sand — a physical change."
+key_experiments:
+  - "Separate a salt-and-sand mixture: dissolve in water, filter off the sand, then evaporate to recover the salt."
 common_misconceptions:
   - A mixture and a compound are the same (mixtures keep the properties of their components and separate physically; compounds form new substances with new properties).
   - Every mixture looks uniform (only homogeneous mixtures do; heterogeneous mixtures, like sand in water, are visibly uneven).

@@ -10,6 +10,14 @@ definition: >-
 symbol: f or ν (nu)
 unit: hertz (Hz)
 equation: f = 1 / T (T = period)
+real_world_applications:
+  - "Radio and TV broadcast on assigned frequencies."
+  - "Mains electricity is 50 Hz; the pitch of a musical note is set by its frequency."
+examples:
+  - "Radio stations broadcast at different frequencies; mains electricity is 50 Hz."
+  - "A humming insect beats its wings faster than a bee — a higher frequency."
+key_experiments:
+  - "Tuning forks of different pitches viewed on a microphone + oscilloscope: higher pitch means higher frequency."
 common_misconceptions:
   - Higher frequency means larger waves (higher frequency means shorter wavelength).
   - Frequency depends on the medium (frequency is determined by the source; wavelength changes with medium).

@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Body temperature stays near 37 °C; insulin regulates blood glucose."
+  - "Sweating cools the body — a negative-feedback response."
+key_experiments:
+  - "Measure pulse, breathing rate and temperature before, during and after exercise and graph the return to rest."
 common_misconceptions:
   - Homeostasis means conditions never change (it means conditions are kept within a narrow functional range, with continuous adjustment).
   - Only warm-blooded animals maintain homeostasis (all living organisms regulate some internal conditions).

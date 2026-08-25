@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Carbon-14 dating is used on ancient organic remains; radioactive tracers image organs in medicine."
+  - "Smoke detectors contain a small alpha-emitting source."
+key_experiments:
+  - "Use a Geiger counter to detect background radiation and compare shielding/absorption of different sources."
 common_misconceptions:
   - Radioactivity is always man-made (it occurs naturally).
   - All radiation is harmful (we are exposed to natural background radiation daily).
@@ -25,7 +30,7 @@ real_world_applications:
   - Carbon dating.
   - Sterilization of medical equipment.
 key_experiments:
-  - Detecting radiation using a Geiger-Muller tube.
+  - "Detecting radiation using a Geiger-Muller tube."
 provenance:
   ai_drafted: true
 relationships:

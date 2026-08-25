@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: F_AB = -F_BA
+examples:
+  - "A rocket pushes exhaust gas down and the gas pushes the rocket up."
+  - "You push Earth backward when you walk; Earth pushes you forward."
+key_experiments:
+  - "Two carts push apart with a spring between them — equal and opposite impulses."
 common_misconceptions:
   - Action and reaction forces cancel each other (they act on different objects, so they cannot cancel).
   - The stronger object exerts a larger force (forces in an action-reaction pair are always equal).
@@ -25,8 +30,8 @@ real_world_applications:
   - Swimming (water pushed backward; swimmer moves forward).
   - Recoil of a gun.
 key_experiments:
-  - Two spring balances pulling each other show equal readings.
-  - Magnets on carts repelling each other move equal distances (same mass) or inversely proportional distances (different mass).
+  - "Two spring balances pulling each other show equal readings."
+  - "Magnets on carts repelling each other move equal distances (same mass) or inversely proportional distances (different mass)."
 provenance:
   ai_drafted: true
 relationships:

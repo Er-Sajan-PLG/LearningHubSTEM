@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: Q = m·L (L = latent heat)
+examples:
+  - "Ice melts to water at 0 °C; water boils to steam at 100 °C at 1 atm."
+  - "Steam condenses on a cold window pane."
+key_experiments:
+  - "Heat ice through melting to boiling while plotting a temperature-time curve — watch the plateaus."
 common_misconceptions:
   - Temperature rises during melting/boiling (it stays constant until the change is complete).
   - Boiling only happens at 100°C (boiling point depends on pressure).
@@ -25,7 +30,7 @@ real_world_applications:
   - Ice production.
   - Distillation.
 key_experiments:
-  - Heating ice to water to steam and recording temperature over time.
+  - "Heating ice to water to steam and recording temperature over time."
 provenance:
   ai_drafted: true
 relationships:

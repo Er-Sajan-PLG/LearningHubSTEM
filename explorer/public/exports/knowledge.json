@@ -1,7 +1,7 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-25T16:09:12+00:00",
+  "generated_at": "2026-08-25T16:17:56+00:00",
   "source": "content/",
   "entity_count": 124,
   "entities": [
@@ -15,6 +15,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Muscle, nerve and skin cells are specialized animal cells.",
+        "Mature red blood cells have no nucleus."
+      ],
+      "key_experiments": [
+        "Compare cheek-cell micrographs with plant-cell micrographs and draw labelled diagrams."
+      ],
       "common_misconceptions": [
         "Animal cells have cell walls like plant cells (animal cells only have a flexible cell membrane).",
         "Animal cells contain chloroplasts (animal cells obtain energy through heterotrophic nutrition and respiration)."
@@ -54,6 +61,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Bacteria are single cells; a human body contains trillions.",
+        "Cheek cells and onion skin cells are classic microscope specimens."
+      ],
+      "key_experiments": [
+        "Prepare and observe cheek (animal) and onion (plant) cells under a microscope with a stain."
+      ],
       "common_misconceptions": [
         "Cells are flat two-dimensional structures as seen under standard microscope slides (cells are 3D).",
         "All cells are identical in size and shape (cells exhibit extreme specialization and diversity)."
@@ -93,6 +107,13 @@
       "symbol": null,
       "unit": null,
       "equation": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP energy",
+      "examples": [
+        "Exercise muscles oxidize glucose for energy; yeast ferments sugar to alcohol and CO₂ (anaerobic).",
+        "Germinating seeds respire and give out heat."
+      ],
+      "key_experiments": [
+        "Blow into or place germinating seeds in limewater — it turns milky, showing CO₂ from respiration."
+      ],
       "common_misconceptions": [
         "Cellular respiration is breathing (breathing is gas exchange at the organism level; cellular respiration is energy release at the cell level).",
         "Plants do not undergo cellular respiration (plants continuously undergo cellular respiration to power cell work)."
@@ -140,6 +161,13 @@
       "symbol": "DNA",
       "unit": null,
       "equation": null,
+      "examples": [
+        "DNA fingerprinting identifies people; PCR copies tiny DNA samples in forensic labs.",
+        "Each human cell nucleus packs about 2 m of DNA into chromosomes."
+      ],
+      "key_experiments": [
+        "Extract DNA from a strawberry or banana using detergent and cold alcohol; observe the strands."
+      ],
       "common_misconceptions": [
         "DNA is found in all body cells equally except red blood cells (mature human red blood cells lack nuclei and DNA).",
         "Genes and DNA are separate materials (genes are specific functional segments of DNA molecules)."
@@ -179,6 +207,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A pond, a forest and a coral reef are ecosystems.",
+        "Decomposers break down dead matter and recycle nutrients in a compost heap."
+      ],
+      "key_experiments": [
+        "Build a sealed bottle biome (mini ecosystem) or survey a local pond or lawn with a quadrat."
+      ],
       "common_misconceptions": [
         "Ecosystems are static and unchanging when undisturbed (ecosystems experience continuous dynamic fluctuations and succession).",
         "Decomposers are unimportant compared to predators (decomposers recycle essential chemical nutrients without which ecosystems collapse)."
@@ -226,6 +261,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Salivary amylase digests starch in the mouth; catalase breaks down hydrogen peroxide in cells.",
+        "Some laundry detergents use enzymes to remove stains."
+      ],
+      "key_experiments": [
+        "Catalase + hydrogen peroxide: bubbling rate drops as temperature rises past the optimum (denaturation); iodine test for amylase on starch."
+      ],
       "common_misconceptions": [
         "Enzymes are alive or die when heated (enzymes are protein molecules that denature/lose active site shape at extreme heat or pH).",
         "Enzymes work on any reactant (enzymes demonstrate high substrate specificity via lock-and-key / induced fit active sites)."
@@ -269,6 +311,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Eye colour and blood type are controlled by genes.",
+        "Sickle-cell disease results from a single-gene variant."
+      ],
+      "key_experiments": [
+        "Model a cross with a Punnett square and trace how one gene maps to a protein-coding DNA segment."
+      ],
       "common_misconceptions": [
         "Single genes strictly dictate complex traits like intelligence or behavior (most traits are polygenic and environmentally influenced).",
         "Mutated genes are always harmful (mutations provide genetic variation essential for natural selection and evolution)."
@@ -308,6 +357,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Body temperature stays near 37 °C; insulin regulates blood glucose.",
+        "Sweating cools the body — a negative-feedback response."
+      ],
+      "key_experiments": [
+        "Measure pulse, breathing rate and temperature before, during and after exercise and graph the return to rest."
+      ],
       "common_misconceptions": [
         "Homeostasis means conditions never change (it means conditions are kept within a narrow functional range, with continuous adjustment).",
         "Only warm-blooded animals maintain homeostasis (all living organisms regulate some internal conditions).",
@@ -353,6 +409,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Peppered moths shifted to dark form during the Industrial Revolution.",
+        "Antibiotic-resistant bacteria spread through selection."
+      ],
+      "key_experiments": [
+        "Camouflage 'predator-prey' activity with coloured beans on patterned cloth selects the well-hidden prey."
+      ],
       "common_misconceptions": [
         "Natural selection involves intentional self-adaptation by individual organisms (adaptation occurs across populations over generations).",
         "Natural selection leads to ultimate perfection in organisms (selection optimizes survival and reproduction relative to current environmental pressures)."
@@ -392,6 +455,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "The nucleus stores the DNA that directs cell activity.",
+        "A stained cheek-cell nucleus is clearly visible under the microscope."
+      ],
+      "key_experiments": [
+        "Stain cheek cells with methylene blue and observe the nuclei; order a karyotype-style set of images by chromosome number."
+      ],
       "common_misconceptions": [
         "Every cell has a nucleus (mature red blood cells and prokaryotes lack a nucleus).",
         "The nucleus is the same as the whole cell's control in prokaryotes (prokaryotes have no nucleus at all; their genetic material floats in the cytoplasm).",
@@ -433,6 +503,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A raisin plumps up in water; a cucumber slice in salt shrinks.",
+        "Freshwater fish take in water while marine fish lose it — osmotic balance."
+      ],
+      "key_experiments": [
+        "Soak potato strips in pure water versus salt solutions and measure length/mass change over time."
+      ],
       "common_misconceptions": [
         "Osmosis moves solute particles through the membrane (osmosis moves the solvent — water — while solutes stay behind).",
         "Osmosis and diffusion are identical (osmosis is a special case of diffusion — the diffusion of water across a selectively permeable membrane).",
@@ -478,6 +555,13 @@
       "symbol": null,
       "unit": null,
       "equation": "6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂",
+      "examples": [
+        "Trees, crops and algae photosynthesize; most atmospheric oxygen comes from photosynthesis.",
+        "Only the green parts of a variegated leaf photosynthesize."
+      ],
+      "key_experiments": [
+        "Starch test on a destarched variegated leaf: light-struck areas turn blue-black with iodine, shaded areas do not."
+      ],
       "common_misconceptions": [
         "Photosynthesis occurs to produce energy for plants instead of storing energy as carbohydrates.",
         "Photosynthesis occurs during the day while cellular respiration only occurs at night (respiration occurs continuously).",
@@ -526,6 +610,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Onion epidermis shows a clear cell wall and nucleus; Elodea leaves show moving chloroplasts.",
+        "Leaf cells are packed with chloroplasts for photosynthesis."
+      ],
+      "key_experiments": [
+        "Observe pondweed or Elodea: moving chloroplasts; plasmolysis shrink in a strong salt solution."
+      ],
       "common_misconceptions": [
         "Plant cells do not perform cellular respiration (plant cells perform both photosynthesis and respiration).",
         "Plant cells lack cell membranes (plant cells have a cell membrane inside the rigid cell wall)."
@@ -565,6 +656,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Vinegar (acetic acid) and lemon juice (citric acid) are weak acids.",
+        "Car-battery electrolyte is strongly acidic sulfuric acid."
+      ],
+      "key_experiments": [
+        "Test household substances with litmus or universal indicator; add acid to a metal and test the gas with a burning splint (pops)."
+      ],
       "common_misconceptions": [
         "All acids burn skin and dissolve everything (many weak acids are safe and essential in biological systems, e.g. citric acid, amino acids).",
         "Strong acids and concentrated acids mean the same thing (strength is degree of ionization; concentration is amount of acid per volume)."
@@ -604,6 +702,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A gold atom is about 0.3 nm across; iron atoms pack in a regular metal lattice.",
+        "Atoms of one element all share the same proton number."
+      ],
+      "key_experiments": [
+        "Build atomic structure models and use the periodic table to find proton/neutron/electron counts."
+      ],
       "common_misconceptions": [
         "Atoms are solid spheres with fixed orbits like solar systems (electrons exist in probability clouds).",
         "Atoms can be seen with optical microscopes (atoms are smaller than wavelengths of visible light)."
@@ -647,6 +752,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Soap, baking soda and antacids are basic substances.",
+        "Caustic soda (sodium hydroxide) is a strong base."
+      ],
+      "key_experiments": [
+        "Universal-indicator testing of household bases; mix a base with an acid and feel the temperature change."
+      ],
       "common_misconceptions": [
         "Bases are completely harmless compared to acids (strong alkalis like sodium hydroxide cause severe chemical burns).",
         "All bases are soluble in water (alkalis are water-soluble bases; insoluble bases like copper oxide are not alkalis)."
@@ -686,6 +798,13 @@
       "symbol": null,
       "unit": null,
       "equation": "2H₂ + O₂ → 2H₂O   ·   CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "examples": [
+        "2H₂ + O₂ → 2H₂O models hydrogen burning; CH₄ + 2O₂ → CO₂ + 2H₂O models methane combustion.",
+        "Photosynthesis: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂."
+      ],
+      "key_experiments": [
+        "Balance equations and verify atom conservation using molecular model kits."
+      ],
       "common_misconceptions": [
         "Coefficients and subscripts can be changed freely to balance an equation (coefficients may change; subscripts define the substance and must not).",
         "Balancing changes the identity of the substances (balancing only adjusts amounts, never the compounds involved).",
@@ -731,6 +850,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Rusting of iron, burning wood and baking a cake are chemical reactions.",
+        "Photosynthesis is one of the most important natural chemical reactions."
+      ],
+      "key_experiments": [
+        "Evidence-of-reaction stations: colour change, gas bubbles, precipitate formation and temperature change."
+      ],
       "common_misconceptions": [
         "Atoms are destroyed or created during chemical reactions (atoms are only rearranged).",
         "Mass changes significantly during chemical reactions in closed systems (mass is conserved)."
@@ -778,6 +904,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Gas stoves, car engines and campfires run on combustion of fuel.",
+        "Incomplete combustion makes soot and dangerous carbon monoxide."
+      ],
+      "key_experiments": [
+        "Burn a small candle in a jar: observe moisture and test the gas with limewater to show CO₂ from complete combustion."
+      ],
       "common_misconceptions": [
         "Combustion can occur without oxygen (combustion requires an oxidant, normally oxygen in air).",
         "Fire and combustion are the same thing (fire is the visible, observable event of combustion, not the reaction itself).",
@@ -823,6 +956,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Water (H₂O), carbon dioxide (CO₂) and table salt (NaCl) are compounds.",
+        "Sodium and chlorine are dangerous, yet the compound sodium chloride is table salt."
+      ],
+      "key_experiments": [
+        "Electrolysis of water collects hydrogen and oxygen in a 2 : 1 volume ratio — decomposition of a compound."
+      ],
       "common_misconceptions": [
         "Compounds retain the physical and chemical properties of their constituent elements (e.g., sodium and chlorine vs. table salt).",
         "Mixtures and compounds are identical (mixtures are physically combined without fixed ratios or chemical bonds)."
@@ -862,6 +1002,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Water and methane share electrons in covalent bonds.",
+        "Diamond, a giant covalent lattice, is the hardest natural substance."
+      ],
+      "key_experiments": [
+        "Build molecular models of H₂O, CO₂ and CH₄ to visualize shared electron pairs."
+      ],
       "common_misconceptions": [
         "Covalent bonding involves transfer of electrons (covalent bonding involves sharing of electron pairs).",
         "All covalent compounds are simple small molecules (some form giant covalent network structures like diamond and quartz)."
@@ -901,6 +1048,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A drop of ink spreads through water on its own.",
+        "Oxygen diffuses from lung air into the blood across thin membranes."
+      ],
+      "key_experiments": [
+        "Drop potassium permanganate into hot and cold water: diffusion is faster at higher temperature."
+      ],
       "common_misconceptions": [
         "Diffusion happens only in gases (diffusion occurs in gases, liquids, and across solutions).",
         "Particles move because they are pushed toward empty space (particles move randomly; net flow arises from statistical imbalance, not repulsion).",
@@ -946,6 +1100,13 @@
       "symbol": "e-",
       "unit": null,
       "equation": null,
+      "examples": [
+        "Electrons flow through wires as electric current.",
+        "Shared electron pairs form covalent bonds such as in water."
+      ],
+      "key_experiments": [
+        "Electrolysis of water (or a conductivity test) shows charge carried by moving electrons/ions."
+      ],
       "common_misconceptions": [
         "Electrons orbit the nucleus in fixed circular paths like planets (electrons exist in 3D atomic orbitals/probability clouds).",
         "Electrons move at the speed of light in wires (electron drift speed is slow, but electromagnetic signal propagates fast)."
@@ -985,6 +1146,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Oxygen, carbon, iron and gold are elements — the simplest pure substances.",
+        "The periodic table organizes about 118 known elements."
+      ],
+      "key_experiments": [
+        "Classify everyday materials as elements, compounds or mixtures."
+      ],
       "common_misconceptions": [
         "Elements and compounds are the same thing (compounds contain two or more different elements).",
         "Molecules can only be compounds (some elements exist naturally as diatomic or polyatomic molecules, e.g., O₂, N₂)."
@@ -1024,6 +1192,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Table salt is an ionic lattice of Na⁺ and Cl⁻ ions.",
+        "Ionic compounds conduct electricity when molten or dissolved in water."
+      ],
+      "key_experiments": [
+        "Compare the conductivity of pure water, salt solution and molten salt with a bulb-and-electrodes circuit."
+      ],
       "common_misconceptions": [
         "Ionic compounds consist of individual discrete molecules (ionic compounds form continuous 3D giant crystal lattices).",
         "Ionic bonds exist in liquid solution without ion dissociation (in water, ionic lattices dissociate into solvated free ions)."
@@ -1067,6 +1242,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Air, water, rock and living tissue are all matter.",
+        "Ice, liquid water and steam are the same matter in different states."
+      ],
+      "key_experiments": [
+        "Demonstrate melting, boiling and condensation while showing that the amount of substance is conserved."
+      ],
       "common_misconceptions": [
         "Energy and matter are the same thing at introductory levels (energy has no mass or volume).",
         "Gases do not count as matter because they are invisible (gases have mass and occupy volume)."
@@ -1106,6 +1288,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Air, seawater and sand are mixtures with variable composition.",
+        "Filtering muddy water separates the sand — a physical change."
+      ],
+      "key_experiments": [
+        "Separate a salt-and-sand mixture: dissolve in water, filter off the sand, then evaporate to recover the salt."
+      ],
       "common_misconceptions": [
         "A mixture and a compound are the same (mixtures keep the properties of their components and separate physically; compounds form new substances with new properties).",
         "Every mixture looks uniform (only homogeneous mixtures do; heterogeneous mixtures, like sand in water, are visibly uneven).",
@@ -1151,6 +1340,13 @@
       "symbol": null,
       "unit": null,
       "equation": "H⁺(aq) + OH⁻(aq) → H₂O(l)",
+      "examples": [
+        "Antacids relieve acid indigestion by neutralizing stomach acid.",
+        "Farmers spread lime on acidic soil to raise its pH."
+      ],
+      "key_experiments": [
+        "Add acid to a base dropwise until the indicator turns neutral, then evaporate the water to recover salt crystals."
+      ],
       "common_misconceptions": [
         "Neutralization always results in a solution of exactly pH 7 (neutralization of weak acids or bases can produce acidic or basic salt solutions).",
         "Neutralization destroys energy (neutralization is exothermic and releases heat)."
@@ -1194,6 +1390,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "key_experiments": [
+        "Explore the periodic table by comparing group reactivity across elements using data or handled samples."
+      ],
+      "examples": [
+        "Elements are arranged by increasing atomic number; elements in the same group share similar properties.",
+        "The halogens (F, Cl, Br, I) form one group with similar reactions."
+      ],
       "common_misconceptions": [
         "Elements in the periodic table are ordered by atomic mass (they are strictly ordered by atomic number Z).",
         "All elements in a group have identical physical states (groups share chemical reactivity patterns, but physical states vary)."
@@ -1233,6 +1436,13 @@
       "symbol": "pH",
       "unit": null,
       "equation": "pH = -log₁₀[H⁺]",
+      "examples": [
+        "Lemon juice is about pH 2, pure water pH 7, and soap pH 9-10.",
+        "Soil pH decides which crops grow well in a region."
+      ],
+      "key_experiments": [
+        "Use universal indicator against a colour chart to measure the pH of a range of household solutions."
+      ],
       "common_misconceptions": [
         "A change of 1 pH unit represents a 1-fold change in acidity (pH is logarithmic: a 1-unit change is a 10-fold change in H⁺ concentration).",
         "Neutral pH is always 7 regardless of temperature (neutral pH equals 7 at 25 °C, but changes slightly with temperature)."
@@ -1272,6 +1482,13 @@
       "symbol": "p+",
       "unit": null,
       "equation": null,
+      "examples": [
+        "The proton number defines the element — hydrogen has one proton.",
+        "The sodium ion Na⁺ has 11 protons but only 10 electrons."
+      ],
+      "key_experiments": [
+        "Element-identification activity: given Z, name the element and build its atomic notation."
+      ],
       "common_misconceptions": [
         "Protons leave the nucleus during ordinary chemical reactions (only outer electrons are transferred or shared).",
         "Changing the number of protons does not change the element (proton count strictly determines elemental identity)."
@@ -1311,6 +1528,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Table salt is sodium chloride; ammonium nitrate is a salt used in fertilizers.",
+        "Road salt lowers the freezing point of water for de-icing."
+      ],
+      "key_experiments": [
+        "Neutralize hydrochloric acid with sodium hydroxide and evaporate to obtain sodium chloride crystals."
+      ],
       "common_misconceptions": [
         "Salt means only sodium chloride (a salt is any ionic compound formed from acid-base chemistry; NaCl is one example).",
         "All salts are safe to eat (many salts such as ammonium nitrate or heavy-metal salts are toxic or hazardous).",
@@ -1356,6 +1580,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Airlines fly in the troposphere while the ozone layer sits in the stratosphere.",
+        "Air at sea level exerts about 101 kPa of pressure."
+      ],
+      "key_experiments": [
+        "Demonstrate air has mass and occupies space; read atmospheric pressure with a barometer and see it drop with altitude."
+      ],
       "common_misconceptions": [
         "Space begins abruptly where the atmosphere stops (atmospheric density decreases continuously with altitude).",
         "The greenhouse effect is entirely harmful (the natural greenhouse effect makes Earth habitable)."
@@ -1407,6 +1638,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Distant galaxies are moving apart — the expansion of the universe.",
+        "The cosmic microwave background is remnant radiation from the early universe."
+      ],
+      "key_experiments": [
+        "Balloon or raisin-cake model: dots drawn on the surface separate as the balloon inflates, like distant galaxies receding."
+      ],
       "common_misconceptions": [
         "The Big Bang was an explosion into pre-existing space (the Big Bang describes the expansion of space itself everywhere).",
         "The universe expands into empty outer space (space itself is expanding between distant galaxy clusters)."
@@ -1446,6 +1684,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "The water cycle moves water across the hydrosphere, atmosphere and biosphere.",
+        "Volcanic eruptions transfer matter from the geosphere into the atmosphere."
+      ],
+      "key_experiments": [
+        "Trace one carbon or water atom's journey across the four spheres in a systems map."
+      ],
       "common_misconceptions": [
         "Earth's spheres operate independently of one another (they are constantly exchanging matter and energy).",
         "Human activity is external to the Earth system (human activities are an integral component of biosphere interactions)."
@@ -1493,6 +1738,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Earth's natural greenhouse warming keeps the average surface near 15 °C; Venus is hot from a dense CO₂ atmosphere.",
+        "Rising CO₂ and methane from human activity strengthen the greenhouse effect."
+      ],
+      "key_experiments": [
+        "Two-bottle model: a sealed jar and an open jar in sunlight with a thermometer — compare the temperature rise."
+      ],
       "common_misconceptions": [
         "The greenhouse effect functions like a physical glass greenhouse preventing convection (the atmospheric effect operates primarily by absorbing and re-emitting infrared radiation).",
         "The natural greenhouse effect is harmful (without the natural greenhouse effect, Earth's average surface temperature would be approximately -18 °C)."
@@ -1540,6 +1792,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "The Himalayas formed from continental collision; earthquakes cluster at plate boundaries.",
+        "The mid-Atlantic ridge spreads and widens the ocean a few centimetres a year."
+      ],
+      "key_experiments": [
+        "Convection model: heat water with dye in a beaker to watch convection cells, then map plate boundaries on a globe."
+      ],
       "common_misconceptions": [
         "Continents float on liquid ocean magma (tectonic plates consist of rigid lithospheric rock moving over ductile asthenosphere).",
         "Tectonic plate movement is fast and noticeable daily (plates move at rates of 1–10 cm per year)."
@@ -1583,6 +1842,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Granite weathers to sand, becomes sandstone, and is buried and heated into metamorphic rock.",
+        "Marble is metamorphosed limestone; basalt is volcanic rock."
+      ],
+      "key_experiments": [
+        "Lay down graded sediments in a jar to model sedimentary layering; identify rock samples and chart their cycle pathway."
+      ],
       "common_misconceptions": [
         "Rocks are permanent and unchanging (rocks continuously transform between the three families over geological time).",
         "The rock cycle moves only in one direction (rocks can take many different pathways through the cycle).",
@@ -1632,6 +1898,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Nepal's warm summers and cool winters come from Earth's ~23.5° axial tilt.",
+        "Solstices and equinoxes mark the extremes of the tilt cycle."
+      ],
+      "key_experiments": [
+        "Globe-and-lamp model: tilt the globe and observe how the amount and angle of sunlight change for a fixed location."
+      ],
       "common_misconceptions": [
         "Seasons are caused by Earth being significantly closer to the Sun in summer (Earth is actually closest to the Sun in January during Northern Hemisphere winter).",
         "Both Northern and Southern hemispheres experience summer at the same time (hemispheres experience opposite seasons due to axial tilt orientation)."
@@ -1671,6 +1944,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Mars, Jupiter and the other planets orbit the Sun; comets return on long elliptical orbits.",
+        "The Sun holds about 99.8% of the solar system's mass."
+      ],
+      "key_experiments": [
+        "Build a scale model of solar-system distances (or sizes) across a school field to feel the emptiness between planets."
+      ],
       "common_misconceptions": [
         "The planets orbit the Sun because the Sun is the biggest object (planets orbit because of the mutual gravitational attraction, dominated by the Sun's mass).",
         "Pluto is counted among the eight major planets (Pluto is classified as a dwarf planet).",
@@ -1716,6 +1996,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Evaporation from lakes forms clouds, rain falls over mountains, and rivers carry water back to the sea.",
+        "Dew forms on grass by condensation of overnight water vapour."
+      ],
+      "key_experiments": [
+        "Cover a glass of warm water with a plate and watch condensation — model evaporation, condensation and precipitation in a sealed bag."
+      ],
       "common_misconceptions": [
         "The water cycle creates new water (the total water on Earth is essentially constant; the cycle only moves and changes its state).",
         "Evaporation and boiling are the same (evaporation occurs at any temperature at the surface; boiling occurs throughout the liquid at the boiling point).",
@@ -1765,6 +2052,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Designing a paper bridge to hold the most books, then iterating the design.",
+        "NASA builds, tests and refines prototype spacecraft before flight."
+      ],
+      "key_experiments": [
+        "Design-build-test a load-bearing bridge or water filter and document each iteration and what you changed."
+      ],
       "common_misconceptions": [
         "Engineering design is a linear step-by-step procedure (it is iterative with multiple feedback loops).",
         "Engineering design is the same as scientific inquiry (science seeks to explain natural phenomena; engineering solves practical human problems under constraints)."
@@ -1800,6 +2094,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Observation — the ground is wet; inference — it rained.",
+        "Observation — the bulb glows; inference — the circuit is complete."
+      ],
+      "key_experiments": [
+        "Mystery-box or scenario photos: list only what is observed, then separately what is inferred."
+      ],
       "common_misconceptions": [
         "Inferences are facts (inferences are interpretations that require logical justification and testing).",
         "Scientific theories are just guesses (scientific theories are well-supported explanatory frameworks based on extensive observations)."
@@ -1835,6 +2136,14 @@
       "symbol": "a",
       "unit": "metre per second squared (m/s²)",
       "equation": "a = Δv / Δt",
+      "examples": [
+        "A car speeding up from rest at a traffic light.",
+        "A ball slowing as it rolls uphill (negative acceleration)."
+      ],
+      "key_experiments": [
+        "Rolling a ball down an inclined plane and measuring its increasing speed.",
+        "Motion sensor experiments recording velocity vs. time during acceleration."
+      ],
       "common_misconceptions": [
         "Velocity and acceleration always point in the same direction (acceleration points in the direction of the change in velocity).",
         "Acceleration always means speeding up (slowing down and changing direction are also acceleration).",
@@ -1853,10 +2162,6 @@
         "Sports (sprinting, cycling).",
         "Amusement park rides.",
         "Spacecraft maneuvers."
-      ],
-      "key_experiments": [
-        "Rolling a ball down an inclined plane and measuring its increasing speed.",
-        "Motion sensor experiments recording velocity vs. time during acceleration."
       ],
       "provenance": {
         "ai_drafted": true
@@ -1890,6 +2195,17 @@
       "symbol": "A",
       "unit": "metre (m)",
       "equation": null,
+      "real_world_applications": [
+        "Loudness of a sound depends on its amplitude.",
+        "Earthquake amplitude sets the shaking damage; radio signal strength is an amplitude measure."
+      ],
+      "examples": [
+        "A loud drumbeat produces a wave with large amplitude.",
+        "A gentle ripple on water has a small amplitude."
+      ],
+      "key_experiments": [
+        "Oscilloscope: a louder sound shows larger wave amplitude at the same frequency."
+      ],
       "common_misconceptions": [
         "Amplitude is the wavelength (amplitude is height; wavelength is distance between cycles).",
         "Amplitude affects wave speed (wave speed depends on the medium, not amplitude)."
@@ -1923,6 +2239,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A carbon-12 atom has 6 protons, 6 neutrons and 6 electrons.",
+        "An ion forms when an atom gains or loses electrons."
+      ],
+      "key_experiments": [
+        "Rutherford gold-foil model discussion/simulation: most alpha particles pass straight through a thin foil."
+      ],
       "common_misconceptions": [
         "Electrons orbit the nucleus in fixed paths like planets (electrons exist in probability clouds/orbitals).",
         "The atom is mostly solid matter (the atom is mostly empty space).",
@@ -1964,6 +2287,10 @@
       "symbol": null,
       "unit": "newton (N)",
       "equation": "F_buoyant = ρ_fluid · V_displaced · g",
+      "examples": [
+        "A ship floats because its average density is lower than water's.",
+        "A rubber duck floats; a stone sinks."
+      ],
       "common_misconceptions": [
         "Floating objects experience no buoyant force (they do — it equals their weight).",
         "Only light objects float (shape matters — steel ships float).",
@@ -2013,6 +2340,13 @@
       "symbol": null,
       "unit": null,
       "equation": "Q = m·L (L = latent heat)",
+      "examples": [
+        "Ice melts to water at 0 °C; water boils to steam at 100 °C at 1 atm.",
+        "Steam condenses on a cold window pane."
+      ],
+      "key_experiments": [
+        "Heating ice to water to steam and recording temperature over time."
+      ],
       "common_misconceptions": [
         "Temperature rises during melting/boiling (it stays constant until the change is complete).",
         "Boiling only happens at 100°C (boiling point depends on pressure).",
@@ -2029,9 +2363,6 @@
         "Cooking (boiling, steaming).",
         "Ice production.",
         "Distillation."
-      ],
-      "key_experiments": [
-        "Heating ice to water to steam and recording temperature over time."
       ],
       "provenance": {
         "ai_drafted": true
@@ -2061,6 +2392,13 @@
       "symbol": null,
       "unit": null,
       "equation": "E_initial = E_final ; KE_i + PE_i = KE_f + PE_f (conservative systems)",
+      "examples": [
+        "A swinging pendulum never quite returns to its release height — energy is transferred, not lost.",
+        "A roller coaster trades height for speed all along the track."
+      ],
+      "key_experiments": [
+        "Newton's cradle: the last ball swings out while the first stops — energy and momentum are transferred."
+      ],
       "common_misconceptions": [
         "Energy can be \"used up\" (energy is conserved; it only changes form).",
         "Perpetual motion machines are possible (they violate conservation of energy).",
@@ -2111,6 +2449,17 @@
       "symbol": null,
       "unit": null,
       "equation": "F = k·|q₁·q₂| / r² (k ≈ 9×10⁹ N·m²/C²)",
+      "real_world_applications": [
+        "Static cling and electrostatic painting rely on attraction between charges.",
+        "Understanding lightning and electrostatic precipitators that clean industrial smoke."
+      ],
+      "examples": [
+        "A charged balloon is pushed away by a like-charged one.",
+        "Static cling holds a charged balloon to a wall."
+      ],
+      "key_experiments": [
+        "Pith balls: observe repulsion between like charges and stronger force at smaller separations (inverse-square behaviour)."
+      ],
       "common_misconceptions": [
         "Coulomb's law applies to charges of any size (it is exact for point charges).",
         "Force between charges depends on the medium (it does — the constant k changes).",
@@ -2150,6 +2499,13 @@
       "symbol": "I",
       "unit": "ampere (A)",
       "equation": "I = Q / t",
+      "examples": [
+        "A 2 A current flows through an electric iron; phone chargers draw fractions of an amp.",
+        "Household wiring carries alternating current."
+      ],
+      "key_experiments": [
+        "Series circuit with an ammeter: the current is the same at every point in the loop."
+      ],
       "common_misconceptions": [
         "Current is \"used up\" by components (current is the same throughout a series circuit).",
         "Current flows from negative to positive (conventional current flows from positive to negative).",
@@ -2202,6 +2558,10 @@
       "symbol": "ρ (rho)",
       "unit": "kilogram per cubic metre (kg/m³)",
       "equation": "ρ = m / V",
+      "examples": [
+        "Oil floats on water because it is less dense.",
+        "A full and an empty box have the same volume but different densities."
+      ],
       "common_misconceptions": [
         "Heavy objects always sink (it depends on density, not just mass).",
         "Density is the same as weight (density is mass/volume; weight is a force).",
@@ -2250,6 +2610,13 @@
       "symbol": "Δx or s",
       "unit": "metre (m)",
       "equation": "Δx = x_final - x_initial",
+      "examples": [
+        "A hiker who ends 3 km north of the start after a 7 km walk has displacement 3 km north.",
+        "A runner going once around a 400 m track has displacement zero."
+      ],
+      "key_experiments": [
+        "Map/playground walk: compare path distance with straight-line displacement using a trundle wheel and a bearing."
+      ],
       "common_misconceptions": [
         "Displacement is always equal to distance (they differ when the path curves or reverses).",
         "Displacement depends on the path taken (displacement depends only on start and end points)."
@@ -2288,6 +2655,13 @@
       "symbol": "d",
       "unit": "metre (m)",
       "equation": null,
+      "examples": [
+        "Reading the odometer of a car — total path length travelled.",
+        "The length of your round trip to school in kilometres."
+      ],
+      "key_experiments": [
+        "Measure a curved path with a string, then compare with a straight ruler line for the same route."
+      ],
       "common_misconceptions": [
         "Distance and displacement are always the same (they differ whenever the path is not a straight line).",
         "Distance can be negative (distance is always non-negative)."
@@ -2326,6 +2700,13 @@
       "symbol": "η (eta)",
       "unit": "null (dimensionless, or %)",
       "equation": "η = (E_useful_out / E_total_in) × 100%",
+      "examples": [
+        "A 20%-efficient solar panel turns 80% of incoming light to heat; an LED bulb (≈90%) far beats a filament bulb (≈5%).",
+        "Pulley systems reduce effort but lose energy to friction."
+      ],
+      "key_experiments": [
+        "Measure electrical energy in and useful mechanical energy out of a small motor or model crane; compute efficiency."
+      ],
       "common_misconceptions": [
         "Efficiency can exceed 100% (this would violate conservation of energy).",
         "Inefficient machines destroy energy (energy is conserved; it just becomes less useful).",
@@ -2371,6 +2752,13 @@
       "symbol": "Q or q",
       "unit": "coulomb (C)",
       "equation": null,
+      "examples": [
+        "A balloon rubbed on hair attracts small paper pieces.",
+        "Lightning is a large flow of charge between cloud and ground."
+      ],
+      "key_experiments": [
+        "Charging a rod by friction and attracting small pieces of paper."
+      ],
       "common_misconceptions": [
         "Charge is created by friction (charge is transferred, not created).",
         "A charged object always attracts uncharged objects (a charged object can attract a neutral one through polarization).",
@@ -2386,9 +2774,6 @@
         "Static electricity (lightning, photocopiers).",
         "Capacitors.",
         "Electrostatic painting."
-      ],
-      "key_experiments": [
-        "Charging a rod by friction and attracting small pieces of paper."
       ],
       "provenance": {
         "ai_drafted": true
@@ -2418,6 +2803,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Fans, washing machines and electric vehicles turn electrical energy into motion with motors.",
+        "A toy car's wheels spin because a current-carrying coil experiences a torque."
+      ],
+      "key_experiments": [
+        "Build a simple DC motor (coil, magnets, split ring) or observe a force on a current-carrying wire between magnet poles."
+      ],
       "common_misconceptions": [
         "Motors create energy out of nothing (motors convert electrical energy to mechanical energy with some heat loss).",
         "Motors operate on electrostatic repulsion (motors operate via magnetic forces on current-carrying conductors)."
@@ -2461,6 +2853,13 @@
       "symbol": null,
       "unit": null,
       "equation": "ε = -dΦ/dt (Faraday's law)",
+      "examples": [
+        "A dynamo generates electricity as a coil rotates in a magnetic field.",
+        "Induction cooktops heat pans through induced (eddy) currents."
+      ],
+      "key_experiments": [
+        "Galvanometer + magnet-in-coil: relative motion induces current, reversing with direction (Faraday's law)."
+      ],
       "common_misconceptions": [
         "A stationary magnet near a coil produces current (the magnetic field must be changing).",
         "Induced voltage depends on the magnet's strength alone (it depends on the rate of change of flux)."
@@ -2505,6 +2904,13 @@
       "symbol": null,
       "unit": null,
       "equation": "c = f·λ (applies to all EM waves)",
+      "examples": [
+        "X-rays image bones; microwaves heat food; ultraviolet causes sunburn.",
+        "Radio waves carry broadcast and phone signals."
+      ],
+      "key_experiments": [
+        "Prism dispersion of white light — then discuss how the same family extends beyond visible red and violet."
+      ],
       "common_misconceptions": [
         "All EM waves are the same (they differ in wavelength, frequency, and energy).",
         "EM waves need a medium (they travel through vacuum).",
@@ -2556,6 +2962,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A scrapyard electromagnet lifts cars when current flows.",
+        "Electric doorbells and relays use electromagnets."
+      ],
+      "key_experiments": [
+        "Oersted's experiment (compass needle deflects near a current-carrying wire)."
+      ],
       "common_misconceptions": [
         "Electricity and magnetism are separate phenomena (they are two aspects of the same force).",
         "Only magnets produce magnetic fields (current-carrying wires also produce them)."
@@ -2571,9 +2984,6 @@
         "Loudspeakers.",
         "Electromagnets (scrap yards, relays).",
         "Maglev trains."
-      ],
-      "key_experiments": [
-        "Oersted's experiment (compass needle deflects near a current-carrying wire)."
       ],
       "provenance": {
         "ai_drafted": true
@@ -2603,6 +3013,13 @@
       "symbol": "E",
       "unit": "joule (J)",
       "equation": null,
+      "examples": [
+        "Stored chemical energy in a battery powers a bulb as electrical and light energy.",
+        "Kinetic energy of a moving bicycle is turned into heat by the brakes."
+      ],
+      "key_experiments": [
+        "Pendulum: height at release swaps into speed at the bottom and back — evidence of energy transfer between forms."
+      ],
       "common_misconceptions": [
         "Energy is a substance (energy is a property of systems, not a material).",
         "Energy can be \"used up\" (energy is conserved; it only changes form).",
@@ -2653,6 +3070,13 @@
       "symbol": null,
       "unit": "joule (J)",
       "equation": null,
+      "examples": [
+        "A bouncing ball never returns to its original drop height.",
+        "Heat builds in car brakes and tyres during hard braking."
+      ],
+      "key_experiments": [
+        "Bouncing-ball experiment: record successive rebound heights with a ruler and observe the decay."
+      ],
       "common_misconceptions": [
         "Energy is destroyed when it is \"lost\" (energy is conserved; it only becomes less useful).",
         "Energy loss violates conservation of energy (it does not — total energy is conserved).",
@@ -2698,6 +3122,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Coal, oil, gas and uranium are non-renewable; sun, wind and water are renewable.",
+        "A solar panel charging a phone converts light to electrical energy."
+      ],
+      "key_experiments": [
+        "Hand-crank generator powering a bulb: trace the energy path from input work to light."
+      ],
       "common_misconceptions": [
         "Energy can be created (energy is only converted from one form to another).",
         "Renewable energy has no environmental impact (all energy sources have some impact).",
@@ -2750,6 +3181,13 @@
       "symbol": "v, u, a, s, t",
       "unit": null,
       "equation": "v = u + at;  s = ut + ½at²;  v² = u² + 2as;  s = ½(u+v)t",
+      "examples": [
+        "A ball dropped from rest falls with v = g·t after t seconds.",
+        "Estimating a car's braking distance from its speed and deceleration using v² = u² + 2as."
+      ],
+      "key_experiments": [
+        "Braking/accelerating cart on a linear track: measure times and distances to verify v = u + at."
+      ],
       "common_misconceptions": [
         "Equations of motion apply whenever an object moves (they are valid only for uniform, constant acceleration).",
         "u and v are interchangeable (u is the initial velocity and v is the final velocity; swapping them changes the answer).",
@@ -2803,6 +3241,14 @@
       "symbol": "F",
       "unit": "newton (N)",
       "equation": "F = dp/dt ; F = m·a (constant mass)",
+      "examples": [
+        "Pushing a shopping trolley makes it accelerate.",
+        "A magnet pulls a pin toward it — a contact-free force."
+      ],
+      "key_experiments": [
+        "Measuring force using a spring balance.",
+        "Investigating the relationship between force, mass, and acceleration using a trolley and ticker-timer."
+      ],
       "common_misconceptions": [
         "A constant net force produces constant speed (it produces constant acceleration).",
         "Force is a property of an object (force acts between objects; it is not possessed by one).",
@@ -2821,10 +3267,6 @@
         "Vehicle acceleration and braking.",
         "Engineering structures (forces in bridges, buildings).",
         "Spacecraft propulsion."
-      ],
-      "key_experiments": [
-        "Measuring force using a spring balance.",
-        "Investigating the relationship between force, mass, and acceleration using a trolley and ticker-timer."
       ],
       "provenance": {
         "ai_drafted": true
@@ -2874,6 +3316,14 @@
       "symbol": "g",
       "unit": "metre per second squared (m/s²)",
       "equation": "v = g·t ; h = ½·g·t² ; v² = 2·g·h",
+      "examples": [
+        "A dropped stone falls under gravity when air resistance is negligible.",
+        "A skydiver stops accelerating at terminal velocity."
+      ],
+      "key_experiments": [
+        "Dropping objects of different masses in a vacuum chamber.",
+        "Measuring g using a falling object and timer."
+      ],
       "common_misconceptions": [
         "Heavier objects fall faster than lighter ones (in vacuum, all fall at the same rate).",
         "Free fall means the object is falling downward (moving upward under gravity alone is also free fall).",
@@ -2890,10 +3340,6 @@
         "Fountain water streams.",
         "Dropping objects to measure gravitational acceleration.",
         "Sports (basketball arc, projectile motion)."
-      ],
-      "key_experiments": [
-        "Dropping objects of different masses in a vacuum chamber.",
-        "Measuring g using a falling object and timer."
       ],
       "provenance": {
         "ai_drafted": true
@@ -2923,6 +3369,17 @@
       "symbol": "f or ν (nu)",
       "unit": "hertz (Hz)",
       "equation": "f = 1 / T (T = period)",
+      "real_world_applications": [
+        "Radio and TV broadcast on assigned frequencies.",
+        "Mains electricity is 50 Hz; the pitch of a musical note is set by its frequency."
+      ],
+      "examples": [
+        "Radio stations broadcast at different frequencies; mains electricity is 50 Hz.",
+        "A humming insect beats its wings faster than a bee — a higher frequency."
+      ],
+      "key_experiments": [
+        "Tuning forks of different pitches viewed on a microphone + oscilloscope: higher pitch means higher frequency."
+      ],
       "common_misconceptions": [
         "Higher frequency means larger waves (higher frequency means shorter wavelength).",
         "Frequency depends on the medium (frequency is determined by the source; wavelength changes with medium)."
@@ -2964,6 +3421,14 @@
       "symbol": "f",
       "unit": "newton (N)",
       "equation": "f = μ·N (for sliding friction; μ = coefficient of friction, N = normal force)",
+      "examples": [
+        "A box is harder to start moving than to keep sliding.",
+        "Tyres grip the road; without friction a car cannot brake or corner."
+      ],
+      "key_experiments": [
+        "Measuring the force needed to start sliding an object (static friction) vs. keep it sliding (kinetic friction).",
+        "Investigating how surface type and normal force affect friction."
+      ],
       "common_misconceptions": [
         "Friction always opposes motion (it opposes relative motion — it can also cause motion, e.g., walking).",
         "Friction depends on contact area (for sliding friction, it depends primarily on normal force and materials).",
@@ -2983,10 +3448,6 @@
         "Writing (friction between pen and paper).",
         "Matches lighting.",
         "Wear on machinery (friction as a source of energy loss)."
-      ],
-      "key_experiments": [
-        "Measuring the force needed to start sliding an object (static friction) vs. keep it sliding (kinetic friction).",
-        "Investigating how surface type and normal force affect friction."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3016,6 +3477,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Bicycle dynamos light a lamp as the wheel spins the rotor.",
+        "Hydroelectric and thermal power stations rotate large generators."
+      ],
+      "key_experiments": [
+        "Hand-crank a generator to light an LED; reversing the spin reverses the polarity."
+      ],
       "common_misconceptions": [
         "Generators create electric charge (generators move existing free charges in conductors via magnetic induction).",
         "Generators produce 100% efficient electrical power (some mechanical energy is dissipated as thermal energy)."
@@ -3055,6 +3523,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Distance-time graphs show a train at rest, moving steadily, and stopping.",
+        "The slope of a velocity-time graph gives acceleration."
+      ],
+      "key_experiments": [
+        "Walk in front of a motion sensor to plot live distance-time and velocity-time graphs."
+      ],
       "common_misconceptions": [
         "The slope of a distance-time graph is acceleration (it is velocity).",
         "The area under a velocity-time graph is distance (it is displacement).",
@@ -3100,6 +3575,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A dropped ball falls to the ground; the Moon is held in orbit by Earth's gravity.",
+        "Weight changes slightly between sea level and a mountain top."
+      ],
+      "key_experiments": [
+        "Galileo-style inclined plane: uniform acceleration under gravity can be timed and graphed."
+      ],
       "common_misconceptions": [
         "Gravity only exists on Earth (gravitation is universal — it acts between all masses).",
         "Gravity requires air to act (gravitation acts through vacuum).",
@@ -3144,6 +3626,13 @@
       "symbol": "g",
       "unit": "metre per second squared (m/s²)",
       "equation": "g ≈ 9.8 m/s² (near Earth's surface)",
+      "examples": [
+        "g ≈ 9.8 m/s² near Earth's surface — every freely falling object accelerates at this rate.",
+        "In vacuum a feather and a hammer have the same gravitational acceleration."
+      ],
+      "key_experiments": [
+        "Measure g with a pendulum (T = 2π√(L/g)) or with free-fall timing gates."
+      ],
       "common_misconceptions": [
         "g is the same everywhere in the universe (g varies with distance from a massive body).",
         "g is a force (g is an acceleration; the force is weight = m·g).",
@@ -3187,6 +3676,14 @@
       "symbol": "Q",
       "unit": "joule (J)",
       "equation": "Q = m·c·ΔT (specific heat) ; Q = m·L (latent heat)",
+      "examples": [
+        "A flame transfers heat into a kettle of water; you warm your hands over a fire.",
+        "An iron rod conducts heat from its hot end toward the cool end."
+      ],
+      "key_experiments": [
+        "Measuring specific heat capacity of a metal using calorimetry.",
+        "Observing heat transfer between hot and cold water."
+      ],
       "common_misconceptions": [
         "Heat and temperature are the same (heat is energy transfer; temperature is a measure of average kinetic energy).",
         "Heat is stored in an object (heat is energy in transit; internal energy is stored).",
@@ -3203,10 +3700,6 @@
         "Climate and weather (heat transfer in atmosphere).",
         "Engine cooling systems.",
         "Insulation in buildings."
-      ],
-      "key_experiments": [
-        "Measuring specific heat capacity of a metal using calorimetry.",
-        "Observing heat transfer between hot and cold water."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3240,6 +3733,13 @@
       "symbol": null,
       "unit": null,
       "equation": "H = I²·R·t (Joule's law of heating)",
+      "examples": [
+        "An electric kettle and toaster heat because current flows through resistance.",
+        "A bulb filament glows white-hot from the heating effect of current."
+      ],
+      "key_experiments": [
+        "Immerse a resistor in water, pass a current, and measure the temperature rise over time (heating ∝ I²R)."
+      ],
       "common_misconceptions": [
         "All electrical energy becomes heat (some becomes light, mechanical energy, etc.).",
         "Heating effect is always undesirable (it's useful in heaters, fuses, and bulbs).",
@@ -3293,6 +3793,13 @@
       "symbol": "J",
       "unit": "newton second (N·s) or kilogram metre per second (kg·m/s)",
       "equation": "J = F·Δt = Δp",
+      "examples": [
+        "Pulling your hands back while catching a fast ball lengthens the catch time and softens the force.",
+        "Crash padding in a car dashboard lengthens impact time and lowers peak force."
+      ],
+      "key_experiments": [
+        "Egg-drop landing on foam versus hard floor: same impulse, longer time, smaller force."
+      ],
       "common_misconceptions": [
         "Impulse is the same as force (impulse is force × time; it measures total momentum change).",
         "A small force cannot produce significant impulse (over a long enough time, even small forces produce large impulse).",
@@ -3342,6 +3849,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A passenger lurches forward when a bus brakes suddenly.",
+        "Yanking a tablecloth leaves the dishes in place — they resist the change in motion."
+      ],
+      "key_experiments": [
+        "Tablecloth pull / flick the bottom coin from a stack: the stack stays at rest."
+      ],
       "common_misconceptions": [
         "Inertia is a force that pushes objects forward (inertia is resistance to change, not a force).",
         "Heavier objects have more inertia because gravity pulls harder on them (inertia is mass, not weight).",
@@ -3381,6 +3895,13 @@
       "symbol": "KE or K",
       "unit": "joule (J)",
       "equation": "KE = ½·m·v²",
+      "examples": [
+        "A moving truck has far more kinetic energy than a bicycle at the same speed.",
+        "Wind turns turbine blades — the air's kinetic energy becomes electricity."
+      ],
+      "key_experiments": [
+        "Ramp-and-block: objects released from higher ramps (more KE = ½mv²) push a block farther."
+      ],
       "common_misconceptions": [
         "Kinetic energy is directly proportional to speed (it depends on speed squared — doubling speed quadruples kinetic energy).",
         "Kinetic energy can be negative (kinetic energy is always non-negative).",
@@ -3430,6 +3951,14 @@
       "symbol": null,
       "unit": null,
       "equation": "1/f = 1/v + 1/u (lens formula)",
+      "examples": [
+        "A magnifying glass focuses sunlight to a burning point.",
+        "A camera lens forms a real, inverted image on a screen or sensor."
+      ],
+      "key_experiments": [
+        "Finding the focal length of a convex lens.",
+        "Drawing ray diagrams for different object positions."
+      ],
       "common_misconceptions": [
         "All lenses magnify (concave lenses reduce image size).",
         "Lenses work by reflection (they work by refraction).",
@@ -3446,10 +3975,6 @@
         "Cameras.",
         "Microscopes and telescopes.",
         "Magnifying glasses."
-      ],
-      "key_experiments": [
-        "Finding the focal length of a convex lens.",
-        "Drawing ray diagrams for different object positions."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3479,6 +4004,13 @@
       "symbol": null,
       "unit": null,
       "equation": "c = f·λ (c = speed of light in vacuum ≈ 3×10⁸ m/s)",
+      "examples": [
+        "Seeing a bulb because light from it reaches your eye; your face in a plane mirror.",
+        "Fibre-optic cables carry light by total internal reflection."
+      ],
+      "key_experiments": [
+        "Pinhole camera: light travels in straight lines, producing an inverted image."
+      ],
       "common_misconceptions": [
         "Light needs a medium to travel (light travels through vacuum).",
         "Light travels instantaneously (it has finite speed).",
@@ -3532,6 +4064,13 @@
       "symbol": "B",
       "unit": "tesla (T)",
       "equation": null,
+      "examples": [
+        "Iron filings around a bar magnet trace its field lines; a compass aligns with Earth's field.",
+        "Speaker and fridge magnets have strong nearby fields."
+      ],
+      "key_experiments": [
+        "Scatter iron filings (or use a plotting compass) to map the field lines around a bar magnet."
+      ],
       "common_misconceptions": [
         "Magnetic field lines are real physical objects (they are a model to represent the field).",
         "Magnetic fields only exist around magnets (current-carrying wires also produce them).",
@@ -3572,6 +4111,13 @@
       "symbol": "Φ",
       "unit": "weber (Wb)",
       "equation": "Φ = B · A · cos(θ)",
+      "examples": [
+        "Pushing a magnet into a coil links flux and induces current; more turns give more flux linkage.",
+        "Transformer cores concentrate the magnetic flux."
+      ],
+      "key_experiments": [
+        "Move a magnet in and out of a coil connected to a galvanometer — deflection grows with speed and number of turns."
+      ],
       "common_misconceptions": [
         "Magnetic flux and magnetic field strength are identical (flux accounts for total area and orientation).",
         "A stationary coil in a constant magnetic field has changing flux (flux only changes when field, area, or angle changes)."
@@ -3611,6 +4157,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "key_experiments": [
+        "Magnetize a steel pin by stroking and observe north-south attraction and repulsion."
+      ],
+      "examples": [
+        "A fridge magnet holds notes; a compass aligns with Earth's magnetic field.",
+        "Speaker magnets drive the cone to produce sound."
+      ],
       "common_misconceptions": [
         "All metals are magnetic (only iron, nickel, cobalt, and some alloys are ferromagnetic).",
         "Magnets attract all metals (only magnetic materials).",
@@ -3652,6 +4205,17 @@
       "symbol": "m",
       "unit": "kilogram (kg)",
       "equation": null,
+      "real_world_applications": [
+        "Cooking measures ingredients by mass rather than volume.",
+        "Mass sets inertia and weight (W = mg), and drives spacecraft fuel budgets in orbit."
+      ],
+      "examples": [
+        "A 1 kg bag of rice has the same mass on Earth and the Moon.",
+        "A beam balance compares amount of matter, independent of gravity."
+      ],
+      "key_experiments": [
+        "Balance an unknown mass against standard masses with a beam balance."
+      ],
       "common_misconceptions": [
         "Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity)."
       ],
@@ -3683,6 +4247,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Measuring a table's length with a ruler; a measuring cylinder reads liquid volume.",
+        "Timing a 100 m sprint with a stopwatch."
+      ],
+      "key_experiments": [
+        "Measuring the same object multiple times and observing variation in results."
+      ],
       "common_misconceptions": [
         "Measurement gives the exact true value of a quantity (all measurements have some uncertainty).",
         "Only laboratory instruments count as measurement (any comparison against a standard is measurement)."
@@ -3696,9 +4267,6 @@
         "Timekeeping (clocks, atomic clocks).",
         "Distance measurement (rulers, lasers, GPS).",
         "Medical diagnostics (thermometer, blood pressure)."
-      ],
-      "key_experiments": [
-        "Measuring the same object multiple times and observing variation in results."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3724,6 +4292,13 @@
       "symbol": "MA",
       "unit": "null (dimensionless)",
       "equation": "MA = F_output / F_input = d_input / d_output",
+      "examples": [
+        "A lever lets a small person lift a heavy rock; a ramp lets you raise a load with less force.",
+        "A block-and-tackle halves the effort needed to lift a load."
+      ],
+      "key_experiments": [
+        "Measure effort and load for levers and pulleys; compute mechanical advantage = load/effort."
+      ],
       "common_misconceptions": [
         "Machines create energy (they only transform force and distance).",
         "Greater mechanical advantage always means easier work (it means less force over more distance).",
@@ -3769,6 +4344,13 @@
       "symbol": null,
       "unit": null,
       "equation": "1/f = 1/v + 1/u (mirror formula)",
+      "examples": [
+        "A concave shaving mirror magnifies; convex wing mirrors give a wider field of view.",
+        "A periscope uses two plane mirrors at 45°."
+      ],
+      "key_experiments": [
+        "Curved-mirror ray box: locate the focal point and verify ray diagrams for real and virtual images."
+      ],
       "common_misconceptions": [
         "All mirrors produce the same type of image (image type depends on mirror shape and object position).",
         "Curved mirrors always magnify (depends on object position)."
@@ -3809,6 +4391,13 @@
       "symbol": "p",
       "unit": "kilogram metre per second (kg·m/s)",
       "equation": "p = m·v",
+      "examples": [
+        "A heavy truck and a light car at the same speed — the truck has more momentum and is harder to stop.",
+        "A water jet from a hose carries small momentum but can wash soil away."
+      ],
+      "key_experiments": [
+        "Colliding trolleys on a frictionless track to demonstrate momentum conservation."
+      ],
       "common_misconceptions": [
         "Momentum and kinetic energy are the same kind of quantity (momentum is a vector measured in kg·m/s; kinetic energy is a scalar measured in joules).",
         "A heavier object always has more momentum (momentum depends on both mass and velocity).",
@@ -3825,9 +4414,6 @@
         "Sports (follow-through increases momentum transfer).",
         "Rocket propulsion (exhaust momentum propels rocket).",
         "Billiards and pool."
-      ],
-      "key_experiments": [
-        "Colliding trolleys on a frictionless track to demonstrate momentum conservation."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3861,6 +4447,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "A bus on a straight road — total distance differs from displacement.",
+        "A ceiling fan blade moves at constant speed but changing direction."
+      ],
+      "key_experiments": [
+        "Ticker-tape timer: even dot spacing means uniform motion; widening spacing means acceleration."
+      ],
       "common_misconceptions": [
         "An object at rest is not in motion relative to anything (motion is relative — it depends on the reference frame).",
         "Motion requires a continuous force (Newton's first law: motion continues without net force).",
@@ -3910,6 +4503,14 @@
       "symbol": null,
       "unit": null,
       "equation": "ΣF = 0 → a = 0",
+      "examples": [
+        "A puck glides a long way on smooth ice before slowing.",
+        "A book stays on a table until pushed; a satellite coasts in orbit."
+      ],
+      "key_experiments": [
+        "Air track experiments showing nearly frictionless motion at constant velocity.",
+        "Rolling a ball on increasingly smooth surfaces."
+      ],
       "common_misconceptions": [
         "An object in motion naturally comes to rest (friction is the external force stopping it).",
         "No motion means no forces (forces can balance to zero net force).",
@@ -3925,10 +4526,6 @@
         "Seatbelts (passengers continue forward when a car stops suddenly).",
         "Tablecloth trick (objects at rest tend to stay at rest).",
         "Spacecraft coasting in deep space with engines off."
-      ],
-      "key_experiments": [
-        "Air track experiments showing nearly frictionless motion at constant velocity.",
-        "Rolling a ball on increasingly smooth surfaces."
       ],
       "provenance": {
         "ai_drafted": true
@@ -3958,6 +4555,13 @@
       "symbol": null,
       "unit": null,
       "equation": "F = G·m₁·m₂ / r² (G ≈ 6.674×10⁻¹¹ N·m²/kg²)",
+      "examples": [
+        "The Moon stays in orbit through mutual gravitational attraction with Earth.",
+        "Ocean tides are raised mainly by the Moon's gravity."
+      ],
+      "key_experiments": [
+        "Compare the weight-force between two masses at different separations with a torsion-balance model or simulation (Cavendish-type)."
+      ],
       "common_misconceptions": [
         "Gravity only exists on Earth (gravitation is universal).",
         "Gravity requires air to act (gravitation acts through vacuum).",
@@ -4011,6 +4615,17 @@
       "symbol": null,
       "unit": null,
       "equation": "F = dp/dt (general); F = m·a at constant mass",
+      "real_world_applications": [
+        "Larger vehicles need bigger engines because more mass needs more force for the same acceleration.",
+        "Smartphone accelerometers measure force per unit mass to detect motion."
+      ],
+      "examples": [
+        "Doubling the push on a trolley roughly doubles its acceleration.",
+        "A loaded cart needs more force than a light one for the same acceleration (a = F/m)."
+      ],
+      "key_experiments": [
+        "Dynamics cart + force sensor: log force against acceleration; the slope is the mass."
+      ],
       "common_misconceptions": [
         "F = m·a means the force is a property of the object itself (F is the net external force acting on the object)."
       ],
@@ -4046,6 +4661,14 @@
       "symbol": null,
       "unit": null,
       "equation": "F_AB = -F_BA",
+      "examples": [
+        "A rocket pushes exhaust gas down and the gas pushes the rocket up.",
+        "You push Earth backward when you walk; Earth pushes you forward."
+      ],
+      "key_experiments": [
+        "Two spring balances pulling each other show equal readings.",
+        "Magnets on carts repelling each other move equal distances (same mass) or inversely proportional distances (different mass)."
+      ],
       "common_misconceptions": [
         "Action and reaction forces cancel each other (they act on different objects, so they cannot cancel).",
         "The stronger object exerts a larger force (forces in an action-reaction pair are always equal).",
@@ -4062,10 +4685,6 @@
         "Walking (foot pushes backward on ground; ground pushes forward on foot).",
         "Swimming (water pushed backward; swimmer moves forward).",
         "Recoil of a gun."
-      ],
-      "key_experiments": [
-        "Two spring balances pulling each other show equal readings.",
-        "Magnets on carts repelling each other move equal distances (same mass) or inversely proportional distances (different mass)."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4095,6 +4714,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Nuclear power reactors split uranium-235 to generate electricity.",
+        "Fission released in a controlled chain reaction also underlies nuclear weapons."
+      ],
+      "key_experiments": [
+        "Chain-reaction model (mousetraps and marbles) and how control rods absorb neutrons to keep the reaction steady."
+      ],
       "common_misconceptions": [
         "Fission and fusion are the same (fission splits nuclei; fusion combines them).",
         "Nuclear energy is the same as nuclear weapons (peaceful applications exist)."
@@ -4134,6 +4760,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "The Sun and other stars fuse hydrogen into helium and release energy.",
+        "Experimental reactors such as ITER aim to harness fusion on Earth."
+      ],
+      "key_experiments": [
+        "Compare energy released per kilogram in fission versus fusion using reference data; demonstrate a solar cell output."
+      ],
       "common_misconceptions": [
         "Fusion is currently used in power plants (fusion power is not yet commercially viable).",
         "Fusion is the same as fission (fusion combines nuclei; fission splits them)."
@@ -4173,6 +4806,13 @@
       "symbol": null,
       "unit": null,
       "equation": "V = I·R",
+      "examples": [
+        "Doubling the voltage across a fixed resistor doubles the current.",
+        "Adding a series resistor dims a lamp — less current flows."
+      ],
+      "key_experiments": [
+        "Measuring V and I for a fixed resistor to verify Ohm's law."
+      ],
       "common_misconceptions": [
         "Ohm's law applies to all conductors (only ohmic conductors show linear V-I relationship).",
         "Resistance depends on voltage and current (for ohmic conductors, resistance is constant).",
@@ -4188,9 +4828,6 @@
         "Circuit design.",
         "Fuse and breaker sizing.",
         "Sensor design (thermistors, LDRs)."
-      ],
-      "key_experiments": [
-        "Measuring V and I for a fixed resistor to verify Ohm's law."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4220,6 +4857,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Burning fossil fuels releases greenhouse gases that warm the planet.",
+        "Switching to renewable energy reduces pollution from power generation."
+      ],
+      "key_experiments": [
+        "School energy audit: measure and rank electricity use and discuss where each unit's energy comes from."
+      ],
       "common_misconceptions": [
         "Environmental problems are only biological (physics plays a major role in energy, climate, and pollution).",
         "Energy flow in ecosystems is 100% efficient (most energy is lost at each trophic level)."
@@ -4260,6 +4904,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Length, mass, time, temperature and electric current are base physical quantities.",
+        "Speed is a derived quantity built from length and time."
+      ],
+      "key_experiments": [
+        "Comparing measured values with accepted values to understand accuracy."
+      ],
       "common_misconceptions": [
         "Physical quantities are the same as the objects or substances they describe.",
         "Every property of an object is a physical quantity (only quantifiable properties are)."
@@ -4273,9 +4924,6 @@
         "Engineering design and safety calculations.",
         "Scientific measurement and data collection.",
         "Navigation, construction, and manufacturing."
-      ],
-      "key_experiments": [
-        "Comparing measured values with accepted values to understand accuracy."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4301,6 +4949,13 @@
       "symbol": "PE or U",
       "unit": "joule (J)",
       "equation": "PE = m·g·h (gravitational)",
+      "examples": [
+        "Water stored high in a dam holds gravitational potential energy.",
+        "A stretched rubber band stores elastic potential energy."
+      ],
+      "key_experiments": [
+        "Pendulum/roller model: height at the top of a swing converts to speed at the bottom — potential to kinetic."
+      ],
       "common_misconceptions": [
         "Potential energy is stored \"in\" the object alone (it is a property of the object-Earth system).",
         "Potential energy can be negative (it depends on the reference level chosen).",
@@ -4354,6 +5009,13 @@
       "symbol": "P",
       "unit": "watt (W)",
       "equation": "P = W / t = E / t",
+      "examples": [
+        "A 60 W bulb transfers 60 J of energy every second.",
+        "A machine that does the same work in less time has more power."
+      ],
+      "key_experiments": [
+        "Stair climb: measure your mass, the stair height and the time; compute power = mgh/t and compare walking vs running."
+      ],
       "common_misconceptions": [
         "Power is the same as energy (energy is the total amount; power is the rate).",
         "More powerful machines always do more work (work depends on power AND time).",
@@ -4399,6 +5061,10 @@
       "symbol": "P",
       "unit": "pascal (Pa)",
       "equation": "P = F / A",
+      "examples": [
+        "A drawing pin concentrates force onto a tiny point.",
+        "Tyres and balloons hold air at pressure above the atmosphere."
+      ],
       "common_misconceptions": [
         "Pressure and force are the same (force is total; pressure is force per unit area).",
         "Pressure always acts downward (pressure acts equally in all directions in a fluid).",
@@ -4447,6 +5113,13 @@
       "symbol": null,
       "unit": null,
       "equation": "Range = v²·sin(2θ)/g ; Time of flight = 2·v·sin(θ)/g ; Max height = v²·sin²(θ)/(2g)",
+      "examples": [
+        "A football kicked at an angle follows a curved parabolic path.",
+        "Water from a tilted hose forms projectile arcs."
+      ],
+      "key_experiments": [
+        "Water fountain or ball launcher: photograph the trajectory and see the parabolic curve, with range depending on launch angle."
+      ],
       "common_misconceptions": [
         "A projectile's horizontal speed decreases over time (it stays constant, neglecting air resistance).",
         "The force of the throw continues to act on the projectile (only gravity acts after launch).",
@@ -4491,6 +5164,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Carbon-14 dating is used on ancient organic remains; radioactive tracers image organs in medicine.",
+        "Smoke detectors contain a small alpha-emitting source."
+      ],
+      "key_experiments": [
+        "Detecting radiation using a Geiger-Muller tube."
+      ],
       "common_misconceptions": [
         "Radioactivity is always man-made (it occurs naturally).",
         "All radiation is harmful (we are exposed to natural background radiation daily).",
@@ -4507,9 +5187,6 @@
         "Medical imaging and cancer treatment.",
         "Carbon dating.",
         "Sterilization of medical equipment."
-      ],
-      "key_experiments": [
-        "Detecting radiation using a Geiger-Muller tube."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4539,6 +5216,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Predicting where a shadow falls using straight light rays.",
+        "Designing a simple periscope from plane mirrors."
+      ],
+      "key_experiments": [
+        "Shadow-size and pinhole-image experiments with a bright bulb and a card."
+      ],
       "common_misconceptions": [
         "Light rays are physical objects (light rays are idealized geometric constructs showing direction of energy travel).",
         "Light only travels straight when observed (light travels straight in homogeneous media regardless of observation)."
@@ -4582,6 +5266,13 @@
       "symbol": null,
       "unit": null,
       "equation": "θ_i = θ_r",
+      "examples": [
+        "Your image in a plane mirror; sunlight glinting off a lake.",
+        "Retroreflectors on bicycles return light to its source."
+      ],
+      "key_experiments": [
+        "Verifying the law of reflection using a plane mirror and ray box."
+      ],
       "common_misconceptions": [
         "Reflection only happens from mirrors (all surfaces reflect some light).",
         "The angle of incidence is measured from the surface (it is measured from the normal).",
@@ -4598,9 +5289,6 @@
         "Periscopes.",
         "Rear-view mirrors.",
         "Optical instruments."
-      ],
-      "key_experiments": [
-        "Verifying the law of reflection using a plane mirror and ray box."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4626,6 +5314,14 @@
       "symbol": null,
       "unit": null,
       "equation": "n = c/v (refractive index) ; Snell's law: n₁·sin(θ₁) = n₂·sin(θ₂)",
+      "examples": [
+        "A pencil in a glass of water looks bent.",
+        "A swimming pool looks shallower than it really is."
+      ],
+      "key_experiments": [
+        "Bending of light through a glass block.",
+        "Apparent depth of a coin in water."
+      ],
       "common_misconceptions": [
         "Light bends because it changes direction randomly (bending is systematic and governed by Snell's law).",
         "Refraction only happens with glass (it happens at any boundary between different media).",
@@ -4642,10 +5338,6 @@
         "Optical fibers.",
         "Mirages.",
         "Apparent depth of swimming pools."
-      ],
-      "key_experiments": [
-        "Bending of light through a glass block.",
-        "Apparent depth of a coin in water."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4675,6 +5367,13 @@
       "symbol": "R",
       "unit": "ohm (Ω)",
       "equation": "R = V / I",
+      "examples": [
+        "A thin wire resists more than a thick one; metal conducts far better than wood.",
+        "Heater elements are deliberately high-resistance so they heat up."
+      ],
+      "key_experiments": [
+        "Vary the voltage across a fixed resistor and plot current against voltage — straight line at constant temperature."
+      ],
       "common_misconceptions": [
         "Resistance is the same as voltage (resistance is opposition; voltage is potential difference).",
         "Thicker wires always have less resistance (all else equal, yes — but length and material also matter).",
@@ -4719,6 +5418,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Temperature 30 °C, speed 50 km/h and mass 5 kg are scalars — no direction.",
+        "Energy and time are scalars."
+      ],
+      "key_experiments": [
+        "Sort a list of physical quantities into scalars and vectors."
+      ],
       "common_misconceptions": [
         "Scalars are less important than vectors (both are essential; many key quantities are scalars).",
         "All numbers in physics are scalars (quantities like velocity have both magnitude and direction)."
@@ -4757,6 +5463,14 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "An echo returns from a cliff; SONAR measures depth by reflected sound.",
+        "A siren sounds higher pitched as it approaches (Doppler effect)."
+      ],
+      "key_experiments": [
+        "Tuning fork in water (vibrations create waves).",
+        "Bell jar experiment (sound needs a medium)."
+      ],
       "common_misconceptions": [
         "Sound can travel through space (sound needs a medium; it cannot travel through vacuum).",
         "Sound travels faster than light (sound is much slower: ~343 m/s vs. 3×10⁸ m/s).",
@@ -4773,10 +5487,6 @@
         "Ultrasound imaging.",
         "SONAR (underwater detection).",
         "Noise control and acoustics."
-      ],
-      "key_experiments": [
-        "Tuning fork in water (vibrations create waves).",
-        "Bell jar experiment (sound needs a medium)."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4810,6 +5520,13 @@
       "symbol": "c",
       "unit": "joule per kilogram kelvin (J/(kg·K))",
       "equation": "c = Q / (m·ΔT)",
+      "examples": [
+        "Water heats and cools slowly — its high specific heat (~4200 J/kg·°C) moderates coastal climates.",
+        "Sand on a beach warms faster than the sea in sunshine."
+      ],
+      "key_experiments": [
+        "Calorimetry experiment to measure specific heat of a metal."
+      ],
       "common_misconceptions": [
         "Specific heat is the same for all substances (it varies significantly — water has very high specific heat).",
         "Higher specific heat means the object is hotter (specific heat is about how much energy is needed to change temperature, not the temperature itself).",
@@ -4826,9 +5543,6 @@
         "Climate moderation (oceans moderate coastal temperatures).",
         "Cooking utensils (metals with low specific heat heat quickly).",
         "Thermal storage systems."
-      ],
-      "key_experiments": [
-        "Calorimetry experiment to measure specific heat of a metal."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4862,6 +5576,13 @@
       "symbol": "v",
       "unit": "metre per second (m/s)",
       "equation": "v = d / t",
+      "examples": [
+        "A car speedometer reads 60 km/h.",
+        "A marathon runner's average speed over the whole race."
+      ],
+      "key_experiments": [
+        "Measuring the speed of a moving object using a stopwatch and ruler."
+      ],
       "common_misconceptions": [
         "Speed and velocity are always the same (velocity includes direction; speed does not).",
         "Speed is always constant (speed can change continuously).",
@@ -4877,9 +5598,6 @@
         "Speedometers in vehicles.",
         "Athletics (race times and speeds).",
         "Traffic engineering and speed limits."
-      ],
-      "key_experiments": [
-        "Measuring the speed of a moving object using a stopwatch and ruler."
       ],
       "provenance": {
         "ai_drafted": true
@@ -4909,6 +5627,13 @@
       "symbol": "T",
       "unit": "kelvin (K) or degree Celsius (°C)",
       "equation": "T(K) = T(°C) + 273.15",
+      "examples": [
+        "A clinical thermometer reads 37 °C body temperature; a room thermostat is set near 20 °C.",
+        "Melting ice stays at 0 °C even while it absorbs heat."
+      ],
+      "key_experiments": [
+        "Calibrate a thermometer at the ice point and the steam point."
+      ],
       "common_misconceptions": [
         "Temperature measures heat (temperature measures average kinetic energy; heat is energy transfer).",
         "Temperature depends on the size of the object (temperature is independent of mass — a small hot object can have higher temperature than a large cold one).",
@@ -4950,6 +5675,13 @@
       "symbol": "U or Q",
       "unit": "joule (J)",
       "equation": null,
+      "examples": [
+        "Rubbing your hands converts mechanical energy into thermal energy.",
+        "Thermal energy from the Sun warms Earth's surface."
+      ],
+      "key_experiments": [
+        "Compare how fast identical cans of hot water cool when wrapped in different insulators."
+      ],
       "common_misconceptions": [
         "Thermal energy and temperature are the same (temperature is average kinetic energy per particle; thermal energy includes all particles).",
         "Thermal energy is only in hot objects (all objects have thermal energy).",
@@ -4999,6 +5731,13 @@
       "symbol": "t",
       "unit": "second (s)",
       "equation": null,
+      "key_experiments": [
+        "Time repeated pendulum swings and average to measure the period with small error."
+      ],
+      "examples": [
+        "Timing a 100 m sprint with a stopwatch.",
+        "The time for one complete pendulum swing is its period."
+      ],
       "common_misconceptions": [
         "Time is the same as a clock reading (time is the dimension; clocks measure intervals of it).",
         "Time passes at the same rate for all observers (at relativistic speeds, time dilation occurs — though this is beyond Grade 10)."
@@ -5041,6 +5780,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "The second (s), metre (m) and kilogram (kg) are SI base units.",
+        "SI prefixes: kilo-, centi-, milli- and micro- scale the base units."
+      ],
+      "key_experiments": [
+        "Unit-conversion practice: convert between mm, cm, m, km and ms, s for measured lengths and times."
+      ],
       "common_misconceptions": [
         "Units are part of the object being measured (units are conventions, not properties of objects).",
         "Any number can have any unit (units must match the quantity being measured)."
@@ -5079,6 +5825,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Force '10 N north' and wind '40 km/h north-east' are vectors.",
+        "Displacement arrows drawn on a map."
+      ],
+      "key_experiments": [
+        "Walk 3 m east then 4 m north: a 5 m resultant (3-4-5 triangle) demonstrates vector addition."
+      ],
       "common_misconceptions": [
         "Any quantity with direction is a vector (must also follow vector addition rules).",
         "Vectors are just arrows on paper (they represent physical quantities with real effects)."
@@ -5117,6 +5870,13 @@
       "symbol": "v",
       "unit": "metre per second (m/s)",
       "equation": "v = Δx / Δt",
+      "examples": [
+        "A plane flying 800 km/h due west — speed plus direction.",
+        "A car's velocity changes when it turns, even if speed is constant."
+      ],
+      "key_experiments": [
+        "Motion sensor experiments plotting position vs. time to extract velocity."
+      ],
       "common_misconceptions": [
         "Velocity is just speed with a direction (the vector nature has real mathematical consequences).",
         "Higher speed always means higher velocity (if directions differ, they are different velocities).",
@@ -5132,9 +5892,6 @@
         "Navigation (ground speed vs. air speed).",
         "Ballistics (projectile velocity).",
         "Weather systems (wind velocity)."
-      ],
-      "key_experiments": [
-        "Motion sensor experiments plotting position vs. time to extract velocity."
       ],
       "provenance": {
         "ai_drafted": true
@@ -5168,6 +5925,13 @@
       "symbol": "V",
       "unit": "volt (V)",
       "equation": "V = W / Q",
+      "examples": [
+        "A 9 V battery provides 9 V of potential difference across a circuit; household mains is roughly 230 V.",
+        "Voltage is the 'push' that drives charge around a circuit."
+      ],
+      "key_experiments": [
+        "Measure the terminal voltage of a battery with a voltmeter at no load and under load."
+      ],
       "common_misconceptions": [
         "Voltage and current are the same (voltage is potential difference; current is flow).",
         "A battery creates current (a battery provides voltage; current depends on resistance).",
@@ -5220,6 +5984,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Sound travels through air as a longitudinal wave.",
+        "Light and radio travel as transverse electromagnetic waves and need no medium."
+      ],
+      "key_experiments": [
+        "Ripple tank experiments demonstrating reflection, refraction, and diffraction of water waves."
+      ],
       "common_misconceptions": [
         "Waves carry matter (waves carry energy; the medium oscillates but does not travel with the wave).",
         "All waves need a medium (electromagnetic waves travel through vacuum).",
@@ -5236,9 +6007,6 @@
         "Medical imaging (ultrasound).",
         "Seismology (earthquake waves).",
         "Music and acoustics."
-      ],
-      "key_experiments": [
-        "Ripple tank experiments demonstrating reflection, refraction, and diffraction of water waves."
       ],
       "provenance": {
         "ai_drafted": true
@@ -5272,6 +6040,13 @@
       "symbol": "v",
       "unit": "metre per second (m/s)",
       "equation": "v = f·λ",
+      "examples": [
+        "Sound travels at about 343 m/s in air; light at 3×10⁸ m/s.",
+        "Deep-ocean tsunami waves can travel at hundreds of km/h."
+      ],
+      "key_experiments": [
+        "Ripple tank: measure frequency and wavelength and verify v = f·λ."
+      ],
       "common_misconceptions": [
         "Higher frequency waves always travel faster (in the same medium, all waves of the same type travel at the same speed).",
         "Wave speed is infinite (all waves have finite speed — light travels at 3×10⁸ m/s in vacuum)."
@@ -5314,6 +6089,17 @@
       "symbol": "λ (lambda)",
       "unit": "metre (m)",
       "equation": null,
+      "real_world_applications": [
+        "The colour of light corresponds to its wavelength.",
+        "Antennas are sized to the wavelength they carry; X-ray wavelengths image bones."
+      ],
+      "examples": [
+        "Red light has a longer wavelength than blue light.",
+        "Longer radio waves bend around hills more easily than short ones."
+      ],
+      "key_experiments": [
+        "Ripple tank: measure the wavelength of periodic waves and change the wave generator frequency."
+      ],
       "common_misconceptions": [
         "Wavelength is the height of a wave (height is amplitude; wavelength is distance between cycles).",
         "All waves have the same wavelength (wavelength varies enormously — from kilometers to nanometers)."
@@ -5351,6 +6137,13 @@
       "symbol": "W",
       "unit": "newton (N)",
       "equation": "W = m·g",
+      "examples": [
+        "A 1 kg mass weighs about 9.8 N on Earth but only about 1.6 N on the Moon.",
+        "A spring balance reads weight; a beam balance reads mass."
+      ],
+      "key_experiments": [
+        "Measure weight with a spring balance and mass with a beam balance for the same object and compare number values."
+      ],
       "common_misconceptions": [
         "Weight and mass are the same thing (mass is intrinsic; weight is a force that varies with gravity).",
         "Weight is measured in kilograms (kilograms measure mass; newtons measure weight).",
@@ -5400,6 +6193,13 @@
       "symbol": "W",
       "unit": "joule (J)",
       "equation": "W = F·d·cos(θ)",
+      "examples": [
+        "Lifting a box onto a shelf does work against gravity.",
+        "Pushing a stalled car along the road does work; holding it still does not."
+      ],
+      "key_experiments": [
+        "Pull a block with a spring balance through a measured distance; work = force × distance."
+      ],
       "common_misconceptions": [
         "Holding a heavy object requires work (no displacement in the direction of force means no work by that force).",
         "Work is a form of energy (work is the process of transferring energy; energy is the quantity).",
@@ -5449,6 +6249,13 @@
       "symbol": null,
       "unit": null,
       "equation": "W_net = ΔKE = ½·m·v_f² - ½·m·v_i²",
+      "examples": [
+        "Braking a car — friction does negative work, removing its kinetic energy.",
+        "A hammer driving a nail: the work done transfers kinetic energy into the wood."
+      ],
+      "key_experiments": [
+        "Ramp-and-block: the work done pushing a block equals the kinetic energy it gains, within measurement error."
+      ],
       "common_misconceptions": [
         "Work and kinetic energy are the same thing (work is the process of transferring energy; kinetic energy is the quantity).",
         "Work-energy theorem only applies to constant forces (it applies to any force, constant or varying).",
@@ -5492,6 +6299,13 @@
       "symbol": null,
       "unit": null,
       "equation": null,
+      "examples": [
+        "Recording that a liquid turns blue litmus red is an observation.",
+        "Measuring temperature before and after mixing gives observation data."
+      ],
+      "key_experiments": [
+        "Describe an object or event using senses and instruments while deliberately holding back explanations."
+      ],
       "common_misconceptions": [
         "Observation is strictly passive watching (scientific observation often involves active measurement and instrumentation).",
         "Observations and inferences are identical (observations are direct empirical data; inferences are logical interpretations)."

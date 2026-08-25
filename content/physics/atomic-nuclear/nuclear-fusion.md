@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "The Sun and other stars fuse hydrogen into helium and release energy."
+  - "Experimental reactors such as ITER aim to harness fusion on Earth."
+key_experiments:
+  - "Compare energy released per kilogram in fission versus fusion using reference data; demonstrate a solar cell output."
 common_misconceptions:
   - Fusion is currently used in power plants (fusion power is not yet commercially viable).
   - Fusion is the same as fission (fusion combines nuclei; fission splits them).

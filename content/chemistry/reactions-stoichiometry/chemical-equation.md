@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: 2H₂ + O₂ → 2H₂O   ·   CH₄ + 2O₂ → CO₂ + 2H₂O
+examples:
+  - "2H₂ + O₂ → 2H₂O models hydrogen burning; CH₄ + 2O₂ → CO₂ + 2H₂O models methane combustion."
+  - "Photosynthesis: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂."
+key_experiments:
+  - "Balance equations and verify atom conservation using molecular model kits."
 common_misconceptions:
   - Coefficients and subscripts can be changed freely to balance an equation (coefficients may change; subscripts define the substance and must not).
   - Balancing changes the identity of the substances (balancing only adjusts amounts, never the compounds involved).

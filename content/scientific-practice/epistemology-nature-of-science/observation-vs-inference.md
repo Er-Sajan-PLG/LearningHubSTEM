@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Observation — the ground is wet; inference — it rained."
+  - "Observation — the bulb glows; inference — the circuit is complete."
+key_experiments:
+  - "Mystery-box or scenario photos: list only what is observed, then separately what is inferred."
 common_misconceptions:
   - Inferences are facts (inferences are interpretations that require logical justification and testing).
   - Scientific theories are just guesses (scientific theories are well-supported explanatory frameworks based on extensive observations).

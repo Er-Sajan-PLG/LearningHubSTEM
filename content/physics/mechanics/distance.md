@@ -10,6 +10,11 @@ definition: >-
 symbol: d
 unit: metre (m)
 equation: null
+examples:
+  - "Reading the odometer of a car — total path length travelled."
+  - "The length of your round trip to school in kilometres."
+key_experiments:
+  - "Measure a curved path with a string, then compare with a straight ruler line for the same route."
 common_misconceptions:
   - Distance and displacement are always the same (they differ whenever the path is not a straight line).
   - Distance can be negative (distance is always non-negative).

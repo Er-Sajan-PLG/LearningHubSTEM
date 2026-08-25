@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Recording that a liquid turns blue litmus red is an observation."
+  - "Measuring temperature before and after mixing gives observation data."
+key_experiments:
+  - "Describe an object or event using senses and instruments while deliberately holding back explanations."
 common_misconceptions:
   - Observation is strictly passive watching (scientific observation often involves active measurement and instrumentation).
   - Observations and inferences are identical (observations are direct empirical data; inferences are logical interpretations).

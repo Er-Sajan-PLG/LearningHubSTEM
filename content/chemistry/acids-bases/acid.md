@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Vinegar (acetic acid) and lemon juice (citric acid) are weak acids."
+  - "Car-battery electrolyte is strongly acidic sulfuric acid."
+key_experiments:
+  - "Test household substances with litmus or universal indicator; add acid to a metal and test the gas with a burning splint (pops)."
 common_misconceptions:
   - All acids burn skin and dissolve everything (many weak acids are safe and essential in biological systems, e.g. citric acid, amino acids).
   - Strong acids and concentrated acids mean the same thing (strength is degree of ionization; concentration is amount of acid per volume).

@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Fans, washing machines and electric vehicles turn electrical energy into motion with motors."
+  - "A toy car's wheels spin because a current-carrying coil experiences a torque."
+key_experiments:
+  - "Build a simple DC motor (coil, magnets, split ring) or observe a force on a current-carrying wire between magnet poles."
 common_misconceptions:
   - Motors create energy out of nothing (motors convert electrical energy to mechanical energy with some heat loss).
   - Motors operate on electrostatic repulsion (motors operate via magnetic forces on current-carrying conductors).

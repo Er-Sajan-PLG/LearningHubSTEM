@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Gas stoves, car engines and campfires run on combustion of fuel."
+  - "Incomplete combustion makes soot and dangerous carbon monoxide."
+key_experiments:
+  - "Burn a small candle in a jar: observe moisture and test the gas with limewater to show CO₂ from complete combustion."
 common_misconceptions:
   - Combustion can occur without oxygen (combustion requires an oxidant, normally oxygen in air).
   - Fire and combustion are the same thing (fire is the visible, observable event of combustion, not the reaction itself).

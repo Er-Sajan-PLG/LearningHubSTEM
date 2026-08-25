@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Earth's natural greenhouse warming keeps the average surface near 15 °C; Venus is hot from a dense CO₂ atmosphere."
+  - "Rising CO₂ and methane from human activity strengthen the greenhouse effect."
+key_experiments:
+  - "Two-bottle model: a sealed jar and an open jar in sunlight with a thermometer — compare the temperature rise."
 common_misconceptions:
   - The greenhouse effect functions like a physical glass greenhouse preventing convection (the atmospheric effect operates primarily by absorbing and re-emitting infrared radiation).
   - The natural greenhouse effect is harmful (without the natural greenhouse effect, Earth's average surface temperature would be approximately -18 °C).

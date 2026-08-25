@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Evaporation from lakes forms clouds, rain falls over mountains, and rivers carry water back to the sea."
+  - "Dew forms on grass by condensation of overnight water vapour."
+key_experiments:
+  - "Cover a glass of warm water with a plate and watch condensation — model evaporation, condensation and precipitation in a sealed bag."
 common_misconceptions:
   - The water cycle creates new water (the total water on Earth is essentially constant; the cycle only moves and changes its state).
   - Evaporation and boiling are the same (evaporation occurs at any temperature at the surface; boiling occurs throughout the liquid at the boiling point).

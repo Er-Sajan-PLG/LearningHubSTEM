@@ -10,6 +10,11 @@ definition: >-
 symbol: η (eta)
 unit: null (dimensionless, or %)
 equation: η = (E_useful_out / E_total_in) × 100%
+examples:
+  - "A 20%-efficient solar panel turns 80% of incoming light to heat; an LED bulb (≈90%) far beats a filament bulb (≈5%)."
+  - "Pulley systems reduce effort but lose energy to friction."
+key_experiments:
+  - "Measure electrical energy in and useful mechanical energy out of a small motor or model crane; compute efficiency."
 common_misconceptions:
   - Efficiency can exceed 100% (this would violate conservation of energy).
   - Inefficient machines destroy energy (energy is conserved; it just becomes less useful).

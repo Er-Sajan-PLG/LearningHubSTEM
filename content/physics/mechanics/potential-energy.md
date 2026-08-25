@@ -10,6 +10,11 @@ definition: >-
 symbol: PE or U
 unit: joule (J)
 equation: PE = m·g·h (gravitational)
+examples:
+  - "Water stored high in a dam holds gravitational potential energy."
+  - "A stretched rubber band stores elastic potential energy."
+key_experiments:
+  - "Pendulum/roller model: height at the top of a swing converts to speed at the bottom — potential to kinetic."
 common_misconceptions:
   - Potential energy is stored "in" the object alone (it is a property of the object-Earth system).
   - Potential energy can be negative (it depends on the reference level chosen).

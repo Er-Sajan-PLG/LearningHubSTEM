@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: θ_i = θ_r
+examples:
+  - "Your image in a plane mirror; sunlight glinting off a lake."
+  - "Retroreflectors on bicycles return light to its source."
+key_experiments:
+  - "Ray box at a plane mirror: measure and show angle of incidence = angle of reflection."
 common_misconceptions:
   - Reflection only happens from mirrors (all surfaces reflect some light).
   - The angle of incidence is measured from the surface (it is measured from the normal).
@@ -25,7 +30,7 @@ real_world_applications:
   - Rear-view mirrors.
   - Optical instruments.
 key_experiments:
-  - Verifying the law of reflection using a plane mirror and ray box.
+  - "Verifying the law of reflection using a plane mirror and ray box."
 provenance:
   ai_drafted: true
 relationships:

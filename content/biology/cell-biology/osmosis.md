@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A raisin plumps up in water; a cucumber slice in salt shrinks."
+  - "Freshwater fish take in water while marine fish lose it — osmotic balance."
+key_experiments:
+  - "Soak potato strips in pure water versus salt solutions and measure length/mass change over time."
 common_misconceptions:
   - Osmosis moves solute particles through the membrane (osmosis moves the solvent — water — while solutes stay behind).
   - Osmosis and diffusion are identical (osmosis is a special case of diffusion — the diffusion of water across a selectively permeable membrane).

@@ -10,6 +10,11 @@ definition: >-
 symbol: MA
 unit: null (dimensionless)
 equation: MA = F_output / F_input = d_input / d_output
+examples:
+  - "A lever lets a small person lift a heavy rock; a ramp lets you raise a load with less force."
+  - "A block-and-tackle halves the effort needed to lift a load."
+key_experiments:
+  - "Measure effort and load for levers and pulleys; compute mechanical advantage = load/effort."
 common_misconceptions:
   - Machines create energy (they only transform force and distance).
   - Greater mechanical advantage always means easier work (it means less force over more distance).

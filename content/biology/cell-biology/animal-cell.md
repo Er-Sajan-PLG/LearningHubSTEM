@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Muscle, nerve and skin cells are specialized animal cells."
+  - "Mature red blood cells have no nucleus."
+key_experiments:
+  - "Compare cheek-cell micrographs with plant-cell micrographs and draw labelled diagrams."
 common_misconceptions:
   - Animal cells have cell walls like plant cells (animal cells only have a flexible cell membrane).
   - Animal cells contain chloroplasts (animal cells obtain energy through heterotrophic nutrition and respiration).

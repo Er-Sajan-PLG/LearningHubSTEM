@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A pond, a forest and a coral reef are ecosystems."
+  - "Decomposers break down dead matter and recycle nutrients in a compost heap."
+key_experiments:
+  - "Build a sealed bottle biome (mini ecosystem) or survey a local pond or lawn with a quadrat."
 common_misconceptions:
   - Ecosystems are static and unchanging when undisturbed (ecosystems experience continuous dynamic fluctuations and succession).
   - Decomposers are unimportant compared to predators (decomposers recycle essential chemical nutrients without which ecosystems collapse).

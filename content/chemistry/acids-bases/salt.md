@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Table salt is sodium chloride; ammonium nitrate is a salt used in fertilizers."
+  - "Road salt lowers the freezing point of water for de-icing."
+key_experiments:
+  - "Neutralize hydrochloric acid with sodium hydroxide and evaporate to obtain sodium chloride crystals."
 common_misconceptions:
   - Salt means only sodium chloride (a salt is any ionic compound formed from acid-base chemistry; NaCl is one example).
   - All salts are safe to eat (many salts such as ammonium nitrate or heavy-metal salts are toxic or hazardous).

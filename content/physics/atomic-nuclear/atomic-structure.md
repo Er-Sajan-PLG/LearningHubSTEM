@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "A carbon-12 atom has 6 protons, 6 neutrons and 6 electrons."
+  - "An ion forms when an atom gains or loses electrons."
+key_experiments:
+  - "Rutherford gold-foil model discussion/simulation: most alpha particles pass straight through a thin foil."
 common_misconceptions:
   - Electrons orbit the nucleus in fixed paths like planets (electrons exist in probability clouds/orbitals).
   - The atom is mostly solid matter (the atom is mostly empty space).

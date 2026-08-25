@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Sound travels through air as a longitudinal wave."
+  - "Light and radio travel as transverse electromagnetic waves and need no medium."
+key_experiments:
+  - "Slinky: a sideways flick makes a transverse pulse; a push-pull makes a longitudinal pulse."
 common_misconceptions:
   - Waves carry matter (waves carry energy; the medium oscillates but does not travel with the wave).
   - All waves need a medium (electromagnetic waves travel through vacuum).
@@ -25,7 +30,7 @@ real_world_applications:
   - Seismology (earthquake waves).
   - Music and acoustics.
 key_experiments:
-  - Ripple tank experiments demonstrating reflection, refraction, and diffraction of water waves.
+  - "Ripple tank experiments demonstrating reflection, refraction, and diffraction of water waves."
 provenance:
   ai_drafted: true
 relationships:

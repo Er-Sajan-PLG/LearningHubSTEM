@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: F = G·m₁·m₂ / r² (G ≈ 6.674×10⁻¹¹ N·m²/kg²)
+examples:
+  - "The Moon stays in orbit through mutual gravitational attraction with Earth."
+  - "Ocean tides are raised mainly by the Moon's gravity."
+key_experiments:
+  - "Compare the weight-force between two masses at different separations with a torsion-balance model or simulation (Cavendish-type)."
 common_misconceptions:
   - Gravity only exists on Earth (gravitation is universal).
   - Gravity requires air to act (gravitation acts through vacuum).

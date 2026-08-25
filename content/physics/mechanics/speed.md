@@ -10,6 +10,11 @@ definition: >-
 symbol: v
 unit: metre per second (m/s)
 equation: v = d / t
+examples:
+  - "A car speedometer reads 60 km/h."
+  - "A marathon runner's average speed over the whole race."
+key_experiments:
+  - "Time a measured distance with a stopwatch and compute average speed."
 common_misconceptions:
   - Speed and velocity are always the same (velocity includes direction; speed does not).
   - Speed is always constant (speed can change continuously).
@@ -24,7 +29,7 @@ real_world_applications:
   - Athletics (race times and speeds).
   - Traffic engineering and speed limits.
 key_experiments:
-  - Measuring the speed of a moving object using a stopwatch and ruler.
+  - "Measuring the speed of a moving object using a stopwatch and ruler."
 provenance:
   ai_drafted: true
 relationships:

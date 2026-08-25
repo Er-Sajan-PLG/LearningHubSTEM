@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: 1/f = 1/v + 1/u (lens formula)
+examples:
+  - "A magnifying glass focuses sunlight to a burning point."
+  - "A camera lens forms a real, inverted image on a screen or sensor."
+key_experiments:
+  - "Convex lens: form a real image of a distant object on a screen and measure the focal length."
 common_misconceptions:
   - All lenses magnify (concave lenses reduce image size).
   - Lenses work by reflection (they work by refraction).
@@ -25,8 +30,8 @@ real_world_applications:
   - Microscopes and telescopes.
   - Magnifying glasses.
 key_experiments:
-  - Finding the focal length of a convex lens.
-  - Drawing ray diagrams for different object positions.
+  - "Finding the focal length of a convex lens."
+  - "Drawing ray diagrams for different object positions."
 provenance:
   ai_drafted: true
 relationships:

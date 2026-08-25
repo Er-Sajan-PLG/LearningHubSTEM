@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Coal, oil, gas and uranium are non-renewable; sun, wind and water are renewable."
+  - "A solar panel charging a phone converts light to electrical energy."
+key_experiments:
+  - "Hand-crank generator powering a bulb: trace the energy path from input work to light."
 common_misconceptions:
   - Energy can be created (energy is only converted from one form to another).
   - Renewable energy has no environmental impact (all energy sources have some impact).

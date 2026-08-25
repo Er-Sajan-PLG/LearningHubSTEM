@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: ε = -dΦ/dt (Faraday's law)
+examples:
+  - "A dynamo generates electricity as a coil rotates in a magnetic field."
+  - "Induction cooktops heat pans through induced (eddy) currents."
+key_experiments:
+  - "Galvanometer + magnet-in-coil: relative motion induces current, reversing with direction (Faraday's law)."
 common_misconceptions:
   - A stationary magnet near a coil produces current (the magnetic field must be changing).
   - Induced voltage depends on the magnet's strength alone (it depends on the rate of change of flux).

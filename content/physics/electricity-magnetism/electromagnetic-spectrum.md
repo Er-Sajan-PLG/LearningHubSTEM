@@ -11,6 +11,11 @@ definition: >-
 symbol: null
 unit: null
 equation: c = f·λ (applies to all EM waves)
+examples:
+  - "X-rays image bones; microwaves heat food; ultraviolet causes sunburn."
+  - "Radio waves carry broadcast and phone signals."
+key_experiments:
+  - "Prism dispersion of white light — then discuss how the same family extends beyond visible red and violet."
 common_misconceptions:
   - All EM waves are the same (they differ in wavelength, frequency, and energy).
   - EM waves need a medium (they travel through vacuum).

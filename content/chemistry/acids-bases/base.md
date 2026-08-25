@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Soap, baking soda and antacids are basic substances."
+  - "Caustic soda (sodium hydroxide) is a strong base."
+key_experiments:
+  - "Universal-indicator testing of household bases; mix a base with an acid and feel the temperature change."
 common_misconceptions:
   - Bases are completely harmless compared to acids (strong alkalis like sodium hydroxide cause severe chemical burns).
   - All bases are soluble in water (alkalis are water-soluble bases; insoluble bases like copper oxide are not alkalis).

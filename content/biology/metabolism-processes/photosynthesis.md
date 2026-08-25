@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂
+examples:
+  - "Trees, crops and algae photosynthesize; most atmospheric oxygen comes from photosynthesis."
+  - "Only the green parts of a variegated leaf photosynthesize."
+key_experiments:
+  - "Starch test on a destarched variegated leaf: light-struck areas turn blue-black with iodine, shaded areas do not."
 common_misconceptions:
   - Photosynthesis occurs to produce energy for plants instead of storing energy as carbohydrates.
   - Photosynthesis occurs during the day while cellular respiration only occurs at night (respiration occurs continuously).

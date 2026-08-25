@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Air, water, rock and living tissue are all matter."
+  - "Ice, liquid water and steam are the same matter in different states."
+key_experiments:
+  - "Demonstrate melting, boiling and condensation while showing that the amount of substance is conserved."
 common_misconceptions:
   - Energy and matter are the same thing at introductory levels (energy has no mass or volume).
   - Gases do not count as matter because they are invisible (gases have mass and occupy volume).

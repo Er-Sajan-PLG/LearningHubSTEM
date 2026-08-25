@@ -10,6 +10,11 @@ definition: >-
 symbol: null
 unit: null
 equation: null
+examples:
+  - "Mars, Jupiter and the other planets orbit the Sun; comets return on long elliptical orbits."
+  - "The Sun holds about 99.8% of the solar system's mass."
+key_experiments:
+  - "Build a scale model of solar-system distances (or sizes) across a school field to feel the emptiness between planets."
 common_misconceptions:
   - The planets orbit the Sun because the Sun is the biggest object (planets orbit because of the mutual gravitational attraction, dominated by the Sun's mass).
   - Pluto is counted among the eight major planets (Pluto is classified as a dwarf planet).
