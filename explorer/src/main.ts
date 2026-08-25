@@ -4,6 +4,7 @@ import { projectKnowledgeGraph } from './services/graph-projection';
 import { getConceptDetails } from './services/concept-data';
 import { ExplorerStateManager, ExplorerState } from './state/explorer-state';
 import { GraphView } from './components/graph-view';
+import { GraphLegend } from './components/graph-legend';
 import { ConceptInspectorView } from './components/concept-inspector-view';
 import { SearchFilterBar } from './components/search-filter-bar';
 import { AccessibleListView } from './components/accessible-list-view';
@@ -15,6 +16,7 @@ class ExplorerApp {
   private inspectorView: ConceptInspectorView | null = null;
   private searchFilterBar: SearchFilterBar | null = null;
   private accessibleListView: AccessibleListView | null = null;
+  private graphLegend: GraphLegend | null = null;
 
   constructor() {
     this.stateManager = new ExplorerStateManager();
@@ -63,13 +65,24 @@ class ExplorerApp {
     try {
       this.graphView = new GraphView({
         container: graphContainer,
-        onNodeSelect: (id) => this.stateManager.selectConcept(id)
+        onNodeSelect: (id) => this.stateManager.selectConcept(id),
+        onClusterSelect: (clusterId) => {
+          if (clusterId) this.graphView?.focusOnCluster(clusterId);
+        }
       });
       this.attachHudCameraControls();
     } catch (err) {
       console.error('Failed to initialize 3D Force Graph WebGL context:', err);
       this.showError(`WebGL/3D Renderer Error: ${(err as Error).message}. You can switch to accessible list mode.`);
     }
+
+    // 2b. Init Graph Legend (relationships + clusters)
+    const legendContainer = document.getElementById('graphLegend')!;
+    this.graphLegend = new GraphLegend({
+      container: legendContainer,
+      clusters: [],
+      onClusterSelect: (clusterId) => this.graphView?.focusOnCluster(clusterId)
+    });
 
     // 3. Init Inspector View
     const inspectorContainer = document.getElementById('inspector')!;
@@ -165,6 +178,8 @@ class ExplorerApp {
     const edgeEl = document.getElementById('hudEdgeCount');
     if (countEl) countEl.innerText = `${projection.nodes.length} Concepts`;
     if (edgeEl) edgeEl.innerText = `${projection.links.length} Edges`;
+
+    if (this.graphLegend) this.graphLegend.renderClusters(projection.clusters);
 
     if (!useList && this.graphView) {
       this.graphView.updateProjection(projection, state.selectedConceptId);

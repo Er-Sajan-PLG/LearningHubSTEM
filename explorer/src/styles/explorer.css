@@ -578,3 +578,87 @@ div#graphCanvas {
     border-top: 1px solid var(--border-glass);
   }
 }
+
+/* Graph Legend (relationships + clusters) */
+.graph-legend {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: var(--font-body);
+}
+.legend-toggle {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.2s;
+}
+.legend-toggle:hover { border-color: var(--accent-cyan); }
+.legend-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 14px;
+  max-width: 250px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.legend-group-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 6px 0 4px;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+.legend-line {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.legend-arrow { font-size: 0.6rem; line-height: 1; transform: translateX(4px); }
+.legend-label { white-space: nowrap; }
+.legend-dot-lg {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.legend-divider { height: 1px; background: var(--border-glass); margin: 6px 0; }
+.cluster-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.cluster-pill:hover { background: rgba(255,255,255,0.06); color: #fff; }
