@@ -1,7 +1,7 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-24T18:24:26+00:00",
+  "generated_at": "2026-08-25T16:06:05+00:00",
   "source": "content/",
   "entity_count": 112,
   "entities": [
@@ -39,8 +39,8 @@
           "target": "lhs:bio.cell"
         },
         {
-          "type": "logically_requires",
-          "target": "lhs:bio.cell"
+          "type": "related_to",
+          "target": "lhs:bio.plant-cell"
         }
       ]
     },
@@ -123,6 +123,10 @@
         {
           "type": "related_to",
           "target": "lhs:bio.photosynthesis"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
         }
       ]
     },
@@ -195,7 +199,7 @@
       },
       "relationships": [
         {
-          "type": "logically_requires",
+          "type": "related_to",
           "target": "lhs:bio.cell"
         },
         {
@@ -205,6 +209,10 @@
         {
           "type": "related_to",
           "target": "lhs:bio.cellular-respiration"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
         }
       ]
     },
@@ -244,6 +252,10 @@
         {
           "type": "related_to",
           "target": "lhs:bio.cell"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.compound"
         }
       ]
     },
@@ -364,7 +376,7 @@
           "target": "lhs:chem.chemical-reaction"
         },
         {
-          "type": "related_to",
+          "type": "logically_requires",
           "target": "lhs:phys.light"
         },
         {
@@ -407,8 +419,8 @@
           "target": "lhs:bio.cell"
         },
         {
-          "type": "logically_requires",
-          "target": "lhs:bio.cell"
+          "type": "related_to",
+          "target": "lhs:bio.animal-cell"
         }
       ]
     },
@@ -573,6 +585,10 @@
         {
           "type": "related_to",
           "target": "lhs:phys.conservation-of-energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
         }
       ]
     },
@@ -1014,6 +1030,14 @@
         {
           "type": "related_to",
           "target": "lhs:phys.gravitation"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.acid"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.cellular-respiration"
         }
       ]
     },
@@ -1095,6 +1119,10 @@
         },
         {
           "type": "related_to",
+          "target": "lhs:bio.ecosystem"
+        },
+        {
+          "type": "related_to",
           "target": "lhs:phys.conservation-of-energy"
         }
       ]
@@ -1139,6 +1167,10 @@
         {
           "type": "related_to",
           "target": "lhs:earth.earth-system"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.thermal-energy"
         }
       ]
     },
@@ -2202,6 +2234,10 @@
         {
           "type": "related_to",
           "target": "lhs:phys.nuclear-fusion"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.chemical-reaction"
         }
       ]
     },
@@ -2927,6 +2963,10 @@
         {
           "type": "related_to",
           "target": "lhs:phys.electromagnetic-spectrum"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.photosynthesis"
         }
       ]
     },
@@ -3070,6 +3110,14 @@
         {
           "type": "appears_in_law",
           "target": "lhs:phys.newtons-second-law"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.inertia"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.weight"
         }
       ]
     },
@@ -4424,6 +4472,10 @@
         {
           "type": "related_to",
           "target": "lhs:phys.scalar"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.frequency"
         }
       ]
     },

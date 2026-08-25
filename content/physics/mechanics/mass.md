@@ -17,10 +17,14 @@ provenance:
 relationships:
   - type: appears_in_law
     target: lhs:phys.newtons-second-law
+  - type: related_to
+    target: lhs:phys.inertia
+  - type: related_to
+    target: lhs:phys.weight
 ---
 
 ## Notes
 
 Mass is a base quantity in the SI; it has no defining equation within this seed. The seed
-describes mass only as it participates in Newton's second law. Further relationships
-(gravitation, inertia, energy) are future content.
+describes mass only as it participates in Newton's second law. Mass is the quantitative
+measure of inertia and the gravitational source in the law of universal gravitation.

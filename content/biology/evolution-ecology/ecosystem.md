@@ -25,12 +25,14 @@ provenance:
   source_kind: standards-or-specification
   source: International Union for Conservation of Nature (IUCN) / UNESCO
 relationships:
-  - type: logically_requires
+  - type: related_to
     target: lhs:bio.cell
   - type: related_to
     target: lhs:bio.photosynthesis
   - type: related_to
     target: lhs:bio.cellular-respiration
+  - type: related_to
+    target: lhs:phys.energy
 ---
 
 ## Notes

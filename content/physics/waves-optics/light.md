@@ -35,6 +35,8 @@ relationships:
     target: lhs:phys.refraction
   - type: related_to
     target: lhs:phys.electromagnetic-spectrum
+  - type: related_to
+    target: lhs:bio.photosynthesis
 ---
 
 ## Notes

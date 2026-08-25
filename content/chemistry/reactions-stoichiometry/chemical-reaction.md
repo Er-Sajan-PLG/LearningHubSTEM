@@ -31,6 +31,8 @@ relationships:
     target: lhs:chem.element
   - type: related_to
     target: lhs:phys.conservation-of-energy
+  - type: related_to
+    target: lhs:phys.energy
 ---
 
 ## Notes

@@ -34,6 +34,8 @@ relationships:
     target: lhs:phys.nuclear-fission
   - type: related_to
     target: lhs:phys.nuclear-fusion
+  - type: related_to
+    target: lhs:chem.chemical-reaction
 ---
 
 ## Notes

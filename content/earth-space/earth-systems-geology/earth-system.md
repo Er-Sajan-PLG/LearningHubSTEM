@@ -30,6 +30,8 @@ relationships:
   - type: related_to
     target: lhs:bio.cell
   - type: related_to
+    target: lhs:bio.ecosystem
+  - type: related_to
     target: lhs:phys.conservation-of-energy
 ---
 

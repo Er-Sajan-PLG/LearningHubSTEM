@@ -31,6 +31,10 @@ relationships:
     target: lhs:phys.pressure
   - type: related_to
     target: lhs:phys.gravitation
+  - type: related_to
+    target: lhs:chem.acid
+  - type: related_to
+    target: lhs:bio.cellular-respiration
 ---
 
 ## Notes

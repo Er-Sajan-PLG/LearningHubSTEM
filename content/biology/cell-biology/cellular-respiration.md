@@ -31,6 +31,8 @@ relationships:
     target: lhs:chem.chemical-reaction
   - type: related_to
     target: lhs:bio.photosynthesis
+  - type: related_to
+    target: lhs:phys.energy
 ---
 
 ## Notes

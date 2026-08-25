@@ -29,6 +29,8 @@ relationships:
     target: lhs:chem.chemical-reaction
   - type: related_to
     target: lhs:bio.cell
+  - type: related_to
+    target: lhs:chem.compound
 ---
 
 ## Notes
