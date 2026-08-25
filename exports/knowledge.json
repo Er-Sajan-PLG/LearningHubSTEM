@@ -1,9 +1,9 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-25T16:06:05+00:00",
+  "generated_at": "2026-08-25T16:09:12+00:00",
   "source": "content/",
-  "entity_count": 112,
+  "entity_count": 124,
   "entities": [
     {
       "id": "lhs:bio.animal-cell",
@@ -299,6 +299,51 @@
       ]
     },
     {
+      "id": "lhs:bio.homeostasis",
+      "type": "concept",
+      "name": "Homeostasis",
+      "domain": "biology",
+      "status": "draft",
+      "definition": "The maintenance of a stable internal environment (temperature, pH, water and solute balance, glucose levels) within living organisms despite changes in the external environment, achieved through regulatory feedback mechanisms.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Homeostasis means conditions never change (it means conditions are kept within a narrow functional range, with continuous adjustment).",
+        "Only warm-blooded animals maintain homeostasis (all living organisms regulate some internal conditions).",
+        "Homeostasis is a static set point rather than dynamic balance (it is a dynamic equilibrium maintained by negative feedback)."
+      ],
+      "learning_objectives": [
+        "Define homeostasis and give examples of regulated internal conditions.",
+        "Explain negative feedback using body temperature or blood glucose as examples.",
+        "Relate homeostasis to enzyme function and cell survival."
+      ],
+      "real_world_applications": [
+        "Clinical monitoring of blood glucose in diabetes.",
+        "Thermoregulation in premature infant care.",
+        "Sports hydration and electrolyte balance."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "International Union of Physiological Sciences"
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:bio.cell"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.enzyme"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.temperature"
+        }
+      ]
+    },
+    {
       "id": "lhs:bio.natural-selection",
       "type": "concept",
       "name": "Natural Selection",
@@ -334,6 +379,92 @@
         {
           "type": "related_to",
           "target": "lhs:bio.dna"
+        }
+      ]
+    },
+    {
+      "id": "lhs:bio.nucleus",
+      "type": "concept",
+      "name": "Nucleus",
+      "domain": "biology",
+      "status": "draft",
+      "definition": "The membrane-bound organelle in eukaryotic cells that contains most of the cell's genetic material (DNA) and directs cell activities such as growth, metabolism, and reproduction.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Every cell has a nucleus (mature red blood cells and prokaryotes lack a nucleus).",
+        "The nucleus is the same as the whole cell's control in prokaryotes (prokaryotes have no nucleus at all; their genetic material floats in the cytoplasm).",
+        "The nuclear membrane is not selective (the nuclear envelope regulates what enters and leaves the nucleus)."
+      ],
+      "learning_objectives": [
+        "Identify the nucleus and its parts (nuclear membrane, nucleoplasm, nucleolus, chromatin).",
+        "Describe the nucleus as the storehouse of hereditary information.",
+        "Distinguish eukaryotic cells (with nucleus) from prokaryotic cells (without)."
+      ],
+      "real_world_applications": [
+        "Genetic fingerprinting from cell nuclei.",
+        "Cancer diagnosis based on abnormal nuclear morphology.",
+        "Somatic cell nuclear transfer research."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "International Union of Biological Sciences"
+      },
+      "relationships": [
+        {
+          "type": "part_of",
+          "target": "lhs:bio.cell"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.dna"
+        }
+      ]
+    },
+    {
+      "id": "lhs:bio.osmosis",
+      "type": "concept",
+      "name": "Osmosis",
+      "domain": "biology",
+      "status": "draft",
+      "definition": "The net movement of water molecules across a selectively permeable membrane from a region of lower solute concentration (higher water concentration) to a region of higher solute concentration (lower water concentration), equalizing concentration by water flow.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Osmosis moves solute particles through the membrane (osmosis moves the solvent — water — while solutes stay behind).",
+        "Osmosis and diffusion are identical (osmosis is a special case of diffusion — the diffusion of water across a selectively permeable membrane).",
+        "Water moves toward where there is more water (water moves toward the higher solute concentration to dilute it)."
+      ],
+      "learning_objectives": [
+        "Define osmosis as the diffusion of water across a selectively permeable membrane.",
+        "Predict the direction of water movement given solution concentrations.",
+        "Distinguish hypotonic, isotonic, and hypertonic solutions and their effects on cells."
+      ],
+      "real_world_applications": [
+        "Rehydration of dried fruits and pickling of vegetables.",
+        "Intravenous fluid design (isotonic saline).",
+        "Water uptake by plant roots and turgor in plant cells."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "International Union of Biological Sciences"
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:chem.diffusion"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.pressure"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.cell"
         }
       ]
     },
@@ -546,6 +677,51 @@
       ]
     },
     {
+      "id": "lhs:chem.chemical-equation",
+      "type": "equation",
+      "name": "Balanced Chemical Equation",
+      "domain": "chemistry",
+      "status": "draft",
+      "definition": "A symbolic representation of a chemical reaction showing reactants on the left and products on the right, with coefficient ratios balanced so that the number of atoms of each element is conserved across the arrow.",
+      "symbol": null,
+      "unit": null,
+      "equation": "2H₂ + O₂ → 2H₂O   ·   CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "common_misconceptions": [
+        "Coefficients and subscripts can be changed freely to balance an equation (coefficients may change; subscripts define the substance and must not).",
+        "Balancing changes the identity of the substances (balancing only adjusts amounts, never the compounds involved).",
+        "The arrow means equality of amounts (it indicates transformation; total atom count is conserved, not the number of molecules)."
+      ],
+      "learning_objectives": [
+        "Write and balance chemical equations for common reactions.",
+        "Interpret a balanced equation in terms of particles, moles, and mass.",
+        "Verify that atoms of each element are conserved."
+      ],
+      "real_world_applications": [
+        "Stoichiometric calculation of reactants and products in industry.",
+        "Fuel combustion tuning and air quality modeling.",
+        "Recipe-like dosage in pharmaceutical synthesis."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "IUPAC Compendium of Chemical Terminology"
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:chem.chemical-reaction"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.element"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.matter"
+        }
+      ]
+    },
+    {
       "id": "lhs:chem.chemical-reaction",
       "type": "concept",
       "name": "Chemical Reaction",
@@ -589,6 +765,51 @@
         {
           "type": "related_to",
           "target": "lhs:phys.energy"
+        }
+      ]
+    },
+    {
+      "id": "lhs:chem.combustion",
+      "type": "concept",
+      "name": "Combustion",
+      "domain": "chemistry",
+      "status": "draft",
+      "definition": "A rapid chemical reaction between a substance and an oxidant (usually oxygen) that releases heat and light. Complete combustion of hydrocarbons produces carbon dioxide and water; incomplete combustion produces carbon monoxide and soot.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Combustion can occur without oxygen (combustion requires an oxidant, normally oxygen in air).",
+        "Fire and combustion are the same thing (fire is the visible, observable event of combustion, not the reaction itself).",
+        "Complete combustion is always achieved with plenty of fuel (complete combustion needs sufficient oxygen, not more fuel)."
+      ],
+      "learning_objectives": [
+        "Describe combustion as an exothermic oxidation reaction.",
+        "Distinguish complete from incomplete combustion and their products.",
+        "Relate combustion to everyday fuels and their environmental effects."
+      ],
+      "real_world_applications": [
+        "Burning fossil fuels for energy and transport.",
+        "Cooking and heating with gas burners.",
+        "Fire safety and extinguishing principles."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "IUPAC Compendium of Chemical Terminology"
+      },
+      "relationships": [
+        {
+          "type": "special_case_of",
+          "target": "lhs:chem.chemical-reaction"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.our-environment"
         }
       ]
     },
@@ -667,6 +888,51 @@
         {
           "type": "related_to",
           "target": "lhs:chem.compound"
+        }
+      ]
+    },
+    {
+      "id": "lhs:chem.diffusion",
+      "type": "concept",
+      "name": "Diffusion",
+      "domain": "chemistry",
+      "status": "draft",
+      "definition": "The net movement of particles from a region of higher concentration to a region of lower concentration, driven by the random thermal motion of particles, until concentrations equalize.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Diffusion happens only in gases (diffusion occurs in gases, liquids, and across solutions).",
+        "Particles move because they are pushed toward empty space (particles move randomly; net flow arises from statistical imbalance, not repulsion).",
+        "Higher temperature slows diffusion (higher temperature increases particle kinetic energy and speeds diffusion)."
+      ],
+      "learning_objectives": [
+        "Explain diffusion in terms of random particle motion.",
+        "Describe factors that affect the rate of diffusion (temperature, particle size, concentration gradient).",
+        "Distinguish diffusion from osmosis."
+      ],
+      "real_world_applications": [
+        "Spreading of perfume or cooking smells through a room.",
+        "Gas exchange of oxygen and carbon dioxide in lungs.",
+        "Dissolving and mixing of substances."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "IUPAC Compendium of Chemical Terminology"
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:chem.matter"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.temperature"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:bio.osmosis"
         }
       ]
     },
@@ -831,6 +1097,51 @@
       ]
     },
     {
+      "id": "lhs:chem.mixture",
+      "type": "concept",
+      "name": "Mixture",
+      "domain": "chemistry",
+      "status": "draft",
+      "definition": "A physical combination of two or more substances that are not chemically bonded, can vary in composition, and can be separated by physical means. Homogeneous mixtures are uniform throughout; heterogeneous mixtures are not.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "A mixture and a compound are the same (mixtures keep the properties of their components and separate physically; compounds form new substances with new properties).",
+        "Every mixture looks uniform (only homogeneous mixtures do; heterogeneous mixtures, like sand in water, are visibly uneven).",
+        "Separating a mixture changes its nature (physical separation preserves the identity of the components)."
+      ],
+      "learning_objectives": [
+        "Distinguish a mixture from a pure substance and from a compound.",
+        "Classify mixtures as homogeneous or heterogeneous.",
+        "Describe physical separation methods (filtration, distillation, evaporation, chromatography)."
+      ],
+      "real_world_applications": [
+        "Separation of crude oil by fractional distillation.",
+        "Purifying drinking water by filtration.",
+        "Air and seawater as naturally occurring mixtures."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "IUPAC Compendium of Chemical Terminology"
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:chem.matter"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.compound"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.diffusion"
+        }
+      ]
+    },
+    {
       "id": "lhs:chem.neutralization",
       "type": "concept",
       "name": "Neutralization Reaction",
@@ -987,6 +1298,51 @@
         {
           "type": "logically_requires",
           "target": "lhs:phys.electric-charge"
+        }
+      ]
+    },
+    {
+      "id": "lhs:chem.salt",
+      "type": "concept",
+      "name": "Salt",
+      "domain": "chemistry",
+      "status": "draft",
+      "definition": "An ionic compound formed when the hydrogen ion of an acid is replaced by a metal ion (or ammonium ion), typically produced by neutralization of an acid with a base. Common table salt is sodium chloride, NaCl.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Salt means only sodium chloride (a salt is any ionic compound formed from acid-base chemistry; NaCl is one example).",
+        "All salts are safe to eat (many salts such as ammonium nitrate or heavy-metal salts are toxic or hazardous).",
+        "Salts are always neutral (salts of weak acids or weak bases can form acidic or basic solutions)."
+      ],
+      "learning_objectives": [
+        "Define a salt and describe how it forms from an acid and a base.",
+        "Give examples of common salts and their uses.",
+        "Predict the salt produced by a given acid-base pair."
+      ],
+      "real_world_applications": [
+        "Table salt and food preservation.",
+        "Fertilizers (ammonium sulfate, potassium nitrate).",
+        "De-icing roads (sodium chloride lowers the freezing point)."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "IUPAC Compendium of Chemical Terminology"
+      },
+      "relationships": [
+        {
+          "type": "derived_from",
+          "target": "lhs:chem.neutralization"
+        },
+        {
+          "type": "logically_requires",
+          "target": "lhs:chem.compound"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.ionic-bond"
         }
       ]
     },
@@ -1218,6 +1574,55 @@
       ]
     },
     {
+      "id": "lhs:earth.rock-cycle",
+      "type": "concept",
+      "name": "Rock Cycle",
+      "domain": "earth-space",
+      "status": "draft",
+      "definition": "The continuous transformation of the three rock families — igneous, sedimentary, and metamorphic — through weathering, erosion, deposition, burial, heat, pressure, and melting, driven by Earth's internal heat and surface processes.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "Rocks are permanent and unchanging (rocks continuously transform between the three families over geological time).",
+        "The rock cycle moves only in one direction (rocks can take many different pathways through the cycle).",
+        "Magma is found only inside volcanoes (magma is melt within the crust and upper mantle; lava is melt at the surface)."
+      ],
+      "learning_objectives": [
+        "Describe the three rock families and how each forms.",
+        "Trace pathways through the rock cycle.",
+        "Relate the rock cycle to plate tectonics and Earth's internal heat."
+      ],
+      "real_world_applications": [
+        "Geological resource exploration (minerals, fossil fuels, groundwater).",
+        "Understanding volcanic hazard and earthquake risk.",
+        "Interpreting Earth's history from rock records."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "NASA Earth System Science Framework / AGU"
+      },
+      "relationships": [
+        {
+          "type": "part_of",
+          "target": "lhs:earth.earth-system"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:earth.plate-tectonics"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.thermal-energy"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.matter"
+        }
+      ]
+    },
+    {
       "id": "lhs:earth.seasons-cause",
       "type": "concept",
       "name": "Cause of Astronomical Seasons",
@@ -1253,6 +1658,100 @@
         {
           "type": "related_to",
           "target": "lhs:earth.earth-system"
+        }
+      ]
+    },
+    {
+      "id": "lhs:earth.solar-system",
+      "type": "concept",
+      "name": "Solar System",
+      "domain": "earth-space",
+      "status": "draft",
+      "definition": "The gravitationally bound system consisting of the Sun, eight planets and their moons, dwarf planets, asteroids, comets, and interplanetary material, orbiting the Sun.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "The planets orbit the Sun because the Sun is the biggest object (planets orbit because of the mutual gravitational attraction, dominated by the Sun's mass).",
+        "Pluto is counted among the eight major planets (Pluto is classified as a dwarf planet).",
+        "All solar system bodies orbit in the same plane and direction because of imposed rules (they formed from a single rotating protoplanetary disk)."
+      ],
+      "learning_objectives": [
+        "Describe the structure and members of the solar system.",
+        "Explain the role of gravity in holding the solar system together.",
+        "Relate Earth's motion (orbit and axial tilt) to seasons."
+      ],
+      "real_world_applications": [
+        "Space exploration mission planning.",
+        "Understanding Earth's place and habitability in the solar system.",
+        "Orbital mechanics and satellite deployment."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "NASA / IAU"
+      },
+      "relationships": [
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.gravitation"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:earth.earth-system"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:earth.seasons-cause"
+        }
+      ]
+    },
+    {
+      "id": "lhs:earth.water-cycle",
+      "type": "concept",
+      "name": "Water Cycle",
+      "domain": "earth-space",
+      "status": "draft",
+      "definition": "The continuous circulation of water between the atmosphere, Earth's surface, and underground reservoirs through evaporation, transpiration, condensation, precipitation, infiltration, and runoff, driven by solar energy and gravity.",
+      "symbol": null,
+      "unit": null,
+      "equation": null,
+      "common_misconceptions": [
+        "The water cycle creates new water (the total water on Earth is essentially constant; the cycle only moves and changes its state).",
+        "Evaporation and boiling are the same (evaporation occurs at any temperature at the surface; boiling occurs throughout the liquid at the boiling point).",
+        "Rainwater is completely pure (rain picks up dissolved gases and particles as it falls)."
+      ],
+      "learning_objectives": [
+        "Trace the movement of water through the stages of the water cycle.",
+        "Identify the energy sources that drive the water cycle (solar energy, gravity).",
+        "Explain the role of the atmosphere and oceans as water reservoirs."
+      ],
+      "real_world_applications": [
+        "Weather forecasting and precipitation prediction.",
+        "Freshwater resource management and irrigation scheduling.",
+        "Understanding droughts, floods, and groundwater recharge."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "NOAA / WMO Atmospheric Science Standards"
+      },
+      "relationships": [
+        {
+          "type": "part_of",
+          "target": "lhs:earth.earth-system"
+        },
+        {
+          "type": "logically_requires",
+          "target": "lhs:phys.change-of-state"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:earth.atmosphere"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.heat"
         }
       ]
     },
@@ -2238,6 +2737,59 @@
         {
           "type": "related_to",
           "target": "lhs:chem.chemical-reaction"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.equations-of-motion",
+      "type": "equation",
+      "name": "Equations of Motion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "The set of kinematic equations relating displacement, initial velocity, uniform acceleration, and time for motion in a straight line under constant acceleration: v = u + at, s = ut + ½at², v² = u² + 2as, and s = ½(u + v)t. They apply only when acceleration is constant.",
+      "symbol": "v, u, a, s, t",
+      "unit": null,
+      "equation": "v = u + at;  s = ut + ½at²;  v² = u² + 2as;  s = ½(u+v)t",
+      "common_misconceptions": [
+        "Equations of motion apply whenever an object moves (they are valid only for uniform, constant acceleration).",
+        "u and v are interchangeable (u is the initial velocity and v is the final velocity; swapping them changes the answer).",
+        "The equations work for any motion including circular motion (they describe straight-line kinematics only)."
+      ],
+      "learning_objectives": [
+        "State the four equations of motion for uniform acceleration.",
+        "Select the correct equation given the known and unknown quantities.",
+        "Solve numerical problems for displacement, velocity, acceleration, and time."
+      ],
+      "real_world_applications": [
+        "Calculating vehicle stopping distances and reaction distance.",
+        "Predicting the time and height of a ball thrown vertically upward.",
+        "Analyzing free fall near Earth's surface."
+      ],
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "standards-or-specification",
+        "source": "Nepal CDC SEE / CBSE / UK KS4 kinematics objectives"
+      },
+      "relationships": [
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.velocity"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.acceleration"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.time"
+        },
+        {
+          "type": "mathematically_requires",
+          "target": "lhs:phys.displacement"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.free-fall"
         }
       ]
     },

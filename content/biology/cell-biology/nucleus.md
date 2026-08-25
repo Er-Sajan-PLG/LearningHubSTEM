@@ -1,0 +1,40 @@
+---
+id: lhs:bio.nucleus
+type: concept
+name: Nucleus
+domain: biology
+status: draft
+definition: >-
+  The membrane-bound organelle in eukaryotic cells that contains most of the cell's
+  genetic material (DNA) and directs cell activities such as growth, metabolism, and
+  reproduction.
+symbol: null
+unit: null
+equation: null
+common_misconceptions:
+  - Every cell has a nucleus (mature red blood cells and prokaryotes lack a nucleus).
+  - The nucleus is the same as the whole cell's control in prokaryotes (prokaryotes have no nucleus at all; their genetic material floats in the cytoplasm).
+  - The nuclear membrane is not selective (the nuclear envelope regulates what enters and leaves the nucleus).
+learning_objectives:
+  - Identify the nucleus and its parts (nuclear membrane, nucleoplasm, nucleolus, chromatin).
+  - Describe the nucleus as the storehouse of hereditary information.
+  - Distinguish eukaryotic cells (with nucleus) from prokaryotic cells (without).
+real_world_applications:
+  - Genetic fingerprinting from cell nuclei.
+  - Cancer diagnosis based on abnormal nuclear morphology.
+  - Somatic cell nuclear transfer research.
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: International Union of Biological Sciences
+relationships:
+  - type: part_of
+    target: lhs:bio.cell
+  - type: related_to
+    target: lhs:bio.dna
+---
+
+## Notes
+
+The nucleus is the defining feature of eukaryotic cells: it houses the DNA that encodes
+hereditary instructions, making it the structural anchor of genetics.
