@@ -1,9 +1,9 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-08-25T16:45:45+00:00",
+  "generated_at": "2026-08-31T19:04:22+00:00",
   "source": "content/",
-  "entity_count": 124,
+  "entity_count": 128,
   "entities": [
     {
       "id": "lhs:bio.animal-cell",
@@ -2278,6 +2278,52 @@
       ]
     },
     {
+      "id": "lhs:phys.bohr-model",
+      "type": "concept",
+      "name": "Bohr Model",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Early quantum model of the atom with electrons in quantized circular orbits around nucleus, explaining hydrogen spectrum but limited to hydrogen-like atoms.",
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "textbook",
+        "source": "Bohr 1913"
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.atomic-structure"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.atom"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.brownian-motion",
+      "type": "concept",
+      "name": "Brownian Motion",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Random, erratic motion of microscopic particles suspended in a fluid, caused by collisions with fast-moving molecules of the fluid. Evidence for molecular-kinetic theory.",
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "textbook",
+        "source": "Einstein 1905; Perrin 1908"
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.heat"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.diffusion"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.buoyancy",
       "type": "concept",
       "name": "Buoyancy",
@@ -3784,6 +3830,29 @@
       ]
     },
     {
+      "id": "lhs:phys.ideal-gas-model",
+      "type": "concept",
+      "name": "Ideal Gas Model",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Simplified model of a gas as point particles with no intermolecular forces, obeying PV = nRT. Valid at moderate pressure and high temperature.",
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "textbook",
+        "source": "Atkins Physical Chemistry"
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:earth.atmosphere"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.matter"
+        }
+      ]
+    },
+    {
       "id": "lhs:phys.impulse",
       "type": "quantity",
       "name": "Impulse",
@@ -4891,6 +4960,29 @@
         {
           "type": "related_to",
           "target": "lhs:phys.conservation-of-energy"
+        }
+      ]
+    },
+    {
+      "id": "lhs:phys.photoelectric-effect",
+      "type": "concept",
+      "name": "Photoelectric Effect",
+      "domain": "physics",
+      "status": "draft",
+      "definition": "Emission of electrons from a material when light of sufficient frequency shines on it, demonstrating quantum nature of light.",
+      "provenance": {
+        "ai_drafted": true,
+        "source_kind": "textbook",
+        "source": "Einstein 1905"
+      },
+      "relationships": [
+        {
+          "type": "related_to",
+          "target": "lhs:phys.light"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:chem.electron"
         }
       ]
     },
