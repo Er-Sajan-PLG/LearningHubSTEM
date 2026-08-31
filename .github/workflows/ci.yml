@@ -1,0 +1,101 @@
+name: CI — LearningHubSTEM
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ci-learninghubstem-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Knowledge Base
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install pyyaml jsonschema
+
+      - name: Run validator (content + connections + sources)
+        run: python3 scripts/validate.py
+
+      - name: Check derived export
+        run: |
+          test -f exports/knowledge.json
+          echo "Derived export exists"
+          ls -lh exports/
+
+  security:
+    name: Security scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        timeout-minutes: 5
+
+      - name: Check no secrets in content
+        run: |
+          if grep -R -i "api_key\|secret.*=" content/ --include="*.md" | grep -v "example" | grep -v "provenance"; then
+            echo "Potential secret in content"
+            exit 1
+          fi
+
+  verify-docs:
+    name: Verify Governance Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required docs
+        run: |
+          for f in AGENTS.md README.md docs/GOVERNANCE.md docs/LEARNINGHUBSTEM-SPECIFICATION.md; do
+            if [[ ! -f "$f" ]]; then echo "Missing $f"; exit 1; fi
+          done
+          echo "Docs OK"
+
+  check-branching:
+    name: Branching Strategy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Check branch naming
+        run: |
+          branch="${{ github.head_ref }}"
+          if [[ ! $branch =~ ^(feat|fix|docs|chore|ci|task|phase|exp|dependabot)/ ]]; then
+            echo "Branch '$branch' must start with feat/|fix/|docs/|chore/|ci/|task/|phase/|exp/|dependabot/"
+            exit 1
+          fi
+
+  check-conventional-commits:
+    name: Conventional Commits
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check commit messages
+        uses: wagoid/commitlint-github-action@v6
+        with:
+          configFile: commitlint.config.cjs
+          failOnErrors: true
