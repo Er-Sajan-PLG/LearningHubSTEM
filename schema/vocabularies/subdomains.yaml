@@ -1,0 +1,47 @@
+# Subdomain vocabularies — controlled per domain (ADR-012, guardrail subdomain)
+# Each domain's allowed subdomains are validated against this file.
+# Unknown subdomains: add to this file (not schema) via ADR update.
+
+physics:
+  - mechanics
+  - thermal-physics
+  - electricity-magnetism
+  - waves-optics
+  - atomic-nuclear
+  - measurement-units
+
+chemistry:
+  - matter-foundations
+  - atomic-structure-periodicity
+  - bonding-structure
+  - reactions-stoichiometry
+  - acids-bases
+
+biology:
+  - cell-biology
+  - genetics-heredity
+  - evolution-ecology
+  - metabolism-processes
+
+earth-space:
+  - atmosphere-climate
+  - earth-systems-geology
+  - space-cosmology
+
+engineering:
+  - design-process
+
+scientific-practice:
+  - inquiry-observation
+  - epistemology-nature-of-science
+
+mathematics:
+  - foundations
+  - arithmetic
+  - number-theory
+  - algebra
+  - geometry
+  - measurement
+  - statistics-probability
+  - functions
+  - calculus
