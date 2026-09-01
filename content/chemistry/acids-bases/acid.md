@@ -29,6 +29,18 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: IUPAC Compendium of Chemical Terminology
+historical:
+  stated_by: "Johannes Brønsted & Thomas Lowry (Brønsted-Lowry model)"
+  year: 1923
+  context: "Acid-base theory (proton-donor model)"
+  note: "Brønsted and Lowry independently proposed the proton-donor/acceptor model of acids and bases in 1923. Earlier, Svante Arrhenius had defined acids as substances producing H⁺ in water (1884)."
+  timeline:
+    - year: 1884
+      by: "Svante Arrhenius"
+      event: "Arrhenius acid-base theory (H⁺ production in aqueous solution)"
+    - year: 1923
+      by: "Johannes Brønsted & Thomas Lowry"
+      event: "Independent proposal of the proton-transfer (Brønsted-Lowry) acid-base model"
 relationships:
   - type: logically_requires
     target: lhs:chem.compound

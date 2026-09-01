@@ -30,6 +30,12 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Heike Kamerlingh Onnes"
+  year: 1909
+  where: "Lecture/publication in which the term 'enthalpy' was introduced"
+  context: "Thermodynamic state function H = U + PV"
+  note: "Kamerlingh Onnes coined the term 'enthalpy' in 1909. The underlying state-function concept (heat exchanged at constant pressure) was already present in earlier thermodynamics, including J. Willard Gibbs's work in the 1870s."
 relationships:
   - type: related_to
     target: lhs:chem.entropy

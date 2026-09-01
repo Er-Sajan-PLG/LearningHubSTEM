@@ -30,6 +30,21 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Campbell Biology
+historical:
+  stated_by: "Oskar Hertwig & Édouard van Beneden (description); term by Farmer & Moore"
+  year: 1876
+  context: "Description of reduction division in the late 1800s; the term 'meiosis' coined later"
+  note: "Hertwig described fertilization and nuclear fusion in sea urchins (1876); van Beneden demonstrated chromosome reduction in 1887; the term 'meiosis' was coined by J. B. Farmer and J. E. Moore in 1905."
+  timeline:
+    - year: 1876
+      by: "Oskar Hertwig"
+      event: "Recognised the process of fertilization, including fusion of gamete nuclei"
+    - year: 1887
+      by: "Édouard van Beneden"
+      event: "Demonstrated the halving (reduction) of chromosome number in gametes"
+    - year: 1905
+      by: "J. B. Farmer and J. E. Moore"
+      event: "Coined the term 'meiosis' for reduction division"
 relationships:
   - type: logically_requires
     target: lhs:bio.chromosome

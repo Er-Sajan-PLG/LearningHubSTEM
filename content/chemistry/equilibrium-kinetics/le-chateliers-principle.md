@@ -30,6 +30,12 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Henri-Louis Le Chatelier"
+  year: 1884
+  where: "Comptes rendus de l'Académie des Sciences (C. R. Acad. Sci.)"
+  context: "Chemical equilibrium under changing conditions"
+  note: "Le Chatelier announced the principle in 1884 in the Comptes rendus. Similar reasoning about equilibrium response to stress was being developed by others around the same time."
 relationships:
   - type: applies_to
     target: lhs:chem.chemical-equilibrium

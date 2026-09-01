@@ -30,6 +30,16 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Josiah Willard Gibbs"
+  year: 1876
+  where: "On the Equilibrium of Heterogeneous Substances (1876–1878), Transactions of the Connecticut Academy of Arts and Sciences"
+  context: "Gibbs free energy and chemical thermodynamics"
+  note: "Gibbs introduced the function combining enthalpy, entropy, and temperature (G = H − TS) in his memoir published across 1876–1878."
+  timeline:
+    - year: 1876
+      by: "Josiah Willard Gibbs"
+      event: "First part of 'On the Equilibrium of Heterogeneous Substances' published (series ran to 1878)"
 relationships:
   - type: mathematically_requires
     target: lhs:chem.enthalpy

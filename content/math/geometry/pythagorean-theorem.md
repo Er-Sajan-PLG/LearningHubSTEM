@@ -36,6 +36,12 @@ provenance:
   source: "NCTM Principles and Standards / ICSE Mathematics Curriculum"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Pythagoras (traditionally attributed)"
+  year: -530
+  where: "Traditionally attributed to the Pythagorean school (6th century BCE)"
+  context: "Geometry"
+  note: "The relation between the sides of a right triangle was known to earlier Babylonian, Indian and Chinese mathematicians; the attribution of a formal proof to Pythagoras is traditional and not directly documented."
 relationships:
   - type: applies_to
     target: lhs:math.triangle

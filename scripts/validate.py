@@ -113,6 +113,50 @@ def check_extensions(data: dict, object_kind: str, errors: list, here: str) -> N
             errors.append(f"{here} extension '{key}' must be a boolean")
 
 
+def check_historical(data: dict, errors: list, here: str) -> None:
+    """Validate optional historical-attribution field (ADR-0018).
+
+    When `historical` is present it must carry stated_by (str) and year (int);
+    optional `where`/`context`/`note` strings; optional ordered `timeline[]` of
+    {year:int, event:str, by?:str}. Absent-field is fine (unknown origin is not
+    fabricated). Fields are additive and never required at the entity level.
+    """
+    hist = data.get("historical")
+    if hist is None:
+        return
+    if not isinstance(hist, dict):
+        errors.append(f"{here} historical must be an object")
+        return
+
+    sb = hist.get("stated_by")
+    if not isinstance(sb, str) or not sb.strip():
+        errors.append(f"{here} historical.stated_by is required and must be a non-empty string")
+
+    y = hist.get("year")
+    if not isinstance(y, int) or isinstance(y, bool):
+        errors.append(f"{here} historical.year must be an integer")
+    for key in ("where", "context", "note"):
+        v = hist.get(key)
+        if v is not None and not isinstance(v, str):
+            errors.append(f"{here} historical.{key} must be a string")
+
+    timeline = hist.get("timeline")
+    if timeline is not None:
+        if not isinstance(timeline, list):
+            errors.append(f"{here} historical.timeline must be an array")
+        else:
+            for ev in timeline:
+                if not isinstance(ev, dict):
+                    errors.append(f"{here} historical.timeline entries must be objects")
+                    continue
+                if not isinstance(ev.get("year"), int):
+                    errors.append(f"{here} historical.timeline[] requires an integer year")
+                if not isinstance(ev.get("event"), str) or not ev.get("event"):
+                    errors.append(f"{here} historical.timeline[] requires an event string")
+                if ev.get("by") is not None and not isinstance(ev.get("by"), str):
+                    errors.append(f"{here} historical.timeline[].by must be a string")
+
+
 def load_schema():
     if not HAVE_JSONSCHEMA or not SCHEMA.exists():
         return None
@@ -219,6 +263,7 @@ def main() -> int:
             continue
         validate_entity(entity, errors, filename_slug=path.stem)
         check_extensions(entity, "entity", errors, f"{entity['_file']}:")
+        check_historical(entity, errors, f"{entity['_file']}:")
         _id = entity.get("id")
         if isinstance(_id, str):
             if _id in entities:

@@ -35,6 +35,28 @@ provenance:
   source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Gerolamo Cardano (first recorded use); geometric interpretation by Wessel, Argand and Gauss"
+  year: 1545
+  where: "Ars Magna (Cardano); geometric interpretations by Wessel (1797), Argand (1806), Gauss (1831)"
+  context: "Algebra / number theory"
+  note: "The term 'imaginary' was coined by René Descartes (1637). Cardano's Ars Magna (1545) records the first documented use of imaginary numbers in solving equations; the geometric interpretation was developed later by Wessel, Argand, and Gauss."
+  timeline:
+    - year: 1545
+      by: "Gerolamo Cardano"
+      event: "First documented use of imaginary numbers in Ars Magna"
+    - year: 1637
+      by: "René Descartes"
+      event: "Coined the term 'imaginary'"
+    - year: 1797
+      by: "Caspar Wessel"
+      event: "Geometric interpretation of complex numbers"
+    - year: 1806
+      by: "Jean-Robert Argand"
+      event: "Geometric interpretation (Argand diagram)"
+    - year: 1831
+      by: "Carl Friedrich Gauss"
+      event: "Formalized the complex-number field and its notation"
 relationships:
   - type: related_to
     target: lhs:math.irrational-number

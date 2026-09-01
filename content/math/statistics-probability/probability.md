@@ -38,6 +38,19 @@ provenance:
   source: "NCTM Principles and Standards / ICSE Mathematics Curriculum"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Blaise Pascal and Pierre de Fermat"
+  year: 1654
+  where: "Correspondence on the problem of points (dice problem)"
+  context: "Probability and statistics"
+  note: "The mathematical foundations of probability began in 1654 through the Pascal-Fermat correspondence; Girolamo Cardano had earlier written on games of chance (Liber de Ludo Aleae, c. 1560s, published posthumously 1663)."
+  timeline:
+    - year: 1560
+      by: "Girolamo Cardano"
+      event: "Early work on games of chance (Liber de Ludo Aleae, published 1663)"
+    - year: 1654
+      by: "Blaise Pascal and Pierre de Fermat"
+      event: "Correspondence founding the mathematical theory of probability"
 relationships:
   - type: related_to
     target: lhs:math.mean

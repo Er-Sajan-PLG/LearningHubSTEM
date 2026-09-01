@@ -34,6 +34,22 @@ provenance:
   source: "Standard content of calculus curricula; classical theorem (Newton, Leibniz)"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Isaac Newton and Gottfried Wilhelm Leibniz (independent)"
+  year: 1666
+  where: "Newton's early work; Leibniz's published formulation"
+  context: "Calculus"
+  note: "Developed independently by Newton (c. 1665-1666) and Leibniz (1670s; published 1693), giving rise to a priority dispute."
+  timeline:
+    - year: 1665
+      by: "Isaac Newton"
+      event: "Early development of the calculus relating differentiation and integration"
+    - year: 1666
+      by: "Isaac Newton"
+      event: "Further development of the calculus (fluxions)"
+    - year: 1693
+      by: "Gottfried Wilhelm Leibniz"
+      event: "Publication of the fundamental theorem of calculus"
 relationships:
   - type: applies_to
     target: lhs:math.derivative

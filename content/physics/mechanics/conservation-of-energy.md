@@ -32,6 +32,22 @@ real_world_applications:
   - Spacecraft trajectories (gravitational assists).
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Hermann von Helmholtz (consolidation); earlier by others"
+  year: 1847
+  where: "Über die Erhaltung der Kraft"
+  context: "Multidisciplinary (mechanics, thermodynamics, chemistry, biology)"
+  note: "Conservation of energy has a multidisciplinary origin and no single first discoverer. Independent contributors during the 1840s–1850s include James Prescott Joule (mechanical equivalent of heat, 1843), Julius Robert Mayer (1842), and Hermann von Helmholtz (general statement, 1847); the principle was consolidated through their combined work."
+  timeline:
+    - year: 1842
+      by: "Julius Robert Mayer"
+      event: "Argues for conservation of force/energy from considerations of heat and motion"
+    - year: 1843
+      by: "James Prescott Joule"
+      event: "Quantifies the mechanical equivalent of heat experimentally"
+    - year: 1847
+      by: "Hermann von Helmholtz"
+      event: "Publishes Über die Erhaltung der Kraft, a general statement of conservation of energy"
 relationships:
   - type: applies_to
     target: lhs:phys.energy

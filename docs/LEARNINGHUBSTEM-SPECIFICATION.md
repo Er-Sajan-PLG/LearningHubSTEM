@@ -334,6 +334,29 @@ other                     — any other explicitly identified source
 
 Objective is traceability, not a citation database. Nonessential fields are optional.
 
+### 8.4 Historical attribution (who + when) — ADR-0018
+
+`provenance` records **where the entity text came from** (the record source). A separate,
+optional `historical` field records **who first stated the scientific claim and when** (the
+scientific origin). Shape:
+
+```yaml
+historical:
+  stated_by: "Isaac Newton"    # required — person/group who first stated/discovered
+  year: 1687                   # required — CE integer; negative for BCE
+  where: "Philosophiæ ..."      # optional — the work it was stated in
+  context: "Classical mechanics" # optional domain note
+  note: "..."                  # optional — contested/multiple-origin caveat
+  timeline:                    # optional ordered milestones
+    - year: 1687
+      by: "Isaac Newton"
+      event: "Second law stated in Principia"
+```
+
+Rules: optional and backward-compatible; `stated_by`+`year` required when present; be
+**truth-conservative** (do not fabricate a single first origin where contested/independent —
+say so in `note`); never curriculum/grade. See ADR-0018 and `docs/SOURCES.md`.
+
 ---
 
 ## 9. Canonical vs derived

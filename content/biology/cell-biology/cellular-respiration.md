@@ -29,6 +29,15 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: International Union of Biochemistry and Molecular Biology
+historical:
+  stated_by: "Hans Krebs (citric acid cycle); long development"
+  year: 1937
+  context: "Modern understanding of cellular respiration and ATP developed across the 20th century"
+  note: "Understanding of respiration and ATP accumulated over many decades; in 1937 Hans Krebs described the citric acid (Krebs) cycle, a central stage of aerobic respiration. The identification of ATP as the energy currency also built on earlier investigations."
+  timeline:
+    - year: 1937
+      by: "Hans Krebs"
+      event: "Elucidated the citric acid (Krebs) cycle, central to aerobic respiration"
 relationships:
   - type: logically_requires
     target: lhs:bio.cell

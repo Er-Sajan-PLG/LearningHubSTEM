@@ -29,6 +29,21 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: International Union of Biological Sciences
+historical:
+  stated_by: "Wilhelm Johannsen"
+  year: 1909
+  context: "Genetics; coined the term 'gene' and the genotype/phenotype distinction"
+  note: "The concept of discrete heredity units dates to Gregor Mendel's 1860s work, rediscovered in 1900. The modern definition of a gene as a DNA segment was established later through molecular genetics."
+  timeline:
+    - year: 1865
+      by: "Gregor Mendel"
+      event: "Experiments in plant hybridization proposed heritable 'factors' (later called genes)"
+    - year: 1900
+      by: "Hugo de Vries, Carl Correns, Erich von Tschermak"
+      event: "Independent rediscovery of Mendel's laws of inheritance"
+    - year: 1909
+      by: "Wilhelm Johannsen"
+      event: "Coined the term 'gene' and introduced the genotype/phenotype distinction"
 relationships:
   - type: part_of
     target: lhs:bio.dna

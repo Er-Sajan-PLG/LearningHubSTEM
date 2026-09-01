@@ -35,6 +35,12 @@ provenance:
   source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Leonhard Euler (formalized e^x)"
+  year: 1748
+  where: "Introductio in Analysin Infinitorum"
+  context: "Calculus and analysis"
+  note: "Euler formalized the natural exponential function e^x and the constant e. Earlier exponential ideas predate the formal function: Bombelli (16th c.) worked on iterative growth, and exponential processes were used in finance and astronomy before the 18th century."
 relationships:
   - type: mathematically_requires
     target: lhs:math.function

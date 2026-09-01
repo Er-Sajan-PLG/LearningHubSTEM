@@ -29,6 +29,22 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: IUPAC-IUBMB Joint Commission on Biochemical Nomenclature
+historical:
+  stated_by: "James Watson & Francis Crick"
+  year: 1953
+  where: "Nature, 'Molecular Structure of Nucleic Acids'"
+  context: "Molecular biology; DNA double-helix model"
+  note: "Built on extensive prior work: Friedrich Miescher's 1869 discovery of nucleic acids, Erwin Chargaff's base-ratio rules, and Maurice Wilkins and Rosalind Franklin's X-ray diffraction - Franklin's 'Photo 51' was critical evidence."
+  timeline:
+    - year: 1869
+      by: "Friedrich Miescher"
+      event: "Discovered and isolated nucleic acids ('nuclein') from white blood cells"
+    - year: 1952
+      by: "Erwin Chargaff; Rosalind Franklin"
+      event: "Chargaff's rules on base pairing; Franklin's Photo 51 X-ray diffraction image revealed DNA's helical structure"
+    - year: 1953
+      by: "James Watson and Francis Crick"
+      event: "Published the double-helix model of DNA in Nature"
 relationships:
   - type: part_of
     target: lhs:bio.cell

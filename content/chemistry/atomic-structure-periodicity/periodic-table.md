@@ -29,6 +29,19 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: IUPAC Periodic Table of the Elements
+historical:
+  stated_by: "Dmitri Mendeleev (with Lothar Meyer independently)"
+  year: 1869
+  where: "Mendeleev's periodic table (1869), communicated to the Russian Chemical Society"
+  context: "Periodic law"
+  note: "Mendeleev arranged the elements by atomic weight and left gaps for undiscovered elements; Lothar Meyer independently recognised periodicity at about the same time (1869). The modern table is ordered by atomic number rather than atomic weight."
+  timeline:
+    - year: 1869
+      by: "Dmitri Mendeleev"
+      event: "Periodic table and periodic law presented"
+    - year: 1869
+      by: "Lothar Meyer"
+      event: "Independent recognition of periodicity in the elements"
 relationships:
   - type: logically_requires
     target: lhs:chem.element

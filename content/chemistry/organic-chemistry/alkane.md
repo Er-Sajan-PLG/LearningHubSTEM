@@ -29,6 +29,11 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: IUPAC Compendium of Chemical Terminology
+historical:
+  stated_by: "Recognition of the paraffin (alkane) series in 19th-century hydrocarbon chemistry"
+  year: 1830
+  where: "19th-century hydrocarbon chemistry"
+  note: "The saturated hydrocarbons were recognised as a family (the paraffins) during the 19th century; the term 'paraffin' was coined by Carl von Reichenbach (c. 1830). The systematic 'alkane' nomenclature came later with the development of organic nomenclature, so no single discoverer is attributed."
 relationships:
   - type: special_case_of
     target: lhs:chem.hydrocarbon
