@@ -17,7 +17,7 @@ examples:
   - "The time for one complete pendulum swing is its period."
 common_misconceptions:
   - Time is the same as a clock reading (time is the dimension; clocks measure intervals of it).
-  - Time passes at the same rate for all observers (at relativistic speeds, time dilation occurs — though this is beyond Grade 10).
+  - Time passes at the same rate for all observers (at relativistic speeds, time dilation occurs).
 learning_objectives:
   - Define time as a fundamental physical quantity.
   - Measure time intervals using appropriate instruments.

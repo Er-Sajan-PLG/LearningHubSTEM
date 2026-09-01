@@ -42,6 +42,6 @@ relationships:
 
 ## Notes
 
-Gravitation is one of the four fundamental interactions of nature. At Grade 10, the focus is on
-understanding it as a universal attractive force and applying Newton's law of gravitation to
+Gravitation is one of the four fundamental interactions of nature. A core treatment
+understands it as a universal attractive force and applies Newton's law of gravitation to
 calculate gravitational force between masses.
