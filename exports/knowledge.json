@@ -1,7 +1,7 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-09-01T16:36:30+00:00",
+  "generated_at": "2026-09-01T16:40:37+00:00",
   "source": "content/",
   "entity_count": 155,
   "entities": [
@@ -6276,6 +6276,10 @@
       ],
       "provenance": {
         "ai_drafted": true
+      },
+      "extensions": {
+        "symbol_set": "F, m, a, p, t",
+        "dimensions": "M L T^-2"
       },
       "relationships": [
         {

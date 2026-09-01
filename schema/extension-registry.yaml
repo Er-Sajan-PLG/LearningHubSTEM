@@ -1,0 +1,79 @@
+# Extension Registry — adaptive metadata seam (ADR-0017)
+#
+# Governed, additive extension dimensions for the canonical foundation.
+# An `extensions` key on an entity/connection/source object MUST be registered here
+# to validate. Register a new dimension with:
+#     python3 scripts/register_extension.py add --name <x> --applies-to entity \
+#         [--value-type string] [--enum a,b,c] [--description "..." ]
+#
+# value_type: the JSON type of the extension value.
+#   single scalar type only (string | number | boolean).
+#   NOTE: richer structured/conditional values belong in context.qualifiers[] (ADR-0011/0016),
+#         not slot into these top-level extension dimensions.
+# enum: optional controlled vocabulary. If present, value must be one of these.
+# applies_to: which object kinds may carry this dimension (entity | connection | source).
+# status: proposed (recent, needs review) | adopted (stable, safe to rely on).
+#
+# Seeded dimensions are knowledge-layer and curriculum-agnostic (Northstar: no grade /
+# curriculum in canonical content). Grade coverage is expressed via relationships and
+# breadth, never by a grade tag.
+version: "0.1"
+
+version: '0.1'
+
+version: '0.1'
+extensions:
+- name: dimensions
+  applies_to:
+  - entity
+  value_type: string
+  enum: null
+  description: 'MLT-style physical dimensions of a quantity (e.g. "M L T^-2"), curriculum-agnostic
+    and machine-parsable. Complements `unit` for dimensional analysis.
+
+    '
+  status: proposed
+  registered_by: process:adaptive-metadata-grade12
+  registered_at: '2026-09-01'
+- name: domain_scope
+  applies_to:
+  - entity
+  value_type: string
+  enum:
+  - pure
+  - applied
+  - cross_domain
+  description: 'Whether the entity is pure/abstract, applied to real contexts, or
+    spans multiple domains (e.g. "energy" spans physics+chemistry+biology). Knowledge-layer
+    breadth marker; NOT a grade or curriculum tag.
+
+    '
+  status: proposed
+  registered_by: process:adaptive-metadata-grade12
+  registered_at: '2026-09-01'
+- name: prerequisite_notation
+  applies_to:
+  - connection
+  value_type: string
+  enum: null
+  description: 'Optional symbolic shorthand for a relationship''s operative condition/notation
+    (e.g. the equation a derivation route uses). Complements a connection''s context.qualifiers
+    for machine parsability.
+
+    '
+  status: proposed
+  registered_by: process:adaptive-metadata-grade12
+  registered_at: '2026-09-01'
+- name: symbol_set
+  applies_to:
+  - entity
+  value_type: string
+  enum: null
+  description: 'Canonical machine-readable notation for a quantity/law/equation''s
+    symbol set, e.g. "F, m, a" for Newton''s second law. Supplements the scalar `symbol`
+    field when a single symbol string is insufficient but the set is fixed and small.
+
+    '
+  status: adopted
+  registered_by: process:test-idempotent
+  registered_at: '2026-09-01T16:40:24+00:00'

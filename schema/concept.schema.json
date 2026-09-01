@@ -90,6 +90,11 @@
         },
         "additionalProperties": false
       }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Adaptive metadata seam (ADR-0017). Open at schema level so new knowledge-layer dimensions never hard-fail; the validator enforces that every key is registered in schema/extension-registry.yaml for this object kind."
     }
   },
   "additionalProperties": false

@@ -39,6 +39,11 @@
         "attribution": { "type": "string" }
       },
       "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Adaptive metadata seam (ADR-0017). Open at schema level; validator enforces registry membership per source."
     }
   },
   "additionalProperties": false
