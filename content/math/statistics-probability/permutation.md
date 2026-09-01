@@ -14,7 +14,7 @@ equation: "P(n, r) = n! / (n − r)!   (0 ≤ r ≤ n)"
 examples:
   - "P(3, 2) = 6: from {a, b, c} there are 3 × 2 ordered pairs"
   - "The letters of a 4-token word can be ordered in 4! = 24 ways"
-  - "Selecting a president, secretary, and treasurer from 5 people gives P(5, 3) = 60 outcomes"
+  - "Choosing a president, vice-president, and treasurer from 5 people gives P(5, 3) = 60 ordered outcomes"
   - "P(n, 0) = 1 for any n (the empty arrangement)"
 common_misconceptions:
   - "Permutations and combinations are the same (permutations count ordered arrangements; combinations ignore order)"
