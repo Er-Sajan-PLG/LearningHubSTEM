@@ -30,6 +30,19 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Michael Faraday"
+  year: 1834
+  where: "Faraday's laws of electrolysis (Philosophical Transactions of the Royal Society)"
+  context: "Electrolysis and its quantitative laws"
+  note: "Faraday formulated his laws of electrolysis in 1834, building on the electrolytic decomposition of compounds developed earlier by Humphry Davy (e.g. isolation of sodium and potassium in 1807)."
+  timeline:
+    - year: 1807
+      by: "Humphry Davy"
+      event: "Electrolytic isolation of sodium and potassium"
+    - year: 1834
+      by: "Michael Faraday"
+      event: "Statement of the laws of electrolysis and introduction of terms such as electrolyte, electrode, and ion"
 relationships:
   - type: special_case_of
     target: lhs:chem.electrochemical-cell

@@ -30,6 +30,21 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: UNESCO Science Education Framework / IUPAC
+historical:
+  stated_by: "Cumulative understanding (Joseph Priestley, Jan Ingenhousz, Cornelis van Niel)"
+  year: 1779
+  context: "Understanding of photosynthesis built up over centuries"
+  note: "Photosynthesis understanding is cumulative and cannot be attributed to a single person: Priestley (1770s) showed plants restore air and discovered oxygen; Ingenhousz (1779) showed light is necessary; van Niel (1931) established water as the electron donor, so the released oxygen comes from water."
+  timeline:
+    - year: 1774
+      by: "Joseph Priestley"
+      event: "Discovered oxygen and showed that plants 'restore' air depleted by burning"
+    - year: 1779
+      by: "Jan Ingenhousz"
+      event: "Demonstrated that light is required for plants to take in carbon dioxide and release oxygen"
+    - year: 1931
+      by: "Cornelis van Niel"
+      event: "Proposed that the oxygen released in photosynthesis comes from water, unifying the overall equation"
 relationships:
   - type: logically_requires
     target: lhs:bio.plant-cell

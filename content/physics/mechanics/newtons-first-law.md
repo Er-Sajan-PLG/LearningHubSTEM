@@ -33,6 +33,19 @@ key_experiments:
   - "Rolling a ball on increasingly smooth surfaces."
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Isaac Newton"
+  year: 1687
+  where: "Philosophiæ Naturalis Principia Mathematica"
+  context: "Classical mechanics"
+  note: "Stated as the first law of motion. The concept of inertia (resistance to change of motion) had earlier formulations — notably in Galileo's work on horizontal motion — so Newton's statement synthesized prior ideas rather than originating the notion of inertia."
+  timeline:
+    - year: 1632
+      by: "Galileo Galilei"
+      event: "Argues in Dialogo for the principle that motion continues indefinitely unless a force acts (inertia precedent)"
+    - year: 1687
+      by: "Isaac Newton"
+      event: "First law stated in Philosophiæ Naturalis Principia Mathematica"
 relationships:
   - type: applies_to
     target: lhs:phys.force

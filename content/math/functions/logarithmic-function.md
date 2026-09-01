@@ -35,6 +35,19 @@ provenance:
   source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "John Napier (with Henry Briggs)"
+  year: 1614
+  where: "Mirifici Logarithmorum Canonis Descriptio"
+  context: "Computation and functions"
+  note: "Napier introduced logarithms in 1614; Henry Briggs developed common (base-10) logarithms from 1617."
+  timeline:
+    - year: 1614
+      by: "John Napier"
+      event: "Publication of Mirifici Logarithmorum Canonis Descriptio introducing logarithms"
+    - year: 1617
+      by: "Henry Briggs"
+      event: "Development of common (base-10) logarithms"
 relationships:
   - type: mathematically_requires
     target: lhs:math.function

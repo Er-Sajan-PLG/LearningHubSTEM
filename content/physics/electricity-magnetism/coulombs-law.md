@@ -29,6 +29,19 @@ learning_objectives:
   - Explain the inverse-square nature of electrostatic force.
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Charles-Augustin de Coulomb"
+  year: 1785
+  where: "Mémoires de l'Académie Royale des Sciences (First and Second Memoirs on Electricity and Magnetism)"
+  context: "Electrostatics"
+  note: "Established experimentally using a torsion balance. An inverse-square law for electrostatics had also been suggested earlier by Joseph Priestley (1767) and Henry Cavendish, so the 'first' formulation is contested; Coulomb provided the quantitative experimental basis."
+  timeline:
+    - year: 1767
+      by: "Joseph Priestley"
+      event: "Infers an inverse-square law for electrical force from a charged-cup experiment (prior, non-quantitative suggestion)"
+    - year: 1785
+      by: "Charles-Augustin de Coulomb"
+      event: "Publishes the inverse-square law of electrostatic force based on torsion-balance measurements"
 relationships:
   - type: applies_to
     target: lhs:phys.electric-charge

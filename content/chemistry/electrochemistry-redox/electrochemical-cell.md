@@ -30,6 +30,19 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Alessandro Volta"
+  year: 1800
+  where: "Letter to the Royal Society (March 1800), 'On the Electricity Excited by the Mere Contact of Conducting Substances'"
+  context: "Galvanic (voltaic) cell"
+  note: "Volta's pile built on earlier observations of galvanism; Luigi Galvani had described 'animal electricity' from frog preparations in the 1780s."
+  timeline:
+    - year: 1780
+      by: "Luigi Galvani"
+      event: "Observations of animal electricity from frog preparations"
+    - year: 1800
+      by: "Alessandro Volta"
+      event: "Invention of the voltaic pile, announced in a letter to the Royal Society"
 relationships:
   - type: related_to
     target: lhs:chem.oxidation-reduction

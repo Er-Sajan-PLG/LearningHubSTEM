@@ -30,6 +30,18 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Atkins' Physical Chemistry
+historical:
+  stated_by: "Rudolf Clausius"
+  year: 1865
+  context: "Second law of thermodynamics"
+  note: "Clausius coined the term 'entropy' in 1865, building on his formulation of the second law in the 1850s. He chose the name (from the Greek 'tropē', transformation) for its similarity to 'energy'."
+  timeline:
+    - year: 1850
+      by: "Rudolf Clausius"
+      event: "Formulation of the second law of thermodynamics"
+    - year: 1865
+      by: "Rudolf Clausius"
+      event: "Coined the term 'entropy'"
 relationships:
   - type: related_to
     target: lhs:chem.enthalpy

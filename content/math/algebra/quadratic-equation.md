@@ -38,6 +38,19 @@ provenance:
   source: "NCTM Principles and Standards / ICSE Mathematics Curriculum"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Babylonian mathematics (earliest known)"
+  year: -2000
+  where: "Old Babylonian cuneiform tablets (c. 2000-1600 BCE)"
+  context: "Algebra"
+  note: "Old Babylonian scribes solved quadratic problems using procedures equivalent to the modern formula. Exact first authorship is unknown; the problem was later treated geometrically by Euclid and systematically by Al-Khwarizmi (9th century CE)."
+  timeline:
+    - year: -1900
+      by: "Babylonian scribes"
+      event: "Solution of quadratic problems on Old Babylonian cuneiform tablets"
+    - year: 825
+      by: "Al-Khwarizmi"
+      event: "Systematic treatment of quadratic equations (Algebra)"
 relationships:
   - type: mathematically_requires
     target: lhs:math.algebraic-expression

@@ -31,6 +31,22 @@ real_world_applications:
   - Space exploration.
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Isaac Newton"
+  year: 1687
+  where: "Philosophiæ Naturalis Principia Mathematica"
+  context: "Universal gravitation"
+  note: "The inverse-square law of gravitation was prompted by questions from Edmund Halley (who also financed the Principia's publication). Earlier 'inverse-square' gravitational suggestions existed (e.g. Hooke), and the gravitational constant G was measured later (Cavendish, 1798); Newton's contribution was the full synthesis and mathematical treatment."
+  timeline:
+    - year: 1684
+      by: "Edmund Halley"
+      event: "Prompts Newton to work out the orbit corresponding to an inverse-square force, leading to the Principia"
+    - year: 1687
+      by: "Isaac Newton"
+      event: "Law of universal gravitation published in Philosophiæ Naturalis Principia Mathematica"
+    - year: 1798
+      by: "Henry Cavendish"
+      event: "Torsion-balance experiment measuring the gravitational constant G and the density of Earth"
 relationships:
   - type: applies_to
     target: lhs:phys.gravitation

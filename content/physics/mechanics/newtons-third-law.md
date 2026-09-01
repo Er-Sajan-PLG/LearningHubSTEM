@@ -34,6 +34,16 @@ key_experiments:
   - "Magnets on carts repelling each other move equal distances (same mass) or inversely proportional distances (different mass)."
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Isaac Newton"
+  year: 1687
+  where: "Philosophiæ Naturalis Principia Mathematica"
+  context: "Classical mechanics"
+  note: "Stated as the third law of motion: to every action there is always opposed an equal reaction."
+  timeline:
+    - year: 1687
+      by: "Isaac Newton"
+      event: "Third law stated in Philosophiæ Naturalis Principia Mathematica"
 relationships:
   - type: applies_to
     target: lhs:phys.force

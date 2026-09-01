@@ -30,6 +30,11 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: IUPAC Compendium of Chemical Terminology
+historical:
+  stated_by: "Recognition of the ethylene class (Erlenmeyer, early structural chemistry)"
+  year: 1860
+  where: "early structural (constitutional) chemistry"
+  note: "Alkenes were recognised as a class as organic structural chemistry grew in the mid-19th century. No single individual 'discovered' the class; Emil Erlenmeyer and others developed representations of the carbon-carbon double bond, and the systematic nomenclature/term 'alkene' came later. Attribution is therefore kept deliberately conservative."
 relationships:
   - type: special_case_of
     target: lhs:chem.hydrocarbon

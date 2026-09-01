@@ -29,6 +29,19 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: International Union of Biological Sciences / UNESCO Biology Framework
+historical:
+  stated_by: "Charles Darwin"
+  year: 1859
+  where: "On the Origin of Species"
+  context: "Evolutionary biology"
+  note: "Alfred Russel Wallace independently reached the same conclusion; their joint paper was presented in 1858, and Darwin's book followed in 1859."
+  timeline:
+    - year: 1858
+      by: "Charles Darwin and Alfred Russel Wallace"
+      event: "Joint paper on natural selection presented to the Linnean Society"
+    - year: 1859
+      by: "Charles Darwin"
+      event: "On the Origin of Species published, detailing natural selection"
 relationships:
   - type: logically_requires
     target: lhs:bio.gene

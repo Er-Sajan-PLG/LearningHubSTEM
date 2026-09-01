@@ -36,6 +36,19 @@ provenance:
   source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Arthur Cayley"
+  year: 1858
+  where: "'A Memoir on the Theory of Matrices'"
+  context: "Algebra / linear algebra"
+  note: "Cayley formalized the theory of matrices in 1858. Earlier matrix-like techniques existed, notably Gauss's elimination method for solving linear systems (c. early 1800s)."
+  timeline:
+    - year: 1810
+      by: "Carl Friedrich Gauss"
+      event: "Elimination method for solving systems of linear equations (predecessor technique)"
+    - year: 1858
+      by: "Arthur Cayley"
+      event: "Publication of A Memoir on the Theory of Matrices, founding matrix algebra"
 relationships:
   - type: related_to
     target: lhs:math.algebraic-expression

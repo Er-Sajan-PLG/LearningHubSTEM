@@ -36,6 +36,12 @@ provenance:
   source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
   reviewer: null
   reviewed_at: null
+historical:
+  stated_by: "Karl Pearson"
+  year: 1893
+  where: "Statistical lectures and writings on the root-mean-square deviation"
+  context: "Statistics"
+  note: "Pearson introduced the standard deviation in the early 1890s as the root-mean-square deviation, building on Gauss's earlier method of least squares."
 relationships:
   - type: mathematically_requires
     target: lhs:math.mean

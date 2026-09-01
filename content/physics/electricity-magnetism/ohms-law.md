@@ -33,6 +33,16 @@ key_experiments:
   - "Measuring V and I for a fixed resistor to verify Ohm's law."
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Georg Simon Ohm"
+  year: 1827
+  where: "Die galvanische Kette, mathematisch bearbeitet"
+  context: "Electrical circuits"
+  note: "Ohm formulated the relation between current, electromotive force and resistance from experiment and theory."
+  timeline:
+    - year: 1827
+      by: "Georg Simon Ohm"
+      event: "Publishes Die galvanische Kette, mathematisch bearbeitet, stating the law relating current, voltage and resistance"
 relationships:
   - type: applies_to
     target: lhs:phys.current

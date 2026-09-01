@@ -29,6 +29,18 @@ provenance:
   ai_drafted: true
   source_kind: standards-or-specification
   source: International Union for Conservation of Nature (IUCN) / UNESCO
+historical:
+  stated_by: "Arthur Tansley"
+  year: 1935
+  context: "Coined the term 'ecosystem' to unite organisms and their physical environment"
+  note: "Tansley coined 'ecosystem' in 1935. An earlier concept of a biological community and its environment was Karl Möbius's 1877 'biocoenosis'."
+  timeline:
+    - year: 1877
+      by: "Karl Möbius"
+      event: "Coined 'biocoenosis' for a community of organisms living and interacting together"
+    - year: 1935
+      by: "Arthur Tansley"
+      event: "Coined the term 'ecosystem' for the whole system of organisms plus physical factors"
 relationships:
   - type: related_to
     target: lhs:bio.cell

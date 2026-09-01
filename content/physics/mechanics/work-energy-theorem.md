@@ -29,6 +29,19 @@ real_world_applications:
   - Engineering (energy transfer in machines).
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Derived from Newton's laws of motion (Isaac Newton)"
+  year: 1687
+  where: "Philosophiæ Naturalis Principia Mathematica (foundation)"
+  context: "Mechanics (work, kinetic energy)"
+  note: "The work-energy theorem is a derived reformulation of Newtonian mechanics rather than a single distinct discovery; it emerges from Newton's laws of motion (1687). Its explicit statement as 'net work equals change in kinetic energy' was consolidated later in the development of energy concepts (18th–19th century)."
+  timeline:
+    - year: 1687
+      by: "Isaac Newton"
+      event: "Newton's laws of motion establish the foundation from which the work-energy relation is derived"
+    - year: 1715
+      by: "Johann Bernoulli"
+      event: "Coins the term 'vis viva' (living force, proportional to mass × velocity²), a precursor of kinetic energy"
 relationships:
   - type: applies_to
     target: lhs:phys.work

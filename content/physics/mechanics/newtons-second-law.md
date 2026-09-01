@@ -23,6 +23,18 @@ common_misconceptions:
     acting on the object).
 provenance:
   ai_drafted: true
+historical:
+  stated_by: "Isaac Newton"
+  year: 1687
+  where: "Philosophiæ Naturalis Principia Mathematica"
+  context: "Classical mechanics"
+  note: "Stated as the second law of motion. The F = ma form is the constant-mass special case; Newton's general statement was in terms of change of momentum."
+  timeline:
+    - year: 1687
+      by: "Isaac Newton"
+      event: "Second law stated in Philosophiæ Naturalis Principia Mathematica"
+    - year: 1750
+      event: "Euler's analytic formulation of force as mass × acceleration"
 extensions:
   symbol_set: "F, m, a, p, t"
   dimensions: "M L T^-2"

@@ -30,6 +30,18 @@ provenance:
   ai_drafted: true
   source_kind: textbook
   source: Campbell Biology
+historical:
+  stated_by: "Heinrich Waldeyer (named); Thomas Hunt Morgan (chromosome theory of inheritance)"
+  year: 1888
+  context: "Term 'chromosome' coined; heredity link established in the early 1900s"
+  note: "Waldeyer coined 'chromosome' in 1888 for the stained rod-like structures seen in dividing cells. Thomas Hunt Morgan's experiments around 1910 connected chromosomes to Mendelian inheritance, establishing the chromosome theory of inheritance."
+  timeline:
+    - year: 1888
+      by: "Heinrich Waldeyer"
+      event: "Coined the term 'chromosome' for stained structures observed during cell division"
+    - year: 1910
+      by: "Thomas Hunt Morgan"
+      event: "Linked heredity to chromosomes through Drosophila experiments supporting the chromosome theory of inheritance"
 relationships:
   - type: part_of
     target: lhs:bio.nucleus
