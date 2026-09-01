@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""D3: Canonicalization state machine — single authoritative implementation."""
+from __future__ import annotations
+
+# Allowed transitions: (from_status, to_status) -> required conditions
+# Statuses are assertion.review.status + assertion.type handling via type
+# Simplified: review.status values: proposed/unreviewed, reviewed, canonical, rejected, deprecated
+# assertion.type: proposed/asserted/inferred — orthogonal but affects gate
+
+ALLOWED = {
+    ("proposed", "reviewed"),      # accept
+    ("proposed", "rejected"),      # reject
+    ("proposed", "proposed"),      # defer (no-op)
+    ("asserted", "reviewed"),
+    ("asserted", "canonical"),
+    ("asserted", "rejected"),
+    ("reviewed", "canonical"),     # canonicalize
+    ("reviewed", "rejected"),
+    ("reviewed", "reviewed"),      # defer
+    ("canonical", "deprecated"),
+    ("canonical", "rejected"),     # dispute after canonical
+    ("rejected", "proposed"),      # reopen
+    ("inferred", "reviewed"),
+    ("inferred", "canonical"),
+    ("inferred", "rejected"),
+}
+
+FORBIDDEN = {
+    ("rejected", "canonical"),  # without reopen
+    ("proposed", "canonical"),  # must go via reviewed
+    ("rejected", "reviewed"),
+}
+
+
+def can_transition(from_review: str, to_review: str, assertion_type: str = "proposed") -> bool:
+    # Inferred type handled separately
+    key = (from_review, to_review)
+    if key in FORBIDDEN:
+        return False
+    # proposed->canonical forbidden
+    if from_review == "proposed" and to_review == "canonical":
+        return False
+    if from_review == "rejected" and to_review in ("canonical", "reviewed"):
+        # only to proposed via reopen
+        return False
+    return key in ALLOWED
+
+
+def requires_reviewer(to_review: str) -> bool:
+    return to_review in ("reviewed", "canonical")
+
+
+def validate_transition(conn: dict, to_review: str, reviewer: str | None) -> list[str]:
+    errs = []
+    cur = conn.get("assertion", {}).get("review", {}).get("status", "unreviewed")
+    # Map unreviewed -> proposed for state machine
+    cur_mapped = "proposed" if cur == "unreviewed" else cur
+    atype = conn.get("assertion", {}).get("type", "proposed")
+    # Allow unreviewed as alias for proposed
+    if cur == "unreviewed":
+        cur_mapped = "proposed"
+        if to_review == "unreviewed":
+            errs.append("no transition (already unreviewed)")
+            return errs
+    if not can_transition(cur_mapped, to_review, atype):
+        errs.append(f"forbidden transition {cur_mapped} -> {to_review} (type {atype})")
+    if requires_reviewer(to_review) and not reviewer:
+        errs.append(f"reviewer required for {to_review}")
+    # Evidence per family would be checked in review gate, not here
+    # Origin preservation: never overwrite asserted_by
+    return errs

@@ -23,6 +23,9 @@ common_misconceptions:
     acting on the object).
 provenance:
   ai_drafted: true
+extensions:
+  symbol_set: "F, m, a, p, t"
+  dimensions: "M L T^-2"
 relationships:
   - type: applies_to
     target: lhs:phys.force

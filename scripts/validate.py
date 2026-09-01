@@ -54,6 +54,63 @@ SOURCE_KINDS = {
     "standards-or-specification", "ai-assisted-draft", "other",
 }
 REVIEWED_STATUSES = {"human_reviewed", "canonical"}
+EXTENSION_REGISTRY = ROOT / "schema" / "extension-registry.yaml"
+
+
+def load_extension_registry() -> dict:
+    """Load the extension registry (ADR-0017), tolerating absence."""
+    if not EXTENSION_REGISTRY.exists():
+        return {"extensions": []}
+    try:
+        data = yaml.safe_load(EXTENSION_REGISTRY.read_text(encoding="utf-8")) or {}
+        return data if isinstance(data, dict) else {"extensions": []}
+    except yaml.YAMLError:
+        return {"extensions": []}
+
+
+def check_extensions(data: dict, object_kind: str, errors: list, here: str) -> None:
+    """Enforce that `extensions` keys are registered (ADR-0017).
+
+    The schema leaves the map open so new dimensions never hard-fail; this gate is
+    where governance lives. Every key must be a registered dimension applicable to
+    this object kind, and any controlled enum must be respected.
+    """
+    extensions = data.get("extensions")
+    if not extensions:
+        return
+    if not isinstance(extensions, dict):
+        errors.append(f"{here} extensions must be an object/map")
+        return
+
+    registry = load_extension_registry()
+    by_name = {e.get("name"): e for e in registry.get("extensions", []) if isinstance(e, dict)}
+
+    for key, value in extensions.items():
+        dim = by_name.get(key)
+        if dim is None:
+            errors.append(
+                f"{here} extension '{key}' is not registered. Register it with: "
+                "python3 scripts/register_extension.py add --name ... (see ADR-0017)"
+            )
+            continue
+        if object_kind not in dim.get("applies_to", []):
+            errors.append(
+                f"{here} extension '{key}' applies to {dim.get('applies_to')}, "
+                f"not '{object_kind}'"
+            )
+        enum = dim.get("enum")
+        if enum and value not in enum:
+            errors.append(
+                f"{here} extension '{key}' value {value!r} not in controlled "
+                f"vocabulary {enum}"
+            )
+        vtype = dim.get("value_type")
+        if vtype == "string" and not isinstance(value, str):
+            errors.append(f"{here} extension '{key}' must be a string")
+        elif vtype == "number" and not isinstance(value, (int, float)):
+            errors.append(f"{here} extension '{key}' must be a number")
+        elif vtype == "boolean" and not isinstance(value, bool):
+            errors.append(f"{here} extension '{key}' must be a boolean")
 
 
 def load_schema():
@@ -161,6 +218,7 @@ def main() -> int:
             errors.append(f"{path.relative_to(ROOT)}: {exc}")
             continue
         validate_entity(entity, errors, filename_slug=path.stem)
+        check_extensions(entity, "entity", errors, f"{entity['_file']}:")
         _id = entity.get("id")
         if isinstance(_id, str):
             if _id in entities:

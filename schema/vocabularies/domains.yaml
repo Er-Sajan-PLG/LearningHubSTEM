@@ -1,0 +1,9 @@
+# Domains vocabulary — controlled per ADR-011
+domains:
+  - physics
+  - chemistry
+  - biology
+  - earth-space
+  - engineering
+  - mathematics
+  - scientific-practice

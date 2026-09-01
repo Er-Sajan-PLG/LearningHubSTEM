@@ -50,4 +50,4 @@ relationships:
 
 The equations of motion unify the kinematics quantities. Given constant acceleration,
 any one quantity can be found from the others — this is the mathematical core of the
-motion unit in every grade 10 curriculum.
+study of motion.

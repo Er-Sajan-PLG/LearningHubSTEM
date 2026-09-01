@@ -1,0 +1,31 @@
+# Regime vocabulary — controlled, multi-valued, extensible (ADR-012, guardrail regime)
+# Context.regime is array of these values; unknown regimes must be added here first.
+regimes:
+  - classical
+  - quantum
+  - relativistic
+  - statistical
+  - nonrelativistic
+  - equilibrium
+  - nonequilibrium
+  - macroscopic
+  - microscopic
+  - mesoscopic
+  - continuum
+  - discrete
+  - low_velocity
+  - high_velocity
+  - weak_gravity
+  - strong_gravity
+  - moderate_pressure
+  - high_temperature
+  - low_temperature
+  - none
+
+scales:
+  - quantum
+  - atomic
+  - molecular
+  - macroscopic
+  - astronomical
+  - cosmological

@@ -1,0 +1,29 @@
+id: lhs:conn.000483
+type: connection
+source: lhs:math.median
+relation: related_to
+target: lhs:math.probability
+assertion:
+  status: active
+  type: proposed
+  review:
+    status: unreviewed
+  confidence: null
+  confidence_basis: null
+context:
+  domain: math
+  subdomain: statistics-probability
+  regime:
+  - classical
+  scale: macroscopic
+  assumptions: []
+evidence: []
+provenance:
+  asserted_by:
+    type: unknown
+    id: unknown:legacy-relationship
+  generated_by:
+    type: process
+    id: process:migration.relationships-v0.2
+  method:
+    type: migration

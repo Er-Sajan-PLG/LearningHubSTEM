@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learninghubstem.example/schema/source.schema.json",
+  "title": "LearningHubSTEM source object",
+  "description": "Schema for one canonical source citation (v0.2). See ADR-015. Urgent bibliographic expansion.",
+  "type": "object",
+  "required": ["id", "type", "citation"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^lhs:src\\.[a-z0-9][a-z0-9-]*$",
+      "description": "Stable source ID."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["textbook", "academic-paper", "standard", "institutional", "other"]
+    },
+    "citation": { "type": "string" },
+    "title": { "type": ["string", "null"] },
+    "authors": { "type": "array", "items": { "type": "string" } },
+    "year": { "type": ["integer", "string", "null"] },
+    "publication_date": { "type": ["string", "null"] },
+    "publisher": { "type": ["string", "null"] },
+    "journal": { "type": ["string", "null"] },
+    "volume": { "type": ["string", "null"] },
+    "doi": { "type": ["string", "null"] },
+    "url": { "type": ["string", "null"] },
+    "isbn": { "type": ["string", "null"] },
+    "edition": { "type": ["string", "null"] },
+    "language": { "type": ["string", "null"] },
+    "source_role": { "type": ["string", "null"], "enum": ["primary", "secondary", "aggregator", "retrieval", null] },
+    "accessed_at": { "type": ["string", "null"] },
+    "license": { "type": ["string", "null"] },
+    "locator_authority": { "type": ["string", "null"] },
+    "rights": {
+      "type": ["object", "null"],
+      "properties": {
+        "license": { "type": "string" },
+        "attribution": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Adaptive metadata seam (ADR-0017). Open at schema level; validator enforces registry membership per source."
+    }
+  },
+  "additionalProperties": false
+}

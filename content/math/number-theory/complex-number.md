@@ -1,0 +1,45 @@
+---
+id: lhs:math.complex-number
+type: concept
+name: Complex Number
+domain: mathematics
+status: draft
+definition: >-
+  A number of the form a + bi, where a and b are real and i is the imaginary unit with
+  i² = −1. The complex numbers extend the real numbers so that every non-constant polynomial
+  has a root, and are represented as points in a plane with a real axis and an imaginary axis.
+symbol: z
+unit: null
+equation: "z = a + bi   (i² = −1)"
+examples:
+  - "3 + 4i (real part 3, imaginary part 4)"
+  - "−2i is purely imaginary"
+  - "5 is a real number and also a complex number with b = 0"
+  - "The roots of x² + 1 = 0 are x = i and x = −i"
+common_misconceptions:
+  - "Complex numbers are just numbers that 'cannot exist' in reality (they are structured quantities with a precise algebra and many applications)"
+  - "Every quadratic needs two distinct complex roots (repeated roots and real roots are still possible)"
+learning_objectives:
+  - Represent complex numbers in rectangular form a + bi
+  - Add, subtract, multiply, and divide complex numbers
+  - Find conjugates and reciprocals
+  - Plot complex numbers in the plane and relate them to vectors
+real_world_applications:
+  - Alternating-current circuit analysis using impedance phasors
+  - Signal processing and the study of oscillations in physics and engineering
+key_experiments:
+  - "Show that x² + 1 = 0 has no real root yet has two complex roots"
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
+  reviewer: null
+  reviewed_at: null
+relationships:
+  - type: related_to
+    target: lhs:math.irrational-number
+  - type: related_to
+    target: lhs:math.polynomial
+  - type: related_to
+    target: lhs:math.rational-number
+---

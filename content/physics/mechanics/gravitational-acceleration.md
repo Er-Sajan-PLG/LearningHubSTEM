@@ -40,6 +40,7 @@ relationships:
 
 ## Notes
 
-Gravitational acceleration is a locally uniform approximation. For Grade 10 purposes, treating g as
-9.8 m/s² (or 10 m/s² for estimation) is appropriate. Understanding that this is an approximation
+Gravitational acceleration is a locally uniform approximation. Treating g as
+9.8 m/s² (or 10 m/s² for estimation) is a common practical simplification, though it
+varies with altitude and latitude. Understanding that this is an approximation
 is part of scientific literacy.

@@ -6,7 +6,7 @@ domain: physics
 status: draft
 definition: >-
   Electromagnetic radiation that is visible to the human eye. Light behaves both as a wave and as
-  a particle (photon), though at Grade 10 the wave model predominates.
+  a particle (photon); the two models describe complementary aspects of its behaviour.
 symbol: null
 unit: null
 equation: c = f·λ (c = speed of light in vacuum ≈ 3×10⁸ m/s)

@@ -24,6 +24,13 @@ Each record follows the same shape:
 | 0008 | [versioning.md](0008-versioning.md) | Schema / export / content versioning | decided (documented) |
 | 0009 | [multilingual-principle.md](0009-multilingual-principle.md) | Language-independent identity | decided (documented) |
 | 0010 | [0010-entity-metadata-extension.md](0010-entity-metadata-extension.md) | Optional equation/symbol/unit/common_misconceptions fields (Phase 2) | decided (documented) |
+| 0011 | [0011-connection-assertion-model.md](0011-connection-assertion-model.md) | First-class connection (source–relation–target + assertion) objects | decided (documented) |
+| 0012 | [0012-relation-vocabulary.md](0012-relation-vocabulary.md) | Controlled relation vocabulary + registry | decided (documented) |
+| 0013 | [0013-confidence-semantics.md](0013-confidence-semantics.md) | Confidence / uncertainty semantics | decided (documented) |
+| 0014 | [0014-inference-semantics.md](0014-inference-semantics.md) | Inferred vs asserted knowledge semantics | decided (documented) |
+| 0015 | [0015-evidence-provenance.md](0015-evidence-provenance.md) | Evidence vs provenance separation; canonical sources | decided (Phase A) |
+| 0016 | [0016-metadata-urgent-rework.md](0016-metadata-urgent-rework.md) | Urgent additive metadata v0.2 (polarity, timestamps, rights...) | decided |
+| 0017 | [0017-adaptive-metadata-extensions.md](0017-adaptive-metadata-extensions.md) | Adaptive extension registry — governed open metadata seam | decided (implemented) |
 
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.
