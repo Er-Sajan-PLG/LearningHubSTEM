@@ -1,7 +1,7 @@
 {
   "export_version": "0.1",
   "schema_version": "0.1",
-  "generated_at": "2026-09-01T16:52:11+00:00",
+  "generated_at": "2026-09-01T16:54:17+00:00",
   "source": "content/",
   "entity_count": 224,
   "entities": [
@@ -5646,7 +5646,7 @@
       "examples": [
         "P(3, 2) = 6: from {a, b, c} there are 3 × 2 ordered pairs",
         "The letters of a 4-token word can be ordered in 4! = 24 ways",
-        "Selecting a president, secretary, and treasurer from 5 people gives P(5, 3) = 60 outcomes",
+        "Choosing a president, vice-president, and treasurer from 5 people gives P(5, 3) = 60 ordered outcomes",
         "P(n, 0) = 1 for any n (the empty arrangement)"
       ],
       "common_misconceptions": [
