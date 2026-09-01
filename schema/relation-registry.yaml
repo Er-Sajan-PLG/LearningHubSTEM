@@ -1,0 +1,426 @@
+# Relation Registry — authoritative source for relation semantics
+# ADR-012. Validator enforces family, inverse/symmetric, transitive, domain/range.
+# Guardrails: extends/supersedes/isomorphic_to non-transitive; causal non-transitive; is_a = class/subclass only.
+
+version: "0.2"
+relations:
+  # Structural — class/subclass (guardrail: instance_of deferred)
+  is_a:
+    family: structural
+    transitive: true
+    # inverse: broader_class (not stored separately); use generalizes/special_case_of for explicit hierarchy
+    domain: [concept, quantity, phenomenon, model]
+    range: [concept, quantity, phenomenon]
+    description: "X is a kind/type of Y (taxonomic)."
+
+  part_of:
+    family: structural
+    inverse: has_part
+    transitive: true
+    domain: [concept, phenomenon, model]
+    range: [concept, phenomenon, model]
+
+  has_part:
+    family: structural
+    inverse: part_of
+    transitive: true
+    domain: [concept, phenomenon, model]
+    range: [concept, phenomenon, model]
+
+  contains:
+    family: structural
+    inverse: contained_in
+    transitive: true
+    domain: [concept, model, phenomenon]
+    range: [concept, model, phenomenon]
+
+  composed_of:
+    family: structural
+    inverse: composes
+    transitive: true
+    domain: [concept, model, phenomenon]
+    range: [concept, phenomenon]
+
+  # Hierarchical / abstraction
+  generalizes:
+    family: hierarchical
+    inverse: special_case_of
+    transitive: true
+    domain: [concept, law, model]
+    range: [concept, law, model]
+
+  special_case_of:
+    family: hierarchical
+    inverse: generalizes
+    transitive: true
+    domain: [concept, law, model]
+    range: [concept, law, model]
+
+  broader_than:
+    family: hierarchical
+    inverse: narrower_than
+    transitive: true
+    domain: [concept, law, model]
+    range: [concept, law, model]
+
+  narrower_than:
+    family: hierarchical
+    inverse: broader_than
+    transitive: true
+    domain: [concept, law, model]
+    range: [concept, law, model]
+
+  # Dependency — transitive
+  requires:
+    family: dependency
+    inverse: required_by
+    transitive: true
+    domain: [concept, quantity, law, equation, model, phenomenon]
+    range: [concept, quantity, law, equation, model, phenomenon]
+
+  prerequisite_of:
+    family: dependency
+    inverse: enables_learning_of
+    transitive: true
+    domain: [concept, quantity, law, phenomenon]
+    range: [concept, quantity, law, phenomenon]
+
+  mathematically_requires:
+    family: dependency
+    inverse: mathematically_required_by
+    transitive: true
+    domain: [law, equation, model, quantity, concept, phenomenon]
+    range: [concept, quantity, equation, phenomenon, unit]
+
+  logically_requires:
+    family: dependency
+    inverse: logically_required_by
+    transitive: true
+    domain: [concept, quantity, law, equation, model, phenomenon, unit]
+    range: [concept, quantity, law, equation, model, phenomenon, unit]
+
+  depends_on:
+    family: dependency
+    inverse: depended_on_by
+    transitive: true
+    domain: [concept, quantity, law, equation, model, phenomenon]
+    range: [concept, quantity, law, equation, model, phenomenon]
+
+  # Causal — NON-TRANSITIVE (guardrail)
+  causes:
+    family: causal
+    inverse: caused_by
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, model, law, concept]
+    range: [phenomenon, concept]
+
+  contributes_to:
+    family: causal
+    inverse: has_contribution_from
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, model, law, concept]
+    range: [phenomenon, concept]
+
+  results_in:
+    family: causal
+    inverse: results_from
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, concept, model]
+    range: [phenomenon, concept]
+
+  influences:
+    family: causal
+    inverse: influenced_by
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, concept, model]
+    range: [phenomenon, concept, model]
+
+  prevents:
+    family: causal
+    inverse: prevented_by
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, concept, model]
+    range: [phenomenon, concept]
+
+  # Explanatory
+  explains:
+    family: explanatory
+    inverse: explained_by
+    transitive: false
+    symmetric: false
+    domain: [law, model]
+    range: [phenomenon, concept, law]
+
+  accounts_for:
+    family: explanatory
+    inverse: accounted_for_by
+    transitive: false
+    symmetric: false
+    domain: [law, model]
+    range: [phenomenon, concept]
+
+  predicted_by:
+    family: explanatory
+    inverse: predicts
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, concept]
+    range: [law, model]
+
+  supported_by:
+    family: explanatory
+    inverse: supports
+    transitive: false
+    symmetric: false
+    domain: [law, model, concept]
+    range: [phenomenon, concept, law]
+
+  evidenced_by:
+    family: explanatory
+    inverse: evidence_for
+    transitive: false
+    symmetric: false
+    domain: [law, model, concept]
+    range: [phenomenon, concept]
+
+  # Model — NON-TRANSITIVE for extends/supersedes (guardrail)
+  approximates:
+    family: model
+    inverse: approximated_by
+    transitive: false
+    symmetric: false
+    domain: [model, equation, law, concept, phenomenon, quantity]
+    range: [phenomenon, model, law, equation, concept, quantity]
+
+  idealizes:
+    family: model
+    inverse: idealized_by
+    transitive: false
+    symmetric: false
+    domain: [model]
+    range: [phenomenon, model]
+
+  extends:
+    family: model
+    inverse: extended_by
+    transitive: false
+    symmetric: false
+    domain: [model, law]
+    range: [model, law]
+
+  supersedes:
+    family: model
+    inverse: superseded_by
+    transitive: false
+    symmetric: false
+    domain: [model, law]
+    range: [model, law]
+
+  simplifies:
+    family: model
+    inverse: simplified_by
+    transitive: false
+    symmetric: false
+    domain: [model, equation]
+    range: [model, equation]
+
+  # Conflict — symmetric
+  contradicts:
+    family: conflict
+    symmetric: true
+    transitive: false
+    domain: [law, model, concept, phenomenon]
+    range: [law, model, concept, phenomenon]
+
+  inconsistent_with:
+    family: conflict
+    symmetric: true
+    transitive: false
+    domain: [law, model, concept, phenomenon]
+    range: [law, model, concept, phenomenon]
+
+  competes_with:
+    family: conflict
+    symmetric: true
+    transitive: false
+    domain: [law, model, concept, phenomenon]
+    range: [law, model, concept, phenomenon]
+
+  limited_by:
+    family: conflict
+    inverse: limits
+    transitive: false
+    symmetric: false
+    domain: [law, model, concept, phenomenon]
+    range: [law, model, concept, regime]
+
+  # Measurement
+  measures:
+    family: measurement
+    inverse: measured_by
+    transitive: false
+    symmetric: false
+    domain: [concept, experiment]
+    range: [quantity]
+
+  measured_by:
+    family: measurement
+    inverse: measures
+    transitive: false
+    symmetric: false
+    domain: [quantity]
+    range: [concept, experiment]
+
+  quantifies:
+    family: measurement
+    inverse: quantified_by
+    transitive: false
+    symmetric: false
+    domain: [quantity]
+    range: [concept, phenomenon]
+
+  expressed_in:
+    family: measurement
+    inverse: expresses
+    transitive: false
+    symmetric: false
+    domain: [quantity]
+    range: [unit]
+
+  has_unit:
+    family: measurement
+    inverse: unit_of
+    transitive: false
+    symmetric: false
+    domain: [quantity, concept]
+    range: [unit]
+
+  # Engineering
+  enables:
+    family: engineering
+    inverse: enabled_by
+    transitive: false
+    symmetric: false
+    domain: [concept, law, model, phenomenon]
+    range: [concept, model]
+
+  used_in:
+    family: engineering
+    inverse: uses
+    transitive: false
+    symmetric: false
+    domain: [concept, law, model, phenomenon]
+    range: [concept, model]
+
+  applied_to:
+    family: engineering
+    inverse: applies
+    transitive: false
+    symmetric: false
+    domain: [concept, law, model]
+    range: [concept, phenomenon]
+
+  implemented_by:
+    family: engineering
+    inverse: implements
+    transitive: false
+    symmetric: false
+    domain: [concept, model, phenomenon]
+    range: [concept, model]
+
+  # Analogy — guardrail: isomorphic_to non-transitive
+  analogous_to:
+    family: analogy
+    symmetric: true
+    transitive: false
+    domain: [concept, quantity, phenomenon, model]
+    range: [concept, quantity, phenomenon, model]
+
+  isomorphic_to:
+    family: analogy
+    symmetric: true
+    transitive: false
+    domain: [concept, quantity, phenomenon, model]
+    range: [concept, quantity, phenomenon, model]
+
+  corresponds_to:
+    family: analogy
+    inverse: corresponds_to
+    symmetric: true
+    transitive: false
+    domain: [concept, phenomenon, model]
+    range: [concept, phenomenon, model]
+
+  # Cross-domain — symmetric, scope-aware (guardrail #6)
+  bridges:
+    family: cross_domain
+    symmetric: true
+    transitive: false
+    domain: [concept, quantity, phenomenon, law, model, unit]
+    range: [concept, quantity, phenomenon, law, model, unit]
+
+  maps_to:
+    family: cross_domain
+    inverse: mapped_from
+    transitive: false
+    symmetric: false
+    domain: [concept, phenomenon, law, model]
+    range: [concept, phenomenon, law, model]
+
+  manifestation_of:
+    family: cross_domain
+    inverse: manifests_as
+    transitive: false
+    symmetric: false
+    domain: [phenomenon, concept]
+    range: [phenomenon, concept]
+
+  shared_mechanism_with:
+    family: cross_domain
+    symmetric: true
+    transitive: false
+    domain: [phenomenon, concept, model]
+    range: [phenomenon, concept, model]
+
+  # Associative / derivation (legacy)
+  related_to:
+    family: associative
+    symmetric: true
+    transitive: false
+    domain: [concept, quantity, law, equation, unit, phenomenon, model]
+    range: [concept, quantity, law, equation, unit, phenomenon, model]
+
+  derived_from:
+    family: derivation
+    inverse: is_basis_of
+    transitive: true
+    domain: [concept, law, model, equation]
+    range: [concept, law, model, equation]
+
+  appears_in_law:
+    family: derivation
+    inverse: contains
+    transitive: false
+    symmetric: false
+    domain: [concept, quantity, unit, phenomenon, model]
+    range: [law]
+
+  applies_to:
+    family: derivation
+    inverse: governed_by
+    transitive: false
+    symmetric: false
+    domain: [law]
+    range: [concept, quantity, equation, phenomenon, model]
+
+  equivalent_to:
+    family: derivation
+    symmetric: true
+    transitive: true
+    domain: [concept, quantity, law, equation, unit, phenomenon, model]
+    range: [concept, quantity, law, equation, unit, phenomenon, model]

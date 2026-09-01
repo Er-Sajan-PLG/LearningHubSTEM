@@ -1,0 +1,27 @@
+{
+  "anomalies": [
+    {
+      "level": "INFO",
+      "type": "isolated_entities",
+      "message": "27 entities have no connections",
+      "ids": [
+        "lhs:math.algebraic-expression",
+        "lhs:math.angle",
+        "lhs:math.area",
+        "lhs:math.circle",
+        "lhs:math.decimal",
+        "lhs:math.fraction",
+        "lhs:math.function",
+        "lhs:math.integer",
+        "lhs:math.irrational-number",
+        "lhs:math.linear-equation"
+      ]
+    }
+  ],
+  "counts": {
+    "ERROR": 0,
+    "WARNING": 0,
+    "INFO": 1
+  },
+  "total": 1
+}
