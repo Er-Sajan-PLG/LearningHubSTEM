@@ -1,0 +1,48 @@
+---
+id: lhs:math.matrix
+type: concept
+name: Matrix
+domain: mathematics
+status: draft
+definition: >-
+  A rectangular array of numbers (or other entries) arranged in rows and columns, usually written
+  within brackets. A matrix with m rows and n columns has size m × n. Matrices have defined
+  operations — addition, scalar multiplication, multiplication, and transposition — and provide a
+  compact representation for systems of linear equations and linear transformations.
+symbol: A
+unit: null
+equation: "A = [aᵢⱼ]  (i = 1,…,m; j = 1,…,n)"
+examples:
+  - "A 2 × 2 matrix: [[1, 2], [3, 4]]"
+  - "A column vector is a matrix with one column: [[1], [2], [3]]"
+  - "Matrix multiplication is defined only when the inner dimensions match"
+  - "An identity matrix I has 1s on the diagonal and 0s elsewhere"
+common_misconceptions:
+  - "Matrix multiplication is commutative (in general AB ≠ BA)"
+  - "A number times a matrix equals the matrix times an added constant (scalar multiplication multiplies every entry)"
+learning_objectives:
+  - Identify the size and entries of a matrix
+  - Add, subtract, and scalar-multiply matrices
+  - Multiply matrices and understand the dimension requirement
+  - Represent systems of linear equations and transformations with matrices
+real_world_applications:
+  - Computer graphics transformations (rotation, scaling, translation) encoded as matrices
+  - Organizing and solving systems in economics, statistics, and engineering
+key_experiments:
+  - "Encode a rotations and scalings on a shape by multiplying column vectors by matrices"
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: "NCTM Principles and Standards / Common Core State Standards for Mathematics"
+  reviewer: null
+  reviewed_at: null
+relationships:
+  - type: related_to
+    target: lhs:math.algebraic-expression
+  - type: related_to
+    target: lhs:math.linear-equation
+  - type: related_to
+    target: lhs:math.rational-number
+  - type: related_to
+    target: lhs:math.determinant
+---
