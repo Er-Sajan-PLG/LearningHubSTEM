@@ -320,6 +320,19 @@ def main() -> int:
         encoding="utf-8",
     )
     print(f"OK: {len(entities)} entities valid; export written to {EXPORT.relative_to(ROOT)}")
+
+    # Auto-sync the derived export into the explorer (3D visual) so the explorer
+    # never drifts from canonical content. The explorer builds/loads from
+    # explorer/public/exports/knowledge.json; keeping it in sync here means any
+    # content change that runs the validator propagates to the visual.
+    explorer_target = ROOT / "explorer" / "public" / "exports" / "knowledge.json"
+    if explorer_target.parent.is_dir() or (ROOT / "explorer").is_dir():
+        explorer_target.parent.mkdir(parents=True, exist_ok=True)
+        explorer_target.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        print(f"OK: explorer export synced to {explorer_target.relative_to(ROOT)}")
     return 0
 
 

@@ -68,8 +68,20 @@ const NS_TO_DOMAIN: Record<string, string> = {
   bio: 'biology',
   earth: 'earth-space',
   eng: 'engineering',
+  math: 'mathematics',
   practice: 'scientific-practice',
   epist: 'scientific-practice',
+};
+
+// Map a math entity slug to a math sub-topic cluster (mirrors LHS math subdomains).
+const MATH_TOPIC_KEYWORDS: Record<string, string[]> = {
+  'algebra': ['algebraic', 'polynomial', 'quadratic', 'linear-copy', 'variable', 'equation', 'expression', 'function-copy', 'matrix'],
+  'number-theory': ['number', 'integer', 'natural', 'rational', 'irrational', 'prime', 'sequence', 'series'],
+  'geometry': ['geometry', 'angle', 'triangle', 'circle', 'pythagorean', 'trigonometric', 'theorem'],
+  'statistics-probability': ['statistics', 'probability', 'mean', 'median', 'standard-deviation', 'permutation', 'combination'],
+  'calculus': ['calculus', 'limit', 'derivative', 'integral', 'continuity'],
+  'functions': ['function', 'exponential', 'logarithmic', 'linear-function', 'quadratic-function'],
+  'measurement': ['area', 'volume', 'measurement'],
 };
 
 export function clusterForEntity(id: string): string {
@@ -83,6 +95,13 @@ export function clusterForEntity(id: string): string {
       if (keywords.some(k => slug.includes(k))) return cluster;
     }
     return 'mechanics';
+  }
+  // Mathematics sub-topics cluster the same way physics does (mirrors LHS math subdomains).
+  if (domain === 'mathematics') {
+    for (const [cluster, keywords] of Object.entries(MATH_TOPIC_KEYWORDS)) {
+      if (keywords.some(k => slug.includes(k))) return cluster;
+    }
+    return 'mathematics';
   }
   return domain || 'other';
 }
@@ -101,6 +120,13 @@ const CLUSTER_LABELS: Record<string, string> = {
   'earth-space': 'Earth & Space',
   'scientific-practice': 'Scientific Practice',
   engineering: 'Engineering',
+  mathematics: 'Mathematics',
+  algebra: 'Algebra',
+  'number-theory': 'Number Theory',
+  geometry: 'Geometry',
+  'statistics-probability': 'Statistics & Probability',
+  calculus: 'Calculus',
+  functions: 'Functions',
   other: 'Other',
 };
 
@@ -121,6 +147,13 @@ const CLUSTER_POSITIONS: Record<string, [number, number, number]> = {
   'earth-space': [6, 30, -18],
   'scientific-practice': [-26, -24, -6],
   engineering: [30, -22, 6],
+  mathematics: [28, -30, 20],
+  algebra: [34, -26, 16],
+  'number-theory': [26, -34, 12],
+  geometry: [38, -22, 22],
+  'statistics-probability': [30, -38, 20],
+  calculus: [24, -28, 26],
+  functions: [36, -32, 14],
   other: [0, -26, -20],
 };
 
@@ -131,12 +164,15 @@ const DOMAIN_COLOR: Record<string, string> = {
   'earth-space': '#fbbf24',
   'scientific-practice': '#a78bfa',
   engineering: '#22d3ee',
+  mathematics: '#e879f9',
 };
 
 export function getClusterColor(cluster: string): string {
   if (DOMAIN_COLOR[cluster]) return DOMAIN_COLOR[cluster];
   // physics sub-topics share the physics color with slight derivation
   if (cluster in PHYSICS_TOPIC_KEYWORDS) return '#38bdf8';
+  // math sub-topics share the mathematics color
+  if (cluster in MATH_TOPIC_KEYWORDS) return '#e879f9';
   return '#94a3b8';
 }
 
