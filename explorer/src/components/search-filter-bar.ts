@@ -47,6 +47,7 @@ export class SearchFilterBar {
             <option value="earth-space">🪐 Earth & Space</option>
             <option value="scientific-practice">📐 Practices</option>
             <option value="engineering">⚙️ Engineering</option>
+            <option value="mathematics">∑ Mathematics</option>
           </select>
 
           <!-- Relationship Filter -->

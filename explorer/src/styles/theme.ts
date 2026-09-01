@@ -56,6 +56,14 @@ export const GRAPH_THEME = {
       badgeBorder: 'rgba(34, 211, 238, 0.4)',
       glowColor: 'rgba(34, 211, 238, 0.6)',
       icon: '⚙️'
+    },
+    mathematics: {
+      color: '#e879f9',
+      name: 'Mathematics',
+      badgeBg: 'rgba(232, 121, 249, 0.12)',
+      badgeBorder: 'rgba(232, 121, 249, 0.4)',
+      glowColor: 'rgba(232, 121, 249, 0.6)',
+      icon: '∑'
     }
   } as Record<string, DomainTheme>,
 
