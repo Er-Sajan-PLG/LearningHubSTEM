@@ -1,0 +1,50 @@
+---
+id: lhs:math.quadratic-equation
+type: concept
+name: Quadratic Equation
+domain: mathematics
+status: draft
+definition: >-
+  An equation in which the highest power of the variable is 2. Standard form: ax² + bx + c = 0 (a ≠ 0).
+  Quadratic equations have at most two real solutions (roots), found by factoring, completing the square,
+  or the quadratic formula.
+symbol: null
+unit: null
+equation: ax² + bx + c = 0  |  x = (-b ± √(b² - 4ac)) / 2a
+examples:
+  - "x² - 5x + 6 = 0 (roots: x = 2, x = 3)"
+  - "2x² + 3x - 2 = 0"
+  - "x² + 4 = 0 (no real roots)"
+common_misconceptions:
+  - "All quadratics have two real solutions (discriminant b² - 4ac may be negative)"
+  - "The quadratic formula only works for x (it works for any variable)"
+  - "If a = 0 it's still quadratic (it becomes linear)"
+learning_objectives:
+  - Identify quadratic equations in standard form
+  - Solve by factoring when possible
+  - Solve using the quadratic formula
+  - Understand the discriminant and its relation to number/type of roots
+  - Relate roots to x-intercepts of the parabola graph
+real_world_applications:
+  - Projectile motion (height = -½gt² + v₀t + h₀)
+  - Area optimization problems
+  - Revenue/profit maximization
+  - Lens/mirror equations in optics
+key_experiments:
+  - "Ball throw: measure height vs time, fit quadratic model"
+provenance:
+  ai_drafted: true
+  source_kind: standards-or-specification
+  source: "NCTM Principles and Standards / ICSE Mathematics Curriculum"
+  reviewer: null
+  reviewed_at: null
+relationships:
+  - type: mathematically_requires
+    target: lhs:math.algebraic-expression
+  - type: related_to
+    target: lhs:math.quadratic-function
+  - type: related_to
+    target: lhs:math.linear-equation
+  - type: related_to
+    target: lhs:math.polynomial
+---
