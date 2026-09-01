@@ -31,6 +31,7 @@ Each record follows the same shape:
 | 0015 | [0015-evidence-provenance.md](0015-evidence-provenance.md) | Evidence vs provenance separation; canonical sources | decided (Phase A) |
 | 0016 | [0016-metadata-urgent-rework.md](0016-metadata-urgent-rework.md) | Urgent additive metadata v0.2 (polarity, timestamps, rights...) | decided |
 | 0017 | [0017-adaptive-metadata-extensions.md](0017-adaptive-metadata-extensions.md) | Adaptive extension registry — governed open metadata seam | decided (implemented) |
+| 0018 | [0018-historical-attribution.md](0018-historical-attribution.md) | Historical scientific attribution — who stated it + when (who/when/timeline) | decided (implemented) |
 
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

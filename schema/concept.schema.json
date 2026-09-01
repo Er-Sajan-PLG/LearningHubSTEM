@@ -95,6 +95,32 @@
       "type": "object",
       "additionalProperties": true,
       "description": "Adaptive metadata seam (ADR-0017). Open at schema level so new knowledge-layer dimensions never hard-fail; the validator enforces that every key is registered in schema/extension-registry.yaml for this object kind."
+    },
+    "historical": {
+      "type": "object",
+      "required": ["stated_by", "year"],
+      "properties": {
+        "stated_by": { "type": "string", "description": "Person/group who first stated or discovered the claim (required when field present)" },
+        "year": { "type": "integer", "description": "Year (CE; negative for BCE) of first statement/publication" },
+        "where": { "type": "string", "description": "Optional: the work/source where it was stated" },
+        "context": { "type": "string", "description": "Optional domain note" },
+        "note": { "type": "string", "description": "Optional attribution caveat / uncertainty / contested-origin note" },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["year", "event"],
+            "properties": {
+              "year": { "type": "integer" },
+              "by": { "type": "string", "description": "Optional; defaults to stated_by" },
+              "event": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Historical scientific attribution (ADR-0018): who first stated this claim and when. Distinct from provenance (record source)."
     }
   },
   "additionalProperties": false

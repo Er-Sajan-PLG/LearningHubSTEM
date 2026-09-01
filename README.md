@@ -3,32 +3,43 @@
 > **An open, structured, reusable STEM knowledge foundation.** Curriculum is external.
 > Products are external. Learning experiences are external. AI agents are consumers.
 
-## Status: SEED ONLY + Phase 2 consumer proof
+## Status: active canonical foundation
 
-This repository currently contains a **minimal proof** that the architecture works — five seed
-entities, a schema, a validator, and a regenerable JSON export — plus a **Phase 2 consumer proof**:
-STEM-TUITION consumes `exports/knowledge.json` through a versioned adapter without touching this
-repository's canonical content. It is **not** an activated MVP. Do not expand it beyond the
-minimal seed without an explicit human decision (`docs/LEARNINGHUBSTEM-ROADMAP.md`).
+LearningHubSTEM holds a validated canonical knowledge base of **224 entities** across
+mathematics, physics, chemistry, biology, earth-space, engineering, and scientific-practice,
+exported through a versioned consumer contract. STEM-TUITION consumes
+`exports/knowledge.json` through a versioned adapter; PROFESSOR-J and future products are
+planned consumers. The architecture is proven; the knowledge base grows incrementally
+(`docs/LEARNINGHUBSTEM-ROADMAP.md`).
 
 ## What's here
 
 ```text
 LearningHubSTEM/
 ├── README.md
-├── schema/concept.schema.json    — canonical entity schema (JSON Schema)
-├── content/                      — canonical Markdown + YAML-frontmatter entities
-│   ├── force.md                  (lhs:phys.force)
-│   ├── mass.md                   (lhs:phys.mass)
-│   ├── acceleration.md           (lhs:phys.acceleration)
-│   ├── newtons-second-law.md     (lhs:phys.newtons-second-law)
-│   └── momentum.md               (lhs:phys.momentum)
-├── scripts/validate.py           — lightweight validation + export generator
-└── exports/knowledge.json        — DERIVED artifact (regenerable; never the source of truth)
+├── schema/                     — entity, connection, source schemas + adaptive extension registry
+├── content/                    — canonical Markdown + YAML-frontmatter entities (224)
+│   ├── math/                   (lhs:math.*)
+│   ├── physics/                (lhs:phys.*)
+│   ├── chemistry/              (lhs:chem.*)
+│   ├── biology/                (lhs:bio.*)
+│   ├── earth-space/            (lhs:earth.*)
+│   ├── engineering/            (lhs:eng.*)
+│   └── scientific-practice/    (lhs:practice.*)
+├── connections/                — first-class assertion objects (lhs:conn.*)
+├── sources/                    — canonical source records (lhs:src.*)
+├── scripts/validate.py         — validation + export generator
+└── exports/knowledge.json      — DERIVED artifact (regenerable; never the source of truth)
 ```
 
-Open the files with `id: lhs:phys.force` and so on. Relabeling a file to a different name
-without changing its `id` is expected; filenames follow the final ID slug for convenience.
+Open any file with an `id: lhs:...`; filenames follow the final ID slug for convenience.
+
+## Sources & attribution
+
+Every entity records **where its content comes from** (`provenance.source/source_kind`) and,
+for historically significant laws and discoveries, **who first stated the claim and when**
+(`historical.stated_by/year/timeline`). See **`docs/SOURCES.md`** for the full visible
+inventory of sources and historical attributions. Canonical source records live in `sources/`.
 
 ## Usage
 
@@ -69,4 +80,9 @@ consumers adapt it to their own curriculum and products.
 
 ## License
 
-No license has been chosen yet — a human decision is pending (`docs/GOVERNANCE.md`).
+- **Content** (`content/`, `connections/`, `sources/`, `docs/`): **Creative Commons
+  Attribution 4.0 International (CC BY 4.0)** — see `LICENSE`.
+- **Code** (`scripts/`, `schema/`, tests): **MIT License** — see `LICENSE-CODE`.
+
+See `docs/decisions/0001-license.md` and `docs/GOVERNANCE.md` for the rationale and the
+distinction between the knowledge content license and the code license.
