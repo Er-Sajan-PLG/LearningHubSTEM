@@ -33,5 +33,23 @@
     "learninghub_shell_tests": "53 pass",
     "conclusion": "rename preserved canonical contract; only generated_at timestamp differs in derived export"
   },
-  "notes": "Branch rule applied across all repos (no direct commits to main). LearningHubSTEM/STEM-TUITION were gitignored as independent repos; /STEMMA/ and /LearningHub/ now gitignored identically. lhs: namespace and schema/export contract FROZEN and verified unchanged."
+  "notes": "Branch rule applied across all repos (no direct commits to main). LearningHubSTEM/STEM-TUITION were gitignored as independent repos; /STEMMA/ and /LearningHub/ now gitignored identically. lhs: namespace and schema/export contract FROZEN and verified unchanged.",
+  "scope_a_closure": {
+    "status": "CLOSED at contract-safe boundary",
+    "closing_date": "2026-09-02",
+    "steady": "Leftover LearningHubSTEM/ residual shell removed; no old-name dirs remain.",
+    "deferred_owner_items": [
+      "A7 product package-scope rename @stem-tuition/* -> @learninghub/* — deferred to its OWN approved change with full verification (pnpm install + lockfile regen + typecheck + test + verify-governance) in a real node v24/pnpm 11 env",
+      "External Cloudflare/Netlify/DNS migration — owner-executed; LearningHub #37 netlify/stemtution deploy-preview stays red until then"
+    ],
+    "contract_invariant_at_close": {
+      "lhs_ids": 881,
+      "schema_version": "0.1",
+      "export_version": "0.1",
+      "entities": 224,
+      "connections": 654,
+      "sources": 3,
+      "export_semantic_diff_excluding_timestamp": 0
+    }
+  }
 }
