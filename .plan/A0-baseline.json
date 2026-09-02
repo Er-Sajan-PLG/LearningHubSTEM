@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-09-02T09:58:29Z",
+  "purpose": "A0 preflight baseline for Scope A rename (LearningHubSTEM->STEMMA, STEM-TUITION->LearningHub). Comparison point for A9 completion gate.",
+  "repos": {
+    "LearningHubSTEM": { "branch": "main", "head": "f6f864fbc78628974ac633d1081c7bca0b8f2a65", "remote": "https://github.com/Er-Sajan-PLG/LearningHubSTEM.git" },
+    "STEM-TUITION":   { "branch": "main", "head": "90f1788c9f595e11cfe095ced025e9558ee63db6", "remote": "https://github.com/Er-Sajan-PLG/STEM-TUITION.git" },
+    "PROFESSOR-J":    { "branch": "main", "head": "cdb812764c52ded0e1dc265fb0797555f8402260", "remote": "https://github.com/Er-Sajan-PLG/PROFESSOR-J.git" }
+  },
+  "contract_counts": {
+    "lhs_distinct_ids": 881,
+    "connections": 654,
+    "sources": 3,
+    "export_present": true,
+    "export_hash_prefix": "6350cf9454e0dc09"
+  },
+  "notes": "LearningHubSTEM working tree had only derived-export dirty files (exports/*.json, explorer sync) - regenerable, not authoritative. lhs: namespace and schema/export contract to remain FROZEN during Scope A."
+}
