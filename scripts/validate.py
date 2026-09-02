@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LearningHubSTEM validator + export generator (v0.1).
+"""STEMMA validator + export generator (v0.1).
 
 Validates canonical content under content/ against schema/concept.schema.json,
 then regenerates exports/knowledge.json (a derived artifact — never the source of truth).

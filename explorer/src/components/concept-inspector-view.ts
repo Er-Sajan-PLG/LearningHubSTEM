@@ -33,7 +33,7 @@ export class ConceptInspectorView {
     this.container.innerHTML = `
       <div class="empty-inspector">
         <div class="empty-icon">⚛</div>
-        <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:#ffffff;">Explore LearningHubSTEM</h3>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:#ffffff;">Explore STEMMA</h3>
         <p style="font-size:0.9rem;line-height:1.5;color:var(--text-secondary);">Select any concept in the 3D graph or search for one above.</p>
         <div style="font-size:0.84rem;text-align:left;background:rgba(15, 23, 42, 0.6);padding:14px 16px;border-radius:12px;border:1px solid var(--border-glass);margin-top:12px;width:100%;">
           <div style="font-weight:700;color:var(--accent-cyan);font-family:'Outfit',sans-serif;margin-bottom:8px;">Explore the constellation:</div>

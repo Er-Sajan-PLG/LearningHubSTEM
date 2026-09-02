@@ -14,14 +14,14 @@ the actual filesystem, which is the authoritative check.
 
 ## Accepted (correct)
 
-- LearningHubSTEM must remain an **independent open foundation**, never a STEM-TUITION package.
+- STEMMA must remain an **independent open foundation**, never a STEM-TUITION package.
 - **Knowledge ≠ Curriculum ≠ Pedagogy ≠ Product** boundary.
 - Governance precedence: ecosystem invariants > project governance > implementation details.
-- Technical specification was genuinely missing — created (`docs/LEARNINGHUBSTEM-SPECIFICATION.md`).
+- Technical specification was genuinely missing — created (`docs/STEMMA-SPECIFICATION.md`).
 - Roadmap and glossary were genuinely missing — created.
 - **Licensing is genuinely unresolved** (no LICENSE anywhere) — documented as a human decision,
   no license chosen.
-- A **small seed proof** resolves the "should LearningHubSTEM stay empty?" question without
+- A **small seed proof** resolves the "should STEMMA stay empty?" question without
   activating any MVP.
 - Root `README.md` was missing — created.
 - Project status must be stated honestly (ACTIVE / PROTOTYPE / SEED ONLY / DEFERRED / OUT OF
@@ -37,9 +37,9 @@ the actual filesystem, which is the authoritative check.
 
 ## Rejected (conflicts with the architecture or reality)
 
-- **"LearningHubSTEM as a shared platform services / backend layer"** — rejected. The earlier
+- **"STEMMA as a shared platform services / backend layer"** — rejected. The earlier
   `docs/GOVERNANCE.md` diagram carried the STEM-TUITION-constitution framing
-  (`Shared Platform Services → LearningHubSTEM`). This subordinates the foundation to products,
+  (`Shared Platform Services → STEMMA`). This subordinates the foundation to products,
   contradicts the ecosystem invariant, and is now corrected (see governance §2). STEM-TUITION's own
   constitution is NOT edited; it stays authoritative inside that repo (Level 2), but Level-1
   invariants stand above it.
@@ -49,5 +49,5 @@ the actual filesystem, which is the authoritative check.
 
 ## Verification note
 
-The workspace root and `LearningHubSTEM/` are **not git repositories**. Git-based checks are
+The workspace root and `STEMMA/` are **not git repositories**. Git-based checks are
 `NOT APPLICABLE`; verification is by file reads and by running `scripts/validate.py`.

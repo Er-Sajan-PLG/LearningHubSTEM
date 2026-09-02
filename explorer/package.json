@@ -2,7 +2,7 @@
   "name": "learninghubstem-explorer",
   "version": "1.0.0",
   "private": true,
-  "description": "LearningHubSTEM 3D Interactive Knowledge Graph Explorer",
+  "description": "STEMMA 3D Interactive Knowledge Graph Explorer",
   "type": "module",
   "scripts": {
     "predev": "node scripts/sync-export.mjs",

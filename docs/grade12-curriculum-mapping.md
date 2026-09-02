@@ -2,7 +2,7 @@
 
 **Status:** consumer-owned reference mapping (NOT canonical content)
 **Date:** 2026-09-01
-**Related:** `docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md`, `docs/NORTHSTAR.md`,
+**Related:** `docs/STEMMA-CONSUMER-SEAM.md`, `docs/NORTHSTAR.md`,
   `docs/decisions/0017-adaptive-metadata-extensions.md`
 
 > **Boundary statement.** Per the NORTHSTAR and the canonical-knowledge pattern, **no

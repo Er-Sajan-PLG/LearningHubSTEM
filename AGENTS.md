@@ -1,4 +1,4 @@
-# AGENTS.md — LearningHubSTEM
+# AGENTS.md — STEMMA
 
 Operating instructions for humans and AI agents working inside this repository.
 Workspace-level rules are in the workspace root (`/home/sajan/Projects/AGENTS.md` and its
@@ -6,7 +6,7 @@ Workspace-level rules are in the workspace root (`/home/sajan/Projects/AGENTS.md
 
 ## North star (this repo must stay)
 
-> **LearningHubSTEM is an open, structured, reusable STEM knowledge foundation.**
+> **STEMMA is an open, structured, reusable STEM knowledge foundation.**
 > Curriculum is external. Products are external. Learning experiences are external.
 > AI agents are consumers. STEM-TUITION is one consumer — never a controller.
 

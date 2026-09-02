@@ -1,4 +1,4 @@
-name: CI — LearningHubSTEM
+name: CI — STEMMA
 
 on:
   push:
@@ -71,7 +71,7 @@ jobs:
 
       - name: Check required docs
         run: |
-          for f in AGENTS.md README.md docs/GOVERNANCE.md docs/LEARNINGHUBSTEM-SPECIFICATION.md; do
+          for f in AGENTS.md README.md docs/GOVERNANCE.md docs/STEMMA-SPECIFICATION.md; do
             if [[ ! -f "$f" ]]; then echo "Missing $f"; exit 1; fi
           done
           echo "Docs OK"

@@ -6,7 +6,7 @@ future contract migration (adding connections/sources as a *required* part of th
 consumer contract) is governed and coordinated.
 
 **Related:** `docs/ARCHITECTURE-REVIEW-v0.3.md` §C.2 (version-drift), §J (versioning),
-ADR-0008 (versioning), ADR-0007 (export contract), `docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md`.
+ADR-0008 (versioning), ADR-0007 (export contract), `docs/STEMMA-CONSUMER-SEAM.md`.
 
 ---
 
@@ -57,8 +57,8 @@ adapter today.
 ## 4. Version declarations and fixture/docs to update on any future bump
 
 - `STEM-TUITION/apps/shell/src/lib/lhs-adapter.ts` — `SUPPORTED_EXPORT_VERSION = '0.1'`.
-- `LearningHubSTEM/docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` — documents `export_version: 0.1`.
-- `LearningHubSTEM/docs/LEARNINGHUBSTEM-SPECIFICATION.md` §10/§11 — three-track versioning rules.
+- `STEMMA/docs/STEMMA-CONSUMER-SEAM.md` — documents `export_version: 0.1`.
+- `STEMMA/docs/STEMMA-SPECIFICATION.md` §10/§11 — three-track versioning rules.
 - `docs/decisions/0007-export-contract.md`, `0008-versioning.md` — contract/versioning ADRs.
 - `scripts/validate.py` + `scripts/export_review_aware.py` + `scripts/graph_analysis.py` — the
   literal `"0.1"` producers.
@@ -88,4 +88,4 @@ for `schema_version` (e.g. from `schema/` files) when a contract migration is au
 | Explorer tolerates extra keys | `knowledge-export-loader.ts:70-75` |
 | Export is additive in this phase | `scripts/validate.py` payload (this branch) |
 | ADR-0008 governs versioning | `docs/decisions/0008-versioning.md` |
-| Consumer seaim claims 0.1 | `docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md:23` |
+| Consumer seaim claims 0.1 | `docs/STEMMA-CONSUMER-SEAM.md:23` |

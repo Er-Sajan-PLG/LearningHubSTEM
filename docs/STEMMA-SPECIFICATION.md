@@ -1,17 +1,17 @@
 # LEARNINGHUBSTEM — TECHNICAL SPECIFICATION
 
 **Version:** 0.1 (minimal foundation)
-**Status:** Specifies the canonical LearningHubSTEM foundation. **Phase 1 — Foundation
+**Status:** Specifies the canonical STEMMA foundation. **Phase 1 — Foundation
 Definition & Freeze.** This is the technical "how"; it is **not** activation of a full MVP.
-**Scope:** `LearningHubSTEM/` repository.
+**Scope:** `STEMMA/` repository.
 **Related:** `AGENTS.md`, `docs/NORTHSTAR.md`, `docs/GOVERNANCE.md`,
-`docs/MASTER-VISION-LearningHubSTEM.md`, `docs/decisions/` (decision records).
+`docs/MASTER-VISION.md`, `docs/decisions/` (decision records).
 
 ---
 
 ## 1. Goal of v0.1 / Phase 1
 
-Phase 1 makes the minimum foundational decisions to stabilize LearningHubSTEM:
+Phase 1 makes the minimum foundational decisions to stabilize STEMMA:
 
 - a working schema, stable IDs, relationships, provenance, validation, and export
 - **and** an explicit freeze on foundational decisions so future change is governed, not drift
@@ -29,7 +29,7 @@ Each canonical entity is one `Markdown` file with a `YAML` frontmatter block and
 `##` prose sections.
 
 ```text
-LearningHubSTEM/
+STEMMA/
 ├── content/                  ← canonical (source of truth)
 │   ├── force.md
 │   ├── mass.md
@@ -106,13 +106,13 @@ No database is the canonical source. No RDF/OWL/JSON-LD stack is required (see �
 lhs:<domain>.<slug>
 ```
 
-- `lhs` = LearningHubSTEM
+- `lhs` = STEMMA
 - `<domain>` = one lowercase ASCII word (e.g. `phys`, `chem`, `math`, `bio`)
 - `<slug>` = lowercase `[a-z0-9-]`, the final segment of the ID
 
 ### Rules
 
-- IDs are **globally unique** within LearningHubSTEM.
+- IDs are **globally unique** within STEMMA.
 - IDs are **stable**: they do not change with rename, refactor, or reordering.
 - IDs are **never silently reassigned**.
 - IDs are **never reused** for a different concept.
@@ -252,10 +252,10 @@ These belong to consumers entirely and must never appear in `content/`.
 
 ## 6. Knowledge ≠ Curriculum
 
-LearningHubSTEM owns **knowledge**; it does not own curriculum decisions, even when a curriculum
+STEMMA owns **knowledge**; it does not own curriculum decisions, even when a curriculum
 references its concepts.
 
-- LearningHubSTEM may define: *Newton's Second Law.*
+- STEMMA may define: *Newton's Second Law.*
 - A curriculum may define: *Newton's Second Law appears in Grade 10 Physics Unit X.*
 
 The second statement is **curriculum information** and does not belong in canonical content.
@@ -264,13 +264,13 @@ The same knowledge entity must be able to participate in — without duplication
 curriculum, another national curriculum, an international curriculum (CBSE/GCSE/A-Level/IB),
 university education, self-directed learning, and professional education.
 
-A curriculum mapping is **consumer-owned** and is never a canonical LearningHubSTEM artifact.
+A curriculum mapping is **consumer-owned** and is never a canonical STEMMA artifact.
 
 ---
 
 ## 7. Knowledge ≠ Pedagogy
 
-LearningHubSTEM may expose knowledge relationships (`logically_requires`, `derived_from`,
+STEMMA may expose knowledge relationships (`logically_requires`, `derived_from`,
 `related_to`). It must **not** dictate, for any product:
 
 - lesson order
@@ -395,7 +395,7 @@ documented as LATER — do not build a package manager or release pipeline now.
 The canonical source is consumed through a versioned, machine-readable export:
 
 ```text
-LearningHubSTEM canonical source (content/)
+STEMMA canonical source (content/)
              ↓
 validator / exporter (scripts/validate.py)
              ↓
@@ -421,7 +421,7 @@ The export contract guarantees:
 
 Consumers never need access to internal canonical implementation details. This contract is useful
 to a future consumer such as STEM-TUITION **without** making STEM-TUITION a dependency of
-LearningHubSTEM.
+STEMMA.
 
 Do **not** build a REST API, GraphQL, microservice, authentication, or cloud infrastructure to
 demonstrate this. A documented file/export contract is sufficient for Phase 1.
@@ -542,6 +542,6 @@ clarifying prose, adding optional notes).
 
 Full ontology, broad knowledge coverage, multilingual content, external publication
 infrastructure, formal semantic-web stack, large CI policy system, consumer APIs, production
-LearningHubSTEM ecosystem, any source of truth outside `content/`, and — always — microservices,
+STEMMA ecosystem, any source of truth outside `content/`, and — always — microservices,
 cloud, auth, payments, analytics, vector/graph databases, recommendation engines, and shared
 platform services.

@@ -3,7 +3,7 @@
 **Status:** Phasing for the foundation. **The roadmap is not authorization to implement future
 phases.** Each phase requires an explicit human activation decision.
 
-Related: `docs/LEARNINGHUBSTEM-SPECIFICATION.md`, `docs/GOVERNANCE.md`, `docs/decisions/`.
+Related: `docs/STEMMA-SPECIFICATION.md`, `docs/GOVERNANCE.md`, `docs/decisions/`.
 
 ---
 
@@ -13,7 +13,7 @@ Related: `docs/LEARNINGHUBSTEM-SPECIFICATION.md`, `docs/GOVERNANCE.md`, `docs/de
 |-------|------|---------|--------|
 | 0 | Governance + specification + seed proof | `AGENTS.md`, governance, northstar, spec, glossary; schema + 5 seed entities + validator + export | ✅ DONE (proof only) |
 | 1 | **Foundation Definition & Freeze** | licenses (pending), canonical representation, entity model, stable identity, lifecycle, provenance, relationship vocabulary, knowledge≠curriculum, knowledge≠pedagogy, export/consumer contract, versioning, multilingual principle, decision records, freeze rule | ✅ DONE (definition & freeze docs); license decisions **PENDING human approval** |
-| 2 | First independent consumer adapter + end-to-end consumption proof | one consumer maps canonical IDs to its own curriculum without touching canonical content | ✅ DONE — STEM-TUITION shell consumes `exports/knowledge.json` via `apps/shell/src/lib/lhs-adapter.ts`; vertical slice (Newton's Second Law) live in `#lhs-demo`. See `docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` |
+| 2 | First independent consumer adapter + end-to-end consumption proof | one consumer maps canonical IDs to its own curriculum without touching canonical content | ✅ DONE — STEM-TUITION shell consumes `exports/knowledge.json` via `apps/shell/src/lib/lhs-adapter.ts`; vertical slice (Newton's Second Law) live in `#lhs-demo`. See `docs/STEMMA-CONSUMER-SEAM.md` |
 | 3+ | Governance enforcement (CI-level checks), ontology expansion, multilingual implementation | — | 🔵 LATER |
 
 Phases 0–1 are implemented **as a foundation and proof** (per specification §1). They do not

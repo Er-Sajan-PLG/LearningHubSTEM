@@ -1,15 +1,15 @@
-# NORTHSTAR — LearningHubSTEM
+# NORTHSTAR — STEMMA
 
 **Status:** The governing north star for the entire STEM Ecosystem workspace.
 **Scope:** Everything under `/Projects`.
 **Source of truth:** The full vision is preserved verbatim in
-`docs/MASTER-VISION-LearningHubSTEM.md`. This file is the distilled, actionable version.
+`docs/MASTER-VISION.md`. This file is the distilled, actionable version.
 
 ---
 
 ## The one-sentence north star
 
-> **LearningHubSTEM is an open, structured, reusable STEM knowledge foundation.**
+> **STEMMA is an open, structured, reusable STEM knowledge foundation.**
 > Anyone — humans, educators, developers, researchers, AI systems, and other products —
 > should be able to build on top of it.
 > **Curriculum is external. Products are external. Learning experiences are external.
@@ -19,7 +19,7 @@
 
 ## The fundamental idea
 
-LearningHubSTEM is **not** an education product. It is not STEM-TUITION. It is not a
+STEMMA is **not** an education product. It is not STEM-TUITION. It is not a
 curriculum platform. It is not a Nepal curriculum database, and it is not owned by any single
 product.
 
@@ -31,43 +31,43 @@ relationships, misconceptions, applications, simulations) is organized in a reus
 - any product can consume,
 - any AI system can retrieve from.
 
-If another person or company uses LearningHubSTEM to build something useful, **that is a success.**
+If another person or company uses STEMMA to build something useful, **that is a success.**
 
 ---
 
 ## The three boundaries you must never blur
 
 1. **Knowledge ≠ Curriculum.**
-   LearningHubSTEM owns the STEM knowledge and its relationships (`requires`, `related_to`,
+   STEMMA owns the STEM knowledge and its relationships (`requires`, `related_to`,
    `applied_in`, `derived_from`, …). It does not care which curriculum — Nepal, CBSE, GCSE,
    A-Level, IB, university, custom — uses it. Curriculum systems are **consumers**.
 
 2. **Knowledge order ≠ Curriculum order.**
-   The knowledge layer says `A requires B`. A curriculum decides when to teach each. LearningHubSTEM
+   The knowledge layer says `A requires B`. A curriculum decides when to teach each. STEMMA
    provides the relationship; the curriculum decides sequence.
 
 3. **Products are external.**
-   STEM-TUITION, STEM-GAME, STEM Lab, JARVIS are all consumers. LearningHubSTEM must remain useful
+   STEM-TUITION, STEM-GAME, STEM Lab, JARVIS are all consumers. STEMMA must remain useful
    even if every one of those products disappears. Never couple the foundation to a product.
 
 ---
 
 ## Architecture rule (the test)
 
-When deciding whether something belongs in LearningHubSTEM, ask:
+When deciding whether something belongs in STEMMA, ask:
 
 > **"Is this intrinsic to the STEM knowledge itself, or is it a way of organizing, teaching,
 > presenting, or consuming that knowledge?"**
 
-- Intrinsic to the knowledge → potentially LearningHubSTEM.
+- Intrinsic to the knowledge → potentially STEMMA.
 - Curriculum, grade, lesson sequence, student progress, UI, monetization, subscription, product
-  experience → belongs OUTSIDE LearningHubSTEM.
+  experience → belongs OUTSIDE STEMMA.
 
 ---
 
 ## Canonical vs derived
 
-- **Canonical** LearningHubSTEM content is version-controlled, structured, human-readable,
+- **Canonical** STEMMA content is version-controlled, structured, human-readable,
   machine-readable, modular, reusable, open to contribution, and independent of any application.
 - **Derived** systems (embeddings, vector/graph databases, search indexes, APIs, caches,
   recommendations, AI retrieval indexes) must always be **regenerable** from canonical content.
@@ -104,4 +104,4 @@ about presentation, curriculum, pedagogy, or product design in the core knowledg
 
 ---
 
-*The full authoritative text, section by section, is in `docs/MASTER-VISION-LearningHubSTEM.md`.*
+*The full authoritative text, section by section, is in `docs/MASTER-VISION.md`.*

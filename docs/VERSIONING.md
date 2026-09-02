@@ -1,4 +1,4 @@
-# LearningHubSTEM Versioning
+# STEMMA Versioning
 
 **Version:** 1.0.0
 **Status:** Active
@@ -11,7 +11,7 @@
 
 ## 1. Purpose
 
-Versioning in LearningHubSTEM distinguishes three separate, never-collapsed tracks (per
+Versioning in STEMMA distinguishes three separate, never-collapsed tracks (per
 decision 0008), plus a release tracker for content:
 
 - **`schema_version`** — version of `schema/concept.schema.json` (field set, enums, constraints).
@@ -45,8 +45,8 @@ decision 0008), plus a release tracker for content:
 The workspace tool keeps doc `**Version:**` markers fresh:
 
 ```bash
-python3 ../scripts/version_bump.py bump minor --scope LearningHubSTEM   # 1.0.0 -> 1.1.0
-python3 ../scripts/version_bump.py check --scope LearningHubSTEM        # must exit 0
+python3 ../scripts/version_bump.py bump minor --scope STEMMA   # 1.0.0 -> 1.1.0
+python3 ../scripts/version_bump.py check --scope STEMMA        # must exit 0
 ```
 
 ---

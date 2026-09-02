@@ -33,5 +33,6 @@ Each record follows the same shape:
 | 0017 | [0017-adaptive-metadata-extensions.md](0017-adaptive-metadata-extensions.md) | Adaptive extension registry — governed open metadata seam | decided (implemented) |
 | 0018 | [0018-historical-attribution.md](0018-historical-attribution.md) | Historical scientific attribution — who stated it + when (who/when/timeline) | decided (implemented) |
 
+| 0019 | [0019-rename-and-freeze.md](0019-rename-and-freeze.md) | Rename foundation to STEMMA; freeze lhs identity + schema/export contracts | decided (implemented) |
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

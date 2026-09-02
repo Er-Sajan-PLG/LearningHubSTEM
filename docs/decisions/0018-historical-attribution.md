@@ -2,7 +2,7 @@
 
 - **Date:** 2026-09-01
 - **Status:** decided (implemented with this PR)
-- **Related:** decisions 0006 (provenance), 0010, 0017; `docs/LEARNINGHUBSTEM-SPECIFICATION.md` §8;
+- **Related:** decisions 0006 (provenance), 0010, 0017; `docs/STEMMA-SPECIFICATION.md` §8;
   `docs/SOURCES.md`; `schema/concept.schema.json`
 
 ## Context
