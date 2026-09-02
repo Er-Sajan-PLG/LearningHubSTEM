@@ -112,13 +112,29 @@ def _write(registry: dict) -> None:
 
 
 def _read_header() -> str:
+    """Preserve only the human comment lines above the first data key.
+
+    `version:` and `extensions:` are data keys serialized by yaml.safe_dump in
+    _write(); keeping them in the header as well caused the `version:` key to
+    accumulate on every re-registration (duplicate-key bug, Q1.2). Stop at the
+    first top-level mapping key (version/extensions) and return only the leading
+    comment block — the body re-emits the single authoritative `version:`.
+    """
     text = REGISTRY.read_text(encoding="utf-8")
     lines = text.splitlines()
     out = []
     for ln in lines:
-        if ln.strip() == "extensions:":
-            break
-        out.append(ln)
+        stripped = ln.strip()
+        if not stripped:
+            # keep blank lines that separate the comment block
+            if out:
+                out.append(ln)
+            continue
+        if stripped.startswith("#"):
+            out.append(ln)
+            continue
+        # First non-comment, non-blank line is a data key — stop.
+        break
     return "\n".join(out).rstrip() + "\n\n"
 
 

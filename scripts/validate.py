@@ -36,10 +36,18 @@ except ImportError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
-SCHEMA = ROOT / "schema" / "concept.schema.json"
+CONNECTIONS = ROOT / "connections"
+SOURCES = ROOT / "sources"
+SCHEMA = ROOT / "schema"
+SCHEMA_ = SCHEMA / "concept.schema.json"
+CONN_SCHEMA = SCHEMA / "connection.schema.json"
+SOURCE_SCHEMA = SCHEMA / "source.schema.json"
+RELATION_REGISTRY = SCHEMA / "relation-registry.yaml"
 EXPORT = ROOT / "exports" / "knowledge.json"
 
 ID_RE = re.compile(r"^lhs:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
+CONN_ID_RE = re.compile(r"^lhs:conn\.[0-9]{6}$")
+SRC_ID_RE = re.compile(r"^lhs:src\.[a-z0-9][a-z0-9-]*$")
 TYPES = {"concept", "quantity", "unit", "law", "equation", "misconception"}
 STATUSES = {"draft", "machine_validated", "human_reviewed", "canonical", "deprecated", "superseded"}
 REL_TYPES = {
@@ -157,10 +165,10 @@ def check_historical(data: dict, errors: list, here: str) -> None:
                     errors.append(f"{here} historical.timeline[].by must be a string")
 
 
-def load_schema():
-    if not HAVE_JSONSCHEMA or not SCHEMA.exists():
+def load_schema() -> Any:
+    if not HAVE_JSONSCHEMA or not SCHEMA_.exists():
         return None
-    raw = json.loads(SCHEMA.read_text(encoding="utf-8"))
+    raw = json.loads(SCHEMA_.read_text(encoding="utf-8"))
     cast(Any, Draft202012Validator).check_schema(raw)  # raises on invalid schema
     return raw
 
@@ -172,11 +180,51 @@ def parse_entity(path: Path) -> dict:
     parts = text.split("---", 2)
     if len(parts) < 3:
         raise ValueError("frontmatter not closed with '---'")
-    data = yaml.safe_load(parts[1])
+    data = load_yaml_strict(parts[1], where=str(path.relative_to(ROOT)))
     if not isinstance(data, dict):
         raise ValueError("frontmatter must be a single YAML mapping")
     data["_file"] = str(path.relative_to(ROOT))
     return data
+
+
+def load_yaml_strict(text: str, where: str = "<yaml>") -> Any:
+    """Parse YAML and deterministically reject duplicate mapping keys.
+
+    PyYAML's safe_load silently keeps the last value for a duplicated key, which
+    hides authoring errors (Q1.2). We walk the composed node tree and raise a
+    ValueError naming the exact duplicate path so the gate can surface it.
+    """
+    loader = yaml.SafeLoader(text)
+    try:
+        node = loader.get_single_node()
+    finally:
+        loader.dispose()
+
+    if node is None:
+        return None  # empty document
+
+    dups: list[str] = []
+    _collect_duplicate_keys(node, dups, "")
+    if dups:
+        raise ValueError(f"{where}: duplicate YAML key(s): {', '.join(sorted(set(dups)))}")
+    return yaml.safe_load(text)
+
+
+def _collect_duplicate_keys(node: Any, dups: list[str], path: str) -> None:
+    """Recursively find duplicate mapping keys in a composed YAML node."""
+    if isinstance(node, yaml.MappingNode):
+        seen: set[str] = set()
+        for key_node, value_node in node.value:
+            key = key_node.value if key_node is not None else ""
+            key_path = f"{path}/{key}"
+            if key in seen:
+                dups.append(key_path)
+            else:
+                seen.add(key)
+            _collect_duplicate_keys(value_node, dups, key_path)
+    elif isinstance(node, yaml.SequenceNode):
+        for value_node in node.value:
+            _collect_duplicate_keys(value_node, dups, f"{path}[]")
 
 
 def validate_entity(entity: dict, errors: list, filename_slug: str | None = None) -> None:
@@ -247,6 +295,153 @@ def validate_entity(entity: dict, errors: list, filename_slug: str | None = None
         errors.append(f"{here} status is {entity.get('status')} but no deprecated_by set")
 
 
+def load_relation_registry() -> dict:
+    """Load the relation registry (authoritative relation vocabulary)."""
+    if not RELATION_REGISTRY.exists():
+        return {"relations": {}}
+    try:
+        data = yaml.safe_load(RELATION_REGISTRY.read_text(encoding="utf-8")) or {}
+        return data if isinstance(data, dict) else {"relations": {}}
+    except yaml.YAMLError:
+        return {"relations": {}}
+
+
+def _relation_semantics(raw: Any, info: dict) -> tuple[list, list]:
+    """Best-effort domain/range lists from a relation descriptor.
+
+    The vocabulary may encode domain/range as either YAML list syntax used here
+    (a plain list) or the '|-' block style, both of which parse to a list under
+    safe_load. Defensive fallback to [] keeps the check lenient for exotic forms.
+    """
+    domain = info.get("domain")
+    range_ = info.get("range")
+    return (
+        [str(x) for x in domain] if isinstance(domain, list) else [],
+        [str(x) for x in range_] if isinstance(range_, list) else [],
+    )
+
+
+def validate_connection(conn: dict, entities: dict, sources: dict, errors: list) -> None:
+    """Validate a first-class connection (ADR-011 / connection.schema.json)."""
+    here = f"{conn.get('_file', '<connection>')}:"
+    cid = conn.get("id")
+    if cid is None:
+        errors.append(f"{here} missing required 'id'")
+    elif not isinstance(cid, str) or not CONN_ID_RE.fullmatch(cid):
+        errors.append(f"{here} invalid connection ID: {cid!r} (expected lhs:conn.NNNNNN)")
+
+    if conn.get("type") != "connection":
+        errors.append(f"{here} connection type must be 'connection' (found {conn.get('type')!r})")
+
+    src = conn.get("source")
+    tgt = conn.get("target")
+    if not isinstance(src, str) or src not in entities:
+        errors.append(f"{here} source does not resolve to a canonical entity: {src!r}")
+    if not isinstance(tgt, str) or tgt not in entities:
+        errors.append(f"{here} target does not resolve to a canonical entity: {tgt!r}")
+
+    rel = conn.get("relation")
+    registry = load_relation_registry().get("relations", {})
+    info = registry.get(rel) if isinstance(rel, str) else None
+    if rel is None:
+        errors.append(f"{here} missing required 'relation'")
+    elif not isinstance(rel, str) or info is None:
+        errors.append(f"{here} relation not in relation-registry.yaml: {rel!r}")
+
+    # Domain/range: only when both endpoint types and the registry allow-list are known.
+    if info and isinstance(src, str) and isinstance(tgt, str):
+        stype = entities.get(src, {}).get("type")
+        ttype = entities.get(tgt, {}).get("type")
+        domain, range_ = _relation_semantics(None, info)
+        if stype and domain and stype not in domain:
+            errors.append(f"{here} relation '{rel}' domain excludes source type '{stype}'")
+        if ttype and range_ and ttype not in range_:
+            errors.append(f"{here} relation '{rel}' range excludes target type '{ttype}'")
+
+    # Assertion must be present (required by schema); enforce provenance presence.
+    prov = conn.get("provenance")
+    if not isinstance(prov, dict):
+        errors.append(f"{here} connection requires a provenance object")
+    else:
+        if not prov.get("asserted_by"):
+            errors.append(f"{here} provenance.asserted_by is required")
+        if not prov.get("generated_by"):
+            errors.append(f"{here} provenance.generated_by is required")
+        if not prov.get("method"):
+            errors.append(f"{here} provenance.method is required")
+
+    # Evidence source_ref must resolve to a canonical source.
+    for idx, ev in enumerate(conn.get("evidence", []) or []):
+        if not isinstance(ev, dict):
+            errors.append(f"{here} evidence[{idx}] must be an object")
+            continue
+        ref = ev.get("source_ref")
+        if ref is not None and ref not in sources:
+            errors.append(f"{here} evidence.source_ref does not resolve to a source: {ref!r}")
+
+    check_extensions(conn, "connection", errors, here)
+
+
+def validate_source(src: dict, errors: list) -> None:
+    """Validate a canonical source object (source.schema.json)."""
+    here = f"{src.get('_file', '<source>')}:"
+    sid = src.get("id")
+    if sid is None:
+        errors.append(f"{here} missing required 'id'")
+    elif not isinstance(sid, str) or not SRC_ID_RE.fullmatch(sid):
+        errors.append(f"{here} invalid source ID: {sid!r} (expected lhs:src.<slug>)")
+    check_extensions(src, "source", errors, here)
+
+
+def load_canonical_yaml_dir(directory: Path, schema_path: Path, errors: list,
+                            entities: dict, sources: dict) -> dict:
+    """Load + validate all canonical YAML objects in a directory (connections/sources).
+
+    Returns a dict keyed by object id. Each object is validated against (a) its
+    JSON schema and (b) the custom checks in validate_connection/validate_source.
+    Only objects that parse are collected; unparsable files are reported.
+    """
+    out: dict[str, dict] = {}
+    if not directory.exists():
+        return out
+    schema = None
+    if HAVE_JSONSCHEMA and schema_path.exists():
+        try:
+            schema = json.loads(schema_path.read_text(encoding="utf-8"))
+            cast(Any, Draft202012Validator).check_schema(schema)
+        except Exception as exc:  # noqa: BLE001 - schema misconfiguration is fatal
+            errors.append(f"invalid schema {schema_path}: {exc}")
+            schema = None
+    validator = cast(Any, Draft202012Validator)(schema) if schema else None
+
+    for path in sorted(directory.glob("*.yaml")):
+        try:
+            data = load_yaml_strict(path.read_text(encoding="utf-8"), where=str(path.relative_to(ROOT)))
+        except ValueError as exc:
+            errors.append(f"{path.relative_to(ROOT)}: {exc}")
+            continue
+        if not isinstance(data, dict):
+            errors.append(f"{path.relative_to(ROOT)}: expected a YAML mapping")
+            continue
+        data["_file"] = str(path.relative_to(ROOT))
+        if validator:
+            obj = {k: v for k, v in data.items() if not k.startswith("_")}
+            for err in validator.iter_errors(obj):
+                errors.append(f"{data['_file']}: schema violation: {err.message}")
+        # kind-specific deep checks
+        kind = data.get("type")
+        if kind == "connection":
+            validate_connection(data, entities, sources, errors)
+        else:
+            validate_source(data, errors)
+        _id = data.get("id")
+        if isinstance(_id, str):
+            if _id in out:
+                errors.append(f"duplicate {kind} id {_id!r} in {out[_id]['_file']} and {data['_file']}")
+            out[_id] = data
+    return out
+
+
 def main() -> int:
     errors: list = []
     entities: dict[str, dict] = {}
@@ -295,6 +490,11 @@ def main() -> int:
             if rtype == "appears_in_law" and target_type != "law":
                 errors.append(f"{entity['_file']}: appears_in_law target must be a 'law' (found {target_type})")
 
+    # Q2: load + validate first-class connections and sources (ADR-011). These are
+    # first-class canonical inputs — the gate now covers content/ + connections/ + sources/.
+    sources = load_canonical_yaml_dir(SOURCES, SOURCE_SCHEMA, errors, entities, {})
+    connections = load_canonical_yaml_dir(CONNECTIONS, CONN_SCHEMA, errors, entities, sources)
+
     # Report
     if errors:
         print(f"FAIL: {len(errors)} problem(s) found", file=sys.stderr)
@@ -309,9 +509,19 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "content/",
         "entity_count": len(entities),
+        "connection_count": len(connections),
+        "source_count": len(sources),
         "entities": [
             {k: v for k, v in entities[i].items() if not k.startswith("_")}
             for i in sorted(entities)
+        ],
+        "connections": [
+            {k: v for k, v in connections[i].items() if not k.startswith("_")}
+            for i in sorted(connections)
+        ],
+        "sources": [
+            {k: v for k, v in sources[i].items() if not k.startswith("_")}
+            for i in sorted(sources)
         ],
     }
     EXPORT.parent.mkdir(parents=True, exist_ok=True)

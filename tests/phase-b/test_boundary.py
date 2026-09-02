@@ -31,13 +31,19 @@ def test_inverse_not_in_canonical():
 
 
 def test_transitive_not_in_canonical():
-    # Transitive closure not written to canonical
-    # Check that relation registry transitive ones are not expanded in canonical count
-    # Our canonical has 63 mathematically_requires, transitive closure 218 derived (not canonical)
+    # Transitive closure must NOT be written to canonical. Derived edges are computed
+    # separately (knowledge.extended.json) and never inflate the canonical connection
+    # count. The exact closure size depends on the repository's content — the invariant
+    # is structural, not a fixed number.
     d = json.loads((ROOT / "exports" / "knowledge.extended.json").read_text())
-    assert d["derived"]["transitive_closure"]["count"] == 218
-    # Canonical count is 397, not 397+218
-    assert d["connection_count"] == 397 or d["explicit"]["count"] == 397
+    # Canonical count == explicit connections only (no derived inflation).
+    canonical_files = len(list((ROOT / "connections").glob("*.yaml")))
+    assert d["explicit"]["count"] == canonical_files
+    assert d["connection_count"] == canonical_files
+    # Derived transitive closure is present and positive, and is reported separately —
+    # it is never folded into the canonical (explicit) count.
+    tc = d["derived"]["transitive_closure"]
+    assert isinstance(tc["count"], int) and tc["count"] > 0
     print("PASS: transitive not in canonical")
 
 

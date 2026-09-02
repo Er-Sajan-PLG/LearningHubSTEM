@@ -1,27 +1,27 @@
 # Curation Status — v0.2
 
-- Total connections: 397 (canonical objects)
+- Total connections: 654 (canonical objects)
 - Canonical assertions (`review.status==canonical`): 50
-- Reviewed-only: 0, Canonical: 50, Unreviewed: 347 (total reviewed inc. canonical: 50)
-- Proposed: 396, Inferred: 0
-- Migrated: 384, Human-authored: 13, LLM: 0
+- Reviewed-only: 0, Canonical: 50, Unreviewed: 604 (total reviewed inc. canonical: 50)
+- Proposed: 653, Inferred: 0
+- Migrated: 641, Human-authored: 13, LLM: 0
 - Rejected: 0, Deprecated: 0
 - Semantics: `reviewed-only` vs `canonical` (terminal); canonical implies reviewed
 
 ## By relation
-{'special_case_of': 4, 'related_to': 213, 'logically_requires': 66, 'part_of': 10, 'derived_from': 1, 'mathematically_requires': 63, 'applies_to': 20, 'appears_in_law': 8, 'bridges': 6, 'analogous_to': 3, 'approximates': 3}
+{'special_case_of': 14, 'related_to': 371, 'logically_requires': 90, 'part_of': 24, 'derived_from': 3, 'mathematically_requires': 98, 'applies_to': 24, 'appears_in_law': 11, 'bridges': 6, 'analogous_to': 3, 'approximates': 3, 'generalizes': 7}
 
 ## By family
-{'hierarchical': 4, 'associative': 213, 'dependency': 129, 'structural': 10, 'derivation': 29, 'cross_domain': 6, 'analogy': 3, 'model': 3}
+{'hierarchical': 21, 'associative': 371, 'dependency': 188, 'structural': 24, 'derivation': 38, 'cross_domain': 6, 'analogy': 3, 'model': 3}
 
 ## By domain
-{'biology': 35, 'chemistry': 50, 'earth-space': 33, 'engineering': 1, 'physics': 276, 'scientific-practice': 2}
+{'biology': 80, 'chemistry': 94, 'earth-space': 33, 'engineering': 1, 'physics': 302, 'scientific-practice': 2, 'math': 142}
 
 ## By review
-{'canonical': 50, 'unreviewed': 347}
+{'canonical': 50, 'unreviewed': 604}
 
 ## By origin
-{'migrated': 384, 'human-authored': 13}
+{'migrated': 641, 'human-authored': 13}
 
 ## Top reviewed (canonical)
 - lhs:conn.000001: special_case_of lhs:bio.animal-cell -> lhs:bio.cell
@@ -53,8 +53,8 @@
 - lhs:conn.000137: appears_in_law
 
 ## Gaps
-- Evidence gaps: 342 (sample ['lhs:conn.000002', 'lhs:conn.000003', 'lhs:conn.000004'])
-- Provenance gaps (no reviewed_by): 347
+- Evidence gaps: 599 (sample ['lhs:conn.000002', 'lhs:conn.000003', 'lhs:conn.000004'])
+- Provenance gaps (no reviewed_by): 604
 
 ## Note
 Schema correctness != semantic acceptance. Canonical objects (397) include 382 proposed/unreviewed.

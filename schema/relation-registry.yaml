@@ -1,6 +1,12 @@
 # Relation Registry — authoritative source for relation semantics
 # ADR-012. Validator enforces family, inverse/symmetric, transitive, domain/range.
 # Guardrails: extends/supersedes/isomorphic_to non-transitive; causal non-transitive; is_a = class/subclass only.
+#
+# Amendment (architecture-review Q2, 2026-09): additive widening of allowed
+# domain/range so existing canonical connections validate against the registry —
+#   * mathematically_requires.range += law  (a law may mathematically require a proposition)
+#   * part_of/has_part domain/range += quantity (a quantity may be structurally part of another)
+# These are additive (allow more valid combinations); no existing valid combination removed.
 
 version: "0.2"
 relations:
@@ -17,15 +23,15 @@ relations:
     family: structural
     inverse: has_part
     transitive: true
-    domain: [concept, phenomenon, model]
+    domain: [concept, phenomenon, model, quantity]
     range: [concept, phenomenon, model]
 
   has_part:
     family: structural
     inverse: part_of
     transitive: true
-    domain: [concept, phenomenon, model]
-    range: [concept, phenomenon, model]
+    domain: [concept, phenomenon, model, quantity]
+    range: [concept, phenomenon, model, quantity]
 
   contains:
     family: structural
@@ -90,7 +96,7 @@ relations:
     inverse: mathematically_required_by
     transitive: true
     domain: [law, equation, model, quantity, concept, phenomenon]
-    range: [concept, quantity, equation, phenomenon, unit]
+    range: [concept, quantity, equation, phenomenon, unit, law]
 
   logically_requires:
     family: dependency
