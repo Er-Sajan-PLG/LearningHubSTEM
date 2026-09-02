@@ -2,3 +2,5 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+# Proposal staging (ingestion output) — derived working area, never canonical.
+proposals/
