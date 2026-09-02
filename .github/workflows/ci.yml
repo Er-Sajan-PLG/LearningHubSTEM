@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Full history so check_id_immutability.py can reconstruct each lhs: id's
+          # identity across time and verify no id was reassigned or reused (ADR-0003).
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7

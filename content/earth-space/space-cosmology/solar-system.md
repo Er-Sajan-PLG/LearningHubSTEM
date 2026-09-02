@@ -43,4 +43,4 @@ relationships:
 ## Notes
 
 The solar system turns a physics abstraction — universal gravitation — into a directly
-observable, grade-10-relevant structure.
+observable, organized hierarchical structure.

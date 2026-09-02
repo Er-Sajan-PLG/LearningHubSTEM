@@ -21,6 +21,7 @@ so the repo is self-contained.
 2. `STEMMA-SPECIFICATION.md` — the technical contract.
 3. `GOVERNANCE.md` — the rules.
 4. `decisions/README.md` — how decisions are made and recorded here.
+5. `CONTRIBUTING.md` — how to contribute (open-source readiness; IDs & stability contract).
 
 ## Ground rule
 

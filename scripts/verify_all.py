@@ -15,6 +15,9 @@ steps = [
     ["python3", str(ROOT / "tests/phase-b/test_phase_b.py")],
     ["python3", str(ROOT / "tests/phase-b/test_boundary.py")],
     ["python3", str(ROOT / "tests/curation/test_curation.py")],
+    ["python3", str(ROOT / "tests/curation/test_generality.py")],
+    ["python3", str(ROOT / "tests/curation/test_id_immutability.py")],
+    ["python3", str(ROOT / "scripts/check_id_immutability.py")],
 ]
 for cmd in steps:
     print(f"RUN: {' '.join(cmd)}")
