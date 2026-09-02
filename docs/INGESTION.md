@@ -11,7 +11,7 @@ Related: `docs/ARCHITECTURE-REVIEW-v0.3.md` §P (curation pipeline), `scripts/in
 
 ## Why
 
-LearningHubSTEM gains knowledge from documents. The ingestion layer turns an arbitrary
+STEMMA gains knowledge from documents. The ingestion layer turns an arbitrary
 document into **extracted text + a canonical Source candidate**, which the curation
 pipeline's Draft stage turns into proposed entities/connections. Every step is gated;
 **no one can add canonical knowledge by merging** (the merge/review gate — the human

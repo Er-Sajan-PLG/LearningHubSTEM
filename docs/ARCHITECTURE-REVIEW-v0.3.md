@@ -1,9 +1,9 @@
-# LearningHubSTEM — Final Architecture Review & Canonical-Knowledge Agent Pipeline
+# STEMMA — Final Architecture Review & Canonical-Knowledge Agent Pipeline
 
 **Version:** 0.3 (review)
 **Status:** Architecture review — **defines the target; does not implement.**
 
-This document inspects the actual LearningHubSTEM (LHSTEM) repository, evaluates its
+This document inspects the actual STEMMA (LHSTEM) repository, evaluates its
 existing decisions against the canonical-knowledge north star, and specifies the architecture —
 **including a canonical-knowledge agent/curation pipeline** — that LHSTEM should adopt.
 
@@ -35,7 +35,7 @@ whether fixing it is **breaking** for consumers.
 ### A.1 Repository shape
 
 ```
-LearningHubSTEM/
+STEMMA/
 ├── content/                        CANONICAL — 224 Markdown files, YAML frontmatter + prose
 │   ├── physics, chemistry, biology, earth-space, engineering, math, scientific-practice/
 ├── connections/                    CANONICAL — 654 first-class relation assertions (lhs:conn.NNNNNN.yaml)

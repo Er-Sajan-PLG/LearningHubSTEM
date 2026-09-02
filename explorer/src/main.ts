@@ -36,7 +36,7 @@ class ExplorerApp {
       this.showLoading(false);
       this.initUI();
     } catch (err) {
-      console.error('Failed to load LearningHubSTEM knowledge export:', err);
+      console.error('Failed to load STEMMA knowledge export:', err);
       this.showLoading(false);
       this.showError((err as Error).message);
     }

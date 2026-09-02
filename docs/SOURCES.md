@@ -1,8 +1,8 @@
-# SOURCES — Where LearningHubSTEM content comes from
+# SOURCES — Where STEMMA content comes from
 
 **Status:** consumer-visible source & attribution inventory
 **Date:** 2026-09-01
-**Related:** `docs/LEARNINGHUBSTEM-SPECIFICATION.md` §8 (provenance),
+**Related:** `docs/STEMMA-SPECIFICATION.md` §8 (provenance),
   `docs/decisions/0018-historical-attribution.md` (who + when), `schema/source.schema.json`.
 
 > Every canonical entity in `content/` records its **provenance** — where the entity's

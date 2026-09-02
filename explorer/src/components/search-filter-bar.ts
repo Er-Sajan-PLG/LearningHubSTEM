@@ -27,7 +27,7 @@ export class SearchFilterBar {
       <div class="explorer-header">
         <div class="brand-title">
           <div class="brand-logo"></div>
-          <span>LearningHubSTEM</span>
+          <span>STEMMA</span>
           <span class="brand-sub">3D Explorer</span>
         </div>
 

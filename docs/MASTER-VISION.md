@@ -1,6 +1,6 @@
 # MASTER VISION — LEARNINGHUBSTEM
 
-You are working on a long-term ecosystem centered around **LearningHubSTEM**.
+You are working on a long-term ecosystem centered around **STEMMA**.
 
 Before making architectural, data-model, API, UI, or implementation decisions, understand this vision.
 
@@ -8,7 +8,7 @@ Before making architectural, data-model, API, UI, or implementation decisions, u
 
 # 1. THE FUNDAMENTAL IDEA
 
-**LearningHubSTEM is not an education product.**
+**STEMMA is not an education product.**
 
 It is not STEMTuition.
 
@@ -18,7 +18,7 @@ It is not a Nepal curriculum database.
 
 It is not owned by one educational product.
 
-LearningHubSTEM is intended to become an **open, structured, reusable STEM knowledge foundation**.
+STEMMA is intended to become an **open, structured, reusable STEM knowledge foundation**.
 
 Its purpose is to organize STEM knowledge in a way that humans, educators, developers, researchers, AI systems, and other products can use.
 
@@ -38,17 +38,17 @@ That includes:
 * simulations
 * future products that do not yet exist
 
-If another person or company uses LearningHubSTEM to build something useful, that is a success.
+If another person or company uses STEMMA to build something useful, that is a success.
 
 ---
 
 # 2. THE MOST IMPORTANT ARCHITECTURAL BOUNDARY
 
-## LearningHubSTEM ≠ Curriculum
+## STEMMA ≠ Curriculum
 
 Curriculum MUST be treated as a separate layer/system.
 
-LearningHubSTEM should contain the underlying STEM knowledge.
+STEMMA should contain the underlying STEM knowledge.
 
 A separate curriculum system can map that knowledge into:
 
@@ -65,7 +65,7 @@ A separate curriculum system can map that knowledge into:
 * teacher-created courses
 * company-created learning paths
 
-LearningHubSTEM does NOT need to care which curriculum uses its knowledge.
+STEMMA does NOT need to care which curriculum uses its knowledge.
 
 Conceptually:
 
@@ -82,7 +82,7 @@ Conceptually:
       Product A     Product B     Product C
 ```
 
-LearningHubSTEM provides the knowledge.
+STEMMA provides the knowledge.
 
 Others decide how to organize and teach it.
 
@@ -130,14 +130,14 @@ But that mapping does NOT belong inside the canonical identity of Force.
 
 # 4. CURRICULUM IS A CONSUMER
 
-Curriculum systems should consume LearningHubSTEM.
+Curriculum systems should consume STEMMA.
 
 They may reference its concepts using stable identifiers.
 
 For example:
 
 ```text
-LearningHubSTEM
+STEMMA
     concept/force
     concept/mass
     concept/acceleration
@@ -178,12 +178,12 @@ No duplication of the underlying knowledge is necessary.
 
 This is a core principle.
 
-LearningHubSTEM should not dictate what people build with the knowledge.
+STEMMA should not dictate what people build with the knowledge.
 
 Someone may create:
 
 ```text
-LearningHubSTEM
+STEMMA
       ↓
 Nepal Curriculum
       ↓
@@ -193,7 +193,7 @@ STEMTuition
 Someone else may create:
 
 ```text
-LearningHubSTEM
+STEMMA
       ↓
 IB Curriculum
       ↓
@@ -203,7 +203,7 @@ Their own learning platform
 Someone else:
 
 ```text
-LearningHubSTEM
+STEMMA
       ↓
 University Engineering Curriculum
       ↓
@@ -213,7 +213,7 @@ Engineering simulator
 Someone else:
 
 ```text
-LearningHubSTEM
+STEMMA
       ↓
 Custom curriculum
       ↓
@@ -223,7 +223,7 @@ Educational game
 And someone else may completely ignore curriculum:
 
 ```text
-LearningHubSTEM
+STEMMA
       ↓
 Research tool
 ```
@@ -234,7 +234,7 @@ All of these are valid.
 
 # 6. STEMTUITION
 
-STEMTuition is ONE consumer of LearningHubSTEM.
+STEMTuition is ONE consumer of STEMMA.
 
 It may have its own curriculum layer.
 
@@ -256,12 +256,12 @@ STEMTuition
 └── AI tutor
           │
           ▼
-   LearningHubSTEM
+   STEMMA
 ```
 
 STEMTuition can decide how to organize knowledge for its users.
 
-That organization does not become part of LearningHubSTEM.
+That organization does not become part of STEMMA.
 
 ---
 
@@ -303,7 +303,7 @@ The key principle is:
 
 # 8. KNOWLEDGE GRAPH
 
-LearningHubSTEM should support meaningful relationships between knowledge entities.
+STEMMA should support meaningful relationships between knowledge entities.
 
 For example:
 
@@ -362,7 +362,7 @@ Another curriculum may decide:
 Teach B and A in Grade 10.
 ```
 
-LearningHubSTEM should provide the relationship.
+STEMMA should provide the relationship.
 
 The curriculum decides the instructional sequence.
 
@@ -370,7 +370,7 @@ The curriculum decides the instructional sequence.
 
 # 10. CANONICAL CONTENT
 
-The canonical LearningHubSTEM repository should be:
+The canonical STEMMA repository should be:
 
 * version controlled
 * structured
@@ -402,7 +402,7 @@ They must be regenerable from canonical content.
 
 # 11. AI
 
-AI can assist in developing LearningHubSTEM.
+AI can assist in developing STEMMA.
 
 It may:
 
@@ -434,7 +434,7 @@ derived indexes
 
 # 12. PRODUCTS SHOULD NOT BE TIGHTLY COUPLED
 
-LearningHubSTEM should not depend on:
+STEMMA should not depend on:
 
 * STEMTuition
 * STEM Game
@@ -448,7 +448,7 @@ LearningHubSTEM should not depend on:
 Instead:
 
 ```text
-                    LearningHubSTEM
+                    STEMMA
                            │
           ┌────────────────┼────────────────┐
           │                │                │
@@ -462,7 +462,7 @@ Instead:
 
 These systems consume and interact with the knowledge layer through defined interfaces.
 
-LearningHubSTEM must remain useful even if every one of those products disappears.
+STEMMA must remain useful even if every one of those products disappears.
 
 ---
 
@@ -470,12 +470,12 @@ LearningHubSTEM must remain useful even if every one of those products disappear
 
 JARVIS is an AI agent/interface.
 
-It may consume LearningHubSTEM, but LearningHubSTEM must not become dependent on JARVIS.
+It may consume STEMMA, but STEMMA must not become dependent on JARVIS.
 
 JARVIS may eventually use:
 
 ```text
-LearningHubSTEM
+STEMMA
 Web
 Research papers
 User data
@@ -485,13 +485,13 @@ Simulations
 External APIs
 ```
 
-LearningHubSTEM is one knowledge source in the larger JARVIS ecosystem.
+STEMMA is one knowledge source in the larger JARVIS ecosystem.
 
 ---
 
 # 14. THE COMPANY
 
-The eventual company may create products and services around LearningHubSTEM.
+The eventual company may create products and services around STEMMA.
 
 For example:
 
@@ -505,7 +505,7 @@ Company
 └── other future products
 ```
 
-But the existence of commercial products must not dictate the fundamental structure of LearningHubSTEM.
+But the existence of commercial products must not dictate the fundamental structure of STEMMA.
 
 The open knowledge foundation should remain independently useful.
 
@@ -515,12 +515,12 @@ The open knowledge foundation should remain independently useful.
 
 Do not assume we know all future consumers.
 
-A future developer might use LearningHubSTEM for something completely different.
+A future developer might use STEMMA for something completely different.
 
 For example:
 
 ```text
-LearningHubSTEM
+STEMMA
        ↓
 robotics education
 ```
@@ -528,7 +528,7 @@ robotics education
 or:
 
 ```text
-LearningHubSTEM
+STEMMA
        ↓
 engineering simulation
 ```
@@ -536,7 +536,7 @@ engineering simulation
 or:
 
 ```text
-LearningHubSTEM
+STEMMA
        ↓
 AI training environment
 ```
@@ -544,7 +544,7 @@ AI training environment
 or:
 
 ```text
-LearningHubSTEM
+STEMMA
        ↓
 scientific visualization
 ```
@@ -555,13 +555,13 @@ Therefore avoid unnecessary assumptions about presentation, curriculum, pedagogy
 
 # 16. ARCHITECTURAL RULE
 
-When deciding whether something belongs in LearningHubSTEM, ask:
+When deciding whether something belongs in STEMMA, ask:
 
 > "Is this intrinsic to the STEM knowledge itself, or is it a particular way of organizing, teaching, presenting, or consuming that knowledge?"
 
 If it is intrinsic to the knowledge:
 
-**Potentially LearningHubSTEM.**
+**Potentially STEMMA.**
 
 If it is about:
 
@@ -576,7 +576,7 @@ If it is about:
 * classroom structure
 * specific educational system
 
-then it probably belongs outside LearningHubSTEM.
+then it probably belongs outside STEMMA.
 
 ---
 
@@ -600,7 +600,7 @@ Do not introduce unnecessary complexity merely because the vision is large.
 
 Remember this above everything else:
 
-> **LearningHubSTEM is an open STEM knowledge foundation.**
+> **STEMMA is an open STEM knowledge foundation.**
 
 > **It should organize STEM knowledge so that anyone can build upon it.**
 
@@ -614,7 +614,7 @@ Remember this above everything else:
 
 > **STEMTuition is one consumer.**
 
-> **If other people use LearningHubSTEM to build things we never imagined, that is a success—not a failure of product control.**
+> **If other people use STEMMA to build things we never imagined, that is a success—not a failure of product control.**
 
 The objective is not to own every use of the knowledge.
 

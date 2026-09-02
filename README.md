@@ -1,21 +1,22 @@
-# LearningHubSTEM
+# STEMMA
 
 > **An open, structured, reusable STEM knowledge foundation.** Curriculum is external.
 > Products are external. Learning experiences are external. AI agents are consumers.
+> (Formerly known as **LearningHubSTEM**; the `lhs:` identity namespace is unchanged.)
 
 ## Status: active canonical foundation
 
-LearningHubSTEM holds a validated canonical knowledge base of **224 entities** across
+STEMMA holds a validated canonical knowledge base of **224 entities** across
 mathematics, physics, chemistry, biology, earth-space, engineering, and scientific-practice,
-exported through a versioned consumer contract. STEM-TUITION consumes
-`exports/knowledge.json` through a versioned adapter; PROFESSOR-J and future products are
+exported through a versioned consumer contract. STEM-TUITION (the LearningHub application)
+consumes `exports/knowledge.json` through a versioned adapter; PROFESSOR-J and future products are
 planned consumers. The architecture is proven; the knowledge base grows incrementally
-(`docs/LEARNINGHUBSTEM-ROADMAP.md`).
+(`docs/STEMMA-ROADMAP.md`).
 
 ## What's here
 
 ```text
-LearningHubSTEM/
+STEMMA/
 ├── README.md
 ├── schema/                     — entity, connection, source schemas + adaptive extension registry
 ├── content/                    — canonical Markdown + YAML-frontmatter entities (224)
@@ -48,7 +49,7 @@ inventory of sources and historical attributions. Canonical source records live 
 python3 scripts/validate.py          # from this directory
 
 # Or from the workspace root
-python3 LearningHubSTEM/scripts/validate.py
+python3 STEMMA/scripts/validate.py
 ```
 
 Exit code `0` = valid. Errors are printed with file and reason.
@@ -58,24 +59,24 @@ Exit code `0` = valid. Errors are printed with file and reason.
 - Canonical knowledge lives only in `content/`. Everything under `exports/` is derived.
 - No curriculum, grade, course, or product appears in `content/`.
 - AI-drafted content is `status: draft` until a human reviews it (see
-  `docs/LEARNINGHUBSTEM-SPECIFICATION.md` §6).
+  `docs/STEMMA-SPECIFICATION.md` §6).
 - A stable ID is never reused or silently reassigned.
 
 ## Governance
 
 The authoritative model for this repository lives in the workspace docs:
 
-- `docs/LEARNINGHUBSTEM-SPECIFICATION.md` — canonical format, IDs, entity model,
+- `docs/STEMMA-SPECIFICATION.md` — canonical format, IDs, entity model,
   relationship semantics, provenance, validation, consumer contract.
 - `docs/decisions/` — foundation decision records (licensing, identity, vocabulary, …).
-- `docs/LEARNINGHUBSTEM-ROADMAP.md` — phased plan; each phase requires activation.
+- `docs/STEMMA-ROADMAP.md` — phased plan; each phase requires activation.
 - `docs/NORTHSTAR.md`, `docs/GOVERNANCE.md` — north star and rules.
 
 ## Consumers
 
-The first consumer proof is STEM-TUITION's shell app. The seam is documented in
-`docs/LEARNINGHUBSTEM-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
-regeneration and test commands). LearningHubSTEM stays independent: it only publishes the export;
+The first consumer proof is STEM-TUITION's shell app (the LearningHub application). The seam is
+documented in `docs/STEMMA-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
+regeneration and test commands). STEMMA stays independent: it only publishes the export;
 consumers adapt it to their own curriculum and products.
 
 ## License
