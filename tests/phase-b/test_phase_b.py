@@ -84,14 +84,52 @@ def test_provenance():
 def test_idempotence():
     import subprocess
 
+    # Idempotence invariant: running the repair/curation migrations must NOT change
+    # the canonical repository state. Snapshot the set of connection ids before and
+    # after; they must be identical (no new files created, none removed), regardless
+    # of how many connections the repository happens to hold.
+    ids_before = _connection_ids()
+    counts_before = _entity_connection_counts()
+
     r1 = subprocess.run(["python3", str(ROOT / "scripts/migrate_relationships.py")], capture_output=True, text=True)
     r2 = subprocess.run(["python3", str(ROOT / "scripts/create_curated_b3_b6.py")], capture_output=True, text=True)
-    assert "created 0" in r1.stdout or "skipped 384" in r1.stdout or "skipped 376" in r1.stdout
-    assert "created 0" in r2.stdout
-    # Connections count stable
-    count = len(list((ROOT / "connections").glob("*.yaml")))
-    assert count == 397, f"connections count changed idempotence: {count}"
+
+    # The migrations must be a no-op on an already-migrated tree (they never create
+    # new connections once settled). Accept "created 0" OR "skipped N" — the stable
+    # invariant is that the connection SET is unchanged, not a magic count.
+    assert "created 0" in r1.stdout or "skipped" in r1.stdout, f"migrate_relationships not idempotent: {r1.stdout.strip()[-200:]}"
+    assert "created 0" in r2.stdout, f"create_curated_b3_b6 created new connections: {r2.stdout.strip()[-200:]}"
+
+    # Canonical connection set is unchanged by running the migrations.
+    ids_after = _connection_ids()
+    assert ids_after == ids_before, "migrations changed the canonical connection set (not idempotent)"
+    assert _entity_connection_counts() == counts_before, "entity inline-relationship count changed (not idempotent)"
     print("PASS: idempotence")
+
+
+def _connection_ids():
+    """All first-class connection ids under connections/, sorted (stable key)."""
+    ids = []
+    for p in (ROOT / "connections").glob("*.yaml"):
+        d = yaml.safe_load(p.read_text())
+        ids.append(d.get("id", p.stem))
+    return sorted(ids)
+
+
+def _entity_connection_counts():
+    """Count entities that still carry inline relationships (legacy v0.1 model)."""
+    count = 0
+    for p in (ROOT / "content").rglob("*.md"):
+        text = p.read_text()
+        if not text.startswith("---"):
+            continue
+        parts = text.split("---", 2)
+        if len(parts) < 3:
+            continue
+        d = yaml.safe_load(parts[1])
+        if isinstance(d, dict) and d.get("relationships"):
+            count += 1
+    return count
 
 
 def test_no_illegal_transitivity():

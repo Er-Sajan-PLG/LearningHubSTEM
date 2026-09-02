@@ -17,9 +17,9 @@
 # Seeded dimensions are knowledge-layer and curriculum-agnostic (Northstar: no grade /
 # curriculum in canonical content). Grade coverage is expressed via relationships and
 # breadth, never by a grade tag.
-version: "0.1"
-
-version: '0.1'
+# The `register_extension.py` writer inserts the idempotent header; a guarded
+# re-insert previously duplicated `version:`. A single `version:` remains — see
+# scripts/validate.py for deterministic duplicate-key detection (Q1.2).
 
 version: '0.1'
 extensions:

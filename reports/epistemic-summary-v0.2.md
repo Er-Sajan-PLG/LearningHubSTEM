@@ -2,13 +2,13 @@
 
 Deterministic report over all `connections/*.yaml` (explicit fields only).
 
-- Total connection records (canonical objects): **397**
+- Total connection records (canonical objects): **654**
 - Canonical scientific assertions (`review.status == canonical`): **50**
-- Proposed: 396, Asserted: 1, Inferred: 0
-- Review: unreviewed 347, reviewed-only 0, canonical 50 (total reviewed including canonical: 50)
-- Status: active 397, deprecated 0, rejected 0
-- Origin: migrated 384, human-authored 13, llm-authored 0
-- With confidence: 1, without: 396
+- Proposed: 653, Asserted: 1, Inferred: 0
+- Review: unreviewed 604, reviewed-only 0, canonical 50 (total reviewed including canonical: 50)
+- Status: active 654, deprecated 0, rejected 0
+- Origin: migrated 641, human-authored 13, llm-authored 0
+- With confidence: 1, without: 653
 - Human reviewed_by present: 50
 
 > Canonical object (file exists in `connections/`) != canonical scientific assertion.
@@ -16,15 +16,15 @@ Deterministic report over all `connections/*.yaml` (explicit fields only).
 > A migrated connection is a canonical object with `review.status=unreviewed` until human review.
 
 ## By assertion type
-{'proposed': 396, 'asserted': 1}
+{'proposed': 653, 'asserted': 1}
 
 ## By review
-{'canonical': 50, 'unreviewed': 347}
+{'canonical': 50, 'unreviewed': 604}
 
 ## By origin
-{'migrated': 384, 'human-authored': 13}
+{'migrated': 641, 'human-authored': 13}
 
 ## By method
-{'migration': 384, 'manual': 13}
+{'migration': 641, 'manual': 13}
 
 Machine-readable: `reports/epistemic-summary-v0.2.json`
