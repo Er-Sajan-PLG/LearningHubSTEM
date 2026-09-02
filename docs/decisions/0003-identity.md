@@ -24,6 +24,18 @@ Split/merge/replace handled by deprecation + `deprecated_by` + `aliases` (never 
 
 Namespaced, ASCII, regex-validated IDs give uniqueness and readability without infrastructure.
 
+**Why IDs must never change (the technical truth-protection rationale):** an `lhs:` ID is a
+reference that external consumers depend on — adapters (`lhs-adapter`), caches, cross-references
+in `connections/*.yaml`, `deprecated_by`/`aliases`, citations in the export contract, and any
+consumer product or AI system that has already persisted an `lhs:` ID. If an ID's meaning were
+reassigned (e.g. `lhs:phys.example` once meant "Classical mechanics" and later means "Quantum
+mechanics"), every consumer that stored the old meaning would silently now point at a different
+fact. IDs are therefore a **stable contract, not a label**: preserving identity preserves
+knowledge-assignment truth; changing it quietly falsifies history. Deprecation plus
+`deprecated_by` plus `aliases` are the only legitimate ways to evolve — never in-place mutation,
+never reuse. See also ADR-0007 (export contract) and `docs/HISTORY-RENAME.md` (why repo names can
+change but IDs and history must not).
+
 ## Consequences
 
 - Deprecated IDs remain reserved forever; alias handling is explicit.
