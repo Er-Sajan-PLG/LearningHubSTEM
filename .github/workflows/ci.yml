@@ -45,7 +45,7 @@ jobs:
         # byte-identical when the tracked artifacts are in sync (ADR-0022 / plan v2 E5.2).
         # A non-empty diff means someone edited canonical content without committing the
         # regenerated export — fail instead of silently consuming a stale export.
-        run: git diff --exit-code -- exports explorer/public/exports
+        run: git diff --exit-code -- exports explorer/public/exports reports/validation-report.json
 
       - name: Check derived exports
         run: |

@@ -210,6 +210,7 @@ def main():
         "export_version": base.get("export_version", "0.1"),
         "schema_version": base.get("schema_version", "0.2"),
         "content_hash": base.get("content_hash", "sha256:unknown"),
+        "kernel_version": base.get("kernel_version"),
         "source": "content/ + connections/ (canonical) + derived",
         "entity_count": len(entities),
         "connection_count": len(conns),

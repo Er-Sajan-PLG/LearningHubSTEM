@@ -580,6 +580,41 @@ def check_relationship_cycles(connections: dict, registry: dict, errors: list) -
                         stack.append((nxt, path + [nxt]))
 
 
+def write_validation_report(conforms: bool, results: list, content_hash: str | None) -> None:
+    """Write the SHACL-style machine-readable validation report.
+
+    Kept from the AXIOM-kernel work (PR #22), reconciled with ADR-0022: the report
+    is DETERMINISTIC — stamped with the canonical content_hash, never wall-clock
+    time — so the tracked reports/validation-report.json never churns between runs.
+    """
+    validation_results = []
+    for line in results:
+        parts = line.split(": ", 1)
+        validation_results.append({
+            "resultSeverity": "Violation",
+            "focusNode": parts[0] if len(parts) > 1 else "unknown",
+            "resultPath": None,
+            "resultMessage": parts[1] if len(parts) > 1 else line,
+            "sourceConstraintComponent": "STEMMAValidator",
+        })
+    kernel_version = None
+    version_file = ROOT / "VERSION"
+    if version_file.exists():
+        kernel_version = version_file.read_text(encoding="utf-8").strip()
+    report = {
+        "conforms": conforms,
+        "results": validation_results,
+        "kernel_version": kernel_version,
+        "content_hash": content_hash,
+    }
+    report_path = ROOT / "reports" / "validation-report.json"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(
+        json.dumps(report, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
 def check_inline_projection(entities: dict, connections: dict, errors: list) -> None:
     """Inline relationships[] must equal the projection of canonical connections
     (ADR-0020: connections/ is the single relationship source; audit F1)."""
@@ -745,6 +780,7 @@ def main() -> int:
         print(f"FAIL: {len(errors)} problem(s) found", file=sys.stderr)
         for line in errors:
             print(f"  - {line}", file=sys.stderr)
+        write_validation_report(conforms=False, results=errors, content_hash=None)
         return 1
 
     # Regenerate derived export (sorted for determinism; versions from the single
@@ -761,10 +797,13 @@ def main() -> int:
             hasher.update(path.read_bytes())
             hasher.update(b"\x00")
     versions = load_versions()
+    content_hash_value = f"sha256:{hasher.hexdigest()}"
+    kernel_version = (ROOT / "VERSION").read_text(encoding="utf-8").strip() if (ROOT / "VERSION").exists() else None
     payload = {
         "export_version": versions["export_version"],
         "schema_version": versions["schema_version"],
-        "content_hash": f"sha256:{hasher.hexdigest()}",
+        "content_hash": content_hash_value,
+        "kernel_version": kernel_version,
         "source": "content/ + connections/ + sources/ (canonical)",
         "entity_count": len(entities),
         "connection_count": len(connections),
@@ -788,6 +827,8 @@ def main() -> int:
         encoding="utf-8",
     )
     print(f"OK: {len(entities)} entities valid; export written to {EXPORT.relative_to(ROOT)}")
+    write_validation_report(conforms=True, results=[], content_hash=content_hash_value)
+    print("OK: validation report written to reports/validation-report.json")
 
     # Auto-sync the derived export into the explorer (3D visual) so the explorer
     # never drifts from canonical content. The explorer builds/loads from
