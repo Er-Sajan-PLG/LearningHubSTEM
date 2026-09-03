@@ -31,9 +31,16 @@ python3 scripts/validate.py        # exit 0 = valid; regenerates exports/knowled
 python3 scripts/verify_all.py      # authoritative chain: validator + status-truth + reports + tests
 ```
 
-`verify_all.py` is what CI runs. It includes the cross-object gates added by ADR-0020/0021/0022
+`verify_all.py` is what CI runs. It includes the cross-object gates added by ADR-0020–0023
 (inline↔connections projection sync, registry coherence, context vocabularies, cycle detection,
-inference/confidence rules, deterministic exports, README status-truth). If validation complains
+inference/confidence rules, deterministic exports, README status-truth, export-contract schema,
+agent-registry resolution, `external_ids` formats). Every agent id in provenance must exist in
+`schema/agent-registry.yaml`; add the entry in the same PR that first uses it.
+
+Review work (E6.1): `python3 scripts/dependency_review_campaign.py` regenerates the worksheets in
+`reports/e61-dependency-campaign/`; a human fills `decision:` in a `batch-NN.yaml` and applies it
+with `python3 scripts/apply_review_decisions.py <sheet> --reviewer human:<id>`. AI agents never
+fill decisions. If validation complains
 about out-of-sync inline relationships, run `python3 scripts/sync_relationships.py` (the inline
 block is a generated projection — never hand-edit it).
 

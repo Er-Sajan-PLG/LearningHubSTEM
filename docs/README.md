@@ -18,6 +18,9 @@ so the repo is self-contained.
 | `GLOSSARY.md` | Terms that recur across the ecosystem. |
 | `REVIEW-RESPONSE.md` | Architectural reconciliation record (decision trail). |
 | `decisions/` | Foundation decision records (ADR-style, `00NN-*.md`). |
+| `../schema/agent-registry.yaml` | Every provenance agent id (human/process/llm/unknown) — validator-resolved (ADR-0023). |
+| `../schema/export.schema.json` | Export contract v1.0 shape (ADR-0023). |
+| `../reports/e61-dependency-campaign/` | E6.1 dependency-edge review worksheets + dashboard (generated; decisions are human). |
 
 ## Reading order
 
