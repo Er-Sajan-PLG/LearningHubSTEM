@@ -39,19 +39,19 @@
 
 ## 3. SOTA Comparison — Mechanisms to Adopt
 
-| Standard | Mechanism | AXIOM Adoption |
-|----------|-----------|----------------|
-| **W3C SHACL** | `sh:ValidationReport` with `sh:conforms`, `sh:result[]` carrying `sh:resultSeverity` (`sh:Violation`/`sh:Warning`/`sh:Info`), `sh:focusNode`, `sh:resultPath`, `sh:sourceConstraintComponent`, `sh:resultMessage` | Adopt this *exact report structure* for kernel validation output — machine-readable, severity-graded, actionable |
-| **LinkML** | `linkml-validate` (runtime validator), generators (JSON Schema, Python, SQL, etc.), `linkml-map` for data migration, schema versioning in YAML header | Adopt: validator as library, migration scripts as first-class, generators for consumer adapters |
-| **OBO Foundry** | ID stability policy (P1–P16), term obsoletion with `owl:deprecated` + `IAO:0100001 replaced_by` + `consider`, MIREOT term import | Adopt: explicit deprecation lifecycle, `consider` for soft redirects, import protocol for external terms |
-| **ROBOT** | CLI pipeline: `extract` → `merge` → `reason` → `annotate` → `diff` → `report` → `init` | Adopt: same pipeline stages for kernel release |
-| **SKOS** | `exactMatch`/`closeMatch`/`broadMatch`/`narrowMatch`/`relatedMatch` for concept mapping | Adopt: mapping vocabulary for cross-foundation alignment |
-| **Wikidata** | Property proposal process (proposal → discussion → closure), constraint types (single-value, subject-type, etc.) with severity (mandatory/suggestion), data-quality dashboards | Adopt: proposal→review→ratification governance, constraint severity, public quality dashboard |
-| **PROV-O** | `prov:Entity`/`Activity`/`Agent`, qualified patterns (`prov:qualifiedAttribution`), derivation/attribution | Already in `connection.provenance` — extend to full PROV-O export |
-| **FAIR** | 15 principles (F1–F4, A1–A2, I1–I3, R1) | Adopt as release gate checklist |
-| **Schema.org** | `pending.schema.org` lifecycle, `attic` for retired terms | Adopt: staging area for candidate relations, attic for deprecated |
-| **LLM Extraction (2024–26)** | JSON-Schema-constrained outputs (OpenAI structured outputs, Outlines, Instructor), extraction→validation loops, human-in-the-loop curation | Adopt: LLM Draft seam with schema-constrained output + validation gate |
-| **Confluent Schema Registry** | Compatibility modes: BACKWARD/FORWARD/FULL/TRANSITIVE | Adopt: explicit compatibility policy per schema track |
+| Standard | Mechanism | AXIOM Adoption | Sources |
+|----------|-----------|----------------|---------|
+| **W3C SHACL** | `sh:ValidationReport` with `sh:conforms`, `sh:result[]` carrying `sh:resultSeverity` (`sh:Violation`/`sh:Warning`/`sh:Info`), `sh:focusNode`, `sh:resultPath`, `sh:sourceConstraintComponent`, `sh:resultMessage` | Adopt this *exact report structure* for kernel validation output — machine-readable, severity-graded, actionable | [W3C SHACL Spec](https://www.w3.org/TR/shacl/#validation-report), [Eclipse RDF4J](https://rdf4j.org/documentation/programming/shacl/), [The Ontologist](https://ontologist.substack.com/p/power-up-your-shacl-validation) |
+| **LinkML** | `linkml-validate` (runtime validator using JSON Schema generation), generators (JSON Schema, Python, SQL, etc.), `linkml-map` for data migration, schema versioning in YAML header | Adopt: validator as library, migration scripts as first-class, generators for consumer adapters | [LinkML Validation](https://linkml.io/linkml/data/validating-data.html), [LinkML Generators](https://linkml.io/linkml/generators/index.html), [linkml-validate CLI](https://linkml.io/linkml/cli/validate.html) |
+| **OBO Foundry** | ID stability policy (P1–P16), term obsoletion with `owl:deprecated` + `IAO:0100001 replaced_by` + `consider`, `IAO:0000231` obsolescence reason, MIREOT term import | Adopt: explicit deprecation lifecycle, `consider` for soft redirects, import protocol for external terms | [OBO Foundry Checks](http://obofoundry.org/principles/checks/fp_012), [OBO Academy Obsoletion](https://oboacademy.github.io/obook/howto/obsolete-term/), [OBO ID Policy](http://obofoundry.org/id-policy.html) |
+| **ROBOT** | CLI pipeline: `extract` → `merge` → `reason` → `annotate` → `diff` → `report` → `init` | Adopt: same pipeline stages for kernel release | [ROBOT Tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-2/), [ROBOT Pipeline](https://oboacademy.github.io/obook/lesson/ontology-pipelines/), [ROBOT Docs](http://robot.obolibrary.org/) |
+| **SKOS** | `exactMatch`/`closeMatch`/`broadMatch`/`narrowMatch`/`relatedMatch` for cross-scheme concept mapping | Adopt: mapping vocabulary for cross-foundation alignment | [W3C SKOS Reference](https://www.w3.org/TR/skos-reference/), [SKOS Primer](https://www.w3.org/TR/skos-primer/) |
+| **Wikidata** | Property proposal process (proposal → discussion → closure), constraint types (single-value, subject-type) with severity (mandatory/suggestion), data-quality dashboards | Adopt: proposal→review→ratification governance, constraint severity, public quality dashboard | [Wikidata Property Proposal](https://www.wikidata.org/wiki/Wikidata:Property_proposal), [Wikidata Constraints](https://www.wikidata.org/wiki/Help:Constraints) |
+| **PROV-O** | `prov:Entity`/`Activity`/`Agent`, qualified patterns (`prov:qualifiedAttribution`), derivation/attribution | Already in `connection.provenance` — extend to full PROV-O export | [W3C PROV-O](https://www.w3.org/TR/prov-o/), [PROV Namespace](https://www.w3.org/ns/prov/) |
+| **FAIR** | 15 principles (F1–F4, A1–A2, I1–I3, R1) | Adopt as release gate checklist | [FAIR Principles](https://www.go-fair.org/fair-principles/) |
+| **Schema.org** | `pending.schema.org` lifecycle, `attic` for retired terms | Adopt: staging area for candidate relations, attic for deprecated | [Schema.org](https://schema.org/) |
+| **LLM Extraction (2024–26)** | JSON-Schema-constrained outputs (OpenAI structured outputs, Outlines, Instructor), extraction→validation loops, human-in-the-loop curation | Adopt: LLM Draft seam with schema-constrained output + validation gate | [Outlines](https://github.com/outlines-dev/outlines), [Instructor](https://github.com/jxnl/instructor) |
+| **Confluent Schema Registry** | Compatibility modes: BACKWARD/FORWARD/FULL/TRANSITIVE | Adopt: explicit compatibility policy per schema track | [Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html) |
 
 ---
 
@@ -225,9 +225,9 @@ exports/
 
 ## Appendix: KO板 Operational Takeaways
 
-1. **SHACL ValidationReport** — adopt exact structure (`sh:conforms`, `sh:result[]` with severity, focusNode, resultPath, sourceConstraintComponent, message) for all kernel validation
-2. **LinkML migration tooling** — `linkml-map` pattern for data migration scripts; make migration first-class, not ad-hoc
-3. **OBO obsoletion** — use `owl:deprecated` + `IAO:0100001 replaced_by` + `consider` for every deprecated term/relation
-4. **ROBOT pipeline** — model kernel release as `extract → merge → reason → annotate → diff → report → init`
-5. **Wikidata proposal process** — formal proposal→discussion→closure with constraint severity (mandatory/suggestion) and public dashboard
-6. **Confluent compatibility modes** — declare BACKWARD/FORWARD/FULL per track; never collapse tracks
+1. **SHACL ValidationReport** — adopt exact structure (`sh:conforms`, `sh:result[]` with severity, focusNode, resultPath, sourceConstraintComponent, message) for all kernel validation — [W3C SHACL](https://www.w3.org/TR/shacl/#validation-report), [Eclipse RDF4J](https://rdf4j.org/documentation/programming/shacl/)
+2. **LinkML migration tooling** — `linkml-map` pattern for data migration scripts; make migration first-class, not ad-hoc — [LinkML Validation](https://linkml.io/linkml/data/validating-data.html), [linkml-map](https://linkml.io/linkml/cli/validate.html)
+3. **OBO obsoletion** — use `owl:deprecated` + `IAO:0100001 replaced_by` + `consider` for every deprecated term/relation — [OBO Checks](http://obofoundry.org/principles/checks/fp_012), [OBO Academy](https://oboacademy.github.io/obook/howto/obsolete-term/)
+4. **ROBOT pipeline** — model kernel release as `extract → merge → reason → annotate → diff → report → init` — [ROBOT Tutorial](https://oboacademy.github.io/obook/tutorial/robot-tutorial-2/), [ROBOT Pipeline](https://oboacademy.github.io/obook/lesson/ontology-pipelines/)
+5. **Wikidata proposal process** — formal proposal→discussion→closure with constraint severity (mandatory/suggestion) and public dashboard — [Wikidata Property Proposal](https://www.wikidata.org/wiki/Wikidata:Property_proposal)
+6. **Confluent compatibility modes** — declare BACKWARD/FORWARD/FULL per track; never collapse tracks — [Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
