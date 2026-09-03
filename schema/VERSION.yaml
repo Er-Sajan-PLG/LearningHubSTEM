@@ -14,7 +14,7 @@
 #                    exports/knowledge.compat-0.1.json (entities only), emitted during
 #                    the consumer co-release window so a `0.1`-pinned adapter can be
 #                    repointed while it upgrades. Delete this key (and the artifact)
-#                    once STEM-TUITION's SUPPORTED_EXPORT_VERSION reads '1.0'.
+#                    once LearningHub's SUPPORTED_EXPORT_VERSION reads '1.0'.
 # relation_registry_version — version of schema/relation-registry.yaml.
 
 schema_version: '0.2'

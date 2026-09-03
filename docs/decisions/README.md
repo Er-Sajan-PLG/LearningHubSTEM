@@ -1,6 +1,6 @@
-# DECISIONS — LearningHubSTEM Foundation
+# DECISIONS — STEMMA Foundation
 
-Decision records for the LearningHubSTEM foundation (Phase 1 — Foundation Definition & Freeze).
+Decision records for the STEMMA foundation (Phase 1 — Foundation Definition & Freeze).
 
 Each record follows the same shape:
 
@@ -14,7 +14,7 @@ Each record follows the same shape:
 
 | # | Record | Subject | Status |
 |---|--------|---------|--------|
-| 0001 | [license.md](0001-license.md) | Knowledge + code licensing | PENDING human approval |
+| 0001 | [license.md](0001-license.md) | Knowledge + code licensing | decided (2026-09-02) |
 | 0002 | [canonical-representation.md](0002-canonical-representation.md) | Markdown + YAML frontmatter; canonical vs derived | decided (documented) |
 | 0003 | [identity.md](0003-identity.md) | Stable ID rules and lifecycle | decided (documented) |
 | 0004 | [entity-model.md](0004-entity-model.md) | Six entity types | decided (documented) |
@@ -39,6 +39,7 @@ Each record follows the same shape:
 | 0022 | [0022-version-source-deterministic-exports.md](0022-version-source-deterministic-exports.md) | Single version source (schema/VERSION.yaml) + deterministic content_hash exports (plan v2 E5.1/E5.2) | decided (implemented) |
 | 0023 | [0023-export-contract-v1-identity-hardening.md](0023-export-contract-v1-identity-hardening.md) | Export contract **v1.0** (connections/sources required; gate G-A) + `external_ids` format checks + agent registry (plan v2 E1.5/E4.1/E4.2) | decided (implemented) |
 | 0024 | [0024-math-layer.md](0024-math-layer.md) | STEM math layer: canonical LaTeX + symbol bindings + ISQ dimensions + unit entities (plan v2 E3.1) | **PROPOSED — gate G-C** |
+| 0025 | [0025-activation-phrase.md](0025-activation-phrase.md) | Retire "ACTIVATE LEARNINGHUBSTEM MVP"; active phrase is "ACTIVATE STEMMA MVP" (plan v2 E0.3 / R2) | decided (implemented) |
 
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

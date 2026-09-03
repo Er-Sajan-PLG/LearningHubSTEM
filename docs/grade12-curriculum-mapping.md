@@ -97,7 +97,7 @@ ecosystem.
 
 ## How consumers use this mapping
 
-This mapping is **consumer-owned** and lives outside `content/`. A consumer (e.g. STEM-TUITION
+This mapping is **consumer-owned** and lives outside `content/`. A consumer (e.g. LearningHub
 Phase 8+, PROFESSOR-J `lhs_adapter`) may:
 
 1. Import `exports/knowledge.json` (contract `export_version 0.1`).
@@ -105,7 +105,7 @@ Phase 8+, PROFESSOR-J `lhs_adapter`) may:
 3. Sequence or tag lessons by "grade-12 coverage" using this table — the grade is a
    **consumer-side concern**, never embedded into canonical entities.
 
-It is intentionally curriculum-agnostic upstream: LHS keeps the definitions; consumers own
+It is intentionally curriculum-agnostic upstream: STEMMA keeps the definitions; consumers own
 the grade/sequence. If a canonical ID in this table is missing from a future export, the
 consumer adapter must fail loudly (dangling reference) rather than silently skip — per the
 consumer-seam contract.

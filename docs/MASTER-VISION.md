@@ -1,4 +1,4 @@
-# MASTER VISION — LEARNINGHUBSTEM
+# MASTER VISION — STEMMA
 
 You are working on a long-term ecosystem centered around **STEMMA**.
 
@@ -10,7 +10,7 @@ Before making architectural, data-model, API, UI, or implementation decisions, u
 
 **STEMMA is not an education product.**
 
-It is not STEMTuition.
+It is not LearningHub.
 
 It is not a curriculum platform.
 
@@ -26,7 +26,7 @@ Anyone should be able to build on top of it.
 
 That includes:
 
-* STEMTuition
+* LearningHub
 * other education platforms
 * universities
 * teachers
@@ -70,7 +70,7 @@ STEMMA does NOT need to care which curriculum uses its knowledge.
 Conceptually:
 
 ```text
-                 LEARNINGHUBSTEM
+                 STEMMA
                 STEM KNOWLEDGE
                        │
           ┌────────────┼────────────┐
@@ -88,7 +88,7 @@ Others decide how to organize and teach it.
 
 ---
 
-# 3. LEARNINGHUBSTEM SHOULD BE CURRICULUM-AGNOSTIC
+# 3. STEMMA SHOULD BE CURRICULUM-AGNOSTIC
 
 The canonical knowledge model should not contain assumptions such as:
 
@@ -187,7 +187,7 @@ STEMMA
       ↓
 Nepal Curriculum
       ↓
-STEMTuition
+LearningHub
 ```
 
 Someone else may create:
@@ -232,16 +232,16 @@ All of these are valid.
 
 ---
 
-# 6. STEMTUITION
+# 6. LearningHub
 
-STEMTuition is ONE consumer of STEMMA.
+LearningHub is ONE consumer of STEMMA.
 
 It may have its own curriculum layer.
 
 For example:
 
 ```text
-STEMTuition
+LearningHub
 │
 ├── Curriculum
 │   ├── Nepal
@@ -259,13 +259,13 @@ STEMTuition
    STEMMA
 ```
 
-STEMTuition can decide how to organize knowledge for its users.
+LearningHub can decide how to organize knowledge for its users.
 
 That organization does not become part of STEMMA.
 
 ---
 
-# 7. LEARNINGHUBSTEM KNOWLEDGE MODEL
+# 7. STEMMA KNOWLEDGE MODEL
 
 The knowledge layer should focus on STEM itself.
 
@@ -436,7 +436,7 @@ derived indexes
 
 STEMMA should not depend on:
 
-* STEMTuition
+* LearningHub
 * STEM Game
 * STEM Lab
 * JARVIS
@@ -453,7 +453,7 @@ Instead:
           ┌────────────────┼────────────────┐
           │                │                │
           ▼                ▼                ▼
-     STEMTuition       STEM Game        STEM Lab
+     LearningHub      STEM Game        STEM Lab
           │                │                │
           └────────────────┼────────────────┘
                            │
@@ -498,7 +498,7 @@ For example:
 ```text
 Company
 │
-├── STEMTuition
+├── LearningHub
 ├── STEM Game
 ├── STEM Lab
 ├── AI services
@@ -612,7 +612,7 @@ Remember this above everything else:
 
 > **AI agents are consumers.**
 
-> **STEMTuition is one consumer.**
+> **LearningHub is one consumer.**
 
 > **If other people use STEMMA to build things we never imagined, that is a success—not a failure of product control.**
 

@@ -61,7 +61,7 @@ const PHYSICS_TOPIC_KEYWORDS: Record<string, string[]> = {
 };
 
 // Map the entity-id namespace prefix (the part before the dot) to its domain.
-// LHS ids are lhs:<ns>.<slug> where ns is a short code (phys/bio/chem/earth/...).
+// STEMMA (`lhs:` namespace) ids are lhs:<ns>.<slug> where ns is a short code (phys/bio/chem/earth/...).
 const NS_TO_DOMAIN: Record<string, string> = {
   phys: 'physics',
   chem: 'chemistry',
@@ -73,7 +73,7 @@ const NS_TO_DOMAIN: Record<string, string> = {
   epist: 'scientific-practice',
 };
 
-// Map a math entity slug to a math sub-topic cluster (mirrors LHS math subdomains).
+// Map a math entity slug to a math sub-topic cluster (mirrors STEMMA math subdomains).
 const MATH_TOPIC_KEYWORDS: Record<string, string[]> = {
   'algebra': ['algebraic', 'polynomial', 'quadratic', 'linear-copy', 'variable', 'equation', 'expression', 'function-copy', 'matrix'],
   'number-theory': ['number', 'integer', 'natural', 'rational', 'irrational', 'prime', 'sequence', 'series'],
@@ -96,7 +96,7 @@ export function clusterForEntity(id: string): string {
     }
     return 'mechanics';
   }
-  // Mathematics sub-topics cluster the same way physics does (mirrors LHS math subdomains).
+  // Mathematics sub-topics cluster the same way physics does (mirrors STEMMA math subdomains).
   if (domain === 'mathematics') {
     for (const [cluster, keywords] of Object.entries(MATH_TOPIC_KEYWORDS)) {
       if (keywords.some(k => slug.includes(k))) return cluster;

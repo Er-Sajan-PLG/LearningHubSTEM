@@ -1,4 +1,4 @@
-"""Tests for the LHS curation pipeline (scripts/curation_pipeline.py).
+"""Tests for the STEMMA curation pipeline (scripts/curation_pipeline.py).
 
 Verifies the hard-gate model: a change is only 'request_review' when every gate
 passes; broken changes are 'hold'/'reject' and never publish; the pipeline never

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS canonical-knowledge curation pipeline (architecture review §P).
+"""STEMMA (`lhs:` namespace) canonical-knowledge curation pipeline (architecture review §P).
 
 A staged, hard-gate pipeline that turns a *curation request* into a governed
 decision over canonical knowledge (entities, connections, sources). It mirrors the
@@ -321,7 +321,7 @@ def _main() -> int:
     import argparse
     import json
 
-    p = argparse.ArgumentParser(description="LHS curation pipeline (canonical-knowledge stages).")
+    p = argparse.ArgumentParser(description="STEMMA curation pipeline (canonical-knowledge stages).")
     p.add_argument("--kind", required=True, choices=["entity", "connection", "source"])
     p.add_argument("--intent", required=True, help="what should be true canonically")
     p.add_argument("--data", required=True, help="path to a YAML/JSON proposal artifact")

@@ -17,6 +17,11 @@ should be retained for history only.
 ADR-0024 (**gate G-C pending**); E6.1 campaign **tooling + 4 batch worksheets** generated
 (`reports/e61-dependency-campaign/`) — review decisions themselves remain human work; E6.7
 dependency-edge dashboard slice included. All other items unchanged and still gated as marked.
+**2026-09-04 (E0 close-out):** E0.1/E0.2/E0.3 implemented — GOVERNANCE + ROADMAP now carry the
+one status story; ADR-0001 licensing **decided 2026-09-02** (CC BY 4.0 content / MIT code) with
+GLOSSARY / consumer-seam / spec §15 reconciled; R1 rename leftovers, R2 activation-phrase
+re-point (**ADR-0025**: "ACTIVATE STEMMA MVP"), and the R3 consumer-name sweep
+(STEM-TUITION → LearningHub) applied across current docs.
 
 **Derived from:** `docs/ARCHITECTURE-AUDIT-v1.0.md` — **the latest architecture audit**
 (supersedes `ARCHITECTURE-REVIEW-v0.3.md`). Every task below carries a traceability tag
@@ -78,9 +83,9 @@ Sizes: S ≤ 1h · M ≤ half day · L ≤ 2 days · X = ongoing cadence.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E0.1 | One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
-| E0.2 | Licensing record reconciliation: set ADR-0001 `decided` with the human approval date; fix GLOSSARY/consumer-seam "pending" lines | R4 | S |
-| E0.3 | Remaining rename leftovers (R1 list) + docs/README.md map refresh (this plan adds the audit + v2 plan rows) | R1, R6 | S |
+| E0.1 | ✅ One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
+| E0.2 | ✅ Licensing record reconciliation: ADR-0001 `decided` (2026-09-02 — CC BY 4.0 content / MIT code); GLOSSARY/consumer-seam/spec §15 "pending" lines fixed | R4 | S |
+| E0.3 | ✅ Rename leftovers (R1 list) + R2 activation phrase (ADR-0025) + R3 consumer-name sweep + docs/README.md map refresh | R1, R2, R3, R6 | S |
 | E0.4 | ✅ **CI doc-status gate:** a script asserts the README status line matches `reports/epistemic-summary` counts (entity counts, reviewed %) — status claims become mechanically checkable | F2 (systemic) | S |
 
 ### E1 — Single source of truth for relationships (the pivot) — L
@@ -221,7 +226,7 @@ automated entity resolution.
 | Gate | Decision | Unblocks |
 |------|----------|----------|
 | G-A | ✅ decided 2026-09-04 (ADR-0023): contract **v1.0** now; compat `0.1` view during LearningHub co-release | E1.5 ✅; E1.6–E1.7 open |
-| G-B | Entity-type expansion ADR (`phenomenon`, `model`, `experiment`; `misconception_of`) | E2.2 |
+| G-B | ✅ decided 2026-09-03 (ADR-0021): entity types `phenomenon`/`model`/`experiment`; `misconception` participates via `related_to` | E2.2 ✅ |
 | G-C | Math-layer ADR (canonical LaTeX + symbol bindings + QUDT/UCUM) — **draft ready: ADR-0024** | E3 |
 | G-D | Reviewer identity policy (ORCID-backed recommended) | E6.5 |
 | G-E | Colon-filename migration + exports tracking model | E4.6, E5.4 |

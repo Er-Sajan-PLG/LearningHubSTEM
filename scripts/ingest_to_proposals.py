@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS ingestion → proposal staging runner.
+"""STEMMA (`lhs:` namespace) ingestion → proposal staging runner.
 
 Ties the pipeline together: ingest a document (PDF/image/scanned) and stage
 review-ready candidate knowledge (source + proposed entities/connections) under
@@ -128,7 +128,7 @@ def write_dossier(dossier: dict, out_dir: Path) -> Path:
 def main(argv: list[str] | None = None) -> int:
     import argparse
 
-    p = argparse.ArgumentParser(description="Ingest a document and stage LHS proposals for review.")
+    p = argparse.ArgumentParser(description="Ingest a document and stage STEMMA proposals for review.")
     p.add_argument("--path", required=True, help="PDF/image file to ingest")
     p.add_argument("--draft", default=None, help="'module:function' LLM Draft seam (optional)")
     p.add_argument("--out", default=str(ROOT / "proposals"), help="proposal staging dir")

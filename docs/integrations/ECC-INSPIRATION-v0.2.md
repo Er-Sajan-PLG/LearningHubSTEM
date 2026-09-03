@@ -1,12 +1,12 @@
-# ECC Inspiration for LearningHubSTEM — v0.2
+# ECC Inspiration for STEMMA — v0.2
 
 **Source:** https://github.com/affaan-m/ECC — agent harness performance optimization system (`plan -> test -> implement -> review -> verify -> remember -> improve`), 68 agents, 286 skills, hooks/memory/AgentShield.
 
-**Intent:** Integrate ECC *workflow and quality* inspiration into LHS without adopting ECC as canonical truth, RDF/GraphDB, or full harness. LHS remains Markdown/YAML canonical, human-governed.
+**Intent:** Integrate ECC *workflow and quality* inspiration into STEMMA without adopting ECC as canonical truth, RDF/GraphDB, or full harness. STEMMA remains Markdown/YAML canonical, human-governed.
 
-## 1. Mapping ECC → LHS
+## 1. Mapping ECC → STEMMA
 
-| ECC | LHS Interpretation |
+| ECC | STEMMA Interpretation |
 |-----|-------------------|
 | `plan` | ADR-011..015 + CURATION-PROTOCOL-v0.2 before code; `docs/curation/` as plan artifact |
 | `test` | `scripts/validate.py` + `tests/phase-b/` + `tests/curation/` — schema + semantic + provenance + boundary tests; TDD for scripts |
@@ -31,11 +31,11 @@
 4. **Remember/improve loop:** After each pilot batch, update `reports/curation-status-v0.2.json/.md` and `reports/curation-pilot-v0.2.md` with effort/ambiguity/false-positive/schema friction; feed back into `relation-registry` or `CURATION-PROTOCOL` only via ADR.
 5. **Security/provenance scan:** Extend `integrity_anomalies` to flag LLM→canonical without human, missing evidence per family, and confidence without basis — analogous to AgentShield prompt/secret scanning.
 
-## 3. What LHS Will NOT Take From ECC (Governance Freeze)
-- No RDF/OWL/GraphDB/Neo4j/vector DB as canonical (ECC supports many harnesses; LHS stays lightweight).
-- No mass auto-canonicalization (ECC's 68 agents ≠ automatic promotion; LHS requires human `reviewed_by`).
+## 3. What STEMMA Will NOT Take From ECC (Governance Freeze)
+- No RDF/OWL/GraphDB/Neo4j/vector DB as canonical (ECC supports many harnesses; STEMMA stays lightweight).
+- No mass auto-canonicalization (ECC's 68 agents ≠ automatic promotion; STEMMA requires human `reviewed_by`).
 - No `PageRank` as truth (ECC centrality is analytics only).
-- No full harness install (`/plugin`, hooks-runtime) — LHS uses repository-local scripts and `graph_policy` as the single inclusion decision point.
+- No full harness install (`/plugin`, hooks-runtime) — STEMMA uses repository-local scripts and `graph_policy` as the single inclusion decision point.
 
 ## 4. Immediate Application to Phase D
 - D2 review interface will follow ECC `/code-review` pattern: fresh context, check against registry, evidence, provenance, then human verdict.

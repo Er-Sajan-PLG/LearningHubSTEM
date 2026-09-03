@@ -7,7 +7,7 @@ on:
     branches: [main, master]
 
 concurrency:
-  group: ci-learninghubstem-${{ github.ref }}
+  group: ci-stemma-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:

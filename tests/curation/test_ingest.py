@@ -1,4 +1,4 @@
-"""Tests for the LHS ingestion system (scripts/ingest.py).
+"""Tests for the STEMMA ingestion system (scripts/ingest.py).
 
 Verifies deterministic extraction from text PDFs, scanned PDFs, and images; that it
 never writes to canonical directories; and that it produces a well-formed Source

@@ -8,7 +8,7 @@ Workspace-level rules are in the workspace root (`/home/sajan/Projects/AGENTS.md
 
 > **STEMMA is an open, structured, reusable STEM knowledge foundation.**
 > Curriculum is external. Products are external. Learning experiences are external.
-> AI agents are consumers. STEM-TUITION is one consumer — never a controller.
+> AI agents are consumers. LearningHub is one consumer — never a controller.
 
 Read `docs/NORTHSTAR.md` for the three boundaries that must never blur.
 
@@ -46,7 +46,7 @@ block is a generated projection — never hand-edit it).
 
 ## Starting work
 
-1. Read `docs/README.md` to navigate the governance set; read `docs/LEARNINGHUBSTEM-SPECIFICATION.md`.
+1. Read `docs/README.md` to navigate the governance set; read `docs/STEMMA-SPECIFICATION.md`.
 2. Read the affected schema and a seed entity in `content/` before editing.
 3. State the classification and a short plan before changing anything.
 4. Run validation after changes; finish with a short summary and flag human decisions.
