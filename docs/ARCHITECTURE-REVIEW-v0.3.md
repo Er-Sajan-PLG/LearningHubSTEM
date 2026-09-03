@@ -1,5 +1,13 @@
 # STEMMA — Final Architecture Review & Canonical-Knowledge Agent Pipeline
 
+> **STATUS: SUPERSEDED (2026-09-03).** Retained for history. The latest, authoritative
+> architecture audit is **[`ARCHITECTURE-AUDIT-v1.0.md`](ARCHITECTURE-AUDIT-v1.0.md)**;
+> the forward implementation plan derived from it is
+> **[`STEMMA-IMPLEMENTATION-PLAN-v2.md`](STEMMA-IMPLEMENTATION-PLAN-v2.md)**.
+> Its findings C.1–C.10 remain traceable: C.1/C.2 were fixed by the Q1/Q2 validation+export
+> work; C.3, C.5–C.7 and the activation-gating remain open and are re-derived in plan v2
+> (E1, E2.6, E5.x).
+
 **Version:** 0.3 (review)
 **Status:** Architecture review — **defines the target; does not implement.**
 
