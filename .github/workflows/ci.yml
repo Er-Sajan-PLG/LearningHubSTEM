@@ -88,8 +88,8 @@ jobs:
       - name: Check branch naming
         run: |
           branch="${{ github.head_ref }}"
-          if [[ ! $branch =~ ^(feat|fix|docs|chore|ci|task|phase|exp|dependabot)/ ]]; then
-            echo "Branch '$branch' must start with feat/|fix/|docs/|chore/|ci/|task/|phase/|exp/|dependabot/"
+          if [[ ! $branch =~ ^(feat|fix|docs|chore|ci|task|phase|exp|dependabot|arena)/ ]]; then
+            echo "Branch '$branch' must start with feat/|fix/|docs/|chore/|ci/|task/|phase/|exp/|dependabot/|arena/"
             exit 1
           fi
 
