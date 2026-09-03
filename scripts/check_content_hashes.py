@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""E4.4 — object content hashes + edit-in-place detection (audit F5).
+
+Problem: a connection or entity that a human reviewed (`review.status:
+human_reviewed`/`canonical`, or an entity with `status: reviewed`/`canonical`) can be
+edited afterwards with no trace. The review then vouches for text that no longer
+exists — trust silently decays.
+
+Mechanism: a tracked ledger (`reports/content-hash-ledger.json`) records, for every
+reviewed-or-better object, the hash of its *substance* (see
+`validate.object_content_hash`: provenance/lifecycle/updated_at bookkeeping excluded)
+together with the length of its review history.
+
+Rules
+  - substance changed **and** review history did NOT grow  -> FAIL (edit in place)
+  - substance changed **and** a new review event exists     -> OK, ledger updated
+  - object newly reaches reviewed/canonical                 -> ledger entry created
+  - object drops below reviewed                             -> ledger entry removed
+
+The ledger is derived and deterministic (sorted, hash-stamped, no wall-clock), so CI's
+`git diff --exit-code` step catches an un-committed regeneration exactly like the
+exports. Run `python3 scripts/check_content_hashes.py` (part of verify_all.py).
+"""
+from __future__ import annotations
+
+import json
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+import validate as v  # noqa: E402
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+LEDGER = ROOT / "reports" / "content-hash-ledger.json"
+
+REVIEWED_CONNECTION_STATES = {"human_reviewed", "reviewed", "canonical"}
+REVIEWED_ENTITY_STATES = {"reviewed", "human_reviewed", "canonical"}
+
+
+def _review_events(obj: dict) -> int:
+    prov = obj.get("provenance") or {}
+    history = prov.get("review_history") or []
+    reviewers = prov.get("reviewed_by") or []
+    single = 1 if prov.get("reviewer") else 0
+    return len(history) + len(reviewers) + single
+
+
+def collect_tracked() -> dict[str, dict]:
+    """id -> {kind, content_hash, review_events, review_status} for reviewed objects."""
+    errors: list = []
+    entities: dict[str, dict] = {}
+    for path in sorted((ROOT / "content").rglob("*.md")):
+        try:
+            entities[str(path)] = v.parse_entity(path)
+        except ValueError:
+            continue
+    by_id = {e["id"]: e for e in entities.values() if isinstance(e.get("id"), str)}
+    connections = v.load_canonical_yaml_dir(ROOT / "connections", v.CONN_SCHEMA, errors, by_id, {})
+
+    tracked: dict[str, dict] = {}
+    for entity in by_id.values():
+        if str(entity.get("status")) in REVIEWED_ENTITY_STATES:
+            tracked[entity["id"]] = {
+                "kind": "entity",
+                "review_status": str(entity.get("status")),
+                "content_hash": v.object_content_hash(entity),
+                "review_events": _review_events(entity),
+            }
+    for conn in connections.values():
+        status = ((conn.get("assertion") or {}).get("review") or {}).get("status")
+        if str(status) in REVIEWED_CONNECTION_STATES:
+            tracked[conn["id"]] = {
+                "kind": "connection",
+                "review_status": str(status),
+                "content_hash": v.object_content_hash(conn),
+                "review_events": _review_events(conn),
+            }
+    return dict(sorted(tracked.items()))
+
+
+def load_ledger() -> dict[str, dict]:
+    if not LEDGER.exists():
+        return {}
+    data = json.loads(LEDGER.read_text(encoding="utf-8"))
+    return data.get("objects", {})
+
+
+def detect(previous: dict[str, dict], current: dict[str, dict]) -> list[str]:
+    """Pure detection — testable without touching the filesystem."""
+    violations: list[str] = []
+    for oid, now in current.items():
+        was = previous.get(oid)
+        if was is None:
+            continue  # newly reviewed: nothing to compare against
+        if was.get("content_hash") == now["content_hash"]:
+            continue
+        if now["review_events"] > was.get("review_events", 0):
+            continue  # changed WITH a new review event — legitimate
+        violations.append(
+            f"[edit-in-place] {oid} ({now['kind']}, review status "
+            f"'{now['review_status']}'): substance changed but no new review event was "
+            f"recorded. A reviewed object must be re-reviewed (add a review_history entry) "
+            f"or superseded via lifecycle — never silently edited."
+        )
+    return violations
+
+
+def main() -> int:
+    current = collect_tracked()
+    violations = detect(load_ledger(), current)
+    if violations:
+        print("CONTENT-HASH (E4.4) FAILURES:")
+        for line in violations:
+            print(f"  - {line}")
+        return 1
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(
+        json.dumps(
+            {
+                "note": "DERIVED (plan v2 E4.4). Regenerated by scripts/check_content_hashes.py; "
+                        "tracked so edit-in-place of a reviewed object fails CI.",
+                "object_count": len(current),
+                "objects": current,
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    print(f"PASS: no edit-in-place of reviewed objects; {len(current)} tracked "
+          f"-> {LEDGER.relative_to(ROOT)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

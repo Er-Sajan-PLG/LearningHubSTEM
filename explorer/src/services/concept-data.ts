@@ -1,4 +1,5 @@
 import { LhsEntity, LhsKnowledgeExport } from './knowledge-export-loader';
+import { collectEdges } from './graph-projection';
 
 export interface ConceptDetails {
   entity: LhsEntity;
@@ -26,26 +27,32 @@ export function getConceptDetails(id: string, exportData: LhsKnowledgeExport): C
   const prerequisites: LhsEntity[] = [];
   const related: LhsEntity[] = [];
 
-  for (const rel of target.relationships ?? []) {
-    const relEntity = entityMap.get(rel.target);
+  // Edges come from canonical connections[] (ADR-0020 / plan v2 E1.6); the inline
+  // relationships[] projection is only a fallback for pre-v1.0 exports.
+  const edges = collectEdges(exportData);
+
+  for (const edge of edges) {
+    if (edge.source !== id) continue;
+    const relEntity = entityMap.get(edge.target);
     if (!relEntity) continue;
-    if (prereqTypes.has(rel.type)) {
+    if (prereqTypes.has(edge.relation)) {
       prerequisites.push(relEntity);
     } else {
       related.push(relEntity);
     }
   }
 
-  // Find dependents (entities that specify 'id' as their prerequisite target)
+  // Dependents: entities whose prerequisite edge points at this concept.
   const dependents: LhsEntity[] = [];
-  for (const entity of exportData.entities) {
-    if (entity.id === id) continue;
-    for (const rel of entity.relationships ?? []) {
-      if (rel.target === id && prereqTypes.has(rel.type)) {
-        dependents.push(entity);
-        break;
-      }
-    }
+  const seenDependents = new Set<string>();
+  for (const edge of edges) {
+    if (edge.target !== id || edge.source === id) continue;
+    if (!prereqTypes.has(edge.relation)) continue;
+    if (seenDependents.has(edge.source)) continue;
+    const dep = entityMap.get(edge.source);
+    if (!dep) continue;
+    seenDependents.add(edge.source);
+    dependents.push(dep);
   }
 
   return {

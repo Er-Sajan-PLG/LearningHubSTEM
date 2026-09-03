@@ -59,8 +59,46 @@ def test_no_materialized_inverse_pairs():
     print("PASS: no materialized inverse pairs stored canonically")
 
 
+
+# --- E1.6: the explorer builds its graph from connections[], not the inline projection ---
+
+EXPLORER_SRC = ROOT / "explorer" / "src" / "services"
+
+
+def test_explorer_edges_come_from_connections():
+    src = (EXPLORER_SRC / "graph-projection.ts").read_text(encoding="utf-8")
+    assert "export function collectEdges" in src, "collectEdges (the connections-first edge source) is missing"
+    assert "exportData.connections" in src, "graph projection must read connections[] (ADR-0020 / E1.6)"
+    # The inline projection may appear ONLY inside the documented fallback.
+    fallback = src.split("// Fallback: deprecated inline projection", 1)
+    assert len(fallback) == 2, "the inline projection must be confined to a documented fallback"
+    body_after_collect = src.split("export function projectKnowledgeGraph", 1)[1]
+    assert "relationships" not in body_after_collect, \
+        "projectKnowledgeGraph must not read entities[].relationships directly"
+    print("PASS: explorer graph projection builds from connections[] (inline only as fallback)")
+
+
+def test_explorer_annotates_edges_by_review_status():
+    src = (EXPLORER_SRC / "graph-projection.ts").read_text(encoding="utf-8")
+    for token in ("reviewStatus", "REVIEW_OPACITY", "canonical", "unreviewed"):
+        assert token in src, f"missing trust annotation token: {token}"
+    view = (ROOT / "explorer" / "src" / "components" / "graph-view.ts").read_text(encoding="utf-8")
+    assert "link.opacity" in view, "graph-view must render the trust-graded edge opacity (E1.6)"
+    print("PASS: explorer edges are annotated and rendered by review status")
+
+
+def test_concept_details_use_canonical_edges():
+    src = (EXPLORER_SRC / "concept-data.ts").read_text(encoding="utf-8")
+    assert "collectEdges" in src, "concept details must resolve prerequisites from canonical edges"
+    assert "relationships ?? []" not in src, "concept details must not read the deprecated inline projection"
+    print("PASS: concept prerequisites/dependents resolve from canonical connections")
+
+
 if __name__ == "__main__":
     test_inline_equals_connection_projection()
     test_sync_is_idempotent()
     test_no_materialized_inverse_pairs()
+    test_explorer_edges_come_from_connections()
+    test_explorer_annotates_edges_by_review_status()
+    test_concept_details_use_canonical_edges()
     print("ALL PROJECTION SYNC TESTS PASS")

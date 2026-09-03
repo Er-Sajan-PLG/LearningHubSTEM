@@ -167,15 +167,160 @@ def check_id_immutability() -> list[str]:
     return detect_violations(build_id_history(), live_entities())
 
 
+# ---------------------------------------------------------------------------
+# E4.5 — connection-triple immutability (audit F11; plan v2 E4.5)
+#
+# A connection id `lhs:conn.NNNNNN` identifies ONE claim. Its identity-defining
+# fields are the triple (source, relation, target). Editing any of them in place
+# turns a reviewed assertion into a *different* assertion under an id that reviewers,
+# consumers, and the export already vouch for — the connection-side twin of ID
+# reassignment (ADR-0003 / ADR-0016). The legal moves are: retract the assertion
+# (`assertion.status`) and/or supersede it via `lifecycle.replaced_by`, then create a
+# new connection id for the new claim.
+# ---------------------------------------------------------------------------
+
+CONNECTIONS = ROOT / "connections"
+
+_CONN_ID_RE = re.compile(r"^id:\s*(lhs:conn\.[0-9]{6})", re.MULTILINE)
+_SOURCE_RE = re.compile(r"^source:\s*(\S+)", re.MULTILINE)
+_RELATION_RE = re.compile(r"^relation:\s*(\S+)", re.MULTILINE)
+_TARGET_RE = re.compile(r"^target:\s*(\S+)", re.MULTILINE)
+_ASSERTION_STATUS_RE = re.compile(r"^assertion:\n(?:[ \t]+.*\n)*?[ \t]+status:\s*(\S+)", re.MULTILINE)
+
+
+def parse_connection(text: str) -> dict:
+    """Extract (id, source, relation, target, assertion_status) from a connection YAML."""
+    out: dict[str, str] = {}
+    for pattern, key in (
+        (_CONN_ID_RE, "id"),
+        (_SOURCE_RE, "source"),
+        (_RELATION_RE, "relation"),
+        (_TARGET_RE, "target"),
+        (_ASSERTION_STATUS_RE, "assertion_status"),
+    ):
+        m = pattern.search(text)
+        if m:
+            out[key] = m.group(1).strip().strip("\"'")
+    return out
+
+
+def build_connection_history() -> dict[str, list[dict]]:
+    """id -> [{commit, source, relation, target, assertion_status}] oldest -> newest.
+
+    Walks only the commits that touched `connections/` and reads each commit's tree in
+    one `git ls-tree` + `git cat-file --batch` pass, so the check stays O(commits)
+    rather than O(commits x files).
+    """
+    history: dict[str, list[dict]] = {}
+    shas = list(reversed(git("log", "--format=%H", "--", "connections").split()))
+    for sha in shas:
+        listing = git("ls-tree", "-r", "--name-only", sha, "--", "connections").split("\n")
+        paths = [p for p in listing if p.strip().endswith(".yaml")]
+        if not paths:
+            continue
+        proc = subprocess.run(
+            ["git", "-C", str(ROOT), "cat-file", "--batch"],
+            input="".join(f"{sha}:{p}\n" for p in paths),
+            capture_output=True,
+            text=True,
+        )
+        if proc.returncode != 0:
+            continue
+        blobs = _split_batch(proc.stdout)
+        for blob in blobs:
+            conn = parse_connection(blob)
+            cid = conn.get("id")
+            if not cid:
+                continue
+            stamp = {
+                "commit": sha[:9],
+                "source": conn.get("source"),
+                "relation": conn.get("relation"),
+                "target": conn.get("target"),
+                "assertion_status": conn.get("assertion_status"),
+            }
+            versions = history.setdefault(cid, [])
+            if not versions or any(versions[-1][k] != stamp[k] for k in ("source", "relation", "target")):
+                versions.append(stamp)
+    return history
+
+
+def _split_batch(stdout: str) -> list[str]:
+    """Split `git cat-file --batch` output into blob contents."""
+    out: list[str] = []
+    rest = stdout
+    while rest:
+        header, _, rest = rest.partition("\n")
+        parts = header.split()
+        if len(parts) != 3 or not parts[2].isdigit():
+            break
+        size = int(parts[2])
+        out.append(rest[:size])
+        rest = rest[size + 1:]  # skip trailing newline
+    return out
+
+
+def live_connections() -> dict[str, dict]:
+    """Connections currently in HEAD: id -> parsed triple."""
+    live: dict[str, dict] = {}
+    if not CONNECTIONS.is_dir():
+        return live
+    for path in sorted(CONNECTIONS.glob("*.yaml")):
+        conn = parse_connection(path.read_text(encoding="utf-8"))
+        if conn.get("id"):
+            live[conn["id"]] = conn
+    return live
+
+
+def detect_connection_violations(
+    history: dict[str, list[dict]], live: dict[str, dict]
+) -> list[str]:
+    """Pure detection over connection history + HEAD (testable without git)."""
+    violations: list[str] = []
+    for cid, versions in sorted(history.items()):
+        stamps: list[tuple[tuple, str]] = []
+        seen: set[tuple] = set()
+        for v in versions:
+            triple = (v.get("source"), v.get("relation"), v.get("target"))
+            if None in triple or triple in seen:
+                continue
+            seen.add(triple)
+            stamps.append((triple, v["commit"]))
+        if len(stamps) > 1:
+            (first, first_commit) = stamps[0]
+            (second, second_commit) = stamps[1]
+            violations.append(
+                f"[triple-rewritten] {cid}: ({first[0]} {first[1]} {first[2]}) @{first_commit} -> "
+                f"({second[0]} {second[1]} {second[2]}) @{second_commit}. A connection id names one "
+                f"claim; retract/supersede it and mint a new id instead of rewriting the triple."
+            )
+    # Deleted connections: an id that existed must not simply vanish — retract it.
+    for cid in sorted(set(history) - set(live)):
+        last = history[cid][-1]
+        violations.append(
+            f"[deleted-connection] {cid}: present in history as ({last.get('source')} "
+            f"{last.get('relation')} {last.get('target')}) but removed from HEAD. Set "
+            f"assertion.status to a retracted state instead of deleting the assertion."
+        )
+    return violations
+
+
+def check_connection_immutability() -> list[str]:
+    return detect_connection_violations(build_connection_history(), live_connections())
+
+
 def main() -> int:
     violations = check_id_immutability()
-    if violations:
-        print("ID-IMMUTABILITY FAILURES:")
-        for v in violations:
+    conn_violations = check_connection_immutability()
+    if violations or conn_violations:
+        print("IMMUTABILITY FAILURES:")
+        for v in violations + conn_violations:
             print(f"  - {v}")
         return 1
     print("PASS: all lhs: identifiers are immutable (no reassignment/reuse); "
           f"{len(live_entities())} live entities, {len(build_id_history())} historical ids")
+    print("PASS: all connection triples are immutable (E4.5); "
+          f"{len(live_connections())} live connections, {len(build_connection_history())} historical ids")
     return 0
 
 

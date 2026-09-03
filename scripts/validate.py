@@ -643,6 +643,75 @@ def check_assertion_epistemics(conn: dict, errors: list, warnings: list) -> None
         errors.append(f"{here} confidence {conf!r} outside [0.0, 1.0]")
 
 
+def claim_signature(conn: dict) -> str:
+    """Derived claim signature (plan v2 E4.3; completes ADR-0016).
+
+    A *claim* is the epistemic content of an assertion, independent of the file it
+    lives in and of its provenance/review metadata:
+
+        hash(source | relation | target | polarity | qualifiers)
+
+    Qualifiers are normalised (stringified, sorted, deduplicated) so ordering is not
+    semantically significant. The signature is DERIVED — never stored in canonical
+    YAML — and exists so the gate can detect two connection files making the same
+    claim (a duplicate claim must be one assertion, or must be differentiated by an
+    explicit qualifier).
+    """
+    ctx = conn.get("context") or {}
+    assertion = conn.get("assertion") or {}
+    qualifiers = sorted({str(q) for q in (ctx.get("qualifiers") or [])})
+    payload = "|".join([
+        str(conn.get("source")),
+        str(conn.get("relation")),
+        str(conn.get("target")),
+        str(assertion.get("polarity")),
+        ",".join(qualifiers),
+    ])
+    return "sha256:" + hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def check_duplicate_claims(connections: dict, errors: list) -> None:
+    """No two active connections may carry the same claim signature (E4.3).
+
+    Retracted/superseded assertions are exempt: history legitimately keeps the same
+    triple more than once. Distinguish genuinely different claims with
+    `context.qualifiers`, or supersede via `lifecycle.replaced_by`.
+    """
+    by_signature: dict[str, list[dict]] = {}
+    for conn in connections.values():
+        if (conn.get("assertion") or {}).get("status") != "active":
+            continue
+        by_signature.setdefault(claim_signature(conn), []).append(conn)
+    for signature, group in sorted(by_signature.items()):
+        if len(group) > 1:
+            ids = ", ".join(sorted(str(c.get("id")) for c in group))
+            first = group[0]
+            errors.append(
+                f"duplicate claim {signature[:19]}…: {ids} assert the same "
+                f"({first.get('source')} {first.get('relation')} {first.get('target')}, "
+                f"polarity={(first.get('assertion') or {}).get('polarity')}) with identical "
+                f"qualifiers (E4.3). Merge them, add a distinguishing context.qualifier, "
+                f"or retract one via lifecycle.replaced_by."
+            )
+
+
+def object_content_hash(obj: dict) -> str:
+    """Content hash of a canonical object, excluding review/provenance bookkeeping.
+
+    Covers the *substance* of the object (E4.4): the claim/definition fields a
+    reviewer actually reviewed. Fields that legitimately change after review
+    (provenance, review history, updated_at, lifecycle, internal loader keys) are
+    excluded, so re-review and lifecycle transitions do not trip the guard.
+    """
+    volatile = {"provenance", "updated_at", "lifecycle", "version", "content_hash"}
+    payload = {
+        k: v for k, v in sorted(obj.items())
+        if not k.startswith("_") and k not in volatile
+    }
+    canonical = json.dumps(payload, sort_keys=True, ensure_ascii=False, default=str)
+    return "sha256:" + hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
 def check_lifecycle_pointers(conn: dict, connections: dict, errors: list) -> None:
     """lifecycle.replaced_by must resolve to an existing connection (ADR-0016)."""
     here = f"{conn.get('_file', '<connection>')}:"
@@ -878,6 +947,7 @@ def main() -> int:
         check_connection_context(conn, vocab, errors)
         check_assertion_epistemics(conn, errors, warnings)
         check_lifecycle_pointers(conn, connections, errors)
+    check_duplicate_claims(connections, errors)
     check_relationship_cycles(connections, registry, errors)
     check_inline_projection(entities, connections, errors)
 

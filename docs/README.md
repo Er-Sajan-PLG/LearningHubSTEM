@@ -16,10 +16,14 @@ so the repo is self-contained.
 | `STEMMA-ROADMAP.md` | Phased plan; each phase requires explicit activation. |
 | `STEMMA-CONSUMER-SEAM.md` | The versioned export → adapter → consumer integration seam. |
 | `GLOSSARY.md` | Terms that recur across the ecosystem. |
+| `MIGRATIONS.md` | Every schema/registry/contract change and its migration script (plan v2 E5.5). |
+| `CONTENT-RELEASES.md` | What a content release is, how to verify one, and the changelog (plan v2 E5.3). |
 | `REVIEW-RESPONSE.md` | Architectural reconciliation record (decision trail). |
 | `decisions/` | Foundation decision records (ADR-style, `00NN-*.md`). |
 | `../schema/agent-registry.yaml` | Every provenance agent id (human/process/llm/unknown) — validator-resolved (ADR-0023). |
 | `../schema/export.schema.json` | Export contract v1.0 shape (ADR-0023). |
+| `../exports/release-manifest.json` | Per-file hashes + aggregate content hash of a content release (generated). |
+| `../reports/content-hash-ledger.json` | Reviewed-object content hashes; edit-in-place of a reviewed object fails CI (plan v2 E4.4). |
 | `../reports/e61-dependency-campaign/` | E6.1 dependency-edge review worksheets + dashboard (generated; decisions are human). |
 
 ## Reading order

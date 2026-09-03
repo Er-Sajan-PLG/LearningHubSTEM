@@ -22,7 +22,10 @@ steps = [
     ["python3", str(ROOT / "tests/curation/test_generality.py")],
     ["python3", str(ROOT / "tests/curation/test_id_immutability.py")],
     ["python3", str(ROOT / "tests/provenance/test_agents_external_ids.py")],
+    ["python3", str(ROOT / "tests/provenance/test_claim_integrity.py")],
     ["python3", str(ROOT / "scripts/dependency_review_campaign.py")],
+    ["python3", str(ROOT / "scripts/check_content_hashes.py")],
+    ["python3", str(ROOT / "scripts/release_manifest.py")],
     ["python3", str(ROOT / "scripts/check_id_immutability.py")],
 ]
 for cmd in steps:

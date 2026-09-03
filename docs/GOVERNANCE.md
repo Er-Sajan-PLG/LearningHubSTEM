@@ -14,7 +14,7 @@
 ## 1. Governance precedence
 
 ```
-LEVEL 1 — LEARNINGHUBSTEM INVARIANTS (non-overridable)
+LEVEL 1 — STEMMA INVARIANTS (non-overridable)
           ↓
 LEVEL 2 — PROJECT / REPOSITORY GOVERNANCE
           ↓
@@ -56,7 +56,7 @@ STEMMA is the open foundation. Consumers build on top of it. There is **no**
 is **not** an application-services backend.
 
 ```
-                    LEARNINGHUBSTEM
+                    STEMMA
                  OPEN STEM FOUNDATION
                            │
           ┌────────────────┼────────────────┐
@@ -103,7 +103,7 @@ Classify every significant piece of work:
 **Deferred / not current scope** unless the human explicitly activates it:
 
 - STEM-GAME production, STEM Lab, JARVIS ↔ STEMMA integration
-- Full STEMMA MVP (activation phrase: **"ACTIVATE LEARNINGHUBSTEM MVP"**)
+- Full STEMMA MVP (activation phrase: **"ACTIVATE STEMMA MVP"**)
 - Microservices, cloud infrastructure, auth, payments, analytics, recommendation engines,
   vector/graph databases, generalized AI orchestration, shared platform services, cross-product
   identity or databases.

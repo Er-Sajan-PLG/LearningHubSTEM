@@ -22,7 +22,7 @@ Only terms that recur across the workspace. See the authoritative definitions in
 | **schema version** | Version of `schema/concept.schema.json`; separate from export version and content release. |
 | **export version** | Version of the `exports/knowledge.json` contract; separate from schema version and content release. |
 | **content release** | The knowledge set itself (entities added/updated/deprecated); not a contract change. |
-| **LICENSE DECISION PENDING** | Marker used until a license is chosen; no license claim is made without human approval. |
+| **License split** | Content (`content/`, `connections/`, `sources/`, `docs/`) is CC BY 4.0 (`LICENSE`); code (`scripts/`, `schema/`, `tests/`, `explorer/`) is MIT (`LICENSE-CODE`). Decided 2026-09-03 (ADR-0001). The former "LICENSE DECISION PENDING" marker is retired. |
 | **pedagogy** | How knowledge is taught/learned; pedagogical relationships are not canonical in v0.1. |
 | **ecosystem invariant** | A Level-1 rule that project governance may not redefine (STEMMA independence, curriculum external, products as consumers…). |
 | **NOW** | Work required by the current milestone; implement. |

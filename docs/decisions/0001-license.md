@@ -1,7 +1,7 @@
 # DECISION 0001 — Licensing
 
 - **Date:** 2026-08-12
-- **Status:** PENDING human approval
+- **Status:** decided (human approval recorded 2026-09-03; LICENSE + LICENSE-CODE present in the repository)
 - **Related:** specification §15
 
 ## Context
@@ -27,7 +27,13 @@ Recommendation (NOT finalized):
 - Code/tooling → **MIT** (simplest fit for the small validator/scripts; Apache-2.0 if external
   contributors or patent clarity become important).
 
-Marked **LICENSE DECISION PENDING**. No LICENSE file is created until the human decides.
+**Approved by the owner (2026-09-03)** as recommended:
+
+- Knowledge/content → **CC BY 4.0** — `LICENSE` (covers `content/`, `connections/`, `sources/`, `docs/`).
+- Code/tooling → **MIT** — `LICENSE-CODE` (covers `scripts/`, `schema/`, `tests/`, `explorer/`).
+
+Both license files are committed; `README.md` §License states the split. The former
+**LICENSE DECISION PENDING** marker is retired repository-wide (plan v2 E0.2).
 
 ## Reason
 
@@ -36,9 +42,11 @@ foundation's provenance principle. MIT keeps tooling friction low.
 
 ## Consequences
 
-- No license claim is made anywhere until approval.
-- Once decided: add the chosen license files and update the specification §15.
+- `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT) are the authoritative license statements.
+- Specification §15, `GLOSSARY.md`, and `STEMMA-CONSUMER-SEAM.md` no longer say "pending";
+  human-decision items 1 and 2 are closed.
+- Re-licensing content is a new decision record, never an edit to this one.
 
 ## Status
 
-**PENDING human approval** (items 1 and 2 of the human-decision list).
+**decided** — items 1 and 2 of the human-decision list are closed (2026-09-03).

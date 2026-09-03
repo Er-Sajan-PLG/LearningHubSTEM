@@ -108,4 +108,4 @@ pnpm --filter @stem-tuition/shell dev        # http://localhost:5173/#lhs-demo
 - A second vertical slice (more laws, quantities, equations) in the STEM-TUITION UI.
 - Real export piping (published artifact / package) instead of a direct file import.
 - Schema/export version bumping policy when a second contract version exists.
-- License files for both repos (human decision pending).
+- License files for the consumer repo (STEMMA's own licenses are decided: CC BY 4.0 content / MIT code, ADR-0001).

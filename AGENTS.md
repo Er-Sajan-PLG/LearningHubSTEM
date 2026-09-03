@@ -34,7 +34,9 @@ python3 scripts/verify_all.py      # authoritative chain: validator + status-tru
 `verify_all.py` is what CI runs. It includes the cross-object gates added by ADR-0020–0023
 (inline↔connections projection sync, registry coherence, context vocabularies, cycle detection,
 inference/confidence rules, deterministic exports, README status-truth, export-contract schema,
-agent-registry resolution, `external_ids` formats). Every agent id in provenance must exist in
+agent-registry resolution, `external_ids` formats) plus the wave-5 gates: duplicate-claim
+signatures (E4.3), edit-in-place detection of reviewed objects (E4.4), connection-triple
+immutability (E4.5), and the release manifest (E5.3). Every agent id in provenance must exist in
 `schema/agent-registry.yaml`; add the entry in the same PR that first uses it.
 
 Review work (E6.1): `python3 scripts/dependency_review_campaign.py` regenerates the worksheets in
@@ -44,9 +46,14 @@ fill decisions. If validation complains
 about out-of-sync inline relationships, run `python3 scripts/sync_relationships.py` (the inline
 block is a generated projection — never hand-edit it).
 
+Changing a schema, registry, vocabulary, or the export contract? Append a row to
+`docs/MIGRATIONS.md` in the same PR (plan v2 E5.5). Cutting a content release?
+`python3 scripts/release_manifest.py --tag-command` and see `docs/CONTENT-RELEASES.md` —
+tagging itself is a human action.
+
 ## Starting work
 
-1. Read `docs/README.md` to navigate the governance set; read `docs/LEARNINGHUBSTEM-SPECIFICATION.md`.
+1. Read `docs/README.md` to navigate the governance set; read `docs/STEMMA-SPECIFICATION.md`.
 2. Read the affected schema and a seed entity in `content/` before editing.
 3. State the classification and a short plan before changing anything.
 4. Run validation after changes; finish with a short summary and flag human decisions.

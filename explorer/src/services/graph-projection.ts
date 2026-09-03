@@ -26,6 +26,85 @@ export interface GraphLink {
   directional: boolean;
   curvature: number;
   width: number;
+  /** Epistemic trust annotation (plan v2 E1.6): review status of the underlying assertion. */
+  reviewStatus: EdgeReviewStatus;
+  /** Trust-graded opacity so unreviewed edges read as provisional. */
+  opacity: number;
+  /** Canonical connection id when the edge came from connections[]; null for the fallback projection. */
+  connectionId: string | null;
+}
+
+/** Review states an edge can carry. `unknown` = derived from the deprecated inline projection. */
+export type EdgeReviewStatus = 'canonical' | 'human_reviewed' | 'reviewed' | 'unreviewed' | 'unknown';
+
+/**
+ * Trust-graded edge opacity (E1.6). An unreviewed assertion must not look as solid as a
+ * human-reviewed one: the explorer visualises epistemic status, it does not flatten it.
+ */
+export const REVIEW_OPACITY: Record<EdgeReviewStatus, number> = {
+  canonical: 1.0,
+  human_reviewed: 0.85,
+  reviewed: 0.7,
+  unreviewed: 0.28,
+  unknown: 0.28,
+};
+
+export function reviewStatusOf(status: string | undefined): EdgeReviewStatus {
+  switch (status) {
+    case 'canonical':
+    case 'human_reviewed':
+    case 'reviewed':
+      return status;
+    case 'unreviewed':
+      return 'unreviewed';
+    default:
+      return 'unknown';
+  }
+}
+
+/**
+ * Canonical edge list for the explorer (plan v2 E1.6 / ADR-0020).
+ *
+ * `connections[]` is the single source of relationship truth. The deprecated
+ * `entities[].relationships` projection is used ONLY when an export carries no
+ * connections (pre-v1.0 artifacts) — and then every edge is marked `unknown` trust,
+ * because the projection has no review status to report.
+ */
+export interface EdgeRecord {
+  source: string;
+  relation: string;
+  target: string;
+  reviewStatus: EdgeReviewStatus;
+  connectionId: string | null;
+}
+
+export function collectEdges(exportData: LhsKnowledgeExport): EdgeRecord[] {
+  const connections = exportData.connections ?? [];
+  if (connections.length > 0) {
+    return connections
+      .filter(c => (c.assertion?.status ?? 'active') === 'active')
+      .map(c => ({
+        source: c.source,
+        relation: c.relation,
+        target: c.target,
+        reviewStatus: reviewStatusOf(c.assertion?.review?.status),
+        connectionId: c.id,
+      }));
+  }
+  // Fallback: deprecated inline projection (no trust information available).
+  const edges: EdgeRecord[] = [];
+  for (const entity of exportData.entities) {
+    for (const rel of entity.relationships ?? []) {
+      edges.push({
+        source: entity.id,
+        relation: rel.type,
+        target: rel.target,
+        reviewStatus: 'unknown',
+        connectionId: null,
+      });
+    }
+  }
+  return edges;
 }
 
 export interface ClusterInfo {
@@ -186,8 +265,8 @@ export function projectKnowledgeGraph(
   relationshipFilter: string = 'all',
   activeMode: string = 'explore'
 ): GraphProjection {
-  const entityMap = new Map<string, LhsEntity>(exportData.entities.map(e => [e.id, e]));
   let filteredEntities = exportData.entities;
+  const edges = collectEdges(exportData);
 
   if (domainFilter !== 'all') {
     filteredEntities = filteredEntities.filter(e => e.domain === domainFilter);
@@ -197,12 +276,10 @@ export function projectKnowledgeGraph(
 
   // degree centrality for node size
   const degreeMap = new Map<string, number>();
-  for (const entity of exportData.entities) {
-    for (const rel of entity.relationships ?? []) {
-      if (validIds.has(entity.id) && validIds.has(rel.target)) {
-        degreeMap.set(entity.id, (degreeMap.get(entity.id) ?? 0) + 1);
-        degreeMap.set(rel.target, (degreeMap.get(rel.target) ?? 0) + 1);
-      }
+  for (const edge of edges) {
+    if (validIds.has(edge.source) && validIds.has(edge.target)) {
+      degreeMap.set(edge.source, (degreeMap.get(edge.source) ?? 0) + 1);
+      degreeMap.set(edge.target, (degreeMap.get(edge.target) ?? 0) + 1);
     }
   }
 
@@ -243,25 +320,26 @@ export function projectKnowledgeGraph(
   });
 
   const links: GraphLink[] = [];
-  for (const entity of filteredEntities) {
-    for (const rel of entity.relationships ?? []) {
-      if (!validIds.has(rel.target)) continue;
-      if (activeMode === 'prerequisites') {
-        if (rel.type !== 'logically_requires' && rel.type !== 'mathematically_requires') continue;
-      }
-      if (relationshipFilter !== 'all' && rel.type !== relationshipFilter) continue;
-
-      const style = GRAPH_THEME.edges[rel.type as keyof typeof GRAPH_THEME.edges] ?? GRAPH_THEME.edges.default;
-      links.push({
-        source: entity.id,
-        target: rel.target,
-        relationship: rel.type,
-        color: style.color,
-        directional: !!style.directional,
-        curvature: rel.type === 'logically_requires' ? 0 : 0.1,
-        width: style.width
-      });
+  for (const edge of edges) {
+    if (!validIds.has(edge.source) || !validIds.has(edge.target)) continue;
+    if (activeMode === 'prerequisites') {
+      if (edge.relation !== 'logically_requires' && edge.relation !== 'mathematically_requires') continue;
     }
+    if (relationshipFilter !== 'all' && edge.relation !== relationshipFilter) continue;
+
+    const style = GRAPH_THEME.edges[edge.relation as keyof typeof GRAPH_THEME.edges] ?? GRAPH_THEME.edges.default;
+    links.push({
+      source: edge.source,
+      target: edge.target,
+      relationship: edge.relation,
+      color: style.color,
+      directional: !!style.directional,
+      curvature: edge.relation === 'logically_requires' ? 0 : 0.1,
+      width: style.width,
+      reviewStatus: edge.reviewStatus,
+      opacity: REVIEW_OPACITY[edge.reviewStatus],
+      connectionId: edge.connectionId,
+    });
   }
 
   const clusters = Array.from(clusterMap.values());

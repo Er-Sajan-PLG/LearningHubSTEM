@@ -482,7 +482,8 @@ Do not build a semantic-web stack for v0.1.
 
 ## 15. Licensing
 
-**LICENSE DECISION PENDING — no license has been chosen anywhere in this workspace.**
+**DECIDED 2026-09-03 (ADR-0001):** content is **CC BY 4.0** (`LICENSE`); code/tooling is **MIT**
+(`LICENSE-CODE`). Both files are committed at the repository root and stated in `README.md`.
 
 The candidate analysis (see `docs/decisions/0001-license.md`) is:
 
@@ -493,8 +494,8 @@ The candidate analysis (see `docs/decisions/0001-license.md`) is:
 | Code / tooling | **MIT** | permissive, minimal, no patent terms | **MIT** (recommended for the small validator/scripts) |
 | Code / tooling | Apache-2.0 | permissive + explicit patent grant + contribution terms | better if external contributors/patents matter |
 
-**Nothing is finalized until the human decides.** Do not add contradictory license files to make
-the repository appear complete.
+The recommendation above was approved as written. Re-licensing requires a **new** decision record;
+do not edit ADR-0001 or add contradictory license files.
 
 ---
 
@@ -502,8 +503,8 @@ the repository appear complete.
 
 | # | Decision | Status |
 |---|----------|--------|
-| 1 | Knowledge/content license (CC BY 4.0 vs CC0) | PENDING |
-| 2 | Code/tooling license (MIT vs Apache-2.0) | PENDING |
+| 1 | Knowledge/content license (CC BY 4.0 vs CC0) | **DECIDED 2026-09-03 — CC BY 4.0** (ADR-0001) |
+| 2 | Code/tooling license (MIT vs Apache-2.0) | **DECIDED 2026-09-03 — MIT** (ADR-0001) |
 | 3 | Initial domain scope | PENDING |
 | 4 | Phase 1 foundation freeze activation | PENDING (recommend: approve) |
 | 5 | Final canonical format approval (Markdown + YAML) | DOCUMENTED — approval PENDING |

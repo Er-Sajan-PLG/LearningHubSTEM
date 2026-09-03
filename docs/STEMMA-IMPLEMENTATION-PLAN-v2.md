@@ -16,7 +16,14 @@ should be retained for history only.
 **v1.0**, co-release compat view); E4.1/E4.2 implemented (ADR-0023); E3.1 ADR **drafted** as
 ADR-0024 (**gate G-C pending**); E6.1 campaign **tooling + 4 batch worksheets** generated
 (`reports/e61-dependency-campaign/`) — review decisions themselves remain human work; E6.7
-dependency-edge dashboard slice included. All other items unchanged and still gated as marked.
+dependency-edge dashboard slice included.
+**2026-09-05 (wave 5, ungated items only):** **E0.2** (ADR-0001 `decided`; "LICENSE DECISION PENDING"
+retired repo-wide), **E0.3** (rename leftovers + docs map), **E1.6** (explorer graph builds from
+`connections[]`, edges annotated + rendered by `review.status`), **E4.3** (claim signature +
+duplicate-claim gate), **E4.4** (`reports/content-hash-ledger.json`; edit-in-place of a reviewed
+object fails CI), **E4.5** (connection-triple immutability in `check_id_immutability.py`),
+**E5.3** (`exports/release-manifest.json` + `docs/CONTENT-RELEASES.md`; tagging stays human),
+**E5.5** (`docs/MIGRATIONS.md`) implemented. All other items unchanged and still gated as marked.
 
 **Derived from:** `docs/ARCHITECTURE-AUDIT-v1.0.md` — **the latest architecture audit**
 (supersedes `ARCHITECTURE-REVIEW-v0.3.md`). Every task below carries a traceability tag
@@ -79,8 +86,8 @@ Sizes: S ≤ 1h · M ≤ half day · L ≤ 2 days · X = ongoing cadence.
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
 | E0.1 | One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
-| E0.2 | Licensing record reconciliation: set ADR-0001 `decided` with the human approval date; fix GLOSSARY/consumer-seam "pending" lines | R4 | S |
-| E0.3 | Remaining rename leftovers (R1 list) + docs/README.md map refresh (this plan adds the audit + v2 plan rows) | R1, R6 | S |
+| E0.2 | ✅ Licensing record reconciliation: set ADR-0001 `decided` with the human approval date; fix GLOSSARY/consumer-seam "pending" lines | R4 | S |
+| E0.3 | ✅ Remaining rename leftovers (R1 list) + docs/README.md map refresh (this plan adds the audit + v2 plan rows) | R1, R6 | S |
 | E0.4 | ✅ **CI doc-status gate:** a script asserts the README status line matches `reports/epistemic-summary` counts (entity counts, reviewed %) — status claims become mechanically checkable | F2 (systemic) | S |
 
 ### E1 — Single source of truth for relationships (the pivot) — L
@@ -94,7 +101,7 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 | E1.3 | ✅ Validator consistency gate: inline block must equal the projection — drift = exit 1 | F1 | M |
 | E1.4 | ✅ Contribution rule: new/edited relationships enter via `connections/` only; validator rejects new inline entries not present in connections | F1 | S |
 | E1.5 | ✅ (ADR-0023) **Export contract v1.0:** `connections` + `sources` become required members; version constants read from the single source (E5.1); coordinate LearningHub adapter (`SUPPORTED_EXPORT_VERSION`) co-release per `EXPORT-VERSION-MIGRATION-Q3.md` | F1, F5, C.2 | M + gate G-A |
-| E1.6 | Explorer graph builds from `connections[]` (inline only as fallback); annotate by `review.status` (trust visualization) | F1, R8 | M |
+| E1.6 | ✅ Explorer graph builds from `connections[]` (inline only as fallback; `collectEdges`); edges carry `reviewStatus` and a trust-graded opacity (`REVIEW_OPACITY`) rendered by `graph-view.ts` | F1, R8 | M |
 | E1.7 | (Gated by G-A completion) Remove `relationships[]` from `concept.schema.json` and the export; retire the projection | F1 | M |
 
 ### E2 — Registry & vocabulary integrity — L
@@ -126,9 +133,9 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 |------|--------|-------|------|
 | E4.1 | ✅ (ADR-0023) `external_ids` first-class (complete ADR-0016): namespaced multi-valued (`wd:`, `orcid:`, `doi:`, `isbn:`, `qudt:`, `ucum:`); seed with Wikidata QIDs for the mechanics batch | F6, R24 | M |
 | E4.2 | ✅ (ADR-0023; `schema/agent-registry.yaml`) agent registry (id, class, external_id, display name); validator resolves every `human:`/`process:`/`llm:`/`unknown:` agent ID against it | F2 | M |
-| E4.3 | **Claim signature** (derived): `hash(source|relation|target|polarity|qualifiers)`; duplicate-claim detection in the gate (ADR-0016 completion) | F7 | S |
-| E4.4 | Object `content_hash` + edit-in-place detection: a `human_reviewed`/`canonical` object whose content changed without a lifecycle transition fails CI | F5 | M |
-| E4.5 | Connection-triple immutability guard (extend `check_id_immutability.py` to `connections/` source/relation/target history) | F11, R12 | M |
+| E4.3 | ✅ **Claim signature** (derived; `validate.claim_signature` + `check_duplicate_claims`): `hash(source|relation|target|polarity|qualifiers)`; duplicate-claim detection in the gate (ADR-0016 completion) | F7 | S |
+| E4.4 | ✅ Object `content_hash` + edit-in-place detection (`scripts/check_content_hashes.py`, ledger tracked): a `human_reviewed`/`canonical` object whose content changed without a lifecycle transition fails CI | F5 | M |
+| E4.5 | ✅ Connection-triple immutability guard — `check_id_immutability.py` walks `connections/` history; rewriting a triple or deleting a connection fails | F11, R12 | M |
 | E4.6 | Colon-filename migration (`conn.000001.yaml`, `src.<slug>.yaml`; IDs untouched) | F11, R11 | M + gate G-E |
 | E4.7 | HTTPS URIs + real schema `$id`s (replace `learninghubstem.example`) — gated with publication | F13, R19 | S + gate G-F |
 
@@ -138,9 +145,9 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 |------|--------|-------|------|
 | E5.1 | ✅ **Single version source** (`schema/VERSION.yaml`): `schema_version`, `export_version`, content-release tag read by every exporter; kill all literals (0.1/0.2/1.0.0 disagreement) | F5, R7 | M |
 | E5.2 | ✅ **Deterministic exports:** stamp content-hash instead of `generated_at`; CI step `validate && git diff --exit-code exports/` (stale export fails the build) | F8, R9 | S |
-| E5.3 | **Content releases:** git tag + manifest (file hashes) + changelog per release; first tagged release once E1 lands | F5, R18 | M |
+| E5.3 | ✅ **Content releases:** `scripts/release_manifest.py` (per-file + aggregate hashes, deterministic) + `docs/CONTENT-RELEASES.md` changelog/verification recipe; the git tag itself remains a human action | F5, R18 | M |
 | E5.4 | Decide: stop tracking `exports/` (publish as release assets) or keep tracked-but-bit-identical with the E5.2 gate | F8 | S + gate G-E |
-| E5.5 | `MIGRATIONS.md` log; every schema change appends (old-data-validates-against-old-schema note) | F6 | S |
+| E5.5 | ✅ `MIGRATIONS.md` log (M1–M9); every schema change appends (old-data-validates-against-old-schema note) | F6 | S |
 
 ### E6 — Epistemic activation (the core value; continuous cadence) — X
 
@@ -202,7 +209,9 @@ Suggested first PRs:
 - Vocabulary violations: 0; `math`/`mathematics` unified.
 - Dimensional validation: 100% of symbol-bound equations type-check.
 - Deterministic export: `git diff --exit-code exports/` green in CI.
-- One git tag + manifest per content release.
+- One git tag + manifest per content release (manifest ✅ mechanised; tag = human action).
+- Duplicate claim signatures: 0 (gate-enforced); reviewed objects edited in place: 0.
+- Connection triples rewritten in history: 0.
 - Reviewed dependency edges: 188 → 100%; entities human_reviewed ≥ mechanics batch.
 - Connections without evidence: 599 → ≤ 300 in the first cycle.
 - No `asserted_by: unknown` on any newly created assertion; agents resolve in the registry.

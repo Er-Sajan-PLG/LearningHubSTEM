@@ -145,12 +145,15 @@ export class GraphView {
         }
         return link.width;
       })
+      // Trust-graded opacity (plan v2 E1.6): an edge is drawn as solidly as its
+      // underlying assertion is reviewed. Unreviewed edges read as provisional.
       .linkOpacity((link: any) => {
+        const trust = typeof link.opacity === 'number' ? link.opacity : 0.55;
         if (this.selectedNodeId) {
           const isConnected = link.source === this.selectedNodeId || link.target === this.selectedNodeId;
-          return isConnected ? 1 : 0.06;
+          return isConnected ? Math.max(0.35, trust) : 0.06;
         }
-        return 0.55;
+        return 0.55 * trust;
       })
       .linkDirectionalParticles((link: any) => link.directional ? 2 : 0)
       .linkDirectionalParticleSpeed((link: any) => link.particleSpeed || 0.005)
