@@ -1,7 +1,8 @@
 {
-  "export_version": "0.1",
-  "schema_version": "0.1",
-  "generated_at": "2026-09-02T14:56:13.268578+00:00",
+  "export_version": "1.0",
+  "schema_version": "0.2",
+  "content_hash": "sha256:85c4bba2895e1a45527dad75f73b7719c768861069ed09c71f44c319c66c5472",
+  "kernel_version": "2.0.0",
   "source": "content/ + connections/ (canonical) + derived",
   "entity_count": 224,
   "connection_count": 654,
@@ -11,7 +12,7 @@
   },
   "derived": {
     "inverse_edges": {
-      "count": 274,
+      "count": 263,
       "edges": [
         {
           "source": "lhs:bio.allele",
@@ -744,16 +745,6 @@
           }
         },
         {
-          "source": "lhs:chem.le-chateliers-principle",
-          "relation": "contains",
-          "target": "lhs:chem.equilibrium-constant",
-          "derived": true,
-          "derivation": {
-            "method": "inverse",
-            "source_connection": "lhs:conn.000546"
-          }
-        },
-        {
           "source": "lhs:chem.matter",
           "relation": "logically_required_by",
           "target": "lhs:bio.cell",
@@ -1011,6 +1002,16 @@
           "derivation": {
             "method": "inverse",
             "source_connection": "lhs:conn.000591"
+          }
+        },
+        {
+          "source": "lhs:math.derivative",
+          "relation": "mathematically_required_by",
+          "target": "lhs:math.integral",
+          "derived": true,
+          "derivation": {
+            "method": "inverse",
+            "source_connection": "lhs:conn.000594"
           }
         }
       ]

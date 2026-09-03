@@ -30,12 +30,14 @@ provenance:
   source_kind: standards-or-specification
   source: IUPAC Compendium of Chemical Terminology
 relationships:
-  - type: logically_requires
-    target: lhs:chem.matter
-  - type: logically_requires
-    target: lhs:phys.electric-charge
-  - type: related_to
-    target: lhs:phys.atomic-structure
+- type: bridges
+  target: lhs:phys.atomic-structure
+- type: logically_requires
+  target: lhs:chem.matter
+- type: logically_requires
+  target: lhs:phys.electric-charge
+- type: related_to
+  target: lhs:phys.atomic-structure
 ---
 
 ## Notes

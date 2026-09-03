@@ -14,8 +14,7 @@ assertion:
 context:
   domain: earth-space
   subdomain: earth-systems-geology
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

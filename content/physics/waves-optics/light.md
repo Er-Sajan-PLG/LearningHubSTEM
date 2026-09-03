@@ -32,16 +32,18 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
-  - type: related_to
-    target: lhs:phys.wave
-  - type: related_to
-    target: lhs:phys.reflection
-  - type: related_to
-    target: lhs:phys.refraction
-  - type: related_to
-    target: lhs:phys.electromagnetic-spectrum
-  - type: related_to
-    target: lhs:bio.photosynthesis
+- type: bridges
+  target: lhs:bio.photosynthesis
+- type: related_to
+  target: lhs:bio.photosynthesis
+- type: related_to
+  target: lhs:phys.electromagnetic-spectrum
+- type: related_to
+  target: lhs:phys.reflection
+- type: related_to
+  target: lhs:phys.refraction
+- type: related_to
+  target: lhs:phys.wave
 ---
 
 ## Notes

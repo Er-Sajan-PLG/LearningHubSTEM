@@ -14,8 +14,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: reactions-stoichiometry
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

@@ -27,6 +27,8 @@ real_world_applications:
   - Seatbelts and airbags.
   - Shaking a tree branch to dislodge fruit.
   - Difficulty stopping a heavy vehicle.
+external_ids:
+  wd: Q122508
 provenance:
   ai_drafted: true
 relationships:

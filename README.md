@@ -6,12 +6,23 @@
 
 ## Status: active canonical foundation
 
-STEMMA holds a validated canonical knowledge base of **224 entities** across
-mathematics, physics, chemistry, biology, earth-space, engineering, and scientific-practice,
-exported through a versioned consumer contract. STEM-TUITION (the LearningHub application)
-consumes `exports/knowledge.json` through a versioned adapter; PROFESSOR-J and future products are
-planned consumers. The architecture is proven; the knowledge base grows incrementally
-(`docs/STEMMA-ROADMAP.md`).
+<!-- status-truth:start -->
+## Status: live foundation in early curation
+
+Machine-checkable live counts — `scripts/status_truth.py` (CI) fails if this
+block drifts from canonical content (audit F2: status honesty is a gate):
+
+- Entities: **224** — human-reviewed/canonical: **0**, draft: **224**
+- Connections (first-class assertions): **654** — review-canonical: **50** (7.6%), unreviewed: **604**
+- Canonical source records: **3**
+<!-- status-truth:end -->
+
+
+The architecture is proven and growing incrementally
+(`docs/STEMMA-ROADMAP.md`, `docs/STEMMA-IMPLEMENTATION-PLAN-v2.md`). Per the
+governance definition, *canonical* is a reviewed property, not a folder: the
+corpus is draft + early curation, and consumers should filter by the review
+policies documented in `docs/STEMMA-CONSUMER-SEAM.md`.
 
 ## What's here
 
@@ -74,7 +85,7 @@ The authoritative model for this repository lives in the workspace docs:
 
 ## Consumers
 
-The first consumer proof is STEM-TUITION's shell app (the LearningHub application). The seam is
+The first consumer proof is LearningHub's shell app (formerly STEM-TUITION). The seam is
 documented in `docs/STEMMA-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
 regeneration and test commands). STEMMA stays independent: it only publishes the export;
 consumers adapt it to their own curriculum and products.

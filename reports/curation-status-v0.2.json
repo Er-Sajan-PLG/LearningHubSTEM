@@ -10,7 +10,7 @@
   "proposed": 653,
   "inferred": 0,
   "rejected": 0,
-  "deprecated": 0,
+  "deprecated": 4,
   "migrated": 641,
   "human_authored": 13,
   "llm_authored": 0,
@@ -45,7 +45,7 @@
     "engineering": 1,
     "physics": 302,
     "scientific-practice": 2,
-    "math": 142
+    "mathematics": 142
   },
   "by_review": {
     "canonical": 50,

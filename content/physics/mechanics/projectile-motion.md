@@ -28,6 +28,8 @@ real_world_applications:
   - Sports (basketball, soccer, javelin).
   - Ballistics.
   - Fountain design.
+external_ids:
+  wd: Q10281355
 provenance:
   ai_drafted: true
 relationships:

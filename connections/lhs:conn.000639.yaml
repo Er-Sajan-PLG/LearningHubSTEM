@@ -13,8 +13,7 @@ assertion:
 context:
   domain: physics
   subdomain: electricity-magnetism
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

@@ -26,6 +26,8 @@ real_world_applications:
   - Thunder and lightning (light travels much faster than sound).
   - Echos and sonar.
   - Seismic wave analysis.
+external_ids:
+  wd: Q13824
 provenance:
   ai_drafted: true
 relationships:

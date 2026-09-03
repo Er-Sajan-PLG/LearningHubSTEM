@@ -29,6 +29,8 @@ real_world_applications:
   - Material identification.
 key_experiments:
   - "Measuring density of a regular solid and an irregular solid using displacement."
+external_ids:
+  wd: Q29539
 provenance:
   ai_drafted: true
 relationships:

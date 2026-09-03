@@ -1,5 +1,10 @@
 # Q3 — Export Contract Version: Migration Impact Analysis
 
+> **Superseded 2026-09-04 by ADR-0023:** gate G-A decided — `export_version` is now **`1.0`**
+> with `connections`/`sources` required (`schema/export.schema.json`). The co-release path this
+> document asked for is implemented as the `exports/knowledge.compat-0.1.json` view. Kept for
+> history and for the consumer checklist in §4.
+
 **Status:** Investigation complete. **Decision: do NOT bump `export_version` in this phase**
 (the Q1/Q2 change is additive and backward-compatible). This documents the full impact so a
 future contract migration (adding connections/sources as a *required* part of the canonical
@@ -45,18 +50,18 @@ These all emit `export_version`; a version bump must be coordinated across them.
 
 | Consumer | Path | Reads | Version enforcement |
 |----------|------|-------|---------------------|
-| STEM-TUITION adapter | `STEM-TUITION/apps/shell/src/lib/lhs-adapter.ts` | `entities` only | **Hard**: `SUPPORTED_EXPORT_VERSION='0.1'`; throws `LhsUnsupportedVersionError` on `!== '0.1'`. Does NOT read connections/sources. No `additionalProperties:false`. |
-| LHS explorer | `explorer/src/services/knowledge-export-loader.ts` | `entities` only | Reads `export_version`/`schema_version`/`entities` types; tolerates extra keys. |
+| LearningHub adapter | `LearningHub/apps/shell/src/lib/lhs-adapter.ts` | `entities` only | **Hard**: `SUPPORTED_EXPORT_VERSION='0.1'`; throws `LhsUnsupportedVersionError` on `!== '0.1'`. Does NOT read connections/sources. No `additionalProperties:false`. |
+| STEMMA explorer | `explorer/src/services/knowledge-export-loader.ts` | `entities` only | Reads `export_version`/`schema_version`/`entities` types; tolerates extra keys. |
 | AI agents / future consumers | (planned) | contract-dependent | n/a |
 
 **Compatibility conclusion:** because both current consumers read only `entities` and neither
 rejects unexpected top-level keys, the additive `connections`/`sources`/counts keys are
-**backward-compatible**. Bumping `export_version` to `0.2` would *break* the STEM-TUITION
+**backward-compatible**. Bumping `export_version` to `0.2` would *break* the LearningHub
 adapter today.
 
 ## 4. Version declarations and fixture/docs to update on any future bump
 
-- `STEM-TUITION/apps/shell/src/lib/lhs-adapter.ts` — `SUPPORTED_EXPORT_VERSION = '0.1'`.
+- `LearningHub/apps/shell/src/lib/lhs-adapter.ts` — `SUPPORTED_EXPORT_VERSION = '0.1'`.
 - `STEMMA/docs/STEMMA-CONSUMER-SEAM.md` — documents `export_version: 0.1`.
 - `STEMMA/docs/STEMMA-SPECIFICATION.md` §10/§11 — three-track versioning rules.
 - `docs/decisions/0007-export-contract.md`, `0008-versioning.md` — contract/versioning ADRs.
@@ -75,8 +80,8 @@ for `schema_version` (e.g. from `schema/` files) when a contract migration is au
 - **Now (this phase):** keep `export_version: "0.1"`. The Q2 change is additive.
 - **Future (governed decision):** when connections/sources become a *required* part of the
   canonical consumer contract (so consumers can rely on relationship assertions from the
-  export), file a decision record and bump `export_version: "0.2"`, updating BOTH the LHS
-  producer script(s) AND the STEM-TUITION adapter's `SUPPORTED_EXPORT_VERSION` in the same
+  export), file a decision record and bump `export_version: "0.2"`, updating BOTH the STEMMA
+  producer script(s) AND the LearningHub adapter's `SUPPORTED_EXPORT_VERSION` in the same
   release. Coordinate across §3/§4 so the adapter keeps working.
 - Do **not** bump casually; the only hard consumer rejects any version other than `0.1`.
 

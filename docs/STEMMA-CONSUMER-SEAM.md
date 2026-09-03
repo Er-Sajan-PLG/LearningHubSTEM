@@ -1,7 +1,7 @@
-# STEMMA ↔ STEM-TUITION — Consumer Seam (Phase 2)
+# STEMMA ↔ LearningHub — Consumer Seam (Phase 2)
 
-> **Consumer proof, not a platform.** STEMMA publishes a versioned export. STEM-TUITION
-> consumes it through one adapter. One direction. Nothing else.
+> **Consumer proof, not a platform.** STEMMA publishes a versioned export. LearningHub
+> (formerly STEM-TUITION) consumes it through one adapter. One direction. Nothing else.
 
 ## The pipeline
 
@@ -12,7 +12,7 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
   exports/knowledge.json         (DERIVED — regenerable, never edited by hand)
         │  import (build/test/dev time)
         ▼
-  apps/shell/src/lib/lhs-adapter.ts   (STEM-TUITION consumer boundary)
+  apps/shell/src/lib/lhs-adapter.ts   (LearningHub consumer boundary)
         │
         ▼
   apps/shell/src/lib/lhs-demo.ts  →  index.html #lhs-demo
@@ -20,12 +20,20 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
 
 ## Export contract
 
-- **File:** `STEMMA/exports/knowledge.json`, contract **`export_version: 0.1`**,
-  schema **`schema_version: 0.1`**.
-- **Shape:** top-level `export_version`, `schema_version`, `generated_at`, `source`,
-  `entity_count`, and `entities[]`. Each entity carries `id`, `type`, `name`, `domain`,
-  `status`, `definition`, optional `symbol` / `unit` / `equation` / `common_misconceptions`,
-  `provenance`, `relationships[]`.
+- **File:** `STEMMA/exports/knowledge.json`, contract **`export_version: 1.0`** (ADR-0023),
+  schema **`schema_version: 0.2`**. Shape is machine-defined in `schema/export.schema.json`
+  and validated by the producer before writing.
+- **Shape (v1.0):** top-level `export_version`, `schema_version`, `content_hash`, `source`,
+  `entity_count`, `connection_count`, `source_count`, `entities[]`, **`connections[]`**
+  (required — first-class assertions with `assertion.review.status` and `provenance`), and
+  **`sources[]`** (required). Each entity carries `id`, `type`, `name`, `domain`, `status`,
+  `definition`, optional `symbol` / `unit` / `equation` / `common_misconceptions` /
+  `external_ids`, `provenance`, and `relationships[]` — the latter is a **deprecated generated
+  projection** of `connections[]` (ADR-0020) removed in contract **2.0**; new consumers read
+  `connections[]` and filter by review policy.
+- **Co-release window:** `exports/knowledge.compat-0.1.json` (entities-only, stamped `0.1`) is
+  emitted while `legacy_export_version` exists in `schema/VERSION.yaml`, so a `0.1`-pinned
+  adapter can be repointed while it upgrades to `SUPPORTED_EXPORT_VERSION = '1.0'`.
 - **Versioning:** a consumer may state "I consume export contract version X". Breaking changes to
   the shape bump `export_version`. Content edits are a content release and do **not** bump the
   contract. (Specification §10, decision 0008.)
@@ -37,10 +45,12 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
 ## Adapter location and API
 
 - **`apps/shell/src/lib/lhs-adapter.ts`** — the only file that imports across the seam.
-- **`apps/shell/src/lib/lhs-types.ts`** — LHS types, kept separate from STEM-TUITION models.
+- **`apps/shell/src/lib/lhs-types.ts`** — `lhs:` types, kept separate from LearningHub models.
 - API: `loadKnowledge()` (validates the contract version and indexes entities),
   `getEntity(id)`, `getRelatedEntities(id)`.
-- **Version enforcement:** `loadKnowledge()` rejects any `export_version !== "0.1"` with
+- **Version enforcement:** `loadKnowledge()` rejects any unsupported `export_version` with
+  (adapter currently pins `"0.1"` — point it at `knowledge.compat-0.1.json` or bump to `"1.0"`
+  as part of the ADR-0023 co-release)
   `LhsUnsupportedVersionError` (message includes found and supported versions). Lookups fail with
   `LhsEntityNotFoundError` / `LhsDanglingReferenceError` — never silently.
 
@@ -50,8 +60,8 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
 |---------|-------|
 | What things mean (`definition`, `equation`, `symbol`, `unit`, relationships) | **STEMMA** (`content/`) |
 | Common false beliefs (knowledge layer) | **STEMMA** (`common_misconceptions`) |
-| Worked examples, questions, explanations, sequence | **STEM-TUITION** (`apps/shell/src/lib/lhs-demo.ts`) |
-| The adapter and LHS types | **STEM-TUITION** (consumer) |
+| Worked examples, questions, explanations, sequence | **LearningHub** (`apps/shell/src/lib/lhs-demo.ts`) |
+| The adapter and `lhs:` types | **LearningHub** (consumer) |
 | The export file | **derived** — owned by the validator, regenerated from `content/` |
 
 ## Canonical vs derived vs pedagogical
@@ -61,7 +71,7 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
   authoritative and never hand-edited.
 - **Pedagogical:** anything that teaches (worked examples, questions, ordering). Lives in the
   consumer. The boundary is kept legible in the demo UI: sections labeled
-  *KNOWLEDGE — imported from STEMMA* vs *LEARNING — authored by STEM-TUITION*.
+  *KNOWLEDGE — imported from STEMMA* vs *LEARNING — authored by LearningHub*.
 
 ## How to regenerate the export
 
@@ -77,25 +87,25 @@ re-run tests/build to pick it up).
 ## How to run the demo and tests
 
 ```bash
-# Consumer unit tests (includes the LHS adapter + demo slices)
-pnpm --filter @stem-tuition/shell test
+# Consumer unit tests (includes the lhs: adapter + demo slices)
+pnpm --filter @learninghub/shell test
 
 # Type-check the consumer (note: pre-existing acl breakage in cosmic-background.ts,
 # unrelated to this seam, currently fails this step)
-pnpm --filter @stem-tuition/shell typecheck
+pnpm --filter @learninghub/shell typecheck
 
 # Lint that covers the new files
 pnpm lint:state && pnpm lint:dom && pnpm lint:arch && pnpm lint:circular
 
 # View the demo
-pnpm --filter @stem-tuition/shell dev        # http://localhost:5173/#lhs-demo
+pnpm --filter @learninghub/shell dev        # http://localhost:5173/#lhs-demo
 ```
 
 ## Deferred for Phase 3
 
 - Full MVP activation of STEMMA (content authoring, review workflow, multilingual).
 - Additional consumer adapters (JARVIS, STEM-GAME, future products) — this seam is the template.
-- A second vertical slice (more laws, quantities, equations) in the STEM-TUITION UI.
+- A second vertical slice (more laws, quantities, equations) in the LearningHub UI.
 - Real export piping (published artifact / package) instead of a direct file import.
 - Schema/export version bumping policy when a second contract version exists.
-- License files for both repos (human decision pending).
+- License files for both repos (STEMMA decided 2026-09-02: CC BY 4.0 content / MIT code — ADR-0001).

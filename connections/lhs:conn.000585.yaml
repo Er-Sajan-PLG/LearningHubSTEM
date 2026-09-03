@@ -11,10 +11,9 @@ assertion:
   confidence: null
   confidence_basis: null
 context:
-  domain: math
+  domain: mathematics
   subdomain: calculus
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

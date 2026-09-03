@@ -11,7 +11,7 @@ Only terms that recur across the workspace. See the authoritative definitions in
 | **knowledge entity** | One canonical node: a Concept, Quantity, Unit, Law, Equation, or Misconception with a stable ID. |
 | **stable ID** | Identifier `lhs:<domain>.<slug>` that is never reassigned and is independent of files, curriculum, and products. |
 | **consumer** | Anything that builds on STEMMA: a curriculum, a product, a research tool, an AI system. |
-| **product** | An application that presents or uses knowledge (STEM-TUITION, JARVIS, STEM-GAME, STEM Lab, 3D-Ludo). |
+| **product** | An application that presents or uses knowledge (LearningHub, JARVIS, STEM-GAME, STEM Lab, 3D-Ludo). |
 | **curriculum** | How a particular educational system organizes knowledge (Nepal, CBSE, GCSE, A-Level, IB…); a consumer. |
 | **curriculum mapping** | The consumer-owned act of connecting canonical IDs to a course/grade/unit. |
 | **provenance** | Record of how content came to be (AI-drafted? source/citation? named reviewer). |
@@ -22,7 +22,7 @@ Only terms that recur across the workspace. See the authoritative definitions in
 | **schema version** | Version of `schema/concept.schema.json`; separate from export version and content release. |
 | **export version** | Version of the `exports/knowledge.json` contract; separate from schema version and content release. |
 | **content release** | The knowledge set itself (entities added/updated/deprecated); not a contract change. |
-| **LICENSE DECISION PENDING** | Marker used until a license is chosen; no license claim is made without human approval. |
+| **license** | Content: CC BY 4.0 (`LICENSE`); code: MIT (`LICENSE-CODE`) — decided 2026-09-02 (ADR-0001). |
 | **pedagogy** | How knowledge is taught/learned; pedagogical relationships are not canonical in v0.1. |
 | **ecosystem invariant** | A Level-1 rule that project governance may not redefine (STEMMA independence, curriculum external, products as consumers…). |
 | **NOW** | Work required by the current milestone; implement. |

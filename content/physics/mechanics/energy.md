@@ -30,17 +30,21 @@ real_world_applications:
   - Food (chemical energy for biological processes).
   - Vehicles (chemical → thermal → kinetic).
   - Renewable energy systems.
+external_ids:
+  wd: Q11379
 provenance:
   ai_drafted: true
 relationships:
-  - type: related_to
-    target: lhs:phys.work
-  - type: related_to
-    target: lhs:phys.kinetic-energy
-  - type: related_to
-    target: lhs:phys.potential-energy
-  - type: related_to
-    target: lhs:phys.conservation-of-energy
+- type: bridges
+  target: lhs:chem.chemical-reaction
+- type: related_to
+  target: lhs:phys.conservation-of-energy
+- type: related_to
+  target: lhs:phys.kinetic-energy
+- type: related_to
+  target: lhs:phys.potential-energy
+- type: related_to
+  target: lhs:phys.work
 ---
 
 ## Notes

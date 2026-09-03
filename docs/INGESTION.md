@@ -1,4 +1,4 @@
-# LHS Knowledge Ingestion — from document to review-ready proposal
+# STEMMA Knowledge Ingestion — from document to review-ready proposal
 
 **Status:** Implemented. **Scope:** extract knowledge from any-size PDFs, images, and
 scanned docs and stage *review-ready candidate* content (source + proposed entities/

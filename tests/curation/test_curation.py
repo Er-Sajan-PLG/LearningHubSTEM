@@ -84,8 +84,12 @@ def test_trusted_export():
     subprocess.run(["python3", str(ROOT / "scripts/export_review_aware.py")], check=True)
     trusted = json.loads((ROOT / "exports/knowledge.trusted.json").read_text())
     all_c = json.loads((ROOT / "exports/knowledge.all.json").read_text())
-    canonical_files = len(list((ROOT / "connections").glob("*.yaml")))
-    # 'all' export contains every canonical connection (not a magic count).
+    canonical_files = sum(
+        1 for p in (ROOT / "connections").glob("*.yaml")
+        if yaml.safe_load(p.read_text()).get("assertion", {}).get("status") == "active"
+    )
+    # 'all' export contains every ACTIVE canonical connection (not a magic count);
+    # deprecated connections are excluded by policy (graph_policy.should_include_connection).
     assert all_c["count"] == canonical_files
     # 'trusted' is a subset of 'all' (>=0) whose members are all reviewed/canonical.
     assert 0 <= trusted["count"] <= all_c["count"]

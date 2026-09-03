@@ -33,12 +33,14 @@ provenance:
   source_kind: standards-or-specification
   source: IUPAC Compendium of Chemical Terminology
 relationships:
-  - type: logically_requires
-    target: lhs:chem.matter
-  - type: related_to
-    target: lhs:phys.temperature
-  - type: related_to
-    target: lhs:bio.osmosis
+- type: bridges
+  target: lhs:bio.osmosis
+- type: logically_requires
+  target: lhs:chem.matter
+- type: related_to
+  target: lhs:bio.osmosis
+- type: related_to
+  target: lhs:phys.temperature
 ---
 
 ## Notes

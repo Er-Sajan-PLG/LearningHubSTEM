@@ -19,7 +19,7 @@
 
 ## The fundamental idea
 
-STEMMA is **not** an education product. It is not STEM-TUITION. It is not a
+STEMMA is **not** an education product. It is not LearningHub. It is not a
 curriculum platform. It is not a Nepal curriculum database, and it is not owned by any single
 product.
 
@@ -47,7 +47,7 @@ If another person or company uses STEMMA to build something useful, **that is a 
    provides the relationship; the curriculum decides sequence.
 
 3. **Products are external.**
-   STEM-TUITION, STEM-GAME, STEM Lab, JARVIS are all consumers. STEMMA must remain useful
+   LearningHub, STEM-GAME, STEM Lab, JARVIS are all consumers. STEMMA must remain useful
    even if every one of those products disappears. Never couple the foundation to a product.
 
 ---

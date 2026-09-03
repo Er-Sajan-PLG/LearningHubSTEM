@@ -1,6 +1,8 @@
 {
-  "export_version": "0.1",
-  "schema_version": "0.1",
+  "export_version": "1.0",
+  "schema_version": "0.2",
+  "content_hash": "sha256:85c4bba2895e1a45527dad75f73b7719c768861069ed09c71f44c319c66c5472",
+  "kernel_version": "2.0.0",
   "policy": "trusted",
   "count": 50,
   "connections": [
@@ -23,9 +25,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -77,7 +77,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:54dddd5798f41a99b5ef7b8f64cb0382e5c2cdd5f6f924285f883e1a641662be"
     },
     {
       "id": "lhs:conn.000005",
@@ -98,9 +99,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -152,7 +151,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b95b4cf1a6c1c64f86ca2dc567d01145e80d051714ccddc4fae46002e5b913d0"
     },
     {
       "id": "lhs:conn.000012",
@@ -173,9 +173,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -227,7 +225,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a676498af4729820f6e7cfffc7a3e08795e6ac71526b39eb93e36bba8ddeb47e"
     },
     {
       "id": "lhs:conn.000014",
@@ -248,9 +247,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -302,7 +299,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9e4aaade411ef97b31dd4585f5f6178b0c9847ac7f24d7f6ddd9c7edd23729db"
     },
     {
       "id": "lhs:conn.000025",
@@ -323,9 +321,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -377,7 +373,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:261dbb268511a0fa3944f6317aad0869eed897019cdea2cd380193c92edc415f"
     },
     {
       "id": "lhs:conn.000048",
@@ -398,9 +395,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -454,7 +449,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6ec7ae9e84742dcd5a5ff240b37cd51a75a2af0963ea688fa11161153eaf1f55"
     },
     {
       "id": "lhs:conn.000049",
@@ -475,9 +471,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -531,7 +525,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:12da6c3ef4ce153627c7da3a52e08b293622fb53006be9d7a2a828a9f0ef06a8"
     },
     {
       "id": "lhs:conn.000053",
@@ -552,9 +547,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -608,7 +601,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7fce1fb5fe2c255b2803bdbf10625604ae1484d3ef5d88f3ccd7301cf9e4f312"
     },
     {
       "id": "lhs:conn.000060",
@@ -629,9 +623,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -685,7 +677,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:59cec36ee074ff3e0b63fa7c38ebb74cdf3aeadb61252fa9f8e7c32700196497"
     },
     {
       "id": "lhs:conn.000069",
@@ -706,9 +699,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -762,7 +753,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:eeb29863bae8f4c866386df023d012fdad5f708b22392b8d6be8b9319d0a19c4"
     },
     {
       "id": "lhs:conn.000130",
@@ -783,9 +775,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -839,7 +829,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3a8927324da849f622453b9a71b56a0cd905aacb461b22f03e5de104b078e388"
     },
     {
       "id": "lhs:conn.000131",
@@ -860,9 +851,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -916,7 +905,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:230d68d30e60afa49bee448aaf46681bc55ebd2d4de5738fd675a01234ca75ec"
     },
     {
       "id": "lhs:conn.000165",
@@ -937,9 +927,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -993,7 +981,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a36cd1c03128064ee66601cc9111e162199c78c74fee1bd30c8866d43e2f0293"
     },
     {
       "id": "lhs:conn.000173",
@@ -1014,9 +1003,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1068,7 +1055,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:cdeac8feedf140bfdfbb97f58bab52837d3ff9dbf58b611c4b913d9711cb9389"
     },
     {
       "id": "lhs:conn.000177",
@@ -1089,9 +1077,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1145,7 +1131,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:38dd30f78902a9a495f32c90c7789449e203c26ee39521401ed07e2821959974"
     },
     {
       "id": "lhs:conn.000180",
@@ -1166,9 +1153,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1222,7 +1207,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:dffae8bec01e86f2f163fae886bea7d6c282dcd8100d82145f8f2c09f39c9df8"
     },
     {
       "id": "lhs:conn.000183",
@@ -1243,9 +1229,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1299,7 +1283,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9eab9b119eb1251ed49d4d62321f13a11a54010878524d95eaf90929f08fe1a5"
     },
     {
       "id": "lhs:conn.000184",
@@ -1320,9 +1305,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1376,7 +1359,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e93305d81fde31bc9628ce78919838fdb5495fff921e3d3e1d1ac1948ac44c44"
     },
     {
       "id": "lhs:conn.000193",
@@ -1397,9 +1381,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1453,7 +1435,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ea17f3b6308f00ae009852a6304b723cb2fcd1845faa27ee667b188887e2ed4f"
     },
     {
       "id": "lhs:conn.000196",
@@ -1474,9 +1457,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1530,7 +1511,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a9f00293da3fc583e7ef9f57522b1a63ec173587bc31861322c43b8657b2170c"
     },
     {
       "id": "lhs:conn.000198",
@@ -1551,9 +1533,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1607,7 +1587,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a2a18e19def72f0fb6865b49cfd37ef6486084ca34d256d58c4d77a6c6c6ad8a"
     },
     {
       "id": "lhs:conn.000220",
@@ -1628,9 +1609,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1684,7 +1663,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:570f739753ae3d012fccb74c4a43c7788d73ef75242e360d877dda653e41f74d"
     },
     {
       "id": "lhs:conn.000221",
@@ -1705,9 +1685,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1761,7 +1739,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:df32e71a8d5492e1e20e0121e73125295798bb76aecd5c049377c55a23920f51"
     },
     {
       "id": "lhs:conn.000222",
@@ -1782,9 +1761,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1838,7 +1815,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ba8cf08ab8f3d9cb440ab07b34d17897ef58c3a6f280ac6feba9d9e24756ab8e"
     },
     {
       "id": "lhs:conn.000224",
@@ -1859,9 +1837,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1915,7 +1891,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:75d14c3c91073290b0d64f00d25ec241e83f648085571099a6121ad8ae91bf6e"
     },
     {
       "id": "lhs:conn.000231",
@@ -1936,9 +1913,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -1992,7 +1967,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:77412b8cab74789af662bebbfc9f9eb38bc685ec3f63377f02c15f4f1e893124"
     },
     {
       "id": "lhs:conn.000240",
@@ -2013,9 +1989,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2069,7 +2043,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:07e18345c0c266b6d77362331987726269e2b0d3b86976c0db42d8fbe1872637"
     },
     {
       "id": "lhs:conn.000244",
@@ -2090,9 +2065,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2146,7 +2119,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d54c0b4fa2d4f3da07dce98bcd84041d364efddf909926a24c5ed1d1d5802a87"
     },
     {
       "id": "lhs:conn.000246",
@@ -2167,9 +2141,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2223,7 +2195,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:54b7bcac57de08cb88a530b5c288c6a58f5aa3ebe7b0c880a5e757fb05f62636"
     },
     {
       "id": "lhs:conn.000250",
@@ -2244,9 +2217,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2300,7 +2271,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9f3c5645b3d1a029e1da55a6ee3d448e0ea0d0edc54f6f12b69eab3c02b82e4c"
     },
     {
       "id": "lhs:conn.000256",
@@ -2321,9 +2293,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2377,7 +2347,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:cb2fb1758ebc91fc21989ba82466d9e038eaa72466744d9c5ab6eb0db05751ff"
     },
     {
       "id": "lhs:conn.000268",
@@ -2398,9 +2369,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2454,7 +2423,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:21f3cc6a7e7d045e99b12ecfb0d1abe8a000bb1cfde72cee2293eafa693bd9f2"
     },
     {
       "id": "lhs:conn.000272",
@@ -2475,9 +2445,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2531,7 +2499,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c476bf76074f2ebab2ce43919d2022b73a352a02d54372568670d3a978ba6ec5"
     },
     {
       "id": "lhs:conn.000273",
@@ -2552,9 +2521,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2608,7 +2575,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3a1f14b35f9c842916393d61e677b4acd3aa57891cb36d75540e45658f5e5033"
     },
     {
       "id": "lhs:conn.000279",
@@ -2629,9 +2597,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2685,7 +2651,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:81d6242f202bb60231f3db18ee597d793f67452ee0dfc49bbae3deb0e354fc61"
     },
     {
       "id": "lhs:conn.000287",
@@ -2706,9 +2673,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2762,7 +2727,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:434c11e9816a8fa179f4dc938e29150d27dd8dbeb38cc2b6b6a0d249f2282022"
     },
     {
       "id": "lhs:conn.000311",
@@ -2783,9 +2749,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2839,7 +2803,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2c45d69c7b2943ba5fa30a17b24a4e3d7bea226dabc8e3fa7a422fe4e52d80a3"
     },
     {
       "id": "lhs:conn.000318",
@@ -2860,9 +2825,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2916,7 +2879,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1d6d8dff6ae7492d9d36b63f737407a4c4abb21f7eefcd5cd1ac6a183875bc46"
     },
     {
       "id": "lhs:conn.000325",
@@ -2937,9 +2901,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -2993,7 +2955,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ed7841c3f47e2e7f0e5199c2d43c9534df70fdc0f5ae12a71b27c98dbe48d5a7"
     },
     {
       "id": "lhs:conn.000335",
@@ -3014,9 +2977,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -3070,7 +3031,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5aa246e2e949d4c32a3028220a534760c8b04458d2be073ea3b5dacadb6289f9"
     },
     {
       "id": "lhs:conn.000342",
@@ -3091,9 +3053,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -3147,7 +3107,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7f6e0822e53f93fe97c44482d8f4d2f693626ee4fe0987e1598a11f6511602fa"
     },
     {
       "id": "lhs:conn.000364",
@@ -3168,9 +3129,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -3222,7 +3181,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:57ba060f1f67520a7424f130276820eff635ed46583c4871951a9e85c3d7a319"
     },
     {
       "id": "lhs:conn.000377",
@@ -3304,7 +3264,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6e839beb795c83d33fb30135dbc36b7c3864197c4ac2a26b9c39af13b326bdb7"
     },
     {
       "id": "lhs:conn.000378",
@@ -3381,7 +3342,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b7b7b6949cc6f8e99baeb90fa07909252d8caf90a09321ed3476cd73674bcb2e"
     },
     {
       "id": "lhs:conn.000379",
@@ -3458,7 +3420,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ee35f865fe5ec2613174c8e73b0b9985774097c337ad98f84e66ba45a5fe7ced"
     },
     {
       "id": "lhs:conn.000380",
@@ -3535,7 +3498,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5a6ac26547ae2b595dd0b27851c1383e0744f08d239c74650ae44a56457fd258"
     },
     {
       "id": "lhs:conn.000381",
@@ -3612,7 +3576,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ef07c51c99ee4ce4d892c35e5bd36d0a368814b3b6325404a0b7b305c4abf334"
     },
     {
       "id": "lhs:conn.000384",
@@ -3689,7 +3654,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7937a299308c423be6959daa1e28a04455ad9283509b7849e54840d7db25bc3c"
     },
     {
       "id": "lhs:conn.000387",
@@ -3770,7 +3736,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ed188a5d1f50c12533fdc5c9e544ff720476e7d1b6b06552fbb05b665f12175d"
     },
     {
       "id": "lhs:conn.000388",
@@ -3848,7 +3815,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:19911a2c43b0a9c26492cb37e73ba9e9c75d711f9c959f7fe761cbfba0d70f43"
     }
   ]
 }

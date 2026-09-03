@@ -14,8 +14,7 @@ assertion:
 context:
   domain: physics
   subdomain: mechanics
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

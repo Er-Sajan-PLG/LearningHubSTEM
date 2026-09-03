@@ -1,0 +1,89 @@
+# Agent Registry — authoritative list of every agent identity that may appear in
+# provenance (plan v2 E4.2; audit F2). Companion of relation-registry.yaml and
+# extension-registry.yaml (governance metadata, not canonical knowledge).
+#
+# Every `human:` / `process:` / `llm:` / `unknown:` identifier referenced by
+#   connections/*.yaml   provenance.asserted_by.id, provenance.generated_by.id,
+#                        provenance.reviewed_by[].id, provenance.review_history[].reviewer
+#   content/**/*.md      provenance.reviewer (when non-null)
+#   schema/extension-registry.yaml  registered_by
+# MUST resolve to an entry here or scripts/validate.py exits 1.
+#
+# Fields
+#   id           — the agent identifier exactly as written in provenance
+#   class        — human | process | llm | unknown (must equal the id prefix)
+#   display_name — human-readable label (pseudonymous display is allowed; E6.5)
+#   external_id  — namespaced anchor when known: orcid:0000-..., github:handle,
+#                  model:vendor/name@version. null while unknown. Reviewer identity
+#                  policy (ORCID-backed recommended) is gate G-D (plan v2 E6.5).
+#   status       — active | retired | test
+#   note         — free text (why this agent exists, scope, caveats)
+#
+# `unknown:legacy-relationship` is deliberately registered: it is the honest
+# attribution for the 641 migrated assertions whose original author is not
+# recoverable (CURATION-PROTOCOL §6: origin is preserved, never rewritten).
+#
+# New agents: append an entry in the same PR that first uses the id.
+# No new canonical assertion may use an `unknown:` agent (plan v2 §4 metric).
+version: '0.1'
+agents:
+- id: human:curator.001
+  class: human
+  display_name: Repository curator (pseudonymous)
+  external_id: null
+  status: active
+  note: Primary maintainer; authored the 12 manually-created connections (phase B/E curation).
+- id: human:reviewer.physics-001
+  class: human
+  display_name: Physics reviewer 001 (pseudonymous)
+  external_id: null
+  status: active
+  note: Physics-domain reviewer; default addressee of the E6.1 dependency-edge campaign.
+- id: human:reviewer.chemistry-001
+  class: human
+  display_name: Chemistry reviewer 001 (pseudonymous)
+  external_id: null
+  status: active
+  note: Chemistry-domain reviewer (pilot + batch 02).
+- id: human:reviewer.biology-001
+  class: human
+  display_name: Biology reviewer 001 (pseudonymous)
+  external_id: null
+  status: active
+  note: Biology-domain reviewer (pilot + batch 02).
+- id: human:reviewer.earth-001
+  class: human
+  display_name: Earth & space reviewer 001 (pseudonymous)
+  external_id: null
+  status: active
+  note: Referenced by scripts/curation_batch_e.py; no canonical uses yet.
+- id: process:migration.relationships-v0.2
+  class: process
+  display_name: Inline-relationship → connection migration (v0.2)
+  external_id: null
+  status: retired
+  note: scripts/migrate_relationships.py; generated the 641 migrated connection objects. One-shot; must not run again.
+- id: process:adaptive-metadata-grade12
+  class: process
+  display_name: Adaptive metadata extension registration (ADR-0017 seed)
+  external_id: null
+  status: retired
+  note: Registered the seed extension dimensions in schema/extension-registry.yaml.
+- id: process:test-idempotent
+  class: process
+  display_name: register_extension.py idempotence test agent
+  external_id: null
+  status: test
+  note: Left by the ADR-0017 idempotence test; registered so the registry is complete, not because it is meaningful.
+- id: process:e61.dependency-campaign
+  class: process
+  display_name: E6.1 dependency-edge review campaign tooling
+  external_id: null
+  status: active
+  note: scripts/dependency_review_campaign.py generates worksheets only; it never writes review status. scripts/apply_review_decisions.py records the HUMAN reviewer, never this process, as reviewer.
+- id: unknown:legacy-relationship
+  class: unknown
+  display_name: Unrecoverable legacy author (pre-connection inline relationships)
+  external_id: null
+  status: retired
+  note: Honest attribution for migrated assertions (CURATION-PROTOCOL §6). Forbidden on any newly created assertion.

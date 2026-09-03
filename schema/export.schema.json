@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learninghubstem.example/schema/export.schema.json",
+  "title": "STEMMA export contract v1.0 (exports/knowledge.json)",
+  "description": "Consumer contract for the derived export (ADR-0023, plan v2 E1.5 / gate G-A). v1.0: `connections` and `sources` are REQUIRED members — consumers may rely on first-class assertions with review status and provenance. `entities[].relationships` remains present as a generated compatibility projection (ADR-0020) and is scheduled for removal in v2.0 (E1.7). Enforced by scripts/validate.py before the export is written.",
+  "type": "object",
+  "required": ["export_version", "schema_version", "content_hash", "source", "entity_count", "connection_count", "source_count", "entities", "connections", "sources"],
+  "properties": {
+    "export_version": { "type": "string", "pattern": "^1\\.[0-9]+$" },
+    "schema_version": { "type": "string" },
+    "content_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "kernel_version": { "type": ["string", "null"] },
+    "source": { "type": "string" },
+    "entity_count": { "type": "integer", "minimum": 0 },
+    "connection_count": { "type": "integer", "minimum": 0 },
+    "source_count": { "type": "integer", "minimum": 0 },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "name", "domain", "status", "definition", "provenance"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^lhs:" },
+          "relationships": {
+            "type": "array",
+            "description": "DEPRECATED compatibility projection of connections[] (ADR-0020). Removed in export_version 2.0.",
+            "items": { "type": "object", "required": ["type", "target"] }
+          }
+        }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "source", "relation", "target", "assertion", "provenance"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^lhs:conn\\.[0-9]{6}$" },
+          "claim_signature": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "description": "DERIVED identity of the asserted proposition: sha256(source|relation|target|polarity|sorted qualifiers) (ADR-0026, plan v2 E4.3). Two active connections sharing a signature are a duplicate-claim gate failure. Never stored in canonical YAML."
+          },
+          "assertion": {
+            "type": "object",
+            "required": ["status", "type", "review"],
+            "properties": { "review": { "type": "object", "required": ["status"] } }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "object", "required": ["id", "type", "citation"] }
+    }
+  },
+  "additionalProperties": false
+}

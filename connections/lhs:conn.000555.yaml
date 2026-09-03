@@ -4,7 +4,7 @@ source: lhs:chem.alkene
 relation: special_case_of
 target: lhs:chem.hydrocarbon
 assertion:
-  status: active
+  status: deprecated
   type: proposed
   review:
     status: unreviewed
@@ -13,8 +13,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: organic-chemistry
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []
@@ -27,3 +26,6 @@ provenance:
     id: process:migration.relationships-v0.2
   method:
     type: migration
+lifecycle:
+  reason: "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)"
+  replaced_by: lhs:conn.000565

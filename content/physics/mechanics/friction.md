@@ -40,6 +40,8 @@ real_world_applications:
 - Writing (friction between pen and paper).
 - Matches lighting.
 - Wear on machinery (friction as a source of energy loss).
+external_ids:
+  wd: Q82580
 provenance:
   ai_drafted: true
 relationships:

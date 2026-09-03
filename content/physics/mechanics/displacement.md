@@ -26,6 +26,8 @@ real_world_applications:
   - Navigation systems (shortest-path calculations).
   - Physics of projectile motion.
   - Engineering (structural displacement under load).
+external_ids:
+  wd: Q190291
 provenance:
   ai_drafted: true
 relationships:

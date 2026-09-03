@@ -2,7 +2,7 @@
 
 Assessment against Biolink, PROV, RDF 1.2, assertion/evidence practice.
 
-| ID | Dimension | LHS Status | Assessment | Urgency |
+| ID | Dimension | STEMMA Status | Assessment | Urgency |
 |----|-----------|------------|------------|---------|
 | M1 | Proposition vs assertion identity | `connection.id` identifies assertion record; no separate proposition ID | Defensible for v0.2; proposition is `source+relation+target` triple; derived claim_signature sufficient. **Do not create second object.** | **DEFER** |
 | M2 | Negation/polarity | missing | `rejected/contradicts` not equivalent to "A does not cause B". Need `assertion.polarity: positive|negative` (default positive). Urgent for public trust (avoid implying affirmation). | **URGENT** |

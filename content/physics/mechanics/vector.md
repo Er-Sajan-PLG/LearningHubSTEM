@@ -26,6 +26,8 @@ real_world_applications:
   - Navigation (wind velocity + aircraft velocity = ground velocity).
   - Engineering forces (multiple forces on a structure).
   - Physics of motion (velocity, acceleration, force are all vectors).
+external_ids:
+  wd: Q2672914
 provenance:
   ai_drafted: true
 relationships:

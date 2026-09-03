@@ -31,16 +31,18 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
-  - type: mathematically_requires
-    target: lhs:phys.electric-charge
-  - type: mathematically_requires
-    target: lhs:phys.time
-  - type: related_to
-    target: lhs:phys.voltage
-  - type: related_to
-    target: lhs:phys.resistance
-  - type: appears_in_law
-    target: lhs:phys.ohms-law
+- type: analogous_to
+  target: lhs:chem.diffusion
+- type: appears_in_law
+  target: lhs:phys.ohms-law
+- type: mathematically_requires
+  target: lhs:phys.electric-charge
+- type: mathematically_requires
+  target: lhs:phys.time
+- type: related_to
+  target: lhs:phys.resistance
+- type: related_to
+  target: lhs:phys.voltage
 ---
 
 ## Notes

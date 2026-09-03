@@ -32,6 +32,8 @@ real_world_applications:
 - Navigation (ground speed vs. air speed).
 - Ballistics (projectile velocity).
 - Weather systems (wind velocity).
+external_ids:
+  wd: Q11465
 provenance:
   ai_drafted: true
 relationships:

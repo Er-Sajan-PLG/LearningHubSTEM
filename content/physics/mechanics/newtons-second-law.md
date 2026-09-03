@@ -21,6 +21,10 @@ key_experiments:
 common_misconceptions:
   - F = m·a means the force is a property of the object itself (F is the net external force
     acting on the object).
+external_ids:
+  wd:
+  - Q104212301
+  - Q2397319
 provenance:
   ai_drafted: true
 historical:
@@ -39,14 +43,16 @@ extensions:
   symbol_set: "F, m, a, p, t"
   dimensions: "M L T^-2"
 relationships:
-  - type: applies_to
-    target: lhs:phys.force
-  - type: applies_to
-    target: lhs:phys.mass
-  - type: applies_to
-    target: lhs:phys.acceleration
-  - type: applies_to
-    target: lhs:phys.momentum
+- type: applies_to
+  target: lhs:phys.acceleration
+- type: applies_to
+  target: lhs:phys.force
+- type: applies_to
+  target: lhs:phys.mass
+- type: applies_to
+  target: lhs:phys.momentum
+- type: mathematically_requires
+  target: lhs:phys.force
 ---
 
 ## Notes

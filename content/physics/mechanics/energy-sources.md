@@ -28,6 +28,8 @@ real_world_applications:
   - Power generation (coal, gas, nuclear, hydro, solar, wind).
   - Transportation (petrol, electricity, hydrogen).
   - Heating and cooling.
+external_ids:
+  wd: Q1522115
 provenance:
   ai_drafted: true
 relationships:

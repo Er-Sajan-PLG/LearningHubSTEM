@@ -14,8 +14,7 @@ assertion:
 context:
   domain: engineering
   subdomain: design-process
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []
