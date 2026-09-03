@@ -14,8 +14,7 @@ assertion:
 context:
   domain: biology
   subdomain: evolution-ecology
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

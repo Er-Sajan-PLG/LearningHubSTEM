@@ -36,14 +36,16 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
+- type: analogous_to
+  target: lhs:phys.current
 - type: mathematically_requires
   target: lhs:phys.mass
 - type: mathematically_requires
   target: lhs:phys.temperature
 - type: related_to
-  target: lhs:phys.thermal-energy
-- type: related_to
   target: lhs:phys.specific-heat
+- type: related_to
+  target: lhs:phys.thermal-energy
 
 ---
 

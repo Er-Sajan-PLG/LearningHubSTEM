@@ -34,5 +34,9 @@ Each record follows the same shape:
 | 0018 | [0018-historical-attribution.md](0018-historical-attribution.md) | Historical scientific attribution — who stated it + when (who/when/timeline) | decided (implemented) |
 
 | 0019 | [0019-rename-and-freeze.md](0019-rename-and-freeze.md) | Rename foundation to STEMMA; freeze lhs identity + schema/export contracts | decided (implemented) |
+| 0020 | [0020-connections-only-truth.md](0020-connections-only-truth.md) | Connections-only relationship truth; inline block = generated projection (plan v2 E1) | decided (implemented) |
+| 0021 | [0021-registry-integrity.md](0021-registry-integrity.md) | Registry integrity: +phenomenon/model/experiment types, inverse coherence, vocabulary enforcement, honest context data (plan v2 E2/E6.2) | decided (implemented) |
+| 0022 | [0022-version-source-deterministic-exports.md](0022-version-source-deterministic-exports.md) | Single version source (schema/VERSION.yaml) + deterministic content_hash exports (plan v2 E5.1/E5.2) | decided (implemented) |
+
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

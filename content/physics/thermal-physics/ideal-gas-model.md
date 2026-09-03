@@ -11,10 +11,12 @@ provenance:
   source_kind: textbook
   source: Atkins Physical Chemistry
 relationships:
-- type: related_to
+- type: approximates
   target: lhs:earth.atmosphere
 - type: related_to
   target: lhs:chem.matter
+- type: related_to
+  target: lhs:earth.atmosphere
 _notes: Model idealizes real gas; scope limited to moderate pressure/high temperature.
 ---
 

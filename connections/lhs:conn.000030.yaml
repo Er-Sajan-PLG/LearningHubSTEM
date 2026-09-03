@@ -14,8 +14,7 @@ assertion:
 context:
   domain: biology
   subdomain: metabolism-processes
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

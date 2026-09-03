@@ -14,8 +14,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: acids-bases
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

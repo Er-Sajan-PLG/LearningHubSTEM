@@ -34,12 +34,14 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
+- type: bridges
+  target: lhs:chem.ionic-bond
+- type: related_to
+  target: lhs:phys.coulombs-law
 - type: related_to
   target: lhs:phys.current
 - type: related_to
   target: lhs:phys.voltage
-- type: related_to
-  target: lhs:phys.coulombs-law
 
 ---
 

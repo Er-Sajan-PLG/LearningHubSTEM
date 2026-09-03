@@ -28,9 +28,14 @@ Read `docs/NORTHSTAR.md` for the three boundaries that must never blur.
 
 ```bash
 python3 scripts/validate.py        # exit 0 = valid; regenerates exports/knowledge.json
+python3 scripts/verify_all.py      # authoritative chain: validator + status-truth + reports + tests
 ```
 
-These are derived-output commands; `scripts/validate.py` is the only required check today.
+`verify_all.py` is what CI runs. It includes the cross-object gates added by ADR-0020/0021/0022
+(inline↔connections projection sync, registry coherence, context vocabularies, cycle detection,
+inference/confidence rules, deterministic exports, README status-truth). If validation complains
+about out-of-sync inline relationships, run `python3 scripts/sync_relationships.py` (the inline
+block is a generated projection — never hand-edit it).
 
 ## Starting work
 

@@ -14,8 +14,7 @@ assertion:
 context:
   domain: scientific-practice
   subdomain: epistemology-nature-of-science
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

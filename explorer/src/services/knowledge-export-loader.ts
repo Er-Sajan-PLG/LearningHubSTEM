@@ -34,8 +34,8 @@ export interface LhsEntity {
 export interface LhsKnowledgeExport {
   export_version: string;
   schema_version: string;
-  generated_at: string;
-  source: string;
+  content_hash?: string; // ADR-0022: deterministic stamp; replaces wall-clock generated_at
+  source?: string;
   entity_count: number;
   entities: LhsEntity[];
 }

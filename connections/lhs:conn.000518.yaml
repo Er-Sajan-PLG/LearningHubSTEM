@@ -13,8 +13,7 @@ assertion:
 context:
   domain: biology
   subdomain: genetics-heredity
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

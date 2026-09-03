@@ -10,8 +10,8 @@
   "canonical": 50,
   "unreviewed": 604,
   "total_reviewed_including_canonical": 50,
-  "active": 654,
-  "deprecated": 0,
+  "active": 650,
+  "deprecated": 4,
   "rejected": 0,
   "migrated": 641,
   "manually_authored": 13,
@@ -28,7 +28,8 @@
     "unreviewed": 604
   },
   "by_status": {
-    "active": 654
+    "active": 650,
+    "deprecated": 4
   },
   "by_origin": {
     "migrated": 641,

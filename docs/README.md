@@ -9,6 +9,10 @@ so the repo is self-contained.
 | `MASTER-VISION.md` | The full, authoritative vision. |
 | `GOVERNANCE.md` | Governance precedence and rules that apply to this repository. |
 | `STEMMA-SPECIFICATION.md` | Technical specification: format, IDs, entity model, validation, consumer contract. |
+| **`ARCHITECTURE-AUDIT-v1.0.md`** | **The latest architecture audit (2026-09-03) — supersedes `ARCHITECTURE-REVIEW-v0.3.md` (kept for history).** |
+| **`STEMMA-IMPLEMENTATION-PLAN-v2.md`** | **The forward implementation plan (E-series), derived from audit v1.0 — supersedes `STEMMA-IMPLEMENTATION-PLAN.md` (Scope D).** |
+| `ARCHITECTURE-REVIEW-v0.3.md` | Prior internal review (superseded; findings C.1–C.10 traceable). |
+| `STEMMA-IMPLEMENTATION-PLAN.md` | Prior Scope D plan (superseded; R-number findings register still referenced). |
 | `STEMMA-ROADMAP.md` | Phased plan; each phase requires explicit activation. |
 | `STEMMA-CONSUMER-SEAM.md` | The versioned export → adapter → consumer integration seam. |
 | `GLOSSARY.md` | Terms that recur across the ecosystem. |

@@ -1,5 +1,12 @@
 # STEMMA — Implementation Plan (Scope D: post-rename reconciliation & epistemic activation)
 
+> **STATUS: SUPERSEDED AS THE FORWARD PLAN (2026-09-03)** by
+> **[`STEMMA-IMPLEMENTATION-PLAN-v2.md`](STEMMA-IMPLEMENTATION-PLAN-v2.md)**, derived from the
+> latest audit [`ARCHITECTURE-AUDIT-v1.0.md`](ARCHITECTURE-AUDIT-v1.0.md). D1/D2 documentation
+> items remain valid and are absorbed into plan v2 **E0**; D3–D6 items still open are re-derived
+> and re-traced there (E1–E6). Retained for history and for its R-number findings register,
+> which plan v2 references.
+
 **Status:** PROPOSED — agent-drafted 2026-09-03 from the full repository review. **Not
 activated.** Like the roadmap rule, this plan is not authorization to implement: each phase
 requires an explicit human activation decision, and the human gates in §5 require explicit

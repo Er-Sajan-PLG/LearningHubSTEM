@@ -30,12 +30,14 @@ provenance:
   source_kind: standards-or-specification
   source: IUPAP / UNESCO Physics Education Standards
 relationships:
-  - type: logically_requires
-    target: lhs:phys.light
-  - type: related_to
-    target: lhs:phys.reflection
-  - type: related_to
-    target: lhs:phys.refraction
+- type: approximates
+  target: lhs:phys.light
+- type: logically_requires
+  target: lhs:phys.light
+- type: related_to
+  target: lhs:phys.reflection
+- type: related_to
+  target: lhs:phys.refraction
 ---
 
 ## Notes
