@@ -26,6 +26,8 @@ real_world_applications:
   - Odometer readings in vehicles.
   - Mapping and navigation (total route length).
   - Athletics (race distances).
+external_ids:
+  wd: Q126017
 provenance:
   ai_drafted: true
 relationships:

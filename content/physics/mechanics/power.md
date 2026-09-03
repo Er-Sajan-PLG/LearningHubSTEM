@@ -29,6 +29,8 @@ real_world_applications:
   - Engine power (horsepower, kilowatts).
   - Human power output (athletes, laborers).
   - Energy billing (kWh = power × time).
+external_ids:
+  wd: Q25342
 provenance:
   ai_drafted: true
 relationships:

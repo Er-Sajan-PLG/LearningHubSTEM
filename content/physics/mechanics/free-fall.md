@@ -33,6 +33,8 @@ real_world_applications:
 - Fountain water streams.
 - Dropping objects to measure gravitational acceleration.
 - Sports (basketball arc, projectile motion).
+external_ids:
+  wd: Q140028
 provenance:
   ai_drafted: true
 relationships:

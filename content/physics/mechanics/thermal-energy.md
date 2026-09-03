@@ -30,6 +30,8 @@ real_world_applications:
   - Engine operation.
   - Cooking and food preservation.
   - Thermal power generation.
+external_ids:
+  wd: Q209233
 provenance:
   ai_drafted: true
 relationships:

@@ -29,6 +29,8 @@ real_world_applications:
   - Tides (Moon's gravitational pull on Earth's oceans).
   - Satellite orbits.
   - Space exploration (gravitational assists).
+external_ids:
+  wd: Q11412
 provenance:
   ai_drafted: true
 relationships:

@@ -29,6 +29,8 @@ real_world_applications:
   - Space exploration (weightlessness in orbit).
   - Engineering loads (structural design must account for weight).
   - Athletics (high jump records at high altitude where g is slightly less).
+external_ids:
+  wd: Q25288
 provenance:
   ai_drafted: true
 relationships:

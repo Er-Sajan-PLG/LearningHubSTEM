@@ -27,6 +27,8 @@ real_world_applications:
   - Parachuting (terminal velocity involves balancing g with air resistance).
   - Satellite orbits (g decreases with altitude).
   - Engineering (structural loads due to gravity).
+external_ids:
+  wd: Q30006
 provenance:
   ai_drafted: true
 relationships:

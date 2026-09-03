@@ -30,6 +30,8 @@ real_world_applications:
   - Sports (a faster ball has much more energy).
   - Wind turbines (kinetic energy of wind converted to electricity).
   - Bullet penetration.
+external_ids:
+  wd: Q46276
 provenance:
   ai_drafted: true
 relationships:

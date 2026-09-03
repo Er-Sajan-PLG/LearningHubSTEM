@@ -66,6 +66,8 @@ VOCAB_DOMAINS = SCHEMA / "vocabularies" / "domains.yaml"
 VOCAB_SUBDOMAINS = SCHEMA / "vocabularies" / "subdomains.yaml"
 VOCAB_REGIMES = SCHEMA / "vocabularies" / "regimes.yaml"
 EXPORT = ROOT / "exports" / "knowledge.json"
+EXPORT_SCHEMA = SCHEMA / "export.schema.json"
+EXPORT_COMPAT = ROOT / "exports" / "knowledge.compat-0.1.json"
 
 ID_RE = re.compile(r"^lhs:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
 CONN_ID_RE = re.compile(r"^lhs:conn\.[0-9]{6}$")
@@ -83,6 +85,21 @@ SOURCE_KINDS = {
 }
 REVIEWED_STATUSES = {"human_reviewed", "canonical"}
 EXTENSION_REGISTRY = ROOT / "schema" / "extension-registry.yaml"
+AGENT_REGISTRY = SCHEMA / "agent-registry.yaml"
+AGENT_ID_RE = re.compile(r"^(human|process|llm|unknown):[A-Za-z0-9][A-Za-z0-9._/@-]*$")
+
+# external_ids (ADR-0016 / plan v2 E4.1): scheme -> value pattern. Unknown schemes
+# are allowed (registry stays open) but the schema restricts scheme names; known
+# schemes get format-checked so a typo'd QID cannot silently anchor an entity.
+EXTERNAL_ID_FORMATS = {
+    "wd": re.compile(r"^Q[1-9][0-9]*$"),
+    "orcid": re.compile(r"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"),
+    "doi": re.compile(r"^10\.[0-9]{4,9}/\S+$"),
+    "isbn": re.compile(r"^(97[89])?[0-9]{9}[0-9X]$"),
+    "qudt": re.compile(r"^[A-Za-z0-9_-]+$"),
+    "ucum": re.compile(r"^\S+$"),
+    "cas": re.compile(r"^[0-9]{2,7}-[0-9]{2}-[0-9]$"),
+}
 
 
 def load_versions() -> dict:
@@ -94,6 +111,97 @@ def load_versions() -> dict:
         if not data.get(key):
             raise SystemExit(f"error: {VERSION_SOURCE.relative_to(ROOT)} missing {key}")
     return data
+
+
+def load_agent_registry() -> dict[str, dict]:
+    """Load schema/agent-registry.yaml (plan v2 E4.2) -> {agent_id: entry}."""
+    if not AGENT_REGISTRY.exists():
+        return {}
+    data = yaml.safe_load(AGENT_REGISTRY.read_text(encoding="utf-8")) or {}
+    out: dict[str, dict] = {}
+    for entry in data.get("agents") or []:
+        if isinstance(entry, dict) and isinstance(entry.get("id"), str):
+            out[entry["id"]] = entry
+    return out
+
+
+def check_agent_registry_shape(agents: dict[str, dict], errors: list) -> None:
+    """Registry self-consistency: id prefix == class; well-formed ids."""
+    for aid, entry in agents.items():
+        if not AGENT_ID_RE.fullmatch(aid):
+            errors.append(f"schema/agent-registry.yaml: malformed agent id {aid!r}")
+            continue
+        prefix = aid.split(":", 1)[0]
+        if entry.get("class") != prefix:
+            errors.append(f"schema/agent-registry.yaml: agent {aid} class {entry.get('class')!r} != id prefix {prefix!r}")
+        if entry.get("status") not in ("active", "retired", "test"):
+            errors.append(f"schema/agent-registry.yaml: agent {aid} status must be active|retired|test")
+
+
+def _agent_refs(conn: dict) -> list[tuple[str, str]]:
+    """All (field, agent_id) pairs referenced by a connection's provenance."""
+    prov = conn.get("provenance") or {}
+    refs: list[tuple[str, str]] = []
+    for field in ("asserted_by", "generated_by"):
+        obj = prov.get(field)
+        if isinstance(obj, dict) and isinstance(obj.get("id"), str):
+            refs.append((f"provenance.{field}.id", obj["id"]))
+    for i, obj in enumerate(prov.get("reviewed_by") or []):
+        if isinstance(obj, dict) and isinstance(obj.get("id"), str):
+            refs.append((f"provenance.reviewed_by[{i}].id", obj["id"]))
+    for i, h in enumerate(prov.get("review_history") or []):
+        if isinstance(h, dict) and isinstance(h.get("reviewer"), str):
+            refs.append((f"provenance.review_history[{i}].reviewer", h["reviewer"]))
+    return refs
+
+
+def check_connection_agents(conn: dict, agents: dict[str, dict], errors: list) -> None:
+    """Every agent id in provenance must resolve in the agent registry (E4.2).
+
+    Additionally: the id's class prefix must match the declared `type`, a
+    reviewer must be a human agent, and newly authored (non-migrated) assertions
+    may not be attributed to an `unknown:` agent (plan v2 §4 metric)."""
+    here = f"{conn.get('_file', '<connection>')}:"
+    prov = conn.get("provenance") or {}
+    for field, aid in _agent_refs(conn):
+        if aid not in agents:
+            errors.append(f"{here} {field} '{aid}' not in schema/agent-registry.yaml (E4.2)")
+    for field in ("asserted_by", "generated_by"):
+        obj = prov.get(field)
+        if isinstance(obj, dict) and isinstance(obj.get("id"), str) and isinstance(obj.get("type"), str):
+            if not obj["id"].startswith(obj["type"] + ":"):
+                errors.append(f"{here} provenance.{field}: id '{obj['id']}' prefix != type '{obj['type']}'")
+    for i, obj in enumerate(prov.get("reviewed_by") or []):
+        if isinstance(obj, dict) and isinstance(obj.get("id"), str):
+            if not obj["id"].startswith(str(obj.get("type")) + ":"):
+                errors.append(f"{here} provenance.reviewed_by[{i}]: id '{obj['id']}' prefix != type '{obj.get('type')}'")
+    for i, h in enumerate(prov.get("review_history") or []):
+        if isinstance(h, dict) and isinstance(h.get("reviewer"), str) and not h["reviewer"].startswith("human:"):
+            errors.append(f"{here} provenance.review_history[{i}].reviewer must be a human agent (found '{h['reviewer']}')")
+    method = (prov.get("method") or {}).get("type") if isinstance(prov.get("method"), dict) else None
+    asserted = prov.get("asserted_by") or {}
+    if method != "migration" and isinstance(asserted, dict) and str(asserted.get("id", "")).startswith("unknown:"):
+        errors.append(f"{here} non-migrated assertion attributed to an unknown: agent — forbidden (E4.2)")
+
+
+def check_external_ids(obj: dict, errors: list, here: str) -> None:
+    """Format-check external_ids values for known schemes (E4.1)."""
+    ext = obj.get("external_ids")
+    if ext is None:
+        return
+    if not isinstance(ext, dict):
+        errors.append(f"{here} external_ids must be a mapping")
+        return
+    for scheme, value in ext.items():
+        values = value if isinstance(value, list) else [value]
+        pattern = EXTERNAL_ID_FORMATS.get(str(scheme))
+        for v in values:
+            if not isinstance(v, str) or not v.strip():
+                errors.append(f"{here} external_ids.{scheme} contains a non-string/empty value")
+            elif pattern and not pattern.fullmatch(v):
+                errors.append(f"{here} external_ids.{scheme} value {v!r} does not match the {scheme} format")
+        if isinstance(value, list) and len(set(value)) != len(value):
+            errors.append(f"{here} external_ids.{scheme} has duplicate values")
 
 
 def load_vocabulary(path: Path) -> Any:
@@ -714,6 +822,7 @@ def main() -> int:
         validate_entity(entity, errors, filename_slug=path.stem)
         check_extensions(entity, "entity", errors, f"{entity['_file']}:")
         check_historical(entity, errors, f"{entity['_file']}:")
+        check_external_ids(entity, errors, f"{entity['_file']}:")
         _id = entity.get("id")
         if isinstance(_id, str):
             if _id in entities:
@@ -760,12 +869,28 @@ def main() -> int:
         "scales": (load_vocabulary(VOCAB_REGIMES) or {}).get("scales") or [],
     }
     warnings: list = []
+    agents = load_agent_registry()
+    if not agents:
+        errors.append("schema/agent-registry.yaml missing or empty (plan v2 E4.2: every provenance agent must resolve)")
+    check_agent_registry_shape(agents, errors)
     for conn in connections.values():
+        check_connection_agents(conn, agents, errors)
         check_connection_context(conn, vocab, errors)
         check_assertion_epistemics(conn, errors, warnings)
         check_lifecycle_pointers(conn, connections, errors)
     check_relationship_cycles(connections, registry, errors)
     check_inline_projection(entities, connections, errors)
+
+    # Entity-side reviewer ids resolve in the agent registry too (E4.2).
+    for _id, entity in entities.items():
+        reviewer = (entity.get("provenance") or {}).get("reviewer")
+        if isinstance(reviewer, str) and reviewer not in agents:
+            errors.append(f"{entity['_file']}: provenance.reviewer '{reviewer}' not in schema/agent-registry.yaml (E4.2)")
+    # Extension registrants resolve as well.
+    for ext_entry in (load_extension_registry().get("extensions") or []):
+        reg = ext_entry.get("registered_by") if isinstance(ext_entry, dict) else None
+        if isinstance(reg, str) and reg not in agents:
+            errors.append(f"schema/extension-registry.yaml: registered_by '{reg}' not in schema/agent-registry.yaml (E4.2)")
 
     # deprecated_by must resolve to an existing entity (never a dangling pointer).
     for _id, entity in entities.items():
@@ -821,12 +946,48 @@ def main() -> int:
             for i in sorted(sources)
         ],
     }
+    # Contract v1.0 (ADR-0023 / gate G-A): the export must conform to
+    # schema/export.schema.json BEFORE it is written — a producer can never ship
+    # a payload that violates the contract it advertises.
+    if HAVE_JSONSCHEMA and EXPORT_SCHEMA.exists():
+        export_schema = json.loads(EXPORT_SCHEMA.read_text(encoding="utf-8"))
+        contract_errors = [
+            f"export contract violation ({EXPORT_SCHEMA.name}): {err.message}"
+            for err in cast(Any, Draft202012Validator)(export_schema).iter_errors(payload)
+        ]
+        if contract_errors:
+            print(f"FAIL: {len(contract_errors)} export contract problem(s)", file=sys.stderr)
+            for line in contract_errors[:20]:
+                print(f"  - {line}", file=sys.stderr)
+            write_validation_report(conforms=False, results=contract_errors, content_hash=None)
+            return 1
     EXPORT.parent.mkdir(parents=True, exist_ok=True)
     EXPORT.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     print(f"OK: {len(entities)} entities valid; export written to {EXPORT.relative_to(ROOT)}")
+
+    # Co-release window artifact (ADR-0023 §Consequences): an entities-only view
+    # stamped with the legacy contract version so a consumer still pinned to the
+    # previous contract can be repointed while its adapter upgrades. Removed when
+    # `legacy_export_version` disappears from schema/VERSION.yaml.
+    legacy = versions.get("legacy_export_version")
+    if legacy:
+        compat = {
+            "export_version": legacy,
+            "schema_version": payload["schema_version"],
+            "content_hash": payload["content_hash"],
+            "kernel_version": payload["kernel_version"],
+            "source": payload["source"] + " — COMPATIBILITY VIEW; upgrade to export_version "
+                      + payload["export_version"],
+            "entity_count": payload["entity_count"],
+            "entities": payload["entities"],
+        }
+        EXPORT_COMPAT.write_text(json.dumps(compat, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"OK: legacy {legacy} compatibility view written to {EXPORT_COMPAT.relative_to(ROOT)}")
+    elif EXPORT_COMPAT.exists():
+        EXPORT_COMPAT.unlink()
     write_validation_report(conforms=True, results=[], content_hash=content_hash_value)
     print("OK: validation report written to reports/validation-report.json")
 

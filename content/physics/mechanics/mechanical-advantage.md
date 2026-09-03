@@ -29,6 +29,8 @@ real_world_applications:
   - Pulleys (cranes, elevators).
   - Inclined planes (ramps).
   - Wheel and axle (steering wheels).
+external_ids:
+  wd: Q5378501
 provenance:
   ai_drafted: true
 relationships:

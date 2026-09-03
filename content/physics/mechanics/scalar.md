@@ -26,6 +26,8 @@ real_world_applications:
   - Temperature readings.
   - Time intervals.
   - Mass and energy measurements.
+external_ids:
+  wd: Q181175
 provenance:
   ai_drafted: true
 relationships:

@@ -34,6 +34,8 @@ real_world_applications:
 - Walking (foot pushes backward on ground; ground pushes forward on foot).
 - Swimming (water pushed backward; swimmer moves forward).
 - Recoil of a gun.
+external_ids:
+  wd: Q3235565
 provenance:
   ai_drafted: true
 historical:

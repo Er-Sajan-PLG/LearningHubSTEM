@@ -29,6 +29,8 @@ real_world_applications:
   - Atmospheric pressure.
 key_experiments:
   - "Pressure in fluids increases with depth."
+external_ids:
+  wd: Q39552
 provenance:
   ai_drafted: true
 relationships:

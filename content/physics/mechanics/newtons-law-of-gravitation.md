@@ -29,6 +29,8 @@ real_world_applications:
   - Tides.
   - Satellite orbits.
   - Space exploration.
+external_ids:
+  wd: Q134465
 provenance:
   ai_drafted: true
 historical:
