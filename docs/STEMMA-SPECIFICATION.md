@@ -1,4 +1,4 @@
-# LEARNINGHUBSTEM — TECHNICAL SPECIFICATION
+# STEMMA — TECHNICAL SPECIFICATION
 
 **Version:** 0.1 (minimal foundation)
 **Status:** Specifies the canonical STEMMA foundation. **Phase 1 — Foundation
@@ -17,7 +17,7 @@ Phase 1 makes the minimum foundational decisions to stabilize STEMMA:
 - **and** an explicit freeze on foundational decisions so future change is governed, not drift
 
 The seed proves the architecture. It does **not** mean the MVP is activated. The full project
-stays inactive until a human says **"ACTIVATE LEARNINGHUBSTEM MVP"**.
+stays inactive until a human says **"ACTIVATE STEMMA MVP"**.
 
 ---
 
@@ -31,9 +31,19 @@ Each canonical entity is one `Markdown` file with a `YAML` frontmatter block and
 ```text
 STEMMA/
 ├── content/                  ← canonical (source of truth)
-│   ├── force.md
-│   ├── mass.md
-│   └── acceleration.md
+│   ├── physics/
+│   │   └── mechanics/
+│   │       ├── force.md
+│   │       ├── mass.md
+│   │       └── acceleration.md
+│   ├── math/ …
+│   ├── chemistry/ …
+│   ├── biology/ …
+│   ├── earth-space/ …
+│   ├── engineering/ …
+│   └── scientific-practice/ …
+├── connections/              ← first-class assertions (lhs:conn.*)
+├── sources/                  ← canonical source records (lhs:src.*)
 ├── schema/
 │   └── concept.schema.json   ← schema contract
 ├── scripts/
@@ -51,8 +61,8 @@ PyYAML + JSON Schema (both present in this workspace).
 - The frontmatter is the **first** thing in the file, delimited by `---` on its own lines.
 - Frontmatter is a single YAML mapping (the "entity object").
 - Prose `##` sections follow the frontmatter; the frontmatter is the canonical machine data.
-- Filenames equal the final ID slug (`lhs:phys.force` → `content/force.md`).
-- Entity files live directly under `content/` (no subdirectories in v0.1).
+- Filenames equal the final ID slug (`lhs:phys.force` → `content/physics/mechanics/force.md`).
+- Entity files live under `content/<domain>/<subdomain>/<slug>.md`.
 
 ### Minimal valid entity template
 
@@ -136,6 +146,25 @@ lhs:<domain>.<slug>
   be valid `lhs:` IDs and must not equal the entity's own `id`.
 - **ID reuse**: **never.** A deprecated identifier may never silently be assigned to a different
   concept.
+
+### Assertion (connection) identity — ADR-0026
+
+A connection (`lhs:conn.NNNNNN`, §ADR-0011) is an assertion, and what it *means* is the triple
+`(source, relation, target)` plus `polarity` and `context.qualifiers`:
+
+- **Claim signature (derived).** `sha256(source | relation | target | polarity | sorted qualifiers)`
+  identifies the *proposition*, not the record. It is never stored in canonical YAML; the export
+  emits it as `connections[].claim_signature` so consumers can detect duplicate or changed claims
+  without recomputing. Two **active** connections with the same signature are a validation error.
+- **The triple is immutable.** Correcting a claim is a supersession, never an in-place edit:
+  `assertion.status: superseded` + `lifecycle.replaced_by`, with the corrected claim asserted
+  under a **new** connection ID. Evidence, review status, confidence and context metadata may
+  change freely — only the claim itself is frozen.
+- **Removal requires retirement.** A connection that disappears from `connections/` without having
+  been `superseded` (or `deprecated`) is a gate failure, because consumers may still hold its ID.
+
+Enforced by `scripts/validate.py` (duplicate-claim gate) and `scripts/check_id_immutability.py`
+(git-history triple guard); see `docs/decisions/0026-claim-identity.md`.
 
 ---
 
@@ -420,7 +449,7 @@ The export contract guarantees:
   a bug, not a source of truth
 
 Consumers never need access to internal canonical implementation details. This contract is useful
-to a future consumer such as STEM-TUITION **without** making STEM-TUITION a dependency of
+to a future consumer such as LearningHub **without** making LearningHub a dependency of
 STEMMA.
 
 Do **not** build a REST API, GraphQL, microservice, authentication, or cloud infrastructure to
@@ -482,19 +511,16 @@ Do not build a semantic-web stack for v0.1.
 
 ## 15. Licensing
 
-**LICENSE DECISION PENDING — no license has been chosen anywhere in this workspace.**
+**Decided 2026-09-02 (ADR-0001).** STEMMA is licensed on two tracks, matching the content/code
+distinction:
 
-The candidate analysis (see `docs/decisions/0001-license.md`) is:
+| Track | License | Scope |
+|-------|---------|-------|
+| Knowledge / content | **CC BY 4.0** | `content/`, `connections/`, `sources/`, `docs/` — see `LICENSE` |
+| Code / tooling | **MIT** | `scripts/`, `schema/`, tests — see `LICENSE-CODE` |
 
-| Track | Candidates | Implication | Recommendation |
-|-------|-----------|-------------|----------------|
-| Knowledge / content | **CC BY 4.0** | attribution required; reusable/remixable/commercial with credit; interoperable | **CC BY 4.0** (recommended) |
-| Knowledge / content | CC0 | public-domain dedication; maximal openness; no attribution retained | acceptable alternative |
-| Code / tooling | **MIT** | permissive, minimal, no patent terms | **MIT** (recommended for the small validator/scripts) |
-| Code / tooling | Apache-2.0 | permissive + explicit patent grant + contribution terms | better if external contributors/patents matter |
-
-**Nothing is finalized until the human decides.** Do not add contradictory license files to make
-the repository appear complete.
+Attribution is required for the knowledge content; the tooling is permissive. No contradictory
+license claim may be added without a decision record (see `docs/decisions/0001-license.md`).
 
 ---
 
@@ -502,8 +528,8 @@ the repository appear complete.
 
 | # | Decision | Status |
 |---|----------|--------|
-| 1 | Knowledge/content license (CC BY 4.0 vs CC0) | PENDING |
-| 2 | Code/tooling license (MIT vs Apache-2.0) | PENDING |
+| 1 | Knowledge/content license (CC BY 4.0 vs CC0) | DECIDED 2026-09-02 — CC BY 4.0 (ADR-0001) |
+| 2 | Code/tooling license (MIT vs Apache-2.0) | DECIDED 2026-09-02 — MIT (ADR-0001) |
 | 3 | Initial domain scope | PENDING |
 | 4 | Phase 1 foundation freeze activation | PENDING (recommend: approve) |
 | 5 | Final canonical format approval (Markdown + YAML) | DOCUMENTED — approval PENDING |

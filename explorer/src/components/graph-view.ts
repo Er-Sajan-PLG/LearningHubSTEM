@@ -150,7 +150,8 @@ export class GraphView {
           const isConnected = link.source === this.selectedNodeId || link.target === this.selectedNodeId;
           return isConnected ? 1 : 0.06;
         }
-        return 0.55;
+        // E1.6: opacity carries assertion trust — unreviewed claims read as faint edges.
+        return link.trustOpacity ?? 0.55;
       })
       .linkDirectionalParticles((link: any) => link.directional ? 2 : 0)
       .linkDirectionalParticleSpeed((link: any) => link.particleSpeed || 0.005)

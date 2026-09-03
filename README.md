@@ -85,7 +85,7 @@ The authoritative model for this repository lives in the workspace docs:
 
 ## Consumers
 
-The first consumer proof is STEM-TUITION's shell app (the LearningHub application). The seam is
+The first consumer proof is LearningHub's shell app (formerly STEM-TUITION). The seam is
 documented in `docs/STEMMA-CONSUMER-SEAM.md` (export contract, adapter, ownership boundaries,
 regeneration and test commands). STEMMA stays independent: it only publishes the export;
 consumers adapt it to their own curriculum and products.

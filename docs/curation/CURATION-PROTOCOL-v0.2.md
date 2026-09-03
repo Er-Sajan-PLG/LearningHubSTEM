@@ -1,6 +1,6 @@
 # Curation Protocol — v0.2
 
-**Status:** Authoritative review protocol for LearningHubSTEM Phase D.
+**Status:** Authoritative review protocol for STEMMA Phase D.
 
 ## 1. Status definitions
 

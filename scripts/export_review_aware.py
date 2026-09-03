@@ -18,6 +18,7 @@ def _versions() -> dict:
     return yaml.safe_load(VERSION_SOURCE.read_text(encoding="utf-8"))
 
 from graph_policy import should_include_connection  # type: ignore
+from validate import claim_signature  # type: ignore — derived claim identity (E4.3 / ADR-0026)
 
 
 def main():
@@ -40,7 +41,12 @@ def main():
             "kernel_version": base.get("kernel_version"),
             "policy": policy,
             "count": len(filtered),
-            "connections": sorted(filtered, key=lambda x: x["id"]),
+            # `claim_signature` is derived (ADR-0026): identity of the asserted
+            # proposition, so a consumer can deduplicate claims across views.
+            "connections": [
+                {**c, "claim_signature": claim_signature(c)}
+                for c in sorted(filtered, key=lambda x: x["id"])
+            ],
         }
         path = ROOT / f"exports/knowledge.{policy}.json"
         path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")

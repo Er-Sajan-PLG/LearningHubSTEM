@@ -17,6 +17,18 @@ should be retained for history only.
 ADR-0024 (**gate G-C pending**); E6.1 campaign **tooling + 4 batch worksheets** generated
 (`reports/e61-dependency-campaign/`) — review decisions themselves remain human work; E6.7
 dependency-edge dashboard slice included. All other items unchanged and still gated as marked.
+**2026-09-04 (E0 close-out):** E0.1/E0.2/E0.3 implemented — GOVERNANCE + ROADMAP now carry the
+one status story; ADR-0001 licensing **decided 2026-09-02** (CC BY 4.0 content / MIT code) with
+GLOSSARY / consumer-seam / spec §15 reconciled; R1 rename leftovers, R2 activation-phrase
+re-point (**ADR-0026**: "ACTIVATE STEMMA MVP"), and the R3 consumer-name sweep
+(STEM-TUITION → LearningHub) applied across current docs.
+**Wave 5 (2026-09-04):** E1.6 ✅ (explorer draws edges from `connections[]` and annotates them by
+`assertion.review.status` — trust legend + inspector badges; inline only as fallback);
+E4.3 ✅ + E4.5 ✅ (derived `claim_signature`, duplicate-claim gate, connection-triple
+immutability guard — ADR-0026, landing with validator rule + guard + tests);
+E5.5 ✅ (`docs/MIGRATIONS.md`); E7.4 ✅ (validator no longer writes into `explorer/`; the
+explorer syncs its own export copy). Remaining un-gated: E1.7, E4.4, E5.3, E7.1/E7.3,
+E6.3/E6.4 cadence.
 
 **Derived from:** `docs/ARCHITECTURE-AUDIT-v1.0.md` — **the latest architecture audit**
 (supersedes `ARCHITECTURE-REVIEW-v0.3.md`). Every task below carries a traceability tag
@@ -78,9 +90,9 @@ Sizes: S ≤ 1h · M ≤ half day · L ≤ 2 days · X = ongoing cadence.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E0.1 | One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
-| E0.2 | Licensing record reconciliation: set ADR-0001 `decided` with the human approval date; fix GLOSSARY/consumer-seam "pending" lines | R4 | S |
-| E0.3 | Remaining rename leftovers (R1 list) + docs/README.md map refresh (this plan adds the audit + v2 plan rows) | R1, R6 | S |
+| E0.1 | ✅ One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
+| E0.2 | ✅ Licensing record reconciliation: ADR-0001 `decided` (2026-09-02 — CC BY 4.0 content / MIT code); GLOSSARY/consumer-seam/spec §15 "pending" lines fixed | R4 | S |
+| E0.3 | ✅ Rename leftovers (R1 list) + R2 activation phrase (ADR-0026) + R3 consumer-name sweep + docs/README.md map refresh | R1, R2, R3, R6 | S |
 | E0.4 | ✅ **CI doc-status gate:** a script asserts the README status line matches `reports/epistemic-summary` counts (entity counts, reviewed %) — status claims become mechanically checkable | F2 (systemic) | S |
 
 ### E1 — Single source of truth for relationships (the pivot) — L
@@ -94,7 +106,7 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 | E1.3 | ✅ Validator consistency gate: inline block must equal the projection — drift = exit 1 | F1 | M |
 | E1.4 | ✅ Contribution rule: new/edited relationships enter via `connections/` only; validator rejects new inline entries not present in connections | F1 | S |
 | E1.5 | ✅ (ADR-0023) **Export contract v1.0:** `connections` + `sources` become required members; version constants read from the single source (E5.1); coordinate LearningHub adapter (`SUPPORTED_EXPORT_VERSION`) co-release per `EXPORT-VERSION-MIGRATION-Q3.md` | F1, F5, C.2 | M + gate G-A |
-| E1.6 | Explorer graph builds from `connections[]` (inline only as fallback); annotate by `review.status` (trust visualization) | F1, R8 | M |
+| E1.6 | ✅ **implemented 2026-09-04:** Explorer graph builds from `connections[]` (inline only as fallback); edges annotated by `assertion.review.status` (trust: width/opacity + legend + inspector badges); regression-checked by `npm --prefix explorer run verify` | F1, R8 | M |
 | E1.7 | (Gated by G-A completion) Remove `relationships[]` from `concept.schema.json` and the export; retire the projection | F1 | M |
 
 ### E2 — Registry & vocabulary integrity — L
@@ -126,9 +138,9 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 |------|--------|-------|------|
 | E4.1 | ✅ (ADR-0023) `external_ids` first-class (complete ADR-0016): namespaced multi-valued (`wd:`, `orcid:`, `doi:`, `isbn:`, `qudt:`, `ucum:`); seed with Wikidata QIDs for the mechanics batch | F6, R24 | M |
 | E4.2 | ✅ (ADR-0023; `schema/agent-registry.yaml`) agent registry (id, class, external_id, display name); validator resolves every `human:`/`process:`/`llm:`/`unknown:` agent ID against it | F2 | M |
-| E4.3 | **Claim signature** (derived): `hash(source|relation|target|polarity|qualifiers)`; duplicate-claim detection in the gate (ADR-0016 completion) | F7 | S |
+| E4.3 | ✅ **implemented 2026-09-04 (ADR-0026):** **Claim signature** (derived): `sha256(source\|relation\|target\|polarity\|sorted qualifiers)`, emitted per connection in the export; duplicate active claims = gate error | F7 | S |
 | E4.4 | Object `content_hash` + edit-in-place detection: a `human_reviewed`/`canonical` object whose content changed without a lifecycle transition fails CI | F5 | M |
-| E4.5 | Connection-triple immutability guard (extend `check_id_immutability.py` to `connections/` source/relation/target history) | F11, R12 | M |
+| E4.5 | ✅ **implemented 2026-09-04 (ADR-0026):** Connection-triple immutability guard — `check_id_immutability.py` reconstructs `connections/` source/relation/target history from git; in-place triple edits and deletions-without-supersession fail | F11, R12 | M |
 | E4.6 | Colon-filename migration (`conn.000001.yaml`, `src.<slug>.yaml`; IDs untouched) | F11, R11 | M + gate G-E |
 | E4.7 | HTTPS URIs + real schema `$id`s (replace `learninghubstem.example`) — gated with publication | F13, R19 | S + gate G-F |
 
@@ -140,7 +152,7 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 | E5.2 | ✅ **Deterministic exports:** stamp content-hash instead of `generated_at`; CI step `validate && git diff --exit-code exports/` (stale export fails the build) | F8, R9 | S |
 | E5.3 | **Content releases:** git tag + manifest (file hashes) + changelog per release; first tagged release once E1 lands | F5, R18 | M |
 | E5.4 | Decide: stop tracking `exports/` (publish as release assets) or keep tracked-but-bit-identical with the E5.2 gate | F8 | S + gate G-E |
-| E5.5 | `MIGRATIONS.md` log; every schema change appends (old-data-validates-against-old-schema note) | F6 | S |
+| E5.5 | ✅ **implemented 2026-09-04:** `docs/MIGRATIONS.md` log; every schema change appends (old-data-validates-against-old-schema note) | F6 | S |
 
 ### E6 — Epistemic activation (the core value; continuous cadence) — X
 
@@ -163,7 +175,7 @@ Aligned with Scope D D4; reordered by the audit's trust-first logic.
 | E7.1 | Formalize the **policy-graded query contract** (`all/reviewed/canonical/trusted`) in `STEMMA-CONSUMER-SEAM.md`: every AI-facing view/query carries a trust floor | Audit Phase 11 | S |
 | E7.2 | **MCP server (minimal):** `get_entity`, `get_assertions(policy)`, `get_prerequisites(transitive, policy)`, `search` — reads the export, returns provenance + review status inline; local stdio server, no hosting | Audit Phase 11 | M + gate G-F |
 | E7.3 | Deterministic **context packs:** subgraph→text projection with per-assertion attribution lines; derived artifact | Audit Phase 11 | M |
-| E7.4 | Move the explorer out of `content/`-coupling: validator stops writing into `explorer/`; sync via build script only (full relocation to its own repo at G-G) | F12 | S |
+| E7.4 | ✅ **implemented 2026-09-04:** validator no longer writes into `explorer/`; `explorer/public/exports/` is git-ignored and synced by `explorer/scripts/sync-export.mjs` (predev/prebuild) | F12 | S |
 
 ### E8 — Publication & interop (LATER; gated) — L
 
@@ -220,8 +232,8 @@ automated entity resolution.
 
 | Gate | Decision | Unblocks |
 |------|----------|----------|
-| G-A | ✅ decided 2026-09-04 (ADR-0023): contract **v1.0** now; compat `0.1` view during LearningHub co-release | E1.5 ✅; E1.6–E1.7 open |
-| G-B | Entity-type expansion ADR (`phenomenon`, `model`, `experiment`; `misconception_of`) | E2.2 |
+| G-A | ✅ decided 2026-09-04 (ADR-0023): contract **v1.0** now; compat `0.1` view during LearningHub co-release | E1.5 ✅, E1.6 ✅; E1.7 open (waits for the consumer to read `connections[]`) |
+| G-B | ✅ decided 2026-09-03 (ADR-0021): entity types `phenomenon`/`model`/`experiment`; `misconception` participates via `related_to` | E2.2 ✅ |
 | G-C | Math-layer ADR (canonical LaTeX + symbol bindings + QUDT/UCUM) — **draft ready: ADR-0024** | E3 |
 | G-D | Reviewer identity policy (ORCID-backed recommended) | E6.5 |
 | G-E | Colon-filename migration + exports tracking model | E4.6, E5.4 |

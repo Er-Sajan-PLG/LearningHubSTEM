@@ -18,6 +18,21 @@ Outcomes (must match the plan's TDD table):
   aliased                   -> PASS   (deprecated_by / aliases; alias references must be valid)
   reassigned                -> FAIL   (same ID now means a DIFFERENT entity: name/domain changed)
   deleted-and-reused        -> FAIL   (an ID was deleted, then a different entity reused it)
+
+---
+
+Plan v2 E4.5 extends the same invariant to CONNECTIONS (ADR-0026): an assertion's
+(source, relation, target) triple is what `lhs:conn.NNNNNN` *means*, so it is immutable for
+the life of the id. Correcting a claim is not an edit — it is a supersession:
+`assertion.status: superseded` + `lifecycle.replaced_by: lhs:conn.NNNNNN` and a NEW id for
+the corrected claim. Deleting a connection file without superseding it is also a violation
+(the id vanishes while its claim is still referenced by consumers).
+
+  new triple                        -> PASS
+  unchanged triple                  -> PASS   (only evidence/review metadata changed)
+  triple corrected via supersession -> PASS   (old id superseded + replaced_by set)
+  triple edited in place            -> FAIL   (the same id now asserts a different claim)
+  deleted without supersession      -> FAIL
 """
 from __future__ import annotations
 import pathlib
@@ -27,6 +42,10 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
+CONNECTIONS = ROOT / "connections"
+
+# Connection statuses that legally retire an assertion (ADR-0011 / ADR-0026).
+CONNECTION_RETIRED_STATUSES = ("superseded", "deprecated")
 
 _ID_RE = re.compile(r"^id:\s*(lhs:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*)", re.MULTILINE)
 _NAME_RE = re.compile(r"^name:\s*(.+)$", re.MULTILINE)
@@ -104,6 +123,131 @@ def live_entities() -> dict[str, dict]:
     return live
 
 
+def parse_connection(text: str) -> dict:
+    """Extract a connection's identity fields without a YAML dependency.
+
+    Kept deliberately dependency-free (this guard must run in a bare CI checkout):
+    top-level `id/source/relation/target`, plus `assertion.status` and
+    `lifecycle.replaced_by` from their two-space-indented blocks.
+    """
+    out: dict[str, str] = {}
+    block: str | None = None
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or stripped.startswith("---"):
+            continue
+        indent = len(line) - len(line.lstrip())
+        if indent == 0:
+            key, _, val = stripped.partition(":")
+            key = key.strip()
+            if val.strip() == "":
+                block = key  # start of a nested block (assertion:/lifecycle:/...)
+                continue
+            block = key
+            out[key] = val.strip().strip("\"'")
+        elif indent == 2 and block in ("assertion", "lifecycle"):
+            key, _, val = stripped.partition(":")
+            out[f"{block}.{key.strip()}"] = val.strip().strip("\"'")
+    return out
+
+
+def build_connection_history() -> dict[str, list[dict]]:
+    """For each connection id, record every distinct (source, relation, target) version.
+
+    History comes from git (the single source of truth), following renames so the
+    pending E4.6 colon-filename migration cannot be mistaken for a deletion.
+    """
+    history: dict[str, list[dict]] = {}
+    if not CONNECTIONS.exists():
+        return history
+    for path in sorted(CONNECTIONS.rglob("*.yaml")):
+        rel = path.relative_to(ROOT).as_posix()
+        shas = list(reversed(git("log", "--format=%H", "--follow", "--", rel).split()))
+        seen: set[tuple] = set()
+        for sha in shas:
+            try:
+                blob = git("show", f"{sha}:{rel}")
+            except RuntimeError:
+                continue  # path did not exist at that commit (pre-rename history)
+            conn = parse_connection(blob)
+            cid = conn.get("id")
+            if not cid:
+                continue
+            stamp = (
+                conn.get("source"),
+                conn.get("relation"),
+                conn.get("target"),
+                conn.get("assertion.status"),
+                conn.get("lifecycle.replaced_by"),
+            )
+            if stamp in seen:
+                continue  # drop consecutive identical versions
+            seen.add(stamp)
+            history.setdefault(cid, []).append(
+                {
+                    "commit": sha[:9],
+                    "source": conn.get("source"),
+                    "relation": conn.get("relation"),
+                    "target": conn.get("target"),
+                    "status": conn.get("assertion.status"),
+                    "replaced_by": conn.get("lifecycle.replaced_by") or None,
+                }
+            )
+    return history
+
+
+def live_connections() -> dict[str, dict]:
+    """Connections present in HEAD: id -> parsed identity fields."""
+    live: dict[str, dict] = {}
+    if not CONNECTIONS.exists():
+        return live
+    for path in sorted(CONNECTIONS.rglob("*.yaml")):
+        conn = parse_connection(path.read_text(encoding="utf-8"))
+        if conn.get("id"):
+            live[conn["id"]] = conn
+    return live
+
+
+def detect_connection_violations(history: dict[str, list[dict]], live: dict[str, dict]) -> list[str]:
+    """Pure detection for connection-triple immutability (E4.5) — dict-in, list-out."""
+    violations: list[str] = []
+
+    # 1. The (source, relation, target) triple under an id never changes.
+    for cid in sorted(history):
+        stamps: list[tuple] = []
+        for v in history[cid]:
+            stamp = (v.get("source"), v.get("relation"), v.get("target"))
+            if any(part is None for part in stamp):
+                continue  # unparsable version — nothing to compare
+            if not stamps or stamps[-1][0] != stamp:
+                stamps.append((stamp, v["commit"]))
+        if len(stamps) > 1:
+            (first, first_sha), (second, second_sha) = stamps[0], stamps[1]
+            violations.append(
+                f"[connection-triple-changed] {cid}: "
+                f"{first[0]} –{first[1]}→ {first[2]} @{first_sha} became "
+                f"{second[0]} –{second[1]}→ {second[2]} @{second_sha}. "
+                "An assertion's (source, relation, target) triple is immutable: supersede this "
+                "connection (assertion.status: superseded + lifecycle.replaced_by) and assert "
+                "the corrected claim under a NEW connection id (ADR-0026)."
+            )
+
+    # 2. A connection id that disappears from HEAD must have been superseded/deprecated,
+    #    never silently dropped (consumers may still hold a reference to it).
+    for cid in sorted(set(history) - set(live)):
+        last = history[cid][-1]
+        if (last.get("status") or "").strip() in CONNECTION_RETIRED_STATUSES or last.get("replaced_by"):
+            continue
+        violations.append(
+            f"[connection-deleted-without-supersession] {cid}: present in history as "
+            f"{last.get('source')} –{last.get('relation')}→ {last.get('target')} "
+            f"(status {last.get('status')!r} @{last['commit']}) but gone from HEAD without "
+            "being superseded or deprecated. Restore it with assertion.status: superseded and "
+            "lifecycle.replaced_by, or delete only after a replacement connection exists."
+        )
+    return violations
+
+
 def detect_violations(history: dict[str, list[dict]], live: dict[str, dict]) -> list[str]:
     """Pure detection: given an id->[versions] history and a HEAD id->entity map, return any
     immutability violations. Empty = all pass.
@@ -167,8 +311,13 @@ def check_id_immutability() -> list[str]:
     return detect_violations(build_id_history(), live_entities())
 
 
+def check_connection_immutability() -> list[str]:
+    """E4.5: reconstruct connection-triple history from git, then run pure detection."""
+    return detect_connection_violations(build_connection_history(), live_connections())
+
+
 def main() -> int:
-    violations = check_id_immutability()
+    violations = check_id_immutability() + check_connection_immutability()
     if violations:
         print("ID-IMMUTABILITY FAILURES:")
         for v in violations:
@@ -176,6 +325,9 @@ def main() -> int:
         return 1
     print("PASS: all lhs: identifiers are immutable (no reassignment/reuse); "
           f"{len(live_entities())} live entities, {len(build_id_history())} historical ids")
+    live_conns = live_connections()
+    print("PASS: all connection triples are immutable (no in-place claim edits); "
+          f"{len(live_conns)} live connections, {len(build_connection_history())} historical connection ids")
     return 0
 
 

@@ -1,5 +1,5 @@
 import { ClusterInfo } from '../services/graph-projection';
-import { GRAPH_THEME } from '../styles/theme';
+import { ASSERTION_TRUST, GRAPH_THEME } from '../styles/theme';
 
 export interface LegendOptions {
   container: HTMLElement;
@@ -51,6 +51,18 @@ export class GraphLegend {
         </div>`;
     }
 
+    // Trust legend (E1.6 / ADR-0023): every edge is an assertion; trust modulates
+    // how strongly it is drawn. Unreviewed (machine-migrated) claims must look faint.
+    let trustHtml = `<div class="legend-group-title">Assertion trust</div>`;
+    for (const [status, style] of Object.entries(ASSERTION_TRUST)) {
+      if (status === 'unknown') continue; // internal fallback, not a review status
+      trustHtml += `
+        <div class="legend-row" title="${style.label}">
+          <span class="legend-line" style="background:#94a3b8;opacity:${style.opacity};height:${Math.max(1, Math.round(style.widthScale * 3))}px;"></span>
+          <span class="legend-label">${style.short}</span>
+        </div>`;
+    }
+
     // Cluster legend
     let clusterHtml = `<div class="legend-group-title">Topics / Domains</div>`;
     for (const cluster of this.clusters) {
@@ -66,6 +78,8 @@ export class GraphLegend {
         <button class="legend-toggle" id="legendToggle">◧ Legend</button>
         <div class="legend-body">
           ${edgeHtml}
+          <div class="legend-divider"></div>
+          ${trustHtml}
           <div class="legend-divider"></div>
           ${clusterHtml}
         </div>

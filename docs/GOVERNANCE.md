@@ -14,7 +14,7 @@
 ## 1. Governance precedence
 
 ```
-LEVEL 1 — LEARNINGHUBSTEM INVARIANTS (non-overridable)
+LEVEL 1 — STEMMA INVARIANTS (non-overridable)
           ↓
 LEVEL 2 — PROJECT / REPOSITORY GOVERNANCE
           ↓
@@ -26,7 +26,7 @@ LEVEL 3 — IMPLEMENTATION DETAILS
 - STEMMA is an **independent, open, structured, reusable STEM knowledge foundation**.
 - STEMMA is **not** owned by, subordinate to, or a backend of any product.
 - **Curriculum is external.** It is a consumer of the foundation, never a component of it.
-- **Products are consumers.** STEM-TUITION, JARVIS, STEM-GAME, STEM Lab, and unknown future
+- **Products are consumers.** LearningHub, JARVIS, STEM-GAME, STEM Lab, and unknown future
   products all sit **below** STEMMA in the dependency direction.
 - **Knowledge order ≠ curriculum order.** Relationships live in the knowledge layer;
   sequencing is a curriculum decision.
@@ -39,8 +39,8 @@ A repository's governance may refine how these apply, but may **not** silently r
 ### Level 2 — Project / repository governance
 
 A repository decides its own framework, language, folder structure, testing, deployment,
-internal APIs, and workflow. For example `STEM-TUITION/AGENTS.md` and
-`STEM-TUITION/docs/CONSTITUTION.md` are authoritative inside that repository.
+internal APIs, and workflow. For example `LearningHub/AGENTS.md` and
+`LearningHub/docs/CONSTITUTION.md` are authoritative inside that repository.
 
 ### Level 3 — Implementation details
 
@@ -56,13 +56,13 @@ STEMMA is the open foundation. Consumers build on top of it. There is **no**
 is **not** an application-services backend.
 
 ```
-                    LEARNINGHUBSTEM
+                    STEMMA
                  OPEN STEM FOUNDATION
                            │
           ┌────────────────┼────────────────┐
           │                │                │
           ▼                ▼                ▼
-     Consumer A       STEM-TUITION      Consumer C
+     Consumer A       LearningHub       Consumer C
      / Research       / Curriculum      / Future Tool
           │                │                │
           ▼                ▼                ▼
@@ -78,12 +78,12 @@ Distinguish **existing**, **planned**, and **possible** integrations. Today:
 
 | Project | Status |
 |---------|--------|
-| `STEM-TUITION` | ACTIVE (flagship product; a consumer today by intent, not by code) |
+| `LearningHub` | ACTIVE (flagship product; a consumer today by intent, not by code) |
 | `JARVIS` | ACTIVE (AI platform; **planned** consumer) |
 | `3D-Ludo` | PROTOTYPE (independent game; not a consumer) |
-| `STEMMA` | SEED ONLY (minimal proof; full MVP **not** activated) |
+| `STEMMA` | ACTIVE (live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities) |
 | `STEM-GAME` | DEFERRED (empty folder; planned consumer) |
-| STEM Lab | OUT OF SCOPE (referenced in STEM-TUITION constitution only) |
+| STEM Lab | OUT OF SCOPE (referenced in LearningHub constitution only) |
 
 Do not describe planned integrations as existing ones.
 
@@ -103,7 +103,7 @@ Classify every significant piece of work:
 **Deferred / not current scope** unless the human explicitly activates it:
 
 - STEM-GAME production, STEM Lab, JARVIS ↔ STEMMA integration
-- Full STEMMA MVP (activation phrase: **"ACTIVATE LEARNINGHUBSTEM MVP"**)
+- Full STEMMA MVP (activation phrase: **"ACTIVATE STEMMA MVP"**)
 - Microservices, cloud infrastructure, auth, payments, analytics, recommendation engines,
   vector/graph databases, generalized AI orchestration, shared platform services, cross-product
   identity or databases.

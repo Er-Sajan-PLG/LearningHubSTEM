@@ -57,7 +57,7 @@ only-inline), with a minor 6-pair projection lag.
 |----------|-------|
 | `content/*.md` inline `relationships[]` | legacy consumers (backward-compat projection) |
 | `exports/knowledge.json` `connections[]` | NEW (this phase) — the canonical relation source |
-| STEM-TUITION `lhs-adapter.ts` `getRelatedEntities` | reads `entities[].relationships` today; should migrate to `connections` when ready (follow-up) |
+| LearningHub `lhs-adapter.ts` `getRelatedEntities` | reads `entities[].relationships` today; should migrate to `connections` when ready (follow-up) |
 | `explorer` graph | builds graph; can use `connections[]` now (they are exported) |
 
 ## 6. Recommendation / follow-up

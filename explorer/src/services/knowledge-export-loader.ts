@@ -38,6 +38,9 @@ export interface LhsConnection {
   relation: string;
   target: string;
   assertion: { status: string; type: string; review: { status: string } };
+  context?: { domain?: string; subdomain?: string; qualifiers?: unknown[] } | null;
+  /** DERIVED claim identity: sha256(source|relation|target|polarity|qualifiers) (ADR-0026). */
+  claim_signature?: string;
 }
 
 export interface LhsKnowledgeExport {

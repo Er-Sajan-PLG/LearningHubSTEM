@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS knowledge ingestion — extract text from PDFs, images, and scanned docs.
+"""STEMMA (`lhs:` namespace) knowledge ingestion — extract text from PDFs, images, and scanned docs.
 
 This is the **extraction layer** of the canonical-knowledge pipeline. It turns an
 arbitrary document (PDF of any size, PNG/JPG/TIFF image, scanned PDF) into
@@ -286,7 +286,7 @@ if __name__ == "__main__":
     import argparse
     import sys
 
-    p = argparse.ArgumentParser(description="LHS knowledge ingestion (extract text from docs).")
+    p = argparse.ArgumentParser(description="STEMMA knowledge ingestion (extract text from docs).")
     p.add_argument("path", help="PDF or image file to ingest")
     p.add_argument("--json", action="store_true", help="emit extraction + source candidate as JSON")
     args = p.parse_args()
