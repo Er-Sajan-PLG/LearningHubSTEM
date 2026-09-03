@@ -10,6 +10,10 @@ Its D1/D2 documentation-reconciliation items remain valid and are absorbed into 
 its D3–D6 items are re-derived here where still open (traced to the audit). The prior plan
 should be retained for history only.
 
+**Implementation status:** E0.1/E0.4, E1.1–E1.4, E2.1–E2.7, E5.1/E5.2, E6.2 **implemented 2026-09-03**
+(ADRs 0020/0021/0022; owner-directed activation "start implementing"). The export contract
+remains **v0.1** (G-A pending); all other items unchanged and still gated as marked.
+
 **Derived from:** `docs/ARCHITECTURE-AUDIT-v1.0.md` — **the latest architecture audit**
 (supersedes `ARCHITECTURE-REVIEW-v0.3.md`). Every task below carries a traceability tag
 **F#** (audit finding, Phase 15), **C#** (carried from the v0.3 review), or **R#** (Scope D
@@ -73,7 +77,7 @@ Sizes: S ≤ 1h · M ≤ half day · L ≤ 2 days · X = ongoing cadence.
 | E0.1 | One status story: README/GOVERNANCE/roadmap all say "**live foundation in early curation — 224 draft entities; 50 canonical assertions; zero reviewed entities**" until E6 changes the numbers | F2, R5, R15 | S |
 | E0.2 | Licensing record reconciliation: set ADR-0001 `decided` with the human approval date; fix GLOSSARY/consumer-seam "pending" lines | R4 | S |
 | E0.3 | Remaining rename leftovers (R1 list) + docs/README.md map refresh (this plan adds the audit + v2 plan rows) | R1, R6 | S |
-| E0.4 | **CI doc-status gate:** a script asserts the README status line matches `reports/epistemic-summary` counts (entity counts, reviewed %) — status claims become mechanically checkable | F2 (systemic) | S |
+| E0.4 | ✅ **CI doc-status gate:** a script asserts the README status line matches `reports/epistemic-summary` counts (entity counts, reviewed %) — status claims become mechanically checkable | F2 (systemic) | S |
 
 ### E1 — Single source of truth for relationships (the pivot) — L
 
@@ -81,10 +85,10 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E1.1 | **ADR-0020 — connections-only truth:** `connections/` is the sole canonical relationship source; entity `relationships[]` becomes a *generated compatibility projection* with a deprecation window; removal tied to contract v1.0 | F1, C.3 | S + gate G-A |
-| E1.2 | `scripts/sync_relationships.py`: regenerate inline `relationships[]` from `connections/` (idempotent, deterministic); run once to close the 6-pair gap | F1, R8 | M |
-| E1.3 | Validator consistency gate: inline block must equal the projection — drift = exit 1 | F1 | M |
-| E1.4 | Contribution rule: new/edited relationships enter via `connections/` only; validator rejects new inline entries not present in connections | F1 | S |
+| E1.1 | **ADR-0020 — connections-only truth (DONE 2026-09-03):** `connections/` is the sole canonical relationship source; entity `relationships[]` becomes a *generated compatibility projection* with a deprecation window; removal tied to contract v1.0 | F1, C.3 | S + gate G-A |
+| E1.2 | ✅ `scripts/sync_relationships.py`: regenerate inline `relationships[]` from `connections/` (idempotent, deterministic); run once to close the 6-pair gap | F1, R8 | M |
+| E1.3 | ✅ Validator consistency gate: inline block must equal the projection — drift = exit 1 | F1 | M |
+| E1.4 | ✅ Contribution rule: new/edited relationships enter via `connections/` only; validator rejects new inline entries not present in connections | F1 | S |
 | E1.5 | **Export contract v1.0:** `connections` + `sources` become required members; version constants read from the single source (E5.1); coordinate LearningHub adapter (`SUPPORTED_EXPORT_VERSION`) co-release per `EXPORT-VERSION-MIGRATION-Q3.md` | F1, F5, C.2 | M + gate G-A |
 | E1.6 | Explorer graph builds from `connections[]` (inline only as fallback); annotate by `review.status` (trust visualization) | F1, R8 | M |
 | E1.7 | (Gated by G-A completion) Remove `relationships[]` from `concept.schema.json` and the export; retire the projection | F1 | M |
@@ -93,19 +97,19 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E2.1 | **Repair the 39 inverse-coherence defects:** one canonical inverse table; every used relation's inverse is either a defined relation or the `inverse:` field is dropped; generate `has_part`-style missing inverses; regenerate registry programmatically | F3 | M |
-| E2.2 | **ADR-0021 — entity types:** add `phenomenon`, `model`, `experiment`; remove `regime` from relation ranges; give `misconception` relation participation (`misconception_of`) or constrain its use; align registry domain/range with the type enum (no phantom types) | F3, R20 | M + gate G-B |
-| E2.3 | **Vocabulary enforcement in the gate:** validate `context.domain/subdomain/regime/scale` against `schema/vocabularies/`; repair the 194 subdomain violations, unify `math` → `mathematics`, fix `scale: microscopic` | F3, F11 | M |
-| E2.4 | **Cycle detection** for dependency + hierarchy families in `validate.py` (ADR-0012 promised it; graph_analysis assumes it exists) | F3, F11 | M |
-| E2.5 | **Implement the orphaned ADR rules:** inference mutual-exclusivity (ADR-0014), confidence↔basis pairing (ADR-0013), `lifecycle.replaced_by` / `deprecated_by` resolution, entity-side ADR-0016 fields (`external_ids`, `version`, `updated_at`, `rights`) | F6, F7 | M |
-| E2.6 | Enforce registry `symmetric`/`transitive` flags in tests (property-based checks, not hardcoded counts) | F3, C.5 | S |
-| E2.7 | Prune speculative vocabulary: mark the 37 never-used relations `status: reserved` (or remove); deprecate duplicate pairs (`broader_than`/`narrower_than` vs `generalizes`/`special_case_of`; `contains`/`composed_of` vs `part_of`/`has_part`) | F3 | S |
+| E2.1 | ✅ **Repair the 39 inverse-coherence defects:** one canonical inverse table; every used relation's inverse is either a defined relation or the `inverse:` field is dropped; generate `has_part`-style missing inverses; regenerate registry programmatically | F3 | M |
+| E2.2 | ✅ **ADR-0021 — entity types:** add `phenomenon`, `model`, `experiment`; remove `regime` from relation ranges; give `misconception` relation participation (`misconception_of`) or constrain its use; align registry domain/range with the type enum (no phantom types) | F3, R20 | M + gate G-B |
+| E2.3 | ✅ **Vocabulary enforcement in the gate:** validate `context.domain/subdomain/regime/scale` against `schema/vocabularies/`; repair the 194 subdomain violations, unify `math` → `mathematics`, fix `scale: microscopic` | F3, F11 | M |
+| E2.4 | ✅ **Cycle detection** for dependency + hierarchy families in `validate.py` (ADR-0012 promised it; graph_analysis assumes it exists) | F3, F11 | M |
+| E2.5 | ✅ **Implement the orphaned ADR rules:** inference mutual-exclusivity (ADR-0014), confidence↔basis pairing (ADR-0013), `lifecycle.replaced_by` / `deprecated_by` resolution, entity-side ADR-0016 fields (`external_ids`, `version`, `updated_at`, `rights`) | F6, F7 | M |
+| E2.6 | ✅ Enforce registry coherence (mutual/mirrored/symmetric) in tests (property-based checks, not hardcoded counts) | F3, C.5 | S |
+| E2.7 | ✅ Prune speculative vocabulary: mark the 37 never-used relations `status: reserved` (or remove); deprecate duplicate pairs (`broader_than`/`narrower_than` vs `generalizes`/`special_case_of`; `contains`/`composed_of` vs `part_of`/`has_part`) | F3 | S |
 
 ### E3 — STEM math layer (the subject-matter gap) — L
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E3.1 | **ADR-0022 — canonical math representation:** entity-level `math` object: `equation {latex: <canonical LaTeX>}`, `symbol_bindings: [{symbol, quantity: lhs:…}]`, quantities gain `dimensions` (MLTQΘNIJ vector in `extensions.dimensions` — promoted to schema for type `quantity` only); `unit` becomes a reference to a unit entity, display strings demoted to derived | F4 | M + gate G-C |
+| E3.1 | **math ADR (next free number, e.g. 0023) — canonical math representation:** entity-level `math` object: `equation {latex: <canonical LaTeX>}`, `symbol_bindings: [{symbol, quantity: lhs:…}]`, quantities gain `dimensions` (MLTQΘNIJ vector in `extensions.dimensions` — promoted to schema for type `quantity` only); `unit` becomes a reference to a unit entity, display strings demoted to derived | F4 | M + gate G-C |
 | E3.2 | Backfill: symbol bindings + LaTeX for the 54 quantities and 11 laws (highest-value subset first: mechanics); fix the type-inconsistent `dimensions` on `phys.newtons-second-law` | F4 | L |
 | E3.3 | **Unit registry:** real `unit` entities with QUDT/UCUM codes via `external_ids` (E4.1); `metre per second squared (m/s²)` → `lhs:unit.metre-per-second-squared` + derived display | F4 | M |
 | E3.4 | **Dimensional-consistency validator:** symbol→quantity→dimension bindings must type-check declared equations; quantity `unit` must reduce to its `dimensions` | F4 | L |
@@ -128,8 +132,8 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E5.1 | **Single version source** (`schema/VERSION.yaml`): `schema_version`, `export_version`, content-release tag read by every exporter; kill all literals (0.1/0.2/1.0.0 disagreement) | F5, R7 | M |
-| E5.2 | **Deterministic exports:** stamp content-hash instead of `generated_at`; CI step `validate && git diff --exit-code exports/` (stale export fails the build) | F8, R9 | S |
+| E5.1 | ✅ **Single version source** (`schema/VERSION.yaml`): `schema_version`, `export_version`, content-release tag read by every exporter; kill all literals (0.1/0.2/1.0.0 disagreement) | F5, R7 | M |
+| E5.2 | ✅ **Deterministic exports:** stamp content-hash instead of `generated_at`; CI step `validate && git diff --exit-code exports/` (stale export fails the build) | F8, R9 | S |
 | E5.3 | **Content releases:** git tag + manifest (file hashes) + changelog per release; first tagged release once E1 lands | F5, R18 | M |
 | E5.4 | Decide: stop tracking `exports/` (publish as release assets) or keep tracked-but-bit-identical with the E5.2 gate | F8 | S + gate G-E |
 | E5.5 | `MIGRATIONS.md` log; every schema change appends (old-data-validates-against-old-schema note) | F6 | S |
@@ -141,11 +145,11 @@ Aligned with Scope D D4; reordered by the audit's trust-first logic.
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
 | E6.1 | **Dependency-edge review campaign:** all 188 `mathematically_requires`/`logically_requires` edges in weekly batches of 25–50 (prioritised by centrality), per CURATION-PROTOCOL | F2, R14 | X |
-| E6.2 | **Regime de-fabrication:** regenerate migrated connections' `context.regime` honestly (`regime: null` + policy note); epistemic fields stop being boilerplate | F9 | M |
+| E6.2 | ✅ **Regime de-fabrication:** regenerate migrated connections' `context.regime` honestly (`regime: null` + policy note); epistemic fields stop being boilerplate | F9 | M |
 | E6.3 | **Sources growth:** 3 → coverage of the 149 `provenance.source` strings; **re-classify curriculum-body citations** (NCTM/ICSE/NCDC) out of canonical `provenance.source` into consumer-side mapping docs or `source_kind` with explicit role | F2, F10 | X |
 | E6.4 | Entity review pilot → cadence (mechanics first, 41 entities), `provenance.reviewer` + `reviewed_at` set | F2 | M then X |
 | E6.5 | Reviewer identity policy: recommend ORCID-backed IDs (pseudonymous display allowed); amend spec §8.2 | F2, R13 | S + gate G-D |
-| E6.6 | **Competing-claim semantics (ADR-0023):** adopt Wikidata-style `rank` on assertions (preferred/normal/deprecated) or document consumer resolution rule (review status + confidence); define when `contradicts` is a relation vs two ranked assertions | F7 | S + gate G-H |
+| E6.6 | **Competing-claim semantics (next free number):** adopt Wikidata-style `rank` on assertions (preferred/normal/deprecated) or document consumer resolution rule (review status + confidence); define when `contradicts` is a relation vs two ranked assertions | F7 | S + gate G-H |
 | E6.7 | Epistemic dashboard: report entity-review % and dependency-edge review % per domain (extends existing scripts) | F2 | S |
 
 ### E7 — AI/API surface (SEAM) — M

@@ -1,6 +1,6 @@
 # STEMMA Versioning
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Active
 **Owner:** Governance
 **Applies To:** This repository (canonical knowledge foundation)
