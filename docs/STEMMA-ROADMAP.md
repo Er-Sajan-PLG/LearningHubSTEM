@@ -1,4 +1,4 @@
-# LEARNINGHUBSTEM — ROADMAP
+# STEMMA — ROADMAP
 
 **Status:** Phasing for the foundation. **The roadmap is not authorization to implement future
 phases.** Each phase requires an explicit human activation decision.

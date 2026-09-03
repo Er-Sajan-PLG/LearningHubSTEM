@@ -1,4 +1,4 @@
-# ECC Inspiration for LearningHubSTEM — v0.2
+# ECC Inspiration for STEMMA — v0.2
 
 **Source:** https://github.com/affaan-m/ECC — agent harness performance optimization system (`plan -> test -> implement -> review -> verify -> remember -> improve`), 68 agents, 286 skills, hooks/memory/AgentShield.
 

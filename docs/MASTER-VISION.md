@@ -1,4 +1,4 @@
-# MASTER VISION — LEARNINGHUBSTEM
+# MASTER VISION — STEMMA
 
 You are working on a long-term ecosystem centered around **STEMMA**.
 
@@ -70,7 +70,7 @@ STEMMA does NOT need to care which curriculum uses its knowledge.
 Conceptually:
 
 ```text
-                 LEARNINGHUBSTEM
+                 STEMMA
                 STEM KNOWLEDGE
                        │
           ┌────────────┼────────────┐
@@ -88,7 +88,7 @@ Others decide how to organize and teach it.
 
 ---
 
-# 3. LEARNINGHUBSTEM SHOULD BE CURRICULUM-AGNOSTIC
+# 3. STEMMA SHOULD BE CURRICULUM-AGNOSTIC
 
 The canonical knowledge model should not contain assumptions such as:
 
@@ -265,7 +265,7 @@ That organization does not become part of STEMMA.
 
 ---
 
-# 7. LEARNINGHUBSTEM KNOWLEDGE MODEL
+# 7. STEMMA KNOWLEDGE MODEL
 
 The knowledge layer should focus on STEM itself.
 

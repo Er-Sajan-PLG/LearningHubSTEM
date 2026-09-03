@@ -1,4 +1,4 @@
-# LEARNINGHUBSTEM — TECHNICAL SPECIFICATION
+# STEMMA — TECHNICAL SPECIFICATION
 
 **Version:** 0.1 (minimal foundation)
 **Status:** Specifies the canonical STEMMA foundation. **Phase 1 — Foundation
@@ -51,8 +51,9 @@ PyYAML + JSON Schema (both present in this workspace).
 - The frontmatter is the **first** thing in the file, delimited by `---` on its own lines.
 - Frontmatter is a single YAML mapping (the "entity object").
 - Prose `##` sections follow the frontmatter; the frontmatter is the canonical machine data.
-- Filenames equal the final ID slug (`lhs:phys.force` → `content/force.md`).
-- Entity files live directly under `content/` (no subdirectories in v0.1).
+- Filenames equal the final ID slug (`lhs:phys.force` → `content/physics/mechanics/force.md`).
+- Entity files live in a subdomain tree under `content/`:
+  `content/<domain>/<subdomain>/<slug>.md` (e.g. `content/physics/mechanics/force.md`).
 
 ### Minimal valid entity template
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS ingestion → proposal staging runner.
+"""STEMMA ingestion → proposal staging runner.
 
 Ties the pipeline together: ingest a document (PDF/image/scanned) and stage
 review-ready candidate knowledge (source + proposed entities/connections) under

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS canonical-knowledge curation pipeline (architecture review §P).
+"""STEMMA canonical-knowledge curation pipeline (architecture review §P).
 
 A staged, hard-gate pipeline that turns a *curation request* into a governed
 decision over canonical knowledge (entities, connections, sources). It mirrors the

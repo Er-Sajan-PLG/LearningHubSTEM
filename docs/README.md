@@ -19,6 +19,16 @@ so the repo is self-contained.
 | `MIGRATIONS.md` | Every schema/registry/contract change and its migration script (plan v2 E5.5). |
 | `CONTENT-RELEASES.md` | What a content release is, how to verify one, and the changelog (plan v2 E5.3). |
 | `REVIEW-RESPONSE.md` | Architectural reconciliation record (decision trail). |
+| `HISTORY-RENAME.md` | Record of the LearningHubSTEM → STEMMA rename (kept for history). |
+| `INGESTION.md` | Document → review-ready proposal ingestion pipeline (implemented). |
+| `SOURCES.md` | Source records and how evidence attaches to entities/connections. |
+| `VERSIONING.md` | Repository/schema/export version policy. |
+| `EXPORT-VERSION-MIGRATION-Q3.md` | Consumer contract 0.1 → 1.0 co-release plan. |
+| `RELATIONSHIP-MODEL-ADR-0011-note.md` | Working note accompanying the connection-assertion model. |
+| `curation/` | Curation & review protocol (authoritative for human reviews). |
+| `metadata/` | Metadata-audit records and extension decisions. |
+| `integrations/` | Inspirational notes from external systems (e.g. ECC). |
+| `research/` | Research-area working notes. |
 | `decisions/` | Foundation decision records (ADR-style, `00NN-*.md`). |
 | `../schema/agent-registry.yaml` | Every provenance agent id (human/process/llm/unknown) — validator-resolved (ADR-0023). |
 | `../schema/export.schema.json` | Export contract v1.0 shape (ADR-0023). |

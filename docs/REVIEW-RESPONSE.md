@@ -49,5 +49,7 @@ the actual filesystem, which is the authoritative check.
 
 ## Verification note
 
-The workspace root and `STEMMA/` are **not git repositories**. Git-based checks are
-`NOT APPLICABLE`; verification is by file reads and by running `scripts/validate.py`.
+The `STEMMA/` repository **is a git repository** with a remote (github.com/Er-Sajan-PLG/STEMMA);
+the outer workspace root is not itself a single git repo. Git-based checks therefore apply to
+this repository — the authoritative chain is `scripts/verify_all.py`, which runs
+`scripts/validate.py` plus the cross-object gates and test suites CI executes.

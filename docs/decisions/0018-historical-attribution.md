@@ -7,9 +7,10 @@
 
 ## Context
 
-LearningHubSTEM is a canonical STEM knowledge foundation. It carries 149 entities with
-`provenance.source` citations, but **no structured record of the historical origin of a
-scientific claim** — who first stated a law, principle, or discovery, and when. That is a
+LearningHubSTEM is a canonical STEM knowledge foundation. As of this decision's date
+(2026-09-01) it carried 149 entities with `provenance.source` citations (the live count is
+maintained by `reports/epistemic-summary`), but **no structured record of the historical
+origin of a scientific claim** — who first stated a law, principle, or discovery, and when. That is a
 different question from record provenance:
 
 - `provenance` answers *"where did this entity's content come from / who reviewed it?"* —

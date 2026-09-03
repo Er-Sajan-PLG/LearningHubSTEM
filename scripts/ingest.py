@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LHS knowledge ingestion — extract text from PDFs, images, and scanned docs.
+"""STEMMA knowledge ingestion — extract text from PDFs, images, and scanned docs.
 
 This is the **extraction layer** of the canonical-knowledge pipeline. It turns an
 arbitrary document (PDF of any size, PNG/JPG/TIFF image, scanned PDF) into
