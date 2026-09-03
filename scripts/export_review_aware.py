@@ -31,6 +31,7 @@ def main():
         out = {
             "export_version": base.get("export_version", "0.1"),
             "schema_version": base.get("schema_version", "0.2"),
+            "content_hash": base.get("content_hash", "sha256:unknown"),
             "policy": policy,
             "count": len(filtered),
             "connections": sorted(filtered, key=lambda x: x["id"]),

@@ -209,7 +209,7 @@ def main():
     payload = {
         "export_version": base.get("export_version", "0.1"),
         "schema_version": base.get("schema_version", "0.2"),
-        "generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
+        "content_hash": base.get("content_hash", "sha256:unknown"),
         "source": "content/ + connections/ (canonical) + derived",
         "entity_count": len(entities),
         "connection_count": len(conns),

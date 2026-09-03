@@ -7,6 +7,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 steps = [
     ["python3", str(ROOT / "scripts/validate.py")],
+    ["python3", str(ROOT / "scripts/status_truth.py")],
     ["python3", str(ROOT / "scripts/epistemic_summary.py")],
     ["python3", str(ROOT / "scripts/integrity_anomalies.py")],
     ["python3", str(ROOT / "scripts/graph_analysis.py")],
@@ -14,6 +15,9 @@ steps = [
     ["python3", str(ROOT / "scripts/curation_status.py")],
     ["python3", str(ROOT / "tests/phase-b/test_phase_b.py")],
     ["python3", str(ROOT / "tests/phase-b/test_boundary.py")],
+    ["python3", str(ROOT / "tests/registry/test_registry_coherence.py")],
+    ["python3", str(ROOT / "tests/relationships/test_projection_sync.py")],
+    ["python3", str(ROOT / "tests/versioning/test_deterministic_export.py")],
     ["python3", str(ROOT / "tests/curation/test_curation.py")],
     ["python3", str(ROOT / "tests/curation/test_generality.py")],
     ["python3", str(ROOT / "tests/curation/test_id_immutability.py")],

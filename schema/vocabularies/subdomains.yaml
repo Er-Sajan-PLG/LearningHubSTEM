@@ -16,12 +16,17 @@ chemistry:
   - bonding-structure
   - reactions-stoichiometry
   - acids-bases
+  - electrochemistry-redox
+  - equilibrium-kinetics
+  - organic-chemistry
+  - thermodynamics
 
 biology:
   - cell-biology
   - genetics-heredity
   - evolution-ecology
   - metabolism-processes
+  - physiology
 
 earth-space:
   - atmosphere-climate
