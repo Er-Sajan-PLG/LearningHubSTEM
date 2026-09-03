@@ -30,6 +30,8 @@ real_world_applications:
   - Power generation (energy conversion chains).
   - Food chains (energy flow through ecosystems).
   - Spacecraft trajectories (gravitational assists).
+external_ids:
+  wd: Q11382
 provenance:
   ai_drafted: true
 historical:

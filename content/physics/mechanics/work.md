@@ -29,6 +29,8 @@ real_world_applications:
   - Pushing a stalled car.
   - Work done by friction (always negative).
   - Energy billing (kWh is a unit of work/energy).
+external_ids:
+  wd: Q42213
 provenance:
   ai_drafted: true
 relationships:

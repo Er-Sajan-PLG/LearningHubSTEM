@@ -4,13 +4,20 @@
 # graph_analysis.py) MUST read its version constants from this file. Version literals
 # in scripts are forbidden (audit finding F5: four disagreeing version signals).
 #
-# schema_version   — version of the canonical JSON Schemas (they self-describe v0.2;
-#                    the historical "0.1" export literal was stale drift, now aligned).
+# schema_version   — version of the canonical JSON Schemas (they self-describe v0.2).
 # export_version   — version of the exports/knowledge.json consumer contract.
-#                    UNCHANGED at 0.1: the LearningHub adapter pins "0.1"; a bump to a
-#                    v1.x contract is gate G-A (plan v2 E1.5) and requires co-release.
+#                    1.0 (ADR-0023, gate G-A decided 2026-09-04): `connections` and
+#                    `sources` are REQUIRED members; shape enforced by
+#                    schema/export.schema.json. The inline `relationships[]`
+#                    projection is deprecated and removed at 2.0 (E1.7).
+# legacy_export_version — contract of the compatibility artifact
+#                    exports/knowledge.compat-0.1.json (entities only), emitted during
+#                    the consumer co-release window so a `0.1`-pinned adapter can be
+#                    repointed while it upgrades. Delete this key (and the artifact)
+#                    once STEM-TUITION's SUPPORTED_EXPORT_VERSION reads '1.0'.
 # relation_registry_version — version of schema/relation-registry.yaml.
 
 schema_version: '0.2'
-export_version: '0.1'
+export_version: '1.0'
+legacy_export_version: '0.1'
 relation_registry_version: '0.3'

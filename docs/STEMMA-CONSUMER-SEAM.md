@@ -20,12 +20,20 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
 
 ## Export contract
 
-- **File:** `STEMMA/exports/knowledge.json`, contract **`export_version: 0.1`**,
-  schema **`schema_version: 0.1`**.
-- **Shape:** top-level `export_version`, `schema_version`, `generated_at`, `source`,
-  `entity_count`, and `entities[]`. Each entity carries `id`, `type`, `name`, `domain`,
-  `status`, `definition`, optional `symbol` / `unit` / `equation` / `common_misconceptions`,
-  `provenance`, `relationships[]`.
+- **File:** `STEMMA/exports/knowledge.json`, contract **`export_version: 1.0`** (ADR-0023),
+  schema **`schema_version: 0.2`**. Shape is machine-defined in `schema/export.schema.json`
+  and validated by the producer before writing.
+- **Shape (v1.0):** top-level `export_version`, `schema_version`, `content_hash`, `source`,
+  `entity_count`, `connection_count`, `source_count`, `entities[]`, **`connections[]`**
+  (required — first-class assertions with `assertion.review.status` and `provenance`), and
+  **`sources[]`** (required). Each entity carries `id`, `type`, `name`, `domain`, `status`,
+  `definition`, optional `symbol` / `unit` / `equation` / `common_misconceptions` /
+  `external_ids`, `provenance`, and `relationships[]` — the latter is a **deprecated generated
+  projection** of `connections[]` (ADR-0020) removed in contract **2.0**; new consumers read
+  `connections[]` and filter by review policy.
+- **Co-release window:** `exports/knowledge.compat-0.1.json` (entities-only, stamped `0.1`) is
+  emitted while `legacy_export_version` exists in `schema/VERSION.yaml`, so a `0.1`-pinned
+  adapter can be repointed while it upgrades to `SUPPORTED_EXPORT_VERSION = '1.0'`.
 - **Versioning:** a consumer may state "I consume export contract version X". Breaking changes to
   the shape bump `export_version`. Content edits are a content release and do **not** bump the
   contract. (Specification §10, decision 0008.)
@@ -40,7 +48,9 @@ STEMMA canonical files  (content/*.md — YAML frontmatter)
 - **`apps/shell/src/lib/lhs-types.ts`** — LHS types, kept separate from STEM-TUITION models.
 - API: `loadKnowledge()` (validates the contract version and indexes entities),
   `getEntity(id)`, `getRelatedEntities(id)`.
-- **Version enforcement:** `loadKnowledge()` rejects any `export_version !== "0.1"` with
+- **Version enforcement:** `loadKnowledge()` rejects any unsupported `export_version` with
+  (adapter currently pins `"0.1"` — point it at `knowledge.compat-0.1.json` or bump to `"1.0"`
+  as part of the ADR-0023 co-release)
   `LhsUnsupportedVersionError` (message includes found and supported versions). Lookups fail with
   `LhsEntityNotFoundError` / `LhsDanglingReferenceError` — never silently.
 

@@ -37,6 +37,8 @@ Each record follows the same shape:
 | 0020 | [0020-connections-only-truth.md](0020-connections-only-truth.md) | Connections-only relationship truth; inline block = generated projection (plan v2 E1) | decided (implemented) |
 | 0021 | [0021-registry-integrity.md](0021-registry-integrity.md) | Registry integrity: +phenomenon/model/experiment types, inverse coherence, vocabulary enforcement, honest context data (plan v2 E2/E6.2) | decided (implemented) |
 | 0022 | [0022-version-source-deterministic-exports.md](0022-version-source-deterministic-exports.md) | Single version source (schema/VERSION.yaml) + deterministic content_hash exports (plan v2 E5.1/E5.2) | decided (implemented) |
+| 0023 | [0023-export-contract-v1-identity-hardening.md](0023-export-contract-v1-identity-hardening.md) | Export contract **v1.0** (connections/sources required; gate G-A) + `external_ids` format checks + agent registry (plan v2 E1.5/E4.1/E4.2) | decided (implemented) |
+| 0024 | [0024-math-layer.md](0024-math-layer.md) | STEM math layer: canonical LaTeX + symbol bindings + ISQ dimensions + unit entities (plan v2 E3.1) | **PROPOSED — gate G-C** |
 
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

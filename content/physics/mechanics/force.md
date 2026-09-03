@@ -37,6 +37,8 @@ real_world_applications:
 - Vehicle acceleration and braking.
 - Engineering structures (forces in bridges, buildings).
 - Spacecraft propulsion.
+external_ids:
+  wd: Q11402
 provenance:
   ai_drafted: true
 relationships:

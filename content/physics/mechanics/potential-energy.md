@@ -29,6 +29,8 @@ real_world_applications:
   - Hydroelectric dams (water at height has PE).
   - Pendulums (continuous PE ↔ KE conversion).
   - Springs and elastic bands (elastic potential energy).
+external_ids:
+  wd: Q155640
 provenance:
   ai_drafted: true
 relationships:

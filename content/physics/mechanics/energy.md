@@ -30,6 +30,8 @@ real_world_applications:
   - Food (chemical energy for biological processes).
   - Vehicles (chemical → thermal → kinetic).
   - Renewable energy systems.
+external_ids:
+  wd: Q11379
 provenance:
   ai_drafted: true
 relationships:

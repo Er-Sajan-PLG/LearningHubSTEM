@@ -30,6 +30,8 @@ real_world_applications:
   - Vehicle fuel consumption.
   - Heat generation in moving parts.
   - Power transmission losses.
+external_ids:
+  wd: Q1341275
 provenance:
   ai_drafted: true
 relationships:

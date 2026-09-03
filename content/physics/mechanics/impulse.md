@@ -30,6 +30,8 @@ real_world_applications:
   - Catching a ball (pulling hand back increases time, reduces force).
   - Pole vaulters landing on thick mats.
   - Bungee jumping.
+external_ids:
+  wd: Q837940
 provenance:
   ai_drafted: true
 relationships:

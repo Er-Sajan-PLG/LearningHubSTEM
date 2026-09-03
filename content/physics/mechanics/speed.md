@@ -29,6 +29,8 @@ real_world_applications:
 - Speedometers in vehicles.
 - Athletics (race times and speeds).
 - Traffic engineering and speed limits.
+external_ids:
+  wd: Q3711325
 provenance:
   ai_drafted: true
 relationships:

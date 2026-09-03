@@ -29,6 +29,8 @@ real_world_applications:
   - Sports analysis.
   - Planetary motion.
   - Machinery operation.
+external_ids:
+  wd: Q79782
 provenance:
   ai_drafted: true
 relationships:

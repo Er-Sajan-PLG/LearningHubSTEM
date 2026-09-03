@@ -27,6 +27,8 @@ real_world_applications:
   - Braking distance calculations.
   - Sports (work done on a ball increases its kinetic energy).
   - Engineering (energy transfer in machines).
+external_ids:
+  wd: Q2642081
 provenance:
   ai_drafted: true
 historical:

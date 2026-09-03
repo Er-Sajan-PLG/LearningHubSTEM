@@ -37,6 +37,8 @@ real_world_applications:
 - Sports (sprinting, cycling).
 - Amusement park rides.
 - Spacecraft maneuvers.
+external_ids:
+  wd: Q11376
 provenance:
   ai_drafted: true
 relationships:

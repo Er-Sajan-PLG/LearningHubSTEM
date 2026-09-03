@@ -30,6 +30,8 @@ real_world_applications:
 key_experiments:
   - "Measuring buoyant force on an object in water."
   - "Verifying Archimedes' principle."
+external_ids:
+  wd: Q6497624
 provenance:
   ai_drafted: true
 relationships:

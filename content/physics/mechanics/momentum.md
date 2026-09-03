@@ -33,6 +33,8 @@ real_world_applications:
 - Sports (follow-through increases momentum transfer).
 - Rocket propulsion (exhaust momentum propels rocket).
 - Billiards and pool.
+external_ids:
+  wd: Q41273
 provenance:
   ai_drafted: true
 relationships:

@@ -11,8 +11,12 @@ its D3–D6 items are re-derived here where still open (traced to the audit). Th
 should be retained for history only.
 
 **Implementation status:** E0.1/E0.4, E1.1–E1.4, E2.1–E2.7, E5.1/E5.2, E6.2 **implemented 2026-09-03**
-(ADRs 0020/0021/0022; owner-directed activation "start implementing"). The export contract
-remains **v0.1** (G-A pending); all other items unchanged and still gated as marked.
+(ADRs 0020/0021/0022; owner-directed activation "start implementing").
+**2026-09-04:** gate **G-A decided** ("bump to 1.0 now") → E1.5 implemented (ADR-0023, contract
+**v1.0**, co-release compat view); E4.1/E4.2 implemented (ADR-0023); E3.1 ADR **drafted** as
+ADR-0024 (**gate G-C pending**); E6.1 campaign **tooling + 4 batch worksheets** generated
+(`reports/e61-dependency-campaign/`) — review decisions themselves remain human work; E6.7
+dependency-edge dashboard slice included. All other items unchanged and still gated as marked.
 
 **Derived from:** `docs/ARCHITECTURE-AUDIT-v1.0.md` — **the latest architecture audit**
 (supersedes `ARCHITECTURE-REVIEW-v0.3.md`). Every task below carries a traceability tag
@@ -89,7 +93,7 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 | E1.2 | ✅ `scripts/sync_relationships.py`: regenerate inline `relationships[]` from `connections/` (idempotent, deterministic); run once to close the 6-pair gap | F1, R8 | M |
 | E1.3 | ✅ Validator consistency gate: inline block must equal the projection — drift = exit 1 | F1 | M |
 | E1.4 | ✅ Contribution rule: new/edited relationships enter via `connections/` only; validator rejects new inline entries not present in connections | F1 | S |
-| E1.5 | **Export contract v1.0:** `connections` + `sources` become required members; version constants read from the single source (E5.1); coordinate LearningHub adapter (`SUPPORTED_EXPORT_VERSION`) co-release per `EXPORT-VERSION-MIGRATION-Q3.md` | F1, F5, C.2 | M + gate G-A |
+| E1.5 | ✅ (ADR-0023) **Export contract v1.0:** `connections` + `sources` become required members; version constants read from the single source (E5.1); coordinate LearningHub adapter (`SUPPORTED_EXPORT_VERSION`) co-release per `EXPORT-VERSION-MIGRATION-Q3.md` | F1, F5, C.2 | M + gate G-A |
 | E1.6 | Explorer graph builds from `connections[]` (inline only as fallback); annotate by `review.status` (trust visualization) | F1, R8 | M |
 | E1.7 | (Gated by G-A completion) Remove `relationships[]` from `concept.schema.json` and the export; retire the projection | F1 | M |
 
@@ -109,7 +113,7 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E3.1 | **math ADR (next free number, e.g. 0023) — canonical math representation:** entity-level `math` object: `equation {latex: <canonical LaTeX>}`, `symbol_bindings: [{symbol, quantity: lhs:…}]`, quantities gain `dimensions` (MLTQΘNIJ vector in `extensions.dimensions` — promoted to schema for type `quantity` only); `unit` becomes a reference to a unit entity, display strings demoted to derived | F4 | M + gate G-C |
+| E3.1 | 📝 drafted as ADR-0024 (gate G-C) — **math ADR — canonical math representation:** entity-level `math` object: `equation {latex: <canonical LaTeX>}`, `symbol_bindings: [{symbol, quantity: lhs:…}]`, quantities gain `dimensions` (MLTQΘNIJ vector in `extensions.dimensions` — promoted to schema for type `quantity` only); `unit` becomes a reference to a unit entity, display strings demoted to derived | F4 | M + gate G-C |
 | E3.2 | Backfill: symbol bindings + LaTeX for the 54 quantities and 11 laws (highest-value subset first: mechanics); fix the type-inconsistent `dimensions` on `phys.newtons-second-law` | F4 | L |
 | E3.3 | **Unit registry:** real `unit` entities with QUDT/UCUM codes via `external_ids` (E4.1); `metre per second squared (m/s²)` → `lhs:unit.metre-per-second-squared` + derived display | F4 | M |
 | E3.4 | **Dimensional-consistency validator:** symbol→quantity→dimension bindings must type-check declared equations; quantity `unit` must reduce to its `dimensions` | F4 | L |
@@ -120,8 +124,8 @@ The audit's #1 finding. Declared by ADR-0011, never mechanized.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E4.1 | `external_ids` first-class (complete ADR-0016): namespaced multi-valued (`wd:`, `orcid:`, `doi:`, `isbn:`, `qudt:`, `ucum:`); seed with Wikidata QIDs for the mechanics batch | F6, R24 | M |
-| E4.2 | `agents/` registry (id, class, external_id, display name); validator resolves every `human:`/`process:`/`llm:`/`unknown:` agent ID against it | F2 | M |
+| E4.1 | ✅ (ADR-0023) `external_ids` first-class (complete ADR-0016): namespaced multi-valued (`wd:`, `orcid:`, `doi:`, `isbn:`, `qudt:`, `ucum:`); seed with Wikidata QIDs for the mechanics batch | F6, R24 | M |
+| E4.2 | ✅ (ADR-0023; `schema/agent-registry.yaml`) agent registry (id, class, external_id, display name); validator resolves every `human:`/`process:`/`llm:`/`unknown:` agent ID against it | F2 | M |
 | E4.3 | **Claim signature** (derived): `hash(source|relation|target|polarity|qualifiers)`; duplicate-claim detection in the gate (ADR-0016 completion) | F7 | S |
 | E4.4 | Object `content_hash` + edit-in-place detection: a `human_reviewed`/`canonical` object whose content changed without a lifecycle transition fails CI | F5 | M |
 | E4.5 | Connection-triple immutability guard (extend `check_id_immutability.py` to `connections/` source/relation/target history) | F11, R12 | M |
@@ -144,7 +148,7 @@ Aligned with Scope D D4; reordered by the audit's trust-first logic.
 
 | Task | Detail | Fixes | Size |
 |------|--------|-------|------|
-| E6.1 | **Dependency-edge review campaign:** all 188 `mathematically_requires`/`logically_requires` edges in weekly batches of 25–50 (prioritised by centrality), per CURATION-PROTOCOL | F2, R14 | X |
+| E6.1 | 🔄 started (tooling + batches 01–04 in `reports/e61-dependency-campaign/`; 34/188 reviewed) **Dependency-edge review campaign:** all 188 `mathematically_requires`/`logically_requires` edges in weekly batches of 25–50 (prioritised by centrality), per CURATION-PROTOCOL | F2, R14 | X |
 | E6.2 | ✅ **Regime de-fabrication:** regenerate migrated connections' `context.regime` honestly (`regime: null` + policy note); epistemic fields stop being boilerplate | F9 | M |
 | E6.3 | **Sources growth:** 3 → coverage of the 149 `provenance.source` strings; **re-classify curriculum-body citations** (NCTM/ICSE/NCDC) out of canonical `provenance.source` into consumer-side mapping docs or `source_kind` with explicit role | F2, F10 | X |
 | E6.4 | Entity review pilot → cadence (mechanics first, 41 entities), `provenance.reviewer` + `reviewed_at` set | F2 | M then X |
@@ -216,9 +220,9 @@ automated entity resolution.
 
 | Gate | Decision | Unblocks |
 |------|----------|----------|
-| G-A | Connections-only truth + `export_version`/contract **v1.0** timing (LearningHub co-release) | E1.5–E1.7 |
+| G-A | ✅ decided 2026-09-04 (ADR-0023): contract **v1.0** now; compat `0.1` view during LearningHub co-release | E1.5 ✅; E1.6–E1.7 open |
 | G-B | Entity-type expansion ADR (`phenomenon`, `model`, `experiment`; `misconception_of`) | E2.2 |
-| G-C | Math-layer ADR (canonical LaTeX + symbol bindings + QUDT/UCUM) | E3 |
+| G-C | Math-layer ADR (canonical LaTeX + symbol bindings + QUDT/UCUM) — **draft ready: ADR-0024** | E3 |
 | G-D | Reviewer identity policy (ORCID-backed recommended) | E6.5 |
 | G-E | Colon-filename migration + exports tracking model | E4.6, E5.4 |
 | G-F | Publication track (HTTPS URIs, `$id`s, MCP server) | E4.7, E7.2, E8 |

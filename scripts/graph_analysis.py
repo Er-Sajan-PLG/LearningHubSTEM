@@ -18,6 +18,11 @@ CONTENT = ROOT / "content"
 REGISTRY = ROOT / "schema" / "relation-registry.yaml"
 EXPORT_EXT = ROOT / "exports" / "knowledge.extended.json"
 EXPORT_BASE = ROOT / "exports" / "knowledge.json"
+VERSION_SOURCE = ROOT / "schema" / "VERSION.yaml"  # ADR-0022: no version literals
+
+
+def _versions() -> dict:
+    return yaml.safe_load(VERSION_SOURCE.read_text(encoding="utf-8"))
 
 
 def load_registry():
@@ -207,8 +212,8 @@ def main():
     if EXPORT_BASE.exists():
         base = json.loads(EXPORT_BASE.read_text())
     payload = {
-        "export_version": base.get("export_version", "0.1"),
-        "schema_version": base.get("schema_version", "0.2"),
+        "export_version": _versions()["export_version"],
+        "schema_version": _versions()["schema_version"],
         "content_hash": base.get("content_hash", "sha256:unknown"),
         "kernel_version": base.get("kernel_version"),
         "source": "content/ + connections/ (canonical) + derived",

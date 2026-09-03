@@ -29,6 +29,8 @@ real_world_applications:
   - Electrical appliances (energy ratings).
   - Building insulation.
   - Renewable energy systems.
+external_ids:
+  wd: Q192704
 provenance:
   ai_drafted: true
 relationships:

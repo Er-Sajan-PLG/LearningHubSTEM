@@ -20,6 +20,8 @@ key_experiments:
   - "Balance an unknown mass against standard masses with a beam balance."
 common_misconceptions:
   - Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity).
+external_ids:
+  wd: Q11423
 provenance:
   ai_drafted: true
 relationships:

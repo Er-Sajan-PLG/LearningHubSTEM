@@ -33,6 +33,8 @@ real_world_applications:
 - Seatbelts (passengers continue forward when a car stops suddenly).
 - Tablecloth trick (objects at rest tend to stay at rest).
 - Spacecraft coasting in deep space with engines off.
+external_ids:
+  wd: Q3235671
 provenance:
   ai_drafted: true
 historical:

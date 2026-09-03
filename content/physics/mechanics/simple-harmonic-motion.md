@@ -25,6 +25,8 @@ learning_objectives:
 real_world_applications:
   - "Suspension and shock-absorber design on vehicles."
   - "Mechanical clocks and tuning-fork timing references."
+external_ids:
+  wd: Q835975
 provenance:
   ai_drafted: true
   source_kind: textbook
