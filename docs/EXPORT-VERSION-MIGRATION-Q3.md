@@ -1,5 +1,10 @@
 # Q3 — Export Contract Version: Migration Impact Analysis
 
+> **Superseded 2026-09-04 by ADR-0023:** gate G-A decided — `export_version` is now **`1.0`**
+> with `connections`/`sources` required (`schema/export.schema.json`). The co-release path this
+> document asked for is implemented as the `exports/knowledge.compat-0.1.json` view. Kept for
+> history and for the consumer checklist in §4.
+
 **Status:** Investigation complete. **Decision: do NOT bump `export_version` in this phase**
 (the Q1/Q2 change is additive and backward-compatible). This documents the full impact so a
 future contract migration (adding connections/sources as a *required* part of the canonical

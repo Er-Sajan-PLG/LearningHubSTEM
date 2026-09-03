@@ -11,6 +11,11 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 EXPORT_BASE = ROOT / "exports" / "knowledge.json"
+VERSION_SOURCE = ROOT / "schema" / "VERSION.yaml"  # ADR-0022: no version literals
+
+
+def _versions() -> dict:
+    return yaml.safe_load(VERSION_SOURCE.read_text(encoding="utf-8"))
 
 from graph_policy import should_include_connection  # type: ignore
 
@@ -29,8 +34,8 @@ def main():
             filtered = [c for c in conns if should_include_connection(c, policy)]
 
         out = {
-            "export_version": base.get("export_version", "0.1"),
-            "schema_version": base.get("schema_version", "0.2"),
+            "export_version": _versions()["export_version"],
+            "schema_version": _versions()["schema_version"],
             "content_hash": base.get("content_hash", "sha256:unknown"),
             "kernel_version": base.get("kernel_version"),
             "policy": policy,

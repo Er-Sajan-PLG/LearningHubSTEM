@@ -1,8 +1,8 @@
 {
-  "export_version": "0.1",
+  "export_version": "1.0",
   "schema_version": "0.2",
-  "content_hash": "sha256:0485e1adf62a9712b8d53dd440f1c047ae49bd4f3224d7259a41246882d01719",
-  "kernel_version": "1.1.0",
+  "content_hash": "sha256:85c4bba2895e1a45527dad75f73b7719c768861069ed09c71f44c319c66c5472",
+  "kernel_version": "2.0.0",
   "source": "content/ + connections/ + sources/ (canonical)",
   "entity_count": 224,
   "connection_count": 654,
@@ -7032,6 +7032,9 @@
         "Amusement park rides.",
         "Spacecraft maneuvers."
       ],
+      "external_ids": {
+        "wd": "Q11376"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7250,6 +7253,9 @@
         "Measuring buoyant force on an object in water.",
         "Verifying Archimedes' principle."
       ],
+      "external_ids": {
+        "wd": "Q6497624"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7403,6 +7409,9 @@
         "Food chains (energy flow through ecosystems).",
         "Spacecraft trajectories (gravitational assists)."
       ],
+      "external_ids": {
+        "wd": "Q11382"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7615,6 +7624,9 @@
       "key_experiments": [
         "Measuring density of a regular solid and an irregular solid using displacement."
       ],
+      "external_ids": {
+        "wd": "Q29539"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7664,6 +7676,9 @@
         "Physics of projectile motion.",
         "Engineering (structural displacement under load)."
       ],
+      "external_ids": {
+        "wd": "Q190291"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7709,6 +7724,9 @@
         "Mapping and navigation (total route length).",
         "Athletics (race distances)."
       ],
+      "external_ids": {
+        "wd": "Q126017"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -7804,6 +7822,9 @@
         "Building insulation.",
         "Renewable energy systems."
       ],
+      "external_ids": {
+        "wd": "Q192704"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8218,6 +8239,9 @@
         "Vehicles (chemical → thermal → kinetic).",
         "Renewable energy systems."
       ],
+      "external_ids": {
+        "wd": "Q11379"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8278,6 +8302,9 @@
         "Heat generation in moving parts.",
         "Power transmission losses."
       ],
+      "external_ids": {
+        "wd": "Q1341275"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8329,6 +8356,9 @@
         "Transportation (petrol, electricity, hydrogen).",
         "Heating and cooling."
       ],
+      "external_ids": {
+        "wd": "Q1522115"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8453,6 +8483,9 @@
         "Engineering structures (forces in bridges, buildings).",
         "Spacecraft propulsion."
       ],
+      "external_ids": {
+        "wd": "Q11402"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8527,6 +8560,9 @@
         "Dropping objects to measure gravitational acceleration.",
         "Sports (basketball arc, projectile motion)."
       ],
+      "external_ids": {
+        "wd": "Q140028"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8636,6 +8672,9 @@
         "Matches lighting.",
         "Wear on machinery (friction as a source of energy loss)."
       ],
+      "external_ids": {
+        "wd": "Q82580"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8785,6 +8824,9 @@
         "Satellite orbits.",
         "Space exploration (gravitational assists)."
       ],
+      "external_ids": {
+        "wd": "Q11412"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -8839,6 +8881,9 @@
         "Satellite orbits (g decreases with altitude).",
         "Engineering (structural loads due to gravity)."
       ],
+      "external_ids": {
+        "wd": "Q30006"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9134,6 +9179,9 @@
         "Pole vaulters landing on thick mats.",
         "Bungee jumping."
       ],
+      "external_ids": {
+        "wd": "Q837940"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9188,6 +9236,9 @@
         "Shaking a tree branch to dislodge fruit.",
         "Difficulty stopping a heavy vehicle."
       ],
+      "external_ids": {
+        "wd": "Q122508"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9236,6 +9287,9 @@
         "Wind turbines (kinetic energy of wind converted to electricity).",
         "Bullet penetration."
       ],
+      "external_ids": {
+        "wd": "Q46276"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9588,6 +9642,9 @@
       "common_misconceptions": [
         "Mass and weight are the same thing (weight is a force, W = m·g, and varies with gravity)."
       ],
+      "external_ids": {
+        "wd": "Q11423"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9686,6 +9743,9 @@
         "Inclined planes (ramps).",
         "Wheel and axle (steering wheels)."
       ],
+      "external_ids": {
+        "wd": "Q5378501"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9786,6 +9846,9 @@
         "Rocket propulsion (exhaust momentum propels rocket).",
         "Billiards and pool."
       ],
+      "external_ids": {
+        "wd": "Q41273"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9842,6 +9905,9 @@
         "Planetary motion.",
         "Machinery operation."
       ],
+      "external_ids": {
+        "wd": "Q79782"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9899,6 +9965,9 @@
         "Tablecloth trick (objects at rest tend to stay at rest).",
         "Spacecraft coasting in deep space with engines off."
       ],
+      "external_ids": {
+        "wd": "Q3235671"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -9970,6 +10039,9 @@
         "Satellite orbits.",
         "Space exploration."
       ],
+      "external_ids": {
+        "wd": "Q134465"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10044,6 +10116,12 @@
       "common_misconceptions": [
         "F = m·a means the force is a property of the object itself (F is the net external force acting on the object)."
       ],
+      "external_ids": {
+        "wd": [
+          "Q104212301",
+          "Q2397319"
+        ]
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10128,6 +10206,9 @@
         "Swimming (water pushed backward; swimmer moves forward).",
         "Recoil of a gun."
       ],
+      "external_ids": {
+        "wd": "Q3235565"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10618,6 +10699,9 @@
         "Pendulums (continuous PE ↔ KE conversion).",
         "Springs and elastic bands (elastic potential energy)."
       ],
+      "external_ids": {
+        "wd": "Q155640"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10678,6 +10762,9 @@
         "Human power output (athletes, laborers).",
         "Energy billing (kWh = power × time)."
       ],
+      "external_ids": {
+        "wd": "Q25342"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10730,6 +10817,9 @@
       "key_experiments": [
         "Pressure in fluids increases with depth."
       ],
+      "external_ids": {
+        "wd": "Q39552"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -10781,6 +10871,9 @@
         "Ballistics.",
         "Fountain design."
       ],
+      "external_ids": {
+        "wd": "Q10281355"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11139,6 +11232,9 @@
         "Time intervals.",
         "Mass and energy measurements."
       ],
+      "external_ids": {
+        "wd": "Q181175"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11182,6 +11278,9 @@
         "Suspension and shock-absorber design on vehicles.",
         "Mechanical clocks and tuning-fork timing references."
       ],
+      "external_ids": {
+        "wd": "Q835975"
+      },
       "provenance": {
         "ai_drafted": true,
         "source_kind": "textbook",
@@ -11353,6 +11452,9 @@
         "Athletics (race times and speeds).",
         "Traffic engineering and speed limits."
       ],
+      "external_ids": {
+        "wd": "Q3711325"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11453,6 +11555,9 @@
         "Cooking and food preservation.",
         "Thermal power generation."
       ],
+      "external_ids": {
+        "wd": "Q209233"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11600,6 +11705,9 @@
         "Engineering forces (multiple forces on a structure).",
         "Physics of motion (velocity, acceleration, force are all vectors)."
       ],
+      "external_ids": {
+        "wd": "Q2672914"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11648,6 +11756,9 @@
         "Ballistics (projectile velocity).",
         "Weather systems (wind velocity)."
       ],
+      "external_ids": {
+        "wd": "Q11465"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11865,6 +11976,9 @@
         "Echos and sonar.",
         "Seismic wave analysis."
       ],
+      "external_ids": {
+        "wd": "Q13824"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -11965,6 +12079,9 @@
         "Engineering loads (structural design must account for weight).",
         "Athletics (high jump records at high altitude where g is slightly less)."
       ],
+      "external_ids": {
+        "wd": "Q25288"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -12021,6 +12138,9 @@
         "Work done by friction (always negative).",
         "Energy billing (kWh is a unit of work/energy)."
       ],
+      "external_ids": {
+        "wd": "Q42213"
+      },
       "provenance": {
         "ai_drafted": true
       },
@@ -12075,6 +12195,9 @@
         "Sports (work done on a ball increases its kinetic energy).",
         "Engineering (energy transfer in machines)."
       ],
+      "external_ids": {
+        "wd": "Q2642081"
+      },
       "provenance": {
         "ai_drafted": true
       },

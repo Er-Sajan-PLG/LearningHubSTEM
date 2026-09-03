@@ -1,6 +1,6 @@
 # STEMMA Versioning
 
-**Version:** 1.1.0
+**Version:** 2.0.0
 **Status:** Active
 **Owner:** Governance
 **Applies To:** This repository (canonical knowledge foundation)
@@ -56,6 +56,16 @@ python3 ../scripts/version_bump.py check --scope STEMMA        # must exit 0
 `exports/*.json` are **derived and regenerable** — never hand-edited. Regenerate with
 `python3 scripts/validate.py`. They are validated before the export is written; a consumer
 never handles a dangling reference.
+
+---
+
+## 4a. Contract history
+
+| `export_version` | Date | Change | Record |
+|------------------|------|--------|--------|
+| 0.1 | 2026-08 | entities-only contract; `connections`/`sources` additive (ADR-0011) | ADR-0007, `EXPORT-VERSION-MIGRATION-Q3.md` |
+| **1.0** | 2026-09-04 | `connections` + `sources` **required**; shape in `schema/export.schema.json`; `relationships[]` deprecated projection; compat `0.1` view during co-release | ADR-0023 (repo `VERSION` 1.1.0 → 2.0.0) |
+| 2.0 (planned) | after consumer reads `connections[]` | remove `entities[].relationships` (plan v2 E1.7) | gate |
 
 ---
 

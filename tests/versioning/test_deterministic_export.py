@@ -50,9 +50,39 @@ def test_content_hash_tracks_canonical_content():
     print(f"PASS: export stamped with deterministic content_hash ({export['content_hash'][:19]}…)")
 
 
+def test_export_contract_v1_required_members():
+    """ADR-0023 / gate G-A: connections + sources are required contract members."""
+    import jsonschema
+    schema = json.loads((ROOT / "schema" / "export.schema.json").read_text())
+    export = json.loads((ROOT / "exports" / "knowledge.json").read_text())
+    jsonschema.Draft202012Validator(schema).validate(export)
+    assert export["export_version"].startswith("1."), export["export_version"]
+    assert export["connection_count"] == len(export["connections"]) > 0
+    assert export["source_count"] == len(export["sources"]) > 0
+    broken = dict(export); broken.pop("connections")
+    errs = list(jsonschema.Draft202012Validator(schema).iter_errors(broken))
+    assert errs, "contract must reject an export without connections"
+    print(f"PASS: export conforms to contract v{export['export_version']} (connections/sources required)")
+
+
+def test_legacy_compat_view_during_co_release_window():
+    versions = _versions()
+    compat = ROOT / "exports" / "knowledge.compat-0.1.json"
+    if versions.get("legacy_export_version"):
+        data = json.loads(compat.read_text())
+        assert data["export_version"] == versions["legacy_export_version"]
+        assert "connections" not in data and data["entity_count"] == len(data["entities"])
+        print("PASS: legacy 0.1 compatibility view present for the co-release window")
+    else:
+        assert not compat.exists(), "legacy_export_version removed but compat artifact still tracked"
+        print("PASS: co-release window closed; no compat artifact")
+
+
 if __name__ == "__main__":
     test_version_source_exists_and_matches_export()
     test_no_version_literals_in_exporters()
     test_export_regeneration_is_byte_identical()
     test_content_hash_tracks_canonical_content()
+    test_export_contract_v1_required_members()
+    test_legacy_compat_view_during_co_release_window()
     print("ALL DETERMINISTIC EXPORT TESTS PASS")

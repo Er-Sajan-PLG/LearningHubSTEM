@@ -31,13 +31,25 @@ export interface LhsEntity {
   relationships?: LhsRelationship[];
 }
 
+/** Minimal view of a first-class connection (export contract v1.0, ADR-0023). */
+export interface LhsConnection {
+  id: string;
+  source: string;
+  relation: string;
+  target: string;
+  assertion: { status: string; type: string; review: { status: string } };
+}
+
 export interface LhsKnowledgeExport {
-  export_version: string;
+  export_version: string; // contract v1.0: connections + sources are REQUIRED (ADR-0023)
   schema_version: string;
   content_hash?: string; // ADR-0022: deterministic stamp; replaces wall-clock generated_at
   source?: string;
   entity_count: number;
+  connection_count?: number;
+  source_count?: number;
   entities: LhsEntity[];
+  connections?: LhsConnection[]; // present in v1.x; `entities[].relationships` is a deprecated projection
 }
 
 export class KnowledgeExportLoadError extends Error {

@@ -1,8 +1,8 @@
 {
-  "export_version": "0.1",
+  "export_version": "1.0",
   "schema_version": "0.2",
-  "content_hash": "sha256:0485e1adf62a9712b8d53dd440f1c047ae49bd4f3224d7259a41246882d01719",
-  "kernel_version": "1.1.0",
+  "content_hash": "sha256:85c4bba2895e1a45527dad75f73b7719c768861069ed09c71f44c319c66c5472",
+  "kernel_version": "2.0.0",
   "policy": "rejected",
   "count": 0,
   "connections": []
