@@ -5,7 +5,7 @@
 - Reviewed-only: 0, Canonical: 50, Unreviewed: 604 (total reviewed inc. canonical: 50)
 - Proposed: 653, Inferred: 0
 - Migrated: 641, Human-authored: 13, LLM: 0
-- Rejected: 0, Deprecated: 0
+- Rejected: 0, Deprecated: 4
 - Semantics: `reviewed-only` vs `canonical` (terminal); canonical implies reviewed
 
 ## By relation
@@ -15,7 +15,7 @@
 {'hierarchical': 21, 'associative': 371, 'dependency': 188, 'structural': 24, 'derivation': 38, 'cross_domain': 6, 'analogy': 3, 'model': 3}
 
 ## By domain
-{'biology': 80, 'chemistry': 94, 'earth-space': 33, 'engineering': 1, 'physics': 302, 'scientific-practice': 2, 'math': 142}
+{'biology': 80, 'chemistry': 94, 'earth-space': 33, 'engineering': 1, 'physics': 302, 'scientific-practice': 2, 'mathematics': 142}
 
 ## By review
 {'canonical': 50, 'unreviewed': 604}

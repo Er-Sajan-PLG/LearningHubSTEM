@@ -6,7 +6,7 @@ Deterministic report over all `connections/*.yaml` (explicit fields only).
 - Canonical scientific assertions (`review.status == canonical`): **50**
 - Proposed: 653, Asserted: 1, Inferred: 0
 - Review: unreviewed 604, reviewed-only 0, canonical 50 (total reviewed including canonical: 50)
-- Status: active 654, deprecated 0, rejected 0
+- Status: active 650, deprecated 4, rejected 0
 - Origin: migrated 641, human-authored 13, llm-authored 0
 - With confidence: 1, without: 653
 - Human reviewed_by present: 50
