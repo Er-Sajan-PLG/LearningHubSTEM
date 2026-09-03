@@ -36,6 +36,11 @@
         "required": ["id", "type", "source", "relation", "target", "assertion", "provenance"],
         "properties": {
           "id": { "type": "string", "pattern": "^lhs:conn\\.[0-9]{6}$" },
+          "claim_signature": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "description": "DERIVED identity of the asserted proposition: sha256(source|relation|target|polarity|sorted qualifiers) (ADR-0026, plan v2 E4.3). Two active connections sharing a signature are a duplicate-claim gate failure. Never stored in canonical YAML."
+          },
           "assertion": {
             "type": "object",
             "required": ["status", "type", "review"],

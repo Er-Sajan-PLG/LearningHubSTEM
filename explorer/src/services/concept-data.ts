@@ -5,6 +5,10 @@ export interface ConceptDetails {
   prerequisites: LhsEntity[];
   dependents: LhsEntity[];
   related: LhsEntity[];
+  /** Where the relationship lists came from (E1.6: connections[] preferred). */
+  edgeSource: 'connections' | 'inline';
+  /** entity id -> assertion review status of the edge that linked it (trust annotation). */
+  trust: Record<string, string>;
 }
 
 export class ConceptNotFoundError extends Error {
@@ -26,10 +30,26 @@ export function getConceptDetails(id: string, exportData: LhsKnowledgeExport): C
   const prerequisites: LhsEntity[] = [];
   const related: LhsEntity[] = [];
 
-  for (const rel of target.relationships ?? []) {
-    const relEntity = entityMap.get(rel.target);
+  // E1.6 / ADR-0020: prefer canonical connections[]; the inline projection is a
+  // deprecated fallback kept only for exports that predate contract v1.0.
+  const connections = (exportData.connections ?? []).filter(
+    c => c.assertion?.status !== 'deprecated' && c.assertion?.status !== 'superseded'
+  );
+  const edgeSource: 'connections' | 'inline' = connections.length ? 'connections' : 'inline';
+
+  const outgoing =
+    edgeSource === 'connections'
+      ? connections
+          .filter(c => c.source === id)
+          .map(c => ({ relation: c.relation, target: c.target, trust: c.assertion?.review?.status ?? 'unreviewed' }))
+      : (target.relationships ?? []).map(r => ({ relation: r.type, target: r.target, trust: 'unknown' }));
+
+  const trust: Record<string, string> = {};
+  for (const edge of outgoing) {
+    const relEntity = entityMap.get(edge.target);
     if (!relEntity) continue;
-    if (prereqTypes.has(rel.type)) {
+    trust[relEntity.id] = edge.trust;
+    if (prereqTypes.has(edge.relation)) {
       prerequisites.push(relEntity);
     } else {
       related.push(relEntity);
@@ -38,13 +58,26 @@ export function getConceptDetails(id: string, exportData: LhsKnowledgeExport): C
 
   // Find dependents (entities that specify 'id' as their prerequisite target)
   const dependents: LhsEntity[] = [];
-  for (const entity of exportData.entities) {
-    if (entity.id === id) continue;
-    for (const rel of entity.relationships ?? []) {
-      if (rel.target === id && prereqTypes.has(rel.type)) {
-        dependents.push(entity);
-        break;
-      }
+  const incoming =
+    edgeSource === 'connections'
+      ? connections
+          .filter(c => c.target === id)
+          .map(c => ({ relation: c.relation, source: c.source, trust: c.assertion?.review?.status ?? 'unreviewed' }))
+      : exportData.entities
+          .filter(e => e.id !== id)
+          .flatMap(e =>
+            (e.relationships ?? [])
+              .filter(r => r.target === id)
+              .map(r => ({ relation: r.type, source: e.id, trust: 'unknown' }))
+          );
+
+  for (const edge of incoming) {
+    if (!prereqTypes.has(edge.relation)) continue;
+    const source = entityMap.get(edge.source);
+    if (!source || source.id === id) continue;
+    if (!dependents.some(d => d.id === source.id)) {
+      dependents.push(source);
+      trust[source.id] = edge.trust;
     }
   }
 
@@ -52,6 +85,8 @@ export function getConceptDetails(id: string, exportData: LhsKnowledgeExport): C
     entity: target,
     prerequisites,
     dependents,
-    related
+    related,
+    edgeSource,
+    trust
   };
 }

@@ -652,6 +652,64 @@ def check_lifecycle_pointers(conn: dict, connections: dict, errors: list) -> Non
         errors.append(f"{here} lifecycle.replaced_by does not resolve to a connection: {replaced_by!r}")
 
 
+def claim_signature(conn: dict) -> str:
+    """Derived identity of the *claim* a connection asserts (plan v2 E4.3; ADR-0026).
+
+    signature = sha256(source | relation | target | polarity | sorted(qualifiers))
+
+    It is the identity of the PROPOSITION, not of the record: two connections with the
+    same signature assert the same thing, which `check_duplicate_claims` rejects for
+    active connections (E4.3). Derived — never stored in canonical YAML — but emitted
+    into the export so consumers can deduplicate claims without recomputing.
+
+    Deterministic: qualifiers are order-insensitive (sorted, canonically serialised);
+    polarity defaults to `positive` per connection.schema.json.
+    """
+    assertion = conn.get("assertion") or {}
+    context = conn.get("context") or {}
+    qualifiers = context.get("qualifiers") or []
+    if not isinstance(qualifiers, list):
+        qualifiers = [qualifiers]
+    normalised = sorted(
+        json.dumps(q, sort_keys=True, ensure_ascii=False, default=str) if isinstance(q, (dict, list)) else str(q)
+        for q in qualifiers
+    )
+    polarity = assertion.get("polarity") or "positive"
+    parts = [
+        str(conn.get("source")),
+        str(conn.get("relation")),
+        str(conn.get("target")),
+        str(polarity),
+        json.dumps(normalised, sort_keys=True, ensure_ascii=False),
+    ]
+    return "sha256:" + hashlib.sha256("\x1f".join(parts).encode("utf-8")).hexdigest()
+
+
+def check_duplicate_claims(connections: dict, errors: list) -> dict[str, str]:
+    """Reject two ACTIVE connections asserting the same proposition (E4.3 / ADR-0026).
+
+    Returns {connection_id: signature} for every active connection so the export can
+    carry the derived signature without recomputing it.
+    """
+    by_signature: dict[str, list[str]] = {}
+    signatures: dict[str, str] = {}
+    for cid, conn in connections.items():
+        if (conn.get("assertion") or {}).get("status", "active") != "active":
+            continue
+        sig = claim_signature(conn)
+        signatures[cid] = sig
+        by_signature.setdefault(sig, []).append(cid)
+    for sig, ids in sorted(by_signature.items()):
+        if len(ids) > 1:
+            errors.append(
+                "duplicate claim: " + ", ".join(sorted(ids))
+                + f" assert the same proposition (claim_signature {sig[:19]}… over "
+                "source|relation|target|polarity|qualifiers). Keep one connection and "
+                "supersede the rest via lifecycle.replaced_by (plan v2 E4.3)"
+            )
+    return signatures
+
+
 def check_relationship_cycles(connections: dict, registry: dict, errors: list) -> None:
     """Reject cycles on non-symmetric transitive relations (ADR-0012/0021).
 
@@ -880,6 +938,7 @@ def main() -> int:
         check_lifecycle_pointers(conn, connections, errors)
     check_relationship_cycles(connections, registry, errors)
     check_inline_projection(entities, connections, errors)
+    claim_signatures = check_duplicate_claims(connections, errors)
 
     # Entity-side reviewer ids resolve in the agent registry too (E4.2).
     for _id, entity in entities.items():
@@ -937,8 +996,14 @@ def main() -> int:
             {k: v for k, v in entities[i].items() if not k.startswith("_")}
             for i in sorted(entities)
         ],
+        # `claim_signature` is DERIVED (E4.3 / ADR-0026): the identity of the asserted
+        # proposition (source|relation|target|polarity|qualifiers). Never canonical;
+        # it lets consumers deduplicate claims without recomputing the hash.
         "connections": [
-            {k: v for k, v in connections[i].items() if not k.startswith("_")}
+            {
+                **{k: v for k, v in connections[i].items() if not k.startswith("_")},
+                "claim_signature": claim_signatures.get(i, claim_signature(connections[i])),
+            }
             for i in sorted(connections)
         ],
         "sources": [
@@ -991,18 +1056,10 @@ def main() -> int:
     write_validation_report(conforms=True, results=[], content_hash=content_hash_value)
     print("OK: validation report written to reports/validation-report.json")
 
-    # Auto-sync the derived export into the explorer (3D visual) so the explorer
-    # never drifts from canonical content. The explorer builds/loads from
-    # explorer/public/exports/knowledge.json; keeping it in sync here means any
-    # content change that runs the validator propagates to the visual.
-    explorer_target = ROOT / "explorer" / "public" / "exports" / "knowledge.json"
-    if explorer_target.parent.is_dir() or (ROOT / "explorer").is_dir():
-        explorer_target.parent.mkdir(parents=True, exist_ok=True)
-        explorer_target.write_text(
-            json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8",
-        )
-        print(f"OK: explorer export synced to {explorer_target.relative_to(ROOT)}")
+    # E7.4: the validator no longer writes into explorer/. The explorer is a consumer,
+    # not part of the canonical gate: it copies exports/knowledge.json itself via
+    # explorer/scripts/sync-export.mjs (wired to `predev`/`prebuild`), so the validator
+    # never mutates another component's tree.
     return 0
 
 

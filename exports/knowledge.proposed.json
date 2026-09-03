@@ -48,7 +48,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:040690d4607831e009db177a0a1b5fefd971be5c1a739299eb27e6edd0e6923e"
     },
     {
       "id": "lhs:conn.000003",
@@ -92,7 +93,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9a23a137601c102179972c8dd80f0d5228a1eedd92c500b3196033497d1e87ef"
     },
     {
       "id": "lhs:conn.000004",
@@ -136,7 +138,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d85b2a1c35ffdf4f18bae58232fe03e2b8953c9cc29ae8fc4481732ac332dcbc"
     },
     {
       "id": "lhs:conn.000006",
@@ -180,7 +183,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9d89a6dcfe52e480d2db19f808258c209abe3692b98e64e256cc80c0cca8ee1a"
     },
     {
       "id": "lhs:conn.000007",
@@ -224,7 +228,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:422fdc35354c7dec96d28ad7d499d7fceb79d13f0a75ad8e35de392f2f572b3a"
     },
     {
       "id": "lhs:conn.000008",
@@ -268,7 +273,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:77ac5279c6b98b6201ad26bbab9d3f9bea8cd38c5e44e895af32abb819351e1b"
     },
     {
       "id": "lhs:conn.000009",
@@ -312,7 +318,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f2a2a7b483ed851b6a5bf65ff016ba61072edbfacad655913b66dca7c7ed13f3"
     },
     {
       "id": "lhs:conn.000010",
@@ -356,7 +363,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8280ccbee59af9974026d5c5adbf7fa1be60e97b8e83be646914ff86d92a581b"
     },
     {
       "id": "lhs:conn.000011",
@@ -400,7 +408,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7bbf2b5d0e7464c6940c8e31b3ad15eed7341c907337671fb4eb4b0d52e70e6b"
     },
     {
       "id": "lhs:conn.000013",
@@ -444,7 +453,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:558ca849dd96115f4509288eba259916ac1578c04663fbb2f3a291d5e63d5664"
     },
     {
       "id": "lhs:conn.000015",
@@ -488,7 +498,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5179563d602adaa52545bdc358cd1f40360885b6207f22a217d7cd3015f06cb3"
     },
     {
       "id": "lhs:conn.000016",
@@ -532,7 +543,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:bfecf00d0465bed6a076bdaffec775d245b72dd920281e361074d621cafe6b42"
     },
     {
       "id": "lhs:conn.000017",
@@ -576,7 +588,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:de6cf4661e7b196c6c0019415833d15d23c1f979845feea3e59cecaf65b5b1da"
     },
     {
       "id": "lhs:conn.000018",
@@ -620,7 +633,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fb318cad4df73b4a84c36b1a3b24214239d37c3327d0feb6737c162e162e70dd"
     },
     {
       "id": "lhs:conn.000019",
@@ -664,7 +678,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:469a9894146695b673e3dfabb10efc44f1de476ed0e284dbab8d8a9382baedbe"
     },
     {
       "id": "lhs:conn.000020",
@@ -708,7 +723,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8396f7d12d16cf463433f90a0fef8de083868eddc1262289b9bd21232ef14d4b"
     },
     {
       "id": "lhs:conn.000021",
@@ -752,7 +768,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6d4b8da578ef9318b8daa6d0f2f5c35cfabcce3c5b734e6f07383bafe86678d6"
     },
     {
       "id": "lhs:conn.000022",
@@ -796,7 +813,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9d4dd1d4adba722c076bfb5f8db060f4de63c6603e94b33ff988819413f8b1f2"
     },
     {
       "id": "lhs:conn.000023",
@@ -840,7 +858,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2bacf3ae31344d1d25df4496b09cc7cb704fb5356516808893ea4e96b18a7d12"
     },
     {
       "id": "lhs:conn.000024",
@@ -884,7 +903,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c5506dff90a6d1786fa394136a87d09704457bb93bc7e79737f2ea05c2f68590"
     },
     {
       "id": "lhs:conn.000026",
@@ -928,7 +948,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5bd4243943c40c90d0c78fdc531f1b8b3de9b006d4da4133317ff819dec1f74d"
     },
     {
       "id": "lhs:conn.000027",
@@ -972,7 +993,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:751cac0e478e409b6351e72d69f6f71d521b84b7a0eefd8543e775cb42610294"
     },
     {
       "id": "lhs:conn.000028",
@@ -1016,7 +1038,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ed839cc08749d35d601b4df4c9d3d31aa5822448f0340a32be31a6a5208345de"
     },
     {
       "id": "lhs:conn.000029",
@@ -1060,7 +1083,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4b5daa2cae64e919281b3202889a9474f7ef4c15be43f6527b6dd4c987356d58"
     },
     {
       "id": "lhs:conn.000030",
@@ -1104,7 +1128,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:19686572cbc2b0ff900efeb3115d55e5a3dc62293548a592684f1281ae0018c5"
     },
     {
       "id": "lhs:conn.000031",
@@ -1148,7 +1173,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f0bc2a1740dfcb87cf8033cd953d7149f60726e59b9fc3a024ae9a2cf4481cf0"
     },
     {
       "id": "lhs:conn.000032",
@@ -1192,7 +1218,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:714bb872b6001bb5fa60069e90113d58520d1280b01f35000a5b9d6126495771"
     },
     {
       "id": "lhs:conn.000033",
@@ -1236,7 +1263,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0fa860c05e47d4e27d7453e0da4a7364b251e64c80399b467838cfb5c274999e"
     },
     {
       "id": "lhs:conn.000034",
@@ -1280,7 +1308,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9d5440634ae92dafa2533f57569d79f6af59ae9cfcad59fc83ae185040e996f6"
     },
     {
       "id": "lhs:conn.000035",
@@ -1324,7 +1353,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2c9f0e0aab64162f0244b67ec218c7379d66fa871bd655cac82a810dd6cec584"
     },
     {
       "id": "lhs:conn.000036",
@@ -1368,7 +1398,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a8d14e8458396b6610bb63a5d986222233d0745fe77d82994b4ed0f29972be9b"
     },
     {
       "id": "lhs:conn.000037",
@@ -1412,7 +1443,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:589d7a38df0ee5f1540af8521201255f3f6288a42e6fc88e6a2b4ffc4b37953f"
     },
     {
       "id": "lhs:conn.000038",
@@ -1456,7 +1488,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:90a457e17ad525573b090434ed4503a6dfa30e7b99a4dd6a46e5a0fc6512407f"
     },
     {
       "id": "lhs:conn.000039",
@@ -1500,7 +1533,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:43f879db21d525af5b76c8edd93337f1533227e9d38fb93a4e7869dd3194f809"
     },
     {
       "id": "lhs:conn.000040",
@@ -1544,7 +1578,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:27ff54854f2dccffc5b3b6bc2263be83ebfbe07b4ffcabce9682391ab3b9bcb5"
     },
     {
       "id": "lhs:conn.000041",
@@ -1588,7 +1623,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:096976cd07c2c395f762f9c11e3318f754ab42a7ef6d3ea5a27d0f7b3f329588"
     },
     {
       "id": "lhs:conn.000042",
@@ -1632,7 +1668,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:35616e5c1f4459eef985476d6315d3037e2cab38d6543835c387374b1da09904"
     },
     {
       "id": "lhs:conn.000043",
@@ -1676,7 +1713,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e90f25a97632bd3267c725ac6659121389eef0dcda19420054bdc4c7c728a062"
     },
     {
       "id": "lhs:conn.000044",
@@ -1720,7 +1758,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:70a8888766459c1df9cf053c3e54e473782adc21457962fc24abeab23340ba47"
     },
     {
       "id": "lhs:conn.000045",
@@ -1764,7 +1803,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7068360ceb9e7c0bb8d8d135786a5121316ae1c5ecfcf32610beb187cceb6a78"
     },
     {
       "id": "lhs:conn.000046",
@@ -1808,7 +1848,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6703fcf3102879de46ea16adb55d68da9ae7e6c3fa107a8d38cc294b99043f84"
     },
     {
       "id": "lhs:conn.000047",
@@ -1852,7 +1893,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ef2c2520ae42250cd6a903a265955dcc89388823f3b0b6b80fc5b25cb8d54fef"
     },
     {
       "id": "lhs:conn.000050",
@@ -1896,7 +1938,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c8c246f5b4456886b3ca209e11846362296fed066e324ec42aeb1577fdbea3db"
     },
     {
       "id": "lhs:conn.000051",
@@ -1940,7 +1983,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5e3d894eff55ecfad8cdcfe56772c4f2332c1d814c0281526ab893ded3338389"
     },
     {
       "id": "lhs:conn.000052",
@@ -1984,7 +2028,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4c1c063eedadf25a77fb1f1cb1ac7beb434953d650518d86ccf55c2b25a35162"
     },
     {
       "id": "lhs:conn.000054",
@@ -2028,7 +2073,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b69b101edcdbbd56962f10b4bbe151b7c05e7307805cfe4ca614d578d4e98de6"
     },
     {
       "id": "lhs:conn.000055",
@@ -2072,7 +2118,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:13ca843e7cf60678d758dab87b471c3830c05a3e04a5f4104f0d6166d0a1e4d8"
     },
     {
       "id": "lhs:conn.000056",
@@ -2116,7 +2163,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f90f7866e4bd7a8e17d4ec7c6460b33ac38016f530b616802a0e89580a8130e7"
     },
     {
       "id": "lhs:conn.000057",
@@ -2160,7 +2208,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:515b212de96869bfd54e249d152f3dcb18ad9b510689a1e629711f44e7766904"
     },
     {
       "id": "lhs:conn.000058",
@@ -2204,7 +2253,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:18329eded7615b97aed87faa1bd7ba7661c2fab352ceb89836fb7424087d3ab4"
     },
     {
       "id": "lhs:conn.000059",
@@ -2248,7 +2298,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:cd2185ffc3d20151966be3cef02e405f0d851be84a5a3365570980c3e4579377"
     },
     {
       "id": "lhs:conn.000061",
@@ -2292,7 +2343,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3ffcf305f0403ec0c394bc0064d696fd3fcbcb9d1945358225693f4088030ae4"
     },
     {
       "id": "lhs:conn.000062",
@@ -2336,7 +2388,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b171e1b35e5df0f98dae74023be9bf3cd42591fd6097602b02ce505d658a1fb3"
     },
     {
       "id": "lhs:conn.000063",
@@ -2380,7 +2433,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:262a3164b458a395096a53f1e27b5a20d524cd9615ed0a532bf2f52f1b501be2"
     },
     {
       "id": "lhs:conn.000064",
@@ -2424,7 +2478,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c0131d3cbccffbcf8a8dba5f1bffdd1b431d21a21a52b43bc2537869d763484f"
     },
     {
       "id": "lhs:conn.000065",
@@ -2468,7 +2523,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:efa9963501df5755168e37e430e1599b2622b758412e0fe999da1463af4817b6"
     },
     {
       "id": "lhs:conn.000066",
@@ -2512,7 +2568,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fc7247d530d963154c893de127c87c1da2fdcfe9562426f57724b95347828ba6"
     },
     {
       "id": "lhs:conn.000067",
@@ -2556,7 +2613,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:849ba8cdb7050e98e2535a25f2b4de2d81d37277a42aef16fd6218ac2258d3a2"
     },
     {
       "id": "lhs:conn.000068",
@@ -2600,7 +2658,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:80ed6f6738ae6741a17d8ca3155cfc42a2113f0799f008ff04fbbb91764e364d"
     },
     {
       "id": "lhs:conn.000070",
@@ -2644,7 +2703,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ee7b0edcb31699468652d5356abaf44d6c63386cddc36b7ea84005da1e771548"
     },
     {
       "id": "lhs:conn.000071",
@@ -2688,7 +2748,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2f751a9e8c01a497c2f8a9d34eeb9fb8198aca4c91e6b790af26dc0466469d1b"
     },
     {
       "id": "lhs:conn.000072",
@@ -2732,7 +2793,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f5745467db763b0d4e082ebf91fddd65e74f30301ac20f5a5b3b573bf8372a28"
     },
     {
       "id": "lhs:conn.000073",
@@ -2776,7 +2838,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a7e7799c77ffbb85c276b65ff1090d0e65b0612cd69357d56e69936df9861ae7"
     },
     {
       "id": "lhs:conn.000074",
@@ -2820,7 +2883,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3ef910f89a6688a4e58deb3324bc7e04b2f19542359f81d04d59243d8f91493d"
     },
     {
       "id": "lhs:conn.000075",
@@ -2864,7 +2928,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3cc90e652f6365700cdd70da26494fb8e95ac54f832b9c2e99ba4a267c57d716"
     },
     {
       "id": "lhs:conn.000076",
@@ -2908,7 +2973,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:82fdae6780849f90e11b6701f1e9e2feac897cb3cdf225729aae3d4959e49e89"
     },
     {
       "id": "lhs:conn.000077",
@@ -2952,7 +3018,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:24aec3205571547abaec748ac8132bbf80a8a3a33aabc449096df96c7e65b901"
     },
     {
       "id": "lhs:conn.000078",
@@ -2996,7 +3063,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:580c2efc10a47fdb0183c496a6a19d4e40b5d1904daa262f3e230f03de267caa"
     },
     {
       "id": "lhs:conn.000079",
@@ -3040,7 +3108,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8ac1e3f5bb49eacaafc55d946ed2ae907c7bfab6b70c4d603fcc7dd57581fe9b"
     },
     {
       "id": "lhs:conn.000080",
@@ -3084,7 +3153,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f9beffe8eb8ad555a4549046980d8109012170903609cfe155e2c090daac85ec"
     },
     {
       "id": "lhs:conn.000081",
@@ -3128,7 +3198,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8fac4b2e1db566879933d4c9ce181ee6e5b7b30093b4595deb7e2949d72e084b"
     },
     {
       "id": "lhs:conn.000082",
@@ -3172,7 +3243,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b411cca90d7c14018ec0b9137f9577c64b4115823fa3478c9d0ac6c345263de4"
     },
     {
       "id": "lhs:conn.000083",
@@ -3216,7 +3288,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:da4b51c6ee430bd3252335d60dce5c22ae43c748c09cf6f7d55965c15cb68a43"
     },
     {
       "id": "lhs:conn.000084",
@@ -3260,7 +3333,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:09c9212537b88538666cd53ad3c7674437778a238b90dede5bbdfb5344d2e9d7"
     },
     {
       "id": "lhs:conn.000085",
@@ -3304,7 +3378,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2b061185e02843f3335ecd36e42aa7b89feed15510752362520ebd957ed7d0c1"
     },
     {
       "id": "lhs:conn.000086",
@@ -3348,7 +3423,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4112bf0c6240e57eb7968f8c93eab6cabc7a891aa0941f39b6dd74eca33ff8de"
     },
     {
       "id": "lhs:conn.000087",
@@ -3392,7 +3468,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7edd5ea417b41bc5ce05ebb3ba95862866938157edd8c00bff7967c55acf4133"
     },
     {
       "id": "lhs:conn.000088",
@@ -3436,7 +3513,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:53c27062c5008d1f36856a7e5c3fc97ae328ca5d8b1ede62d0394746a0097062"
     },
     {
       "id": "lhs:conn.000089",
@@ -3480,7 +3558,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1b561c449e9cb196c5db7e1a2249e7564dff5237ec875a5cd7752b0f4cf3ce2c"
     },
     {
       "id": "lhs:conn.000090",
@@ -3524,7 +3603,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f77a0be29dd166d40814bfebe594cf9be1b805850bd3b2bca167dde03a8aec25"
     },
     {
       "id": "lhs:conn.000091",
@@ -3568,7 +3648,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7600b54e8e3c5d89f69e03ef78b6bf7cea4fc33ab1d778f16d5b82c603d7dabb"
     },
     {
       "id": "lhs:conn.000092",
@@ -3612,7 +3693,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:681e664de74f809b6507ccf3b9485e438744f2a6cd83a418ca60ec973e65cb27"
     },
     {
       "id": "lhs:conn.000093",
@@ -3656,7 +3738,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9560a33af2591d9f069cc65068605ee4cbf49b80f6f8d69418a046f899e9e520"
     },
     {
       "id": "lhs:conn.000094",
@@ -3700,7 +3783,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f025bc355b5e8c1b61ceebab0bcbe196068137ce21d6cc10dda05858c09ec692"
     },
     {
       "id": "lhs:conn.000095",
@@ -3744,7 +3828,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:626620100a95decec99eaf749a55cc59421fd3fa60dc87d27029fabfaa1fbf00"
     },
     {
       "id": "lhs:conn.000096",
@@ -3788,7 +3873,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:bf5cddfd05fe42c6100ef6cb21cb0a5ca6d8bf4b7c4d8216336d6c7294b08ff5"
     },
     {
       "id": "lhs:conn.000097",
@@ -3832,7 +3918,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:995fe67208acad371b94de89350caac1ed55388046691ebfa08d9e263a38c89c"
     },
     {
       "id": "lhs:conn.000098",
@@ -3876,7 +3963,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c1bb8881f670e589dc9bcfd0d567693cee7c9110b01728d4cf916629de0937c6"
     },
     {
       "id": "lhs:conn.000099",
@@ -3920,7 +4008,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3e725e47c8446da38919574ee5333d24b03b946bf170a79d6f9cde1df7da165d"
     },
     {
       "id": "lhs:conn.000100",
@@ -3964,7 +4053,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b70cf39503b51c3bc71f13fc74a03521f55856bf5cf64a6e457ce39c25bd6ec8"
     },
     {
       "id": "lhs:conn.000101",
@@ -4008,7 +4098,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5401e722d4098bca2e46d4f52d52e701ae440aac3f4f87a1f35abcb50597edca"
     },
     {
       "id": "lhs:conn.000102",
@@ -4052,7 +4143,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e928a5998e866bbf413f496712b20f520d63ccf63bf9e5e5c0ec8c52d3207ed9"
     },
     {
       "id": "lhs:conn.000103",
@@ -4096,7 +4188,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ea891c8234a850c73ea28308e86ca5f9231fe487a21edad235303f4399cfd08c"
     },
     {
       "id": "lhs:conn.000104",
@@ -4140,7 +4233,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d7f4655edf7fbfc6e91e5e5bbe07083f865f9114f5f04d66d79253457bef8537"
     },
     {
       "id": "lhs:conn.000105",
@@ -4184,7 +4278,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f23ea4981668076d5555016d7ed35025311677d5ffbadff8bf8d33cb66a16b3b"
     },
     {
       "id": "lhs:conn.000106",
@@ -4228,7 +4323,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4c6b4d8429c0247c2ac242b82b125125f9e2245ce35b83937fe7833335183482"
     },
     {
       "id": "lhs:conn.000107",
@@ -4272,7 +4368,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c4c2ba09f600ab3be04d6cc15272f3d0476cfece4d989f3179b2c51add25781d"
     },
     {
       "id": "lhs:conn.000108",
@@ -4316,7 +4413,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4fc2f4a033b123d114f9348c07c7a5ee8ca1a4d6217b31afb975574f1756c785"
     },
     {
       "id": "lhs:conn.000109",
@@ -4360,7 +4458,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:86733c6124745e956de972bd30258b658ed3f7ae74feea09520b8112b399c17f"
     },
     {
       "id": "lhs:conn.000110",
@@ -4404,7 +4503,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:deb3bef3216ea8b07b78288d32af9231f95a96a93b6848776d26585d622e8f3a"
     },
     {
       "id": "lhs:conn.000111",
@@ -4448,7 +4548,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3acaa0e6445ccd29748e7b8e1363d88a011af42425abdbf2073b9a943d6cfbf1"
     },
     {
       "id": "lhs:conn.000112",
@@ -4492,7 +4593,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4c727a3db31c5caba0f165e350b784e07e2a6bdec9eaa512392e20bfb7c767e8"
     },
     {
       "id": "lhs:conn.000113",
@@ -4536,7 +4638,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8fe6c7e58853771486002166ee938978baa8a666c20eab9c13b6eb7e517aa036"
     },
     {
       "id": "lhs:conn.000114",
@@ -4580,7 +4683,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2472935588a46d9da7fe258e243d9cf825f459285144331180abfadca15622ab"
     },
     {
       "id": "lhs:conn.000115",
@@ -4624,7 +4728,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c97f6c4c0b9e719a3a7708ef967f82eef328160186be999dd5793acadf93d194"
     },
     {
       "id": "lhs:conn.000116",
@@ -4668,7 +4773,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1ce61ddb4e0ade13737432b12895d1a54a59328b6b462b0386031c5a5d4ad168"
     },
     {
       "id": "lhs:conn.000117",
@@ -4712,7 +4818,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:899d8d74e6403f8e7a25bbad5d80743df0fcb19be1a1162934eebe921d74de6c"
     },
     {
       "id": "lhs:conn.000118",
@@ -4756,7 +4863,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f63c0b8ded418afe76e297a0112bd20e079a3116d2c0844bd5130ddb315312a3"
     },
     {
       "id": "lhs:conn.000119",
@@ -4800,7 +4908,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:67c560dbd4e13090a75a25b46747a2cb01230a8a40213f306d0f3003788d88fd"
     },
     {
       "id": "lhs:conn.000120",
@@ -4844,7 +4953,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ac40135a1559d8c354a3def6512c115b8b6480eb243faac35190a24aa8f64d7d"
     },
     {
       "id": "lhs:conn.000121",
@@ -4888,7 +4998,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a2d1e05669f639ffd81834719b507795c88863210bd8235aea0f3e6617de16d6"
     },
     {
       "id": "lhs:conn.000122",
@@ -4932,7 +5043,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:20d64ac6e950961935b74bc41f8382c9d0a12c519dd993ef9f79180d36f02cf1"
     },
     {
       "id": "lhs:conn.000123",
@@ -4976,7 +5088,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:483201d7eba7a908d8b9d9f9073bb53e490b674b15b13b98effb50cb4568e7d4"
     },
     {
       "id": "lhs:conn.000124",
@@ -5020,7 +5133,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:bcdfdee7ef2cf37e826e75d2984c89c885a4557203d0946b278391e3f32cbfcf"
     },
     {
       "id": "lhs:conn.000125",
@@ -5064,7 +5178,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:038210b12dbf08f81c202c8c1e98ee3aee9b5def545ec4fc527c6a4898610173"
     },
     {
       "id": "lhs:conn.000126",
@@ -5108,7 +5223,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:59f752cb201e4162ba8dd1b5f664891ab44fd2e2ba5c64587d7b0826fafbd671"
     },
     {
       "id": "lhs:conn.000127",
@@ -5152,7 +5268,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f1a36be83ed609286c3e5a3cc157839e03b37b664864663a9c242f70883d3069"
     },
     {
       "id": "lhs:conn.000128",
@@ -5196,7 +5313,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ce1ccc2fc9734fa6edc2bfd5a117adcfc1bb282d4f0d041855659392ea1cdd9f"
     },
     {
       "id": "lhs:conn.000129",
@@ -5240,7 +5358,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2ad1718d76506a52281ef7beda184816458eb365297b4e7d830b6af2959508a2"
     },
     {
       "id": "lhs:conn.000132",
@@ -5284,7 +5403,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f1dbf3b33fd69ea0afcd6a44cf8f025029c5b328bd571e8fc07760c27a0501bd"
     },
     {
       "id": "lhs:conn.000133",
@@ -5328,7 +5448,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:88324ce13379139c7dc7dfefe81de4893e5c495d2cde74f311a3f2014c5cc8eb"
     },
     {
       "id": "lhs:conn.000134",
@@ -5372,7 +5493,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0ba898723a45fe7fdf4603e00193cf73b6a752c400476cbc61a63b43ef8f364c"
     },
     {
       "id": "lhs:conn.000135",
@@ -5416,7 +5538,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:87b6d0a68c46f04cad8db49bfaee8a4016f83989c6770a487469e54530f64f24"
     },
     {
       "id": "lhs:conn.000136",
@@ -5460,7 +5583,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5d1453312d6097800fe0864f33054add4387362f659a64b0508be8b3e2b37178"
     },
     {
       "id": "lhs:conn.000137",
@@ -5504,7 +5628,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e6ba72088be6c4d751eef4bf16b2cb60dbcf3f3cd978a20d7ab0e3359233c651"
     },
     {
       "id": "lhs:conn.000138",
@@ -5548,7 +5673,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1a51d2cc5fdb1a1f44ffc88b7ff04b6c075c8126edc1bd61aa644b65848f19dc"
     },
     {
       "id": "lhs:conn.000139",
@@ -5592,7 +5718,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:89b0dca295da15249ea2ad1f25319091b729e2a611beedd5a2529906ae6d37e8"
     },
     {
       "id": "lhs:conn.000140",
@@ -5636,7 +5763,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4cda684773f44248e99286fe12f6f83d980e5a2aa6bf3a33d8bc4605f97ff155"
     },
     {
       "id": "lhs:conn.000141",
@@ -5680,7 +5808,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f3c44080a4333358eae6882cd39e2697226885baa02c050c1079a3de16252ca1"
     },
     {
       "id": "lhs:conn.000142",
@@ -5724,7 +5853,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3cedd70ac85c4a5b6c5a3010d007b9509cb6c5f6edab527f5eed61f5b3836d2f"
     },
     {
       "id": "lhs:conn.000143",
@@ -5768,7 +5898,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3d8ce30930ffaf345ebfe15273fffb4f31bd55cc81db02ee8ea98109af428ca4"
     },
     {
       "id": "lhs:conn.000144",
@@ -5812,7 +5943,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f624b55375d4a1a46a50a376fb80e3bb65eb98845f65e1ae9ede96a1a797b8b5"
     },
     {
       "id": "lhs:conn.000145",
@@ -5856,7 +5988,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:44200a774f4c68abc2e257ccbbe00e2fe2e83b8accf8644bdb0420bcf89b9938"
     },
     {
       "id": "lhs:conn.000146",
@@ -5900,7 +6033,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:06d88646f008ea9601ca959be8251d8915ea33b4c9157fd6a41b72b9cd66d253"
     },
     {
       "id": "lhs:conn.000147",
@@ -5944,7 +6078,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4aa52c6dd5ed32c6e20748fac21738cb740c2af95f70747d66958759b15e6227"
     },
     {
       "id": "lhs:conn.000148",
@@ -5988,7 +6123,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b7f2f31860f167db9443560626d7cf2f04dc99d235dab5f351b69e00cccda151"
     },
     {
       "id": "lhs:conn.000149",
@@ -6032,7 +6168,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fd758b0afb517162a86266e65bca1f3f755a8325614248f1e31baa5c4a21fc87"
     },
     {
       "id": "lhs:conn.000150",
@@ -6076,7 +6213,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6cf2583f66dd810a53295d9e4c9204c247f630ee53bcf611599664dfd8a1ce4a"
     },
     {
       "id": "lhs:conn.000151",
@@ -6120,7 +6258,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:99875dce14aee3c6775f5b7fbde3e21c9f7db7c5fa099eab98ddcf867532f3b9"
     },
     {
       "id": "lhs:conn.000152",
@@ -6164,7 +6303,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9b257d349837f5c79946ec706be6668dc648e916f7559aaab37671b18e773ad3"
     },
     {
       "id": "lhs:conn.000153",
@@ -6208,7 +6348,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:eccc53f7002d749c27e3bb1aa06c3196e7084a4ae78f7dca8291d2251d562b24"
     },
     {
       "id": "lhs:conn.000154",
@@ -6252,7 +6393,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:127d325167b21c597595b32330501d90733de09cbac5853984667fdd8feaf068"
     },
     {
       "id": "lhs:conn.000155",
@@ -6296,7 +6438,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b58c158a104bc1ebb1b1de089a039d2e88afcc45ba4c8f407273186a2790b82f"
     },
     {
       "id": "lhs:conn.000156",
@@ -6340,7 +6483,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0fa9aa8360b2c7558a77a36dd432e61a14dcc72ed83be8346489cca68e295446"
     },
     {
       "id": "lhs:conn.000157",
@@ -6384,7 +6528,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0f5ea04efb0378eb43d87d038c21a689e57dcafd19903f0e72f89c02d43ed005"
     },
     {
       "id": "lhs:conn.000158",
@@ -6428,7 +6573,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f21e4dd9707fb2329ebf71d5d87f653e9e06d78e982d0407836a3408c1f9ec65"
     },
     {
       "id": "lhs:conn.000159",
@@ -6472,7 +6618,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e7aa7d88d52fca87d8ed38ca615c3b8d4dc4196731ca75a0515aa76efd76e765"
     },
     {
       "id": "lhs:conn.000160",
@@ -6516,7 +6663,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4e03d1b255970d226ab8ee1af18eb02fdc2e0fc06c2afafd30aacd6ad95fc3ad"
     },
     {
       "id": "lhs:conn.000161",
@@ -6560,7 +6708,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c62e0ae4370810838fbc827e0e1750225488d2ffee9d64339a999dac371b9db2"
     },
     {
       "id": "lhs:conn.000162",
@@ -6604,7 +6753,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a268bb1d802acd55b0ca1b5e3e7882a23786ac19e8ce18924d80df199fe1daed"
     },
     {
       "id": "lhs:conn.000163",
@@ -6648,7 +6798,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8453040f4ab1ba9ba468cd2733af30db67e7c4bdab19998dedabb4ec1e79302c"
     },
     {
       "id": "lhs:conn.000164",
@@ -6692,7 +6843,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c66f136280a5a75c339698944ab0020f40d70bdc26fe89be5bd545b297ab82e4"
     },
     {
       "id": "lhs:conn.000166",
@@ -6736,7 +6888,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:21e0c0c3a651c26e43889edb80eeac117a32477a80762bbeea8e0cb879a42bb3"
     },
     {
       "id": "lhs:conn.000167",
@@ -6780,7 +6933,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:00d6d83eae510249e0be0715226e65640ecc2e7e808d2a4adfdd7ec513635096"
     },
     {
       "id": "lhs:conn.000168",
@@ -6824,7 +6978,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:de5ec25403de334ffc3c1c8485ce243aa04a49fef43a3fdf931cd3f76c5b4715"
     },
     {
       "id": "lhs:conn.000169",
@@ -6868,7 +7023,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:917478ec56e452cfc23d183eaa1255253eb8d838330875c48fa701e08acfec00"
     },
     {
       "id": "lhs:conn.000170",
@@ -6912,7 +7068,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2589ce99c018e11a10c58ffd298fea80e52ec8d5586c4e395f12b75a748dbdd5"
     },
     {
       "id": "lhs:conn.000171",
@@ -6956,7 +7113,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2531b1fe0b276ebfef96939169d435a72176b24c390734206d653746a7502777"
     },
     {
       "id": "lhs:conn.000172",
@@ -7000,7 +7158,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8f4e2a35bcf75fffdcccbea0f7e8faa7473559376829629bdb94d3b1c147bb7e"
     },
     {
       "id": "lhs:conn.000174",
@@ -7044,7 +7203,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:015ed7ab6215cf731220ab11339136b62a7d621246586166a5b38b31b3c89508"
     },
     {
       "id": "lhs:conn.000175",
@@ -7088,7 +7248,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f78d2573345758acc4f1f83f125e34bebce9771097f1d59bd3a40648de6dad47"
     },
     {
       "id": "lhs:conn.000176",
@@ -7132,7 +7293,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:17bdc340ee6042bc0159d39489a8a9c2ca732999f8addfc2b678c603114f455c"
     },
     {
       "id": "lhs:conn.000178",
@@ -7176,7 +7338,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a4b0dc0dfba2307af09f5dcce757cd38c187251871c033ea5698c070d7dbb9e6"
     },
     {
       "id": "lhs:conn.000179",
@@ -7220,7 +7383,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a8d524d5a5d0182f8adc34b533057a6cfa9954fe5a5b6cd3f9442d4d4b65c435"
     },
     {
       "id": "lhs:conn.000181",
@@ -7264,7 +7428,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4c8d321c54149c437d39f486c8d717cf1e98c30cb7cf5d152aa5293db6ee2246"
     },
     {
       "id": "lhs:conn.000182",
@@ -7308,7 +7473,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:52bf2d24562a883341921cc1b90dbb5ad6a5003465d43940bfcae8bd50bbe1f2"
     },
     {
       "id": "lhs:conn.000185",
@@ -7352,7 +7518,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b4d1371d6c53e3761c7fd5c38ed865f992636611334ff370af94b5941ccddb71"
     },
     {
       "id": "lhs:conn.000186",
@@ -7396,7 +7563,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d7014b05c41f3ea36e0e5230f9843495480e4e199fe1ae765178178d53a2032b"
     },
     {
       "id": "lhs:conn.000187",
@@ -7440,7 +7608,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f0ff3c398de9cde1d50ba7cfc918db73c5a8627f00d0b728a2c498b29ec4f884"
     },
     {
       "id": "lhs:conn.000188",
@@ -7484,7 +7653,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6a661fc52a4143594c3a9a5d3419549b95c2b2a7af000c2c88988042eb06a442"
     },
     {
       "id": "lhs:conn.000189",
@@ -7528,7 +7698,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8c6d57e14b4c757897604b5d604ee5832c3ff0f5dd5d0cda4d78c949112a4fa2"
     },
     {
       "id": "lhs:conn.000190",
@@ -7572,7 +7743,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a0f933258dd85096d770d373e652121eb8723f69aef25335158b4e63476d2d8c"
     },
     {
       "id": "lhs:conn.000191",
@@ -7616,7 +7788,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:854466b49a77d692e21a366a807d9a34c2cbeacc512669872e34782dfa416cfa"
     },
     {
       "id": "lhs:conn.000192",
@@ -7660,7 +7833,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:66c576dc88223a6e01edd31cf06a9d4abce2884341aa5e0bbc3c97149b7ee895"
     },
     {
       "id": "lhs:conn.000194",
@@ -7704,7 +7878,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:353b6f5da7d749329436766c224faebda09558dee3cf3d892616bc9a952bb8ce"
     },
     {
       "id": "lhs:conn.000195",
@@ -7748,7 +7923,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a242d0ff5ff5d41e099367f2f29d4e49de112750d0fd97c5b752afca086a87e3"
     },
     {
       "id": "lhs:conn.000197",
@@ -7792,7 +7968,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c46bb7b48ee7f59733fed80ecc9cbe4cf5105fc4bc38a2bf6e08f30c18a003e7"
     },
     {
       "id": "lhs:conn.000199",
@@ -7836,7 +8013,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1485bf9f9b3ddc97727c52673bacee6ec17bfb2d9f0821cb8943b06625eacc91"
     },
     {
       "id": "lhs:conn.000200",
@@ -7880,7 +8058,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d47861690259ea97f58d6beea6a40c48dd4a2184cfa00c580944bca8e9439d30"
     },
     {
       "id": "lhs:conn.000201",
@@ -7924,7 +8103,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1e27d2fa4c06324d6d1e6bb9d627d7e21252e1da07d344b942c8aeddd8dbf417"
     },
     {
       "id": "lhs:conn.000202",
@@ -7968,7 +8148,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e2466f1a45fd9e120efdd748c9f6facc579ee9371d2ff6f2ada5d89f62c3a2f6"
     },
     {
       "id": "lhs:conn.000203",
@@ -8012,7 +8193,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b9921885c24cacc6a769819dad3c2aecb5f872f0974bc0afe644ff06d676d53e"
     },
     {
       "id": "lhs:conn.000204",
@@ -8056,7 +8238,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:eeefc802f30ebe47c6e6da836565fd019531ee82904b03687b8b854dbdda133f"
     },
     {
       "id": "lhs:conn.000205",
@@ -8100,7 +8283,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:505eec1187c34d8ebae21166d4ea96ff831cd9c82991df3114fbaf60724ef581"
     },
     {
       "id": "lhs:conn.000206",
@@ -8144,7 +8328,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4883ba4f8ec55a33cee22c784d08337164ed85c968f2e6faabe13823bdafaf5e"
     },
     {
       "id": "lhs:conn.000207",
@@ -8188,7 +8373,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8f6fefe7be50021ef06256f4b582914a70a0e4359ae8eeda2e143ad0a54b1982"
     },
     {
       "id": "lhs:conn.000208",
@@ -8232,7 +8418,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fdca6d28ae8cc4610d5cfbae7676dc548b55e896fa1ccfa67f78f5f0a5b2045e"
     },
     {
       "id": "lhs:conn.000209",
@@ -8276,7 +8463,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:90b71f905381b5015f6af3865ff73960c65616505928618d7a812ae58f8d675e"
     },
     {
       "id": "lhs:conn.000210",
@@ -8320,7 +8508,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7c423779f3db3a4bad10caba757465e1300b85735a28150617324738fc59244a"
     },
     {
       "id": "lhs:conn.000211",
@@ -8364,7 +8553,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:25d7dc25622e4cc0070904cef2d465bfb5f0602ff8742deb40dce3d389027a2c"
     },
     {
       "id": "lhs:conn.000212",
@@ -8408,7 +8598,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f1023e31acce09e5cfcb3195011ebb80dc35f6428be1821a59367e68cd37e5e2"
     },
     {
       "id": "lhs:conn.000213",
@@ -8452,7 +8643,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6d74bea81d3f08da6e03b313afd806de2e3f5cdde2c3cc362fdbed629ce6b32a"
     },
     {
       "id": "lhs:conn.000214",
@@ -8496,7 +8688,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:dd80e77cff39f2846f35363d2a066052e93da1ca96c20bcaf9d505c58b810550"
     },
     {
       "id": "lhs:conn.000215",
@@ -8540,7 +8733,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6f88e8ff69d4579fe9622b54782c4569aa949e4172384834bf45ccbe522c00a7"
     },
     {
       "id": "lhs:conn.000216",
@@ -8584,7 +8778,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:846b73e8a2c0041473502467565fda95443b260d823f4e9598349869f8cd7bba"
     },
     {
       "id": "lhs:conn.000217",
@@ -8628,7 +8823,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:24aa2c410b07bc0d20782e891c0fa23cb31d546e3fd7a2f4c30e23b35bb8691b"
     },
     {
       "id": "lhs:conn.000218",
@@ -8672,7 +8868,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b27c6b18cd4bea9da1df7cefd514c838e4c117503c96491c801efb0497b23f9a"
     },
     {
       "id": "lhs:conn.000219",
@@ -8716,7 +8913,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:de5f95b4446e1e4fef03a1dfb6ba90a5b8c213fcb59df2f468458e734b56ff0e"
     },
     {
       "id": "lhs:conn.000223",
@@ -8760,7 +8958,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:db62fc3cb6e4ab3aab8e1b5021adea00d5a71e05c781e7dc019880e896347132"
     },
     {
       "id": "lhs:conn.000225",
@@ -8804,7 +9003,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:bb854fc6ba2e3de41b59c6d73b89d3ea5e053d0067372f5f742bf403e343dfd9"
     },
     {
       "id": "lhs:conn.000226",
@@ -8848,7 +9048,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9084e0f020b5246a4192bd6b3349a51418ad5110361c968aa5dfc9b94c518509"
     },
     {
       "id": "lhs:conn.000227",
@@ -8892,7 +9093,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a3918a1df7278fbf1ba70961f2b7c6f945c9544f8bbfcec8f67c347fce5eb24f"
     },
     {
       "id": "lhs:conn.000228",
@@ -8936,7 +9138,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e2c2c4aac9977cd86a7fb20c9bfb42047af893381f42d013bfb7af8c6abcdcc1"
     },
     {
       "id": "lhs:conn.000229",
@@ -8980,7 +9183,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8b8c557de9e273c38f96149f9834aa671fa94e269441400e7d857a66702f0f9d"
     },
     {
       "id": "lhs:conn.000230",
@@ -9024,7 +9228,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:5e70998e5a4d7a5e971fab8dd67466a547ebb599a465c9f5d5aa8c397624e94e"
     },
     {
       "id": "lhs:conn.000232",
@@ -9068,7 +9273,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c7782cf307f03768bcba79c32d9aae6a096caf923248cbc5374cb103cbc4d158"
     },
     {
       "id": "lhs:conn.000233",
@@ -9112,7 +9318,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:23adc1001f96d99f611d8040cbb6ffd3c707663ed76e844857f7b13b6ae65246"
     },
     {
       "id": "lhs:conn.000234",
@@ -9156,7 +9363,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c03cc2fd3ac063168c5aea19de1ebffe7061868aeb820b4e1e4a75e3acadde30"
     },
     {
       "id": "lhs:conn.000235",
@@ -9200,7 +9408,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:30dd008dcad9e4be2c58d540721d6fc38cb98596c5f53d69571e2356fa2838a2"
     },
     {
       "id": "lhs:conn.000236",
@@ -9244,7 +9453,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0f224e6b6b7c300d5168e244814360f5f10c7d354b54005b907205619f7d2e5c"
     },
     {
       "id": "lhs:conn.000237",
@@ -9288,7 +9498,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c2404b3762dd499524580cd9b0811d94ebaf6ff4848332dee3c95c5739e48ece"
     },
     {
       "id": "lhs:conn.000238",
@@ -9332,7 +9543,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1226184215f8b7120a264b00c77dcfb4973791433b17ebc1b67a9a0a82f6675f"
     },
     {
       "id": "lhs:conn.000239",
@@ -9376,7 +9588,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:374626c219f339fae1628c801ef2dada2e547538e3101578fcc0d3ba194d1b8d"
     },
     {
       "id": "lhs:conn.000241",
@@ -9420,7 +9633,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b64fb7ebc45db1f6ed578d5dd164f86c02887741e4f46ee2c6e18a72554943d8"
     },
     {
       "id": "lhs:conn.000242",
@@ -9464,7 +9678,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ba76261c096f6a7809d7683705a42d327ec5f397328836b53b9a4313ad1aa3c6"
     },
     {
       "id": "lhs:conn.000243",
@@ -9508,7 +9723,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a2f988cf4a05c1de0049bf313cab2134985c2954ab16ce2fafd5abb5d85a9b03"
     },
     {
       "id": "lhs:conn.000245",
@@ -9552,7 +9768,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8732dcae7a2ec13d271b04388cfe1a146a7f6cb63b1f92ddbf68ea2102935702"
     },
     {
       "id": "lhs:conn.000247",
@@ -9596,7 +9813,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1e7997598f1a631f16defc5b8610e15b92b5198129215c02c4f81396b7d590c0"
     },
     {
       "id": "lhs:conn.000248",
@@ -9640,7 +9858,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7d4bf84992932d478c1dcdf83181b7eef597cd2cccda7731c84b30b0f4245ba6"
     },
     {
       "id": "lhs:conn.000249",
@@ -9684,7 +9903,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6ad6d2ca523575c02199f9c20508bca2dc3e7114a09872e98a7d20517af25542"
     },
     {
       "id": "lhs:conn.000251",
@@ -9728,7 +9948,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4f71e62014f151d833ea424c29a6e7872c0703ad8d2689154101c3a41c912cf7"
     },
     {
       "id": "lhs:conn.000252",
@@ -9772,7 +9993,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:62218736cbac55e751e255dfdd25c367c1300205ea8a16ab9442a2966fd08aa7"
     },
     {
       "id": "lhs:conn.000253",
@@ -9816,7 +10038,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ce02e3166db1499b5b61776668d21bcbf81e3037ca01ffe3c6bc6e7e1f3b9f2e"
     },
     {
       "id": "lhs:conn.000254",
@@ -9860,7 +10083,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:006ec6985c7d8ebac552fb0cd6dc2e11a93628810eb79ced2d4549aa580962a5"
     },
     {
       "id": "lhs:conn.000255",
@@ -9904,7 +10128,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c68354d2e30e65d18712f526c21a448768aad40e4f9b512fcf0cccbd3a3accb2"
     },
     {
       "id": "lhs:conn.000257",
@@ -9948,7 +10173,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0443496833a8010d470e6e6d2ac922b8a3da7a30eddb882b8669b232b563e1b3"
     },
     {
       "id": "lhs:conn.000258",
@@ -9992,7 +10218,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6558a25f0a210c7e2729946ad59590ce24e2130e304f1c2126d033c31490ee41"
     },
     {
       "id": "lhs:conn.000259",
@@ -10036,7 +10263,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fa7d4a8a319d24379e22093555fb90065cd707a7eb75ece03f1ed4a97c410fd1"
     },
     {
       "id": "lhs:conn.000260",
@@ -10080,7 +10308,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:000cd6af8ce72ef7500b14ee2912e7ff022212023a1b3966c81eb644bb49e9f5"
     },
     {
       "id": "lhs:conn.000261",
@@ -10124,7 +10353,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2dc4d3b68a5bcefa1b4f7de249e0c7315c39470440561a9c97f634d2766f89e0"
     },
     {
       "id": "lhs:conn.000262",
@@ -10168,7 +10398,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:cc62e4ff77c6c170e39ab33cd06768ac9a832fa8c8291f6dd2f736c914055958"
     },
     {
       "id": "lhs:conn.000263",
@@ -10212,7 +10443,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b4a41bc3c7c93792913d3ca1207e76481e0ba9c6401dc5eabe09d93c074f4363"
     },
     {
       "id": "lhs:conn.000264",
@@ -10256,7 +10488,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:24015a2572b2fa057efd80f6127046f977309d98dfee90b1073ddee869a76d74"
     },
     {
       "id": "lhs:conn.000265",
@@ -10300,7 +10533,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8413c198c3408ebb5a7373187fcd668bbd4a6db910d2de2020b3b4767711ea64"
     },
     {
       "id": "lhs:conn.000266",
@@ -10344,7 +10578,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a5ab43b50bcea732047d68789276f7f87a47e2305318894cce512fcc468b514c"
     },
     {
       "id": "lhs:conn.000267",
@@ -10388,7 +10623,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a375f5349901fec0435edf11875a0f1a83b857c770c019c42fc232c10035796f"
     },
     {
       "id": "lhs:conn.000269",
@@ -10432,7 +10668,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8ee4d251a79ffef792b398a0e44670c84baa9d1e7395f40e36b5e29b211193e8"
     },
     {
       "id": "lhs:conn.000270",
@@ -10476,7 +10713,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a35c7db47eb5ff44fea2b6cf49b36fce451c103858613ea63c3fe58cee9d227c"
     },
     {
       "id": "lhs:conn.000271",
@@ -10520,7 +10758,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:037c74c0b003415c4fd4fcc7043bd74165db42cb340985ef01e97022d95736e2"
     },
     {
       "id": "lhs:conn.000274",
@@ -10564,7 +10803,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:96d8d960bffdceb7971632c357c095dc97ea96bdaa8188db4c08cd19c7a2b759"
     },
     {
       "id": "lhs:conn.000275",
@@ -10608,7 +10848,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b9a0dec65e0160445fdeb1283c486e454c4cd45084f6652e626d3f4f8df20858"
     },
     {
       "id": "lhs:conn.000276",
@@ -10652,7 +10893,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:40415cbbdda69457d96d8d04b04fb79d0a9e26e5d58e1aefa47677e757d068a6"
     },
     {
       "id": "lhs:conn.000277",
@@ -10696,7 +10938,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:075b6f7a704284a2b65fb8d3ee3e39316b634fef400359e5a7b08b6e8a495133"
     },
     {
       "id": "lhs:conn.000278",
@@ -10740,7 +10983,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8158082abc5f2c5845ebe9a5234e38350ffb303dd276ea371c61e6987875cb23"
     },
     {
       "id": "lhs:conn.000280",
@@ -10784,7 +11028,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d1ae986637d03c8387670c349f3ce63082e57ba57705ee3684c26a9f35d24bdd"
     },
     {
       "id": "lhs:conn.000281",
@@ -10828,7 +11073,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ce6161355d8429e3a92fb4498846ed15a42419a8b4146cc47d06e97c24b2809a"
     },
     {
       "id": "lhs:conn.000282",
@@ -10872,7 +11118,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:48c3bf0a8f9fd15ba0cd0572be2dc4e30d8d46afb874aae3b5f73cb81b552c1a"
     },
     {
       "id": "lhs:conn.000283",
@@ -10916,7 +11163,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a8e1dc311742092319b9be952650c209324b313a740ac69952c3c4594005fbe6"
     },
     {
       "id": "lhs:conn.000284",
@@ -10960,7 +11208,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:444aca7d0afc167f2d831756eb4435956ae42719dee18be6b3e62800a23605da"
     },
     {
       "id": "lhs:conn.000285",
@@ -11004,7 +11253,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ba9882ac99525c9ff2948417a264b4f2886f2988c27c638e330c793a9723c8fd"
     },
     {
       "id": "lhs:conn.000286",
@@ -11048,7 +11298,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:14b70e96913ded6484ac439218252766034feb05e00f38281ee48da82171bfaf"
     },
     {
       "id": "lhs:conn.000288",
@@ -11092,7 +11343,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:75f42fab9754edd34cbf9a00da3435656c929ae8bfa1e48399a3fa95f0e45c28"
     },
     {
       "id": "lhs:conn.000289",
@@ -11136,7 +11388,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:17cb0f65fb89ad326a2f40d612a3ef4f52e5f886ad6a3facacb99001a23917a2"
     },
     {
       "id": "lhs:conn.000290",
@@ -11180,7 +11433,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7327bf0c167b24c1aa052b70775a1371a5ce59f906fb6eb1c862e145b6b7f559"
     },
     {
       "id": "lhs:conn.000291",
@@ -11224,7 +11478,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:72d455ec9c7242912cea8afc5772770033c90b21fdb611aa8e946027c04d9dec"
     },
     {
       "id": "lhs:conn.000292",
@@ -11268,7 +11523,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ec6eca06869898c30d01d9a82c358a2be3fcf9112505c49404116f319c2f7d1b"
     },
     {
       "id": "lhs:conn.000293",
@@ -11312,7 +11568,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2c672f158fd359f263e41a81f367f5b3ca11a78b1d7f689bbdcf121c2255ab81"
     },
     {
       "id": "lhs:conn.000294",
@@ -11356,7 +11613,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a579151e662f4f29aada00030abfd063974b6956f0693c5832842bc46d605ead"
     },
     {
       "id": "lhs:conn.000295",
@@ -11400,7 +11658,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0b7c92103e27fc07c036fd91a083998e5776e4b95b2b208d813bc4198ad8a46f"
     },
     {
       "id": "lhs:conn.000296",
@@ -11444,7 +11703,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:df266da5ed67047e7bdf2e813c36ba15a345bb9c24b94a9a334771d9d4ddba55"
     },
     {
       "id": "lhs:conn.000297",
@@ -11488,7 +11748,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d06c39884136882bd4469f6a151a3445ffa98da8d231f7ea3a94fa44a52910d4"
     },
     {
       "id": "lhs:conn.000298",
@@ -11532,7 +11793,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c9919847aaa2ac675081feae2df4f783b675ec1f67a0262f1222950e3cc85d6e"
     },
     {
       "id": "lhs:conn.000299",
@@ -11576,7 +11838,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9734ca26cf045ec154ea606a0f9d2c0706aa146761a69dff027df58c74fac1b6"
     },
     {
       "id": "lhs:conn.000300",
@@ -11620,7 +11883,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2f6b7eff6745b75ac8a973c702dae6071baf8fc36ca24c77a37306f1d04d5c5d"
     },
     {
       "id": "lhs:conn.000301",
@@ -11664,7 +11928,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3bb4efe9f6b80c914f9c4eea081337e75bac38480ecf5984660d8f31b09073da"
     },
     {
       "id": "lhs:conn.000302",
@@ -11708,7 +11973,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:60ab7ed93225960865e743fc3d85f3cf71652dc007095e637b7e8f8fb8601c35"
     },
     {
       "id": "lhs:conn.000303",
@@ -11752,7 +12018,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:68b68e0b4e9c5631fc780d188be8437b7adbb8e43c05d01fddcc079e7ace0052"
     },
     {
       "id": "lhs:conn.000304",
@@ -11796,7 +12063,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9f184c2570368708002d5e1491cb17904ecb97e457cb17a0dbc59ffccf839b80"
     },
     {
       "id": "lhs:conn.000305",
@@ -11840,7 +12108,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:479d32afd2618453800504353096ddef7681406bd8eac7a55e7ab3a8b79bfc26"
     },
     {
       "id": "lhs:conn.000306",
@@ -11884,7 +12153,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3bc3e938131ef9a92be283fab535f81733d5643857ff5de4e0f1bcd108c42e4a"
     },
     {
       "id": "lhs:conn.000307",
@@ -11928,7 +12198,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:673b036b557fe8d8488821c348527969e4023a7d7051b32e7754baf9cc1991bd"
     },
     {
       "id": "lhs:conn.000308",
@@ -11972,7 +12243,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1d2654b8f619fed65ecb4b493777f2ec7abccea141185fbc129d84fa8ee8e416"
     },
     {
       "id": "lhs:conn.000309",
@@ -12016,7 +12288,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7fac02f32279ac2b746ab6ce85280070dffbe710e919b432989c088a76863cd3"
     },
     {
       "id": "lhs:conn.000310",
@@ -12060,7 +12333,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ceee4a6e4abcd22eb21a83b8935738068a8337cb418c84e445338a61de1a420f"
     },
     {
       "id": "lhs:conn.000312",
@@ -12104,7 +12378,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:52d6bba3788f1d46b6cebd8f54f8d072c1f47642b021ce801a52ae9a44ceedb6"
     },
     {
       "id": "lhs:conn.000313",
@@ -12148,7 +12423,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b13f7851a5bc4f5ca615bdc325654ba85cb7d8f48a12d8798ca3e31543234791"
     },
     {
       "id": "lhs:conn.000314",
@@ -12192,7 +12468,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ce0d01db9db4ba1e37cd2b613321da868a99e4b694a711d7a218788c25e76018"
     },
     {
       "id": "lhs:conn.000315",
@@ -12236,7 +12513,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0840d96bc2e5c2239324074ad5cb06c21dd0ba9684dc6d423602f3da122c0299"
     },
     {
       "id": "lhs:conn.000316",
@@ -12280,7 +12558,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:61a0be003465e7092f8d4a361ef538f621c9ef481d0a07b2cf34f125470f9778"
     },
     {
       "id": "lhs:conn.000317",
@@ -12324,7 +12603,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8f137fa9f6e2be5d56761a5c7da2561a580aec9fa5aac5692b6656a80a2a50e9"
     },
     {
       "id": "lhs:conn.000319",
@@ -12368,7 +12648,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:09013fdee502de8dea719e3243dc10227d3902c3c1b3512cd0ffc7ab2a16dbb2"
     },
     {
       "id": "lhs:conn.000320",
@@ -12412,7 +12693,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:98d6eeb16c695b151fc5a47ef700a4824c42f2031b83f34b0983b071eadbb7b5"
     },
     {
       "id": "lhs:conn.000321",
@@ -12456,7 +12738,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d27f37695c961e251145eb496c11a1f01e00e182a52984c809b944eeb44f2e8f"
     },
     {
       "id": "lhs:conn.000322",
@@ -12500,7 +12783,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c46035fcb41864738a5d016a7ccead2813206ed2c7d1400912a47b94bea7d162"
     },
     {
       "id": "lhs:conn.000323",
@@ -12544,7 +12828,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:97f36b7601e3ff21a3a393c4e08b98f9d9124f00d4e303b05b28848addfb701f"
     },
     {
       "id": "lhs:conn.000324",
@@ -12588,7 +12873,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:26876904411af67063e9796e067abf8543a003708f01505da1b35444d1229e74"
     },
     {
       "id": "lhs:conn.000326",
@@ -12632,7 +12918,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c969c84735f208232745e78427c1f09e23b71ce2fdd86db2ba4d7b640120bebc"
     },
     {
       "id": "lhs:conn.000327",
@@ -12676,7 +12963,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:497ca14eff76b9a331b0e12112880e725cb9bf5ee4aae13a18993d81747210f3"
     },
     {
       "id": "lhs:conn.000328",
@@ -12720,7 +13008,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ba73bd168840c497fe486452e9c56cab3c64be3b5207127edb3ef7f97a876f4e"
     },
     {
       "id": "lhs:conn.000329",
@@ -12764,7 +13053,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ee31abdac270c40c654b3df08c246ceda0cf0c7bac0460aec094b8196928dcf4"
     },
     {
       "id": "lhs:conn.000330",
@@ -12808,7 +13098,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e162857b1a2ef923a8680ea415bcc104c7278e76b010c0357233b237ff6dda85"
     },
     {
       "id": "lhs:conn.000331",
@@ -12852,7 +13143,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b1af0eb7a293d72f3f27a8472552fc48380b6dbef6a022e5821feeb2e821f763"
     },
     {
       "id": "lhs:conn.000332",
@@ -12896,7 +13188,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:039ad34b05b6b2cc96e07550f48a8b3b3f9c23771e6361d3ae99717cfa04e484"
     },
     {
       "id": "lhs:conn.000333",
@@ -12940,7 +13233,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:88f6333c79f55c89d195c5640f6b8cc8628ddbd7a76cb83501fd607bf18e3be4"
     },
     {
       "id": "lhs:conn.000334",
@@ -12984,7 +13278,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:707287a661da2501205947134c8989c7d0c6339336e4d0802d6efb7b3c457751"
     },
     {
       "id": "lhs:conn.000336",
@@ -13028,7 +13323,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6d7ba36c488eb18e22592b4c09d8f418af1704922afe78c1eab894047691bde0"
     },
     {
       "id": "lhs:conn.000337",
@@ -13072,7 +13368,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:0b0bd5abf2f14fa27db6bcab5a7820580543578ab0342570d9216fbecd5f7bf9"
     },
     {
       "id": "lhs:conn.000338",
@@ -13116,7 +13413,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7e8be290139ad886ef08dc02756136d313b42331fbaf0b85cb75adce38b72c15"
     },
     {
       "id": "lhs:conn.000339",
@@ -13160,7 +13458,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:27a9326094b371bf62cd70f7cf62fcc9f63b87cf93d40eb0f644308b04b9f118"
     },
     {
       "id": "lhs:conn.000340",
@@ -13204,7 +13503,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:8d860e3929de6d10cce43638990d0dc5563f6d94aeb9e5e633caa47ca06d0453"
     },
     {
       "id": "lhs:conn.000341",
@@ -13248,7 +13548,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:198d7a272eabeb0f591d12241c7631f52ec860eb7598e2333980171325fffce7"
     },
     {
       "id": "lhs:conn.000343",
@@ -13292,7 +13593,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:85798c07ff711848e5ce24dd78f0337879da4ddff2f2a8a8cf15e9beddc212c0"
     },
     {
       "id": "lhs:conn.000344",
@@ -13336,7 +13638,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:319aaac59f2c200a8ceadadc7c8a05389cf73283a8f5d541631a08b13b2574ab"
     },
     {
       "id": "lhs:conn.000345",
@@ -13380,7 +13683,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:95e77d3ef19edd4adfb59839b857acbca17c976ca7ea763a7b602f902a9505fe"
     },
     {
       "id": "lhs:conn.000346",
@@ -13424,7 +13728,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:57c0beb2e86e66584fe10bdb75aed42ce7e7f0a688ec6cf30ba8c087d21d24c9"
     },
     {
       "id": "lhs:conn.000347",
@@ -13468,7 +13773,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:7d2946e5ae34b4e123ad2d5284296da12522fced2bcd450c4599a5d7c57e3ad6"
     },
     {
       "id": "lhs:conn.000348",
@@ -13512,7 +13818,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:a20a11d2485293c263028abcf4efbd61270c19d4465717d4f265e1f070585c3a"
     },
     {
       "id": "lhs:conn.000349",
@@ -13556,7 +13863,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:86e30075b7f2f3f31ba18218d422723479b82af5cf00c1447ed0c22f74d137c3"
     },
     {
       "id": "lhs:conn.000350",
@@ -13600,7 +13908,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:64c984525ed0c9a57ceb9739d3fed7540869334e3386d0830a9bd9c41b66e75b"
     },
     {
       "id": "lhs:conn.000351",
@@ -13644,7 +13953,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d2d42c9c93848a7f53ba693177cb4b7bbcccb2610996a80e399aec0a46d5cbf8"
     },
     {
       "id": "lhs:conn.000352",
@@ -13688,7 +13998,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:df8cd9d7b23317c05b52c02fafdf426b071ba79648b8f17645cb5ffefa99bf3c"
     },
     {
       "id": "lhs:conn.000353",
@@ -13732,7 +14043,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:650d45396d91a60cd579e49d26c416057e2333c74b73ecf84e0e8e2b6925d64e"
     },
     {
       "id": "lhs:conn.000354",
@@ -13776,7 +14088,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1150d56d6911a493ba0c93873e99f9ca55ac51d686c346e310ffe691c4527974"
     },
     {
       "id": "lhs:conn.000355",
@@ -13820,7 +14133,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:afd36d5828b7678c5ecf9a0421138ae69e939b13509bd8eb66d7a88b0db5f90e"
     },
     {
       "id": "lhs:conn.000356",
@@ -13864,7 +14178,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f1add53480f4798aab2dfe38b4a0eeffb94630b67234f8016575b32516af0241"
     },
     {
       "id": "lhs:conn.000357",
@@ -13908,7 +14223,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e5e4d4c721c02327d685c471f1152891b58c1f3328572f43c2ecf404fc0a32c1"
     },
     {
       "id": "lhs:conn.000358",
@@ -13952,7 +14268,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9c0973b6a834cd1c395ac89083a33d50e5be3f61d82a8a3e0d91da7b98ccfb30"
     },
     {
       "id": "lhs:conn.000359",
@@ -13996,7 +14313,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:fff0e651f25915339086ff9290b14e9617937297e9e1afeb46a5e7e3f98ca502"
     },
     {
       "id": "lhs:conn.000360",
@@ -14040,7 +14358,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:39b50da8d2d307e486555020a525931104beeb7ea8786c45ed86046d5ef586d6"
     },
     {
       "id": "lhs:conn.000361",
@@ -14084,7 +14403,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:911bd56e18b40f132627afe41f9f5f8934abce0e0a7d231ff9ae63c896769dba"
     },
     {
       "id": "lhs:conn.000362",
@@ -14128,7 +14448,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9e91be12ea9e1d418424f8b9c134310ce38888e1e180773de02f0693216dafb7"
     },
     {
       "id": "lhs:conn.000363",
@@ -14172,7 +14493,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:4f1b0f7c1e2f37bff40cc5ac6a3362950d60eb0a03cf9dbb56c0fda12d358502"
     },
     {
       "id": "lhs:conn.000365",
@@ -14216,7 +14538,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:79365bbcc16d2e02b5cc7c18220cdf6dc3011f0512f7e28e69d2938ade2f809c"
     },
     {
       "id": "lhs:conn.000366",
@@ -14260,7 +14583,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:921dc83be982956efdc9fe97998a715ade7a4fec686c4c03fb1cf35ec9a51878"
     },
     {
       "id": "lhs:conn.000367",
@@ -14304,7 +14628,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:184cec20bd531ad640ebf41ff15fcb4996e5d8616d7d8195f7aa0140b9d093c8"
     },
     {
       "id": "lhs:conn.000368",
@@ -14348,7 +14673,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:ebc8e56db5788a3ad492b9e7c4a5afc076e1d01e987f14f18cae324470c1de8c"
     },
     {
       "id": "lhs:conn.000369",
@@ -14392,7 +14718,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:96d9611c76245f390d8b0a81fc33d54c68e1e54f78fe591dacce8208fbdca290"
     },
     {
       "id": "lhs:conn.000370",
@@ -14436,7 +14763,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:e780603afa3d43fde46b7b434d5e4ef30eba3037cfe04d376ffc46439239ec02"
     },
     {
       "id": "lhs:conn.000371",
@@ -14480,7 +14808,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:9c051079e1bd7462c15f1ae036303f94358c1f80a4aa2d973e7ed6944610ef21"
     },
     {
       "id": "lhs:conn.000372",
@@ -14524,7 +14853,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:41c177f91cdb86acc25b9cfcee52d5d3546926f241efcfeaff288390e9d9aa2f"
     },
     {
       "id": "lhs:conn.000373",
@@ -14568,7 +14898,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:3190c2419481cf2f20701bd823fe219faf2f9d033549f54cbe4e57d1e7d9053a"
     },
     {
       "id": "lhs:conn.000374",
@@ -14612,7 +14943,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:972aa5da03ef7368bf4302be40e1fa8fb955ff7ac5806cadeab7602850383551"
     },
     {
       "id": "lhs:conn.000375",
@@ -14656,7 +14988,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:895265914caf11e41dd05312989ea6b4f48d3ff91a8268a7862477bca0486511"
     },
     {
       "id": "lhs:conn.000376",
@@ -14700,7 +15033,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:16d5a8d47d241a38f55bcff4d602d74b088bbeb9cfac0ca93cb93c46917c7ab5"
     },
     {
       "id": "lhs:conn.000382",
@@ -14756,7 +15090,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:2158769defc29d2b279c528d95f5ef8f871ae884297fe2fa396790c6330ddd8e"
     },
     {
       "id": "lhs:conn.000383",
@@ -14812,7 +15147,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:c626243911886b2d5bf84ff0fe4b5d55a97fc7865a2cb2fbb0b5027e9e94ddab"
     },
     {
       "id": "lhs:conn.000385",
@@ -14868,7 +15204,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:f1c931d2cdc461bf014974067f5da435ce9f9ab4069d836380c3b85432106ab0"
     },
     {
       "id": "lhs:conn.000386",
@@ -14924,7 +15261,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:117c06b6e36c80b04ba098e4553d445556a339dafb69ac384cab271ed9b47944"
     },
     {
       "id": "lhs:conn.000389",
@@ -14983,7 +15321,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:6c3c309ac4eb1de04d4f197a30ef4aaca0ef1f69b043f79774e50a4810fbdf49"
     },
     {
       "id": "lhs:conn.000390",
@@ -15027,7 +15366,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:045edc06e0a372d1c62ad84b022d2e1ceeb80c523946ffba32a89a80eaf65d65"
     },
     {
       "id": "lhs:conn.000391",
@@ -15071,7 +15411,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:1be9d6499a9a7e26865c7d41e8b3d3ec05997344ea786b6ec099669741bb17f4"
     },
     {
       "id": "lhs:conn.000392",
@@ -15115,7 +15456,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:334bab4cf873bb93163847ddbeb424ff5fceed33cffc74a486196ffc1c18b9b1"
     },
     {
       "id": "lhs:conn.000393",
@@ -15159,7 +15501,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:affbe6479ff9ecded29ef6a7ea5cd71ab28b9549d1ffe42d6fae877ba536f6b7"
     },
     {
       "id": "lhs:conn.000394",
@@ -15203,7 +15546,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:d0fa14e6e3d98aa9907319776ae2dc461bb0390fc9d1c684d1bb101f0d1e26b0"
     },
     {
       "id": "lhs:conn.000395",
@@ -15247,7 +15591,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:b3700a0b89c9c972cc2f5f5a748d0bf3b75af943a0a2e1dc812c3c878cd5df35"
     },
     {
       "id": "lhs:conn.000396",
@@ -15291,7 +15636,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:80f654254b40bf0add043bbd2ebfd87ccd1376635a30c82694f93ee53a2ade3a"
     },
     {
       "id": "lhs:conn.000397",
@@ -15335,7 +15681,8 @@
       "updated_at": null,
       "validity": null,
       "lifecycle": null,
-      "rights": null
+      "rights": null,
+      "claim_signature": "sha256:78c8e791226479aed397fc4b2a713189cb3fa1abacf1c589cdc627bcfc114534"
     },
     {
       "id": "lhs:conn.000398",
@@ -15372,7 +15719,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b4e03d8068b893fe6f04f76a94b25ab15d413ffdf058d831de3389db0a5e3ad8"
     },
     {
       "id": "lhs:conn.000399",
@@ -15409,7 +15757,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c89c9f3f3e4bc1860de77a1042ae7b0efd1b8fad57c22dc82eec5d34101d1d38"
     },
     {
       "id": "lhs:conn.000400",
@@ -15446,7 +15795,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6c5e1ffc5bf78188ac6fe850ac2a8f19bbebd8dab7e0c73b34b8e17b2a9bc838"
     },
     {
       "id": "lhs:conn.000401",
@@ -15483,7 +15833,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:046da41b9850d2bcfa2d5532ca4a2ab4566ed90ee5d7da30cfa923a76204b622"
     },
     {
       "id": "lhs:conn.000402",
@@ -15520,7 +15871,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4b81aab70ec4398d9463e00bdfebb3c785037e2f49fbf0597169380430dbf59d"
     },
     {
       "id": "lhs:conn.000403",
@@ -15557,7 +15909,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:45fe5a697ec7f76725e11f1b85198a08347d5217000ff223d7a10870af7df37e"
     },
     {
       "id": "lhs:conn.000404",
@@ -15594,7 +15947,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bc1ebb19a5d49d44d87482da21f1c092855537a211666af5287acccc1641371f"
     },
     {
       "id": "lhs:conn.000405",
@@ -15631,7 +15985,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:51f341a78fac5378ebd170796a926e2823afd3c895aaff1d1333e6a942962f27"
     },
     {
       "id": "lhs:conn.000406",
@@ -15668,7 +16023,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c4928e118e06023dae6de397a1bb8704516a733ca439df66b106d5ce53020b65"
     },
     {
       "id": "lhs:conn.000407",
@@ -15705,7 +16061,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c408290b9ee7fd497dc7294adc3d74feae7163ff9616050d50bf22d45d4775dd"
     },
     {
       "id": "lhs:conn.000408",
@@ -15742,7 +16099,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7e147f1a559ff58ff1028a2ee7b5d3452e5e329c2624c5f316d8e5a2146d2f5a"
     },
     {
       "id": "lhs:conn.000409",
@@ -15779,7 +16137,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bb0c1061c429d8e80a900e94f45c3cb3781002a88bfcc7e03c724b349977df64"
     },
     {
       "id": "lhs:conn.000410",
@@ -15816,7 +16175,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8d36e072b7afd83c4d4d6d963499f6111283266408f5a1a20a6ed6932fa946a5"
     },
     {
       "id": "lhs:conn.000411",
@@ -15853,7 +16213,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0eb148c2f36c9f6314fd135163a2738031583793a5f3cefc5e5a5be988344e2e"
     },
     {
       "id": "lhs:conn.000412",
@@ -15890,7 +16251,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:3c75cc29c091544f5471868ae1bf276af22b91b5d60e8358615d6e23a113fe00"
     },
     {
       "id": "lhs:conn.000413",
@@ -15927,7 +16289,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7ce1a8d912689b7ccabf40162746e74f99ba85a84c0655bd6634d092b9c2f60f"
     },
     {
       "id": "lhs:conn.000414",
@@ -15964,7 +16327,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f4621f5d80c890c692ade0b1f6be532deb6a3a0804ef75b0f3bfe9c6656b1f4d"
     },
     {
       "id": "lhs:conn.000415",
@@ -16001,7 +16365,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:79366e9f4c5a176af969970e37778f9e0a7efb2135a2046d0b31ec0a55af3bb4"
     },
     {
       "id": "lhs:conn.000416",
@@ -16038,7 +16403,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:fa9dee45a58abe556bddde10b6a35d15e660291b049ca6e26eb063256a547086"
     },
     {
       "id": "lhs:conn.000417",
@@ -16075,7 +16441,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:32e28a50ab6e34e620bf4d6761e3ece282852f9a73e8403f310733326dd00040"
     },
     {
       "id": "lhs:conn.000418",
@@ -16112,7 +16479,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1d4de07bf528e61fed9d8adcdd4d72d59ccbb797b20917779f16bc0f7b002ac6"
     },
     {
       "id": "lhs:conn.000419",
@@ -16149,7 +16517,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d37feb9be4a8e1a76bf78f64f74cd946f32d81014ed1201df2be1b0b922195c4"
     },
     {
       "id": "lhs:conn.000420",
@@ -16186,7 +16555,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e713483e988847861fbf4024d95d1f9cbf4dd2559c7c93f22961b9562af68382"
     },
     {
       "id": "lhs:conn.000421",
@@ -16223,7 +16593,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ea8b97148c35b1286a7bc024403fa1551ae491a81085020f8011fbcf1e8629b7"
     },
     {
       "id": "lhs:conn.000422",
@@ -16260,7 +16631,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4f4fedf1f10f6d26206cb72b3856abed75990988e3ef66465d8f5a6757a04d04"
     },
     {
       "id": "lhs:conn.000423",
@@ -16297,7 +16669,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:61613f5459e3a049c55010e9b1a2e39c23596f1f6606164cea4726d2def5fd34"
     },
     {
       "id": "lhs:conn.000424",
@@ -16334,7 +16707,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:79551c4892f89a7de20bff104b600ac85f935310d2022e7f17eda9a2287e6048"
     },
     {
       "id": "lhs:conn.000425",
@@ -16371,7 +16745,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:89296e0baca386f4fefa14ab3f107fe626399b83ad63485fb7640ae3fec93643"
     },
     {
       "id": "lhs:conn.000426",
@@ -16408,7 +16783,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:cc359406e4ef88f03e4212a6dd0b6251097b913692fc155f19c5f8b38661ee4f"
     },
     {
       "id": "lhs:conn.000427",
@@ -16445,7 +16821,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c7407d745a647c48bd13413ccf4519639b8d08b5bb9679ae55a89d71b1627706"
     },
     {
       "id": "lhs:conn.000428",
@@ -16482,7 +16859,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:52a6d9807de6c8e43bb6abb4d00d4aa664c88c1b94473110ac1134af6e1634ae"
     },
     {
       "id": "lhs:conn.000429",
@@ -16519,7 +16897,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1f9fcca2c0affe4dc22c1e55f9b95af5cf65308e848e4658261313c19b579563"
     },
     {
       "id": "lhs:conn.000430",
@@ -16556,7 +16935,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8bc596bc400072066b58a4102f8cf6fba204e79606d187c8b0992b7090330419"
     },
     {
       "id": "lhs:conn.000431",
@@ -16593,7 +16973,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:87aa171ac7856275309938003649b53afdd4f34e8634cb0f74d76b04d01fb560"
     },
     {
       "id": "lhs:conn.000432",
@@ -16630,7 +17011,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:cb9560b72750355f882e5478bf80ee9ff5b4d4326fd373512aff6074fd7aab25"
     },
     {
       "id": "lhs:conn.000433",
@@ -16667,7 +17049,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b4676d70abb18338a31f4ef17dc18467318b7d52608bd85844bb3ec38676c5c6"
     },
     {
       "id": "lhs:conn.000434",
@@ -16708,7 +17091,8 @@
       "lifecycle": {
         "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
         "replaced_by": "lhs:conn.000439"
-      }
+      },
+      "claim_signature": "sha256:6af175b5ff241c44f2d1b183eb098b8541ac7007efde01dd4c0107236afda0ed"
     },
     {
       "id": "lhs:conn.000435",
@@ -16749,7 +17133,8 @@
       "lifecycle": {
         "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
         "replaced_by": "lhs:conn.000441"
-      }
+      },
+      "claim_signature": "sha256:92b2285115da63ee863fd89478b552c7bd03c20b36fb3613df10cfad0965823f"
     },
     {
       "id": "lhs:conn.000436",
@@ -16786,7 +17171,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7b8f94c60978445f63d7254eecd2e8c28c79624f8e4023fcf4c936c9dae70c1a"
     },
     {
       "id": "lhs:conn.000437",
@@ -16823,7 +17209,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c69ff5523cad9e492ac58c8593420f0c85ca2dee8ba4c19ade32c9d85d9bf06d"
     },
     {
       "id": "lhs:conn.000438",
@@ -16860,7 +17247,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:67a95165f3f8a10b18c8e3997c788a542d01369c71fa21538351089e835fa104"
     },
     {
       "id": "lhs:conn.000439",
@@ -16897,7 +17285,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8d9ccbb103150e631d5abec2b040ba7eb4eb4a0fe190dd31fc239d2155947e07"
     },
     {
       "id": "lhs:conn.000440",
@@ -16934,7 +17323,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a0435e1b383f5fd3724dcc067ac94fced58db74c0ed85527c153c1efafb36488"
     },
     {
       "id": "lhs:conn.000441",
@@ -16971,7 +17361,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:681733da8f615944a651b38f35b5bf5889574566205a08139faf3fcb5de7becb"
     },
     {
       "id": "lhs:conn.000442",
@@ -17008,7 +17399,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:504c5add63ced53315146e6ca7543894df8abbf18be861d43a2f66f4f8af43bc"
     },
     {
       "id": "lhs:conn.000443",
@@ -17045,7 +17437,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:40d815740d2970343739ff01cf34e091115b00046819d1f13cd6485fd1fa5dfa"
     },
     {
       "id": "lhs:conn.000444",
@@ -17082,7 +17475,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:712496dc56f6271a93e9b68f83b3d9a89986ef868a177e4d0dbf380faae25cb0"
     },
     {
       "id": "lhs:conn.000445",
@@ -17119,7 +17513,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e1bd9503e12cf76ed5e80e1f280a43ee769e4e242614c86ac062b2591f521b5c"
     },
     {
       "id": "lhs:conn.000446",
@@ -17156,7 +17551,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7a9271d5f811cfbdef403a7be95d9057fa02ee0facc3a39aaf5ce98afe7b1826"
     },
     {
       "id": "lhs:conn.000447",
@@ -17193,7 +17589,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7b1e926b264d540fd38a2a60d364049d19139e9b51272bd5f7bb886aa5107c6e"
     },
     {
       "id": "lhs:conn.000448",
@@ -17230,7 +17627,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1505ef4636cc32615e2fbae725db5a021ae050a16400a798c768a6fefbcc2f84"
     },
     {
       "id": "lhs:conn.000449",
@@ -17267,7 +17665,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:de6d256aa75ba30462782d3ddced49cb985965668ad6a8dc464aff3d5dab1199"
     },
     {
       "id": "lhs:conn.000450",
@@ -17304,7 +17703,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0c23d3092aa9c355600ad4c1b76fbaa3207a84d364b9775d3130778f277dee0d"
     },
     {
       "id": "lhs:conn.000451",
@@ -17341,7 +17741,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:24342ecd3c4e108d1316bcc002b7910fc14f467f45f07e81a9ff6d2a6f4e0965"
     },
     {
       "id": "lhs:conn.000452",
@@ -17378,7 +17779,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:fcd5a9c6f3ca9a0dcdf7b8c043652c52d42afb8ab877e6a3db380ae45be1839e"
     },
     {
       "id": "lhs:conn.000453",
@@ -17415,7 +17817,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:92d30b201498687116c63c376f53686d7e8e293141f70e0b5c8a542cc8d91b16"
     },
     {
       "id": "lhs:conn.000454",
@@ -17452,7 +17855,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:38bd417fdbddba79298c9d9029b48aef56c9024e6bb6c87ffe0d6d5be42caf23"
     },
     {
       "id": "lhs:conn.000455",
@@ -17489,7 +17893,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c30396c028071abb863b04dcd3f12fdd719cbc859e1ac4938b30fbeda65294df"
     },
     {
       "id": "lhs:conn.000456",
@@ -17526,7 +17931,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6a17d8315395fd80b8ec34e31a168abdb8d5d2586131bce4a4fdb6605b5d2f8f"
     },
     {
       "id": "lhs:conn.000457",
@@ -17563,7 +17969,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d56bf7d3f481da435425ede0c0834b5a2ee2b268b983816aae6d38c54daa19e7"
     },
     {
       "id": "lhs:conn.000458",
@@ -17600,7 +18007,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ea960bd81138452810e7f2aeb3d921663f42f61ce9edf5a7b8c0fde11e30b5a6"
     },
     {
       "id": "lhs:conn.000459",
@@ -17637,7 +18045,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0cd95cd4fa501d2a9a71507a0b1713ba377c9bd1239d5b3ff559a53632aedbf7"
     },
     {
       "id": "lhs:conn.000460",
@@ -17674,7 +18083,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f1008be8c68418611892859b1dff7eeb6ee86124fdf6e85c6ebc4e7f48a78b78"
     },
     {
       "id": "lhs:conn.000461",
@@ -17711,7 +18121,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:3963872b84a64c2927b8f8b3d26ff42596f07b97a3bf2015e62e34a89283e203"
     },
     {
       "id": "lhs:conn.000462",
@@ -17748,7 +18159,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e69244c11cf5873d9033dcdb0a3bf83729510f2fad488271f86fe2c825877fc4"
     },
     {
       "id": "lhs:conn.000463",
@@ -17785,7 +18197,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:9ea04c53a2de5170daaa4ff149adc4a9830409916c0be10b6d7bf9d9a0745067"
     },
     {
       "id": "lhs:conn.000464",
@@ -17822,7 +18235,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:fe000c634c80b71ced3e9038c448184f67807b39d1d13c3463c79f42cab545ae"
     },
     {
       "id": "lhs:conn.000465",
@@ -17859,7 +18273,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:72f001b0688b7c98c9a3b589090d62e61b00c4189f47906f8e344177d5a307c4"
     },
     {
       "id": "lhs:conn.000466",
@@ -17896,7 +18311,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2e76404af8545bf531b970cd64c282bf6be0d4bbb8bb7ee5a214f6aea831b0ad"
     },
     {
       "id": "lhs:conn.000467",
@@ -17933,7 +18349,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b9e06283717877e5071591ea200635b58e8dc6980eccf4e9bbcddbd2ee47d4dc"
     },
     {
       "id": "lhs:conn.000468",
@@ -17970,7 +18387,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0631fc460a97a994d4caf4db360fdce52576d6ae7cf46fe9891fd8e6314c9aeb"
     },
     {
       "id": "lhs:conn.000469",
@@ -18007,7 +18425,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ce08a0c8762d629b9a6c9e4631cb6a72f02023984e3c7d8af05de33e12b88164"
     },
     {
       "id": "lhs:conn.000470",
@@ -18044,7 +18463,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0bb8f116821bf5aac2462cea779d06d82e352fbe7f17a784860335e397170fd7"
     },
     {
       "id": "lhs:conn.000471",
@@ -18081,7 +18501,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0752482e0c46906165b4ef0522930a1e34164bf72db3762bd1ee5ae17518dcf7"
     },
     {
       "id": "lhs:conn.000472",
@@ -18118,7 +18539,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7293a08dff134817e067f7d1c90b1829689047d4b5d270ca9c5fae597c078648"
     },
     {
       "id": "lhs:conn.000473",
@@ -18155,7 +18577,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f1997736481ded7c8bb9288a50bdb6bd160274d6c4fb4bedc0b8213fd484418a"
     },
     {
       "id": "lhs:conn.000474",
@@ -18192,7 +18615,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a8f64cf3ae51e0fdfe64c41a95af86880fb97908039848af3f1f8d416a227b07"
     },
     {
       "id": "lhs:conn.000475",
@@ -18229,7 +18653,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:24a12c64c67649ef593dadc013625d5c404e16f6388cbf5d0d5f143f40f530a4"
     },
     {
       "id": "lhs:conn.000476",
@@ -18266,7 +18691,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:655bcdd4f2dbceac3ee55ba99397dc81d6687df1c5ed7e941b61b8ec72bc2855"
     },
     {
       "id": "lhs:conn.000477",
@@ -18303,7 +18729,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d24eee969507c4797a48a6d8214e6af5d86a1150fa4d5586b7ac8778179088f0"
     },
     {
       "id": "lhs:conn.000478",
@@ -18340,7 +18767,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5f40babf76196bed50d33f3d9745e162a795ad534f60eaf3b1098968801c74b4"
     },
     {
       "id": "lhs:conn.000479",
@@ -18377,7 +18805,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a8d0e5ce041bd1de6392568ae45d3b7f73b4edebcc067334cf136491e9ad59ef"
     },
     {
       "id": "lhs:conn.000480",
@@ -18414,7 +18843,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d4398ad411183f61811e574ae125bce1c6fea8149cdc5ac308e1359252dfeef6"
     },
     {
       "id": "lhs:conn.000481",
@@ -18451,7 +18881,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:9570568fe76eb69ca8a72966c6cd9652c81358ee3089957a23b8976f947ef0a3"
     },
     {
       "id": "lhs:conn.000482",
@@ -18488,7 +18919,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d19bc8e93cd3157bc3084c7f2ae5335148fa2885fcb0b78a8f94caad0fdecc2e"
     },
     {
       "id": "lhs:conn.000483",
@@ -18525,7 +18957,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d359472ba509011da53b987016ec79d265629c10cbc953a6c471d7c358459e08"
     },
     {
       "id": "lhs:conn.000484",
@@ -18562,7 +18995,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6301f34f33fa36aeb82ef9a66ac21545673095cd97ad4b8b2f862bff2bf45f3c"
     },
     {
       "id": "lhs:conn.000485",
@@ -18599,7 +19033,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8d4c116cace2c9612e7c5d7cee521a2bb7ea8c95b8cb2a855fa224d39b5b4e71"
     },
     {
       "id": "lhs:conn.000486",
@@ -18636,7 +19071,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:69b06e2fbdcfdf34b4115a30b1ee0e6fd25febd6b6db80d7fc64fb2b7a31a8dd"
     },
     {
       "id": "lhs:conn.000487",
@@ -18673,7 +19109,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2cad1efed23d737b1ffb7a93d65f3dd4dbfacb010941e6c93357ad416c87d77b"
     },
     {
       "id": "lhs:conn.000488",
@@ -18710,7 +19147,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:238cd3967ab91b9f3d68ee11fb998696a9ccaa34d4053489f7c80145c746699f"
     },
     {
       "id": "lhs:conn.000489",
@@ -18747,7 +19185,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ed15a9ae7f1d578c9f8c231d9ded5774b682142af741dfc4fd9e0ab83e248824"
     },
     {
       "id": "lhs:conn.000490",
@@ -18784,7 +19223,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:64d5c3fcf77589c3e720bbe1f4c759437377c58fa1a9b591c3bd4b952f29be43"
     },
     {
       "id": "lhs:conn.000491",
@@ -18821,7 +19261,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:155b22c3bbd1c4670b6d65a1f97a88b3632f2ae8a4e8341d11f8e18e5c9d8e66"
     },
     {
       "id": "lhs:conn.000492",
@@ -18858,7 +19299,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4f02c5da5a9845ca4418eff2d1f524174e12309502e2b0d46f76a42beb1b38ee"
     },
     {
       "id": "lhs:conn.000493",
@@ -18895,7 +19337,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a46f56fed9d0fdff7eb760983e6f44fee132405ffaa498355eed0a99983cc9ad"
     },
     {
       "id": "lhs:conn.000494",
@@ -18932,7 +19375,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c1970ca5da9e552008286b2a1ff0f57b32a80fc22ab2cd745e0e9a94592c87e4"
     },
     {
       "id": "lhs:conn.000495",
@@ -18969,7 +19413,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:65cfb027a63ffd5edb47b2a6fd9ba0647bfa5ce32fc9a5f81735130cdbea7b4b"
     },
     {
       "id": "lhs:conn.000496",
@@ -19006,7 +19451,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:af7af31263ae96653948044bc44d00d9c28ee0e5ba369805bc54b6c2d405d45e"
     },
     {
       "id": "lhs:conn.000497",
@@ -19043,7 +19489,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:23a1b41fdeff2e37313bc5a2b846a68274d70f25622d3d3240b5968c11f594f5"
     },
     {
       "id": "lhs:conn.000498",
@@ -19080,7 +19527,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e69b7974ab18b14b6ae0ccf355e494e80acba3d360ba33be05ee56d0b1a173af"
     },
     {
       "id": "lhs:conn.000499",
@@ -19117,7 +19565,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f9464b7f9149c8017e06403cf5409e9d00aec5b6b0b112262267607deb883702"
     },
     {
       "id": "lhs:conn.000500",
@@ -19154,7 +19603,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:73d3b0e3671552cfc6124287e672ebfcc1f84203679fc7d74f505600e4b7179c"
     },
     {
       "id": "lhs:conn.000501",
@@ -19191,7 +19641,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:41a47441992bcbc337c8dc886ea5bae79b323b011e8ae1012c568b1df36baa23"
     },
     {
       "id": "lhs:conn.000502",
@@ -19228,7 +19679,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5daad0bb5aec66f8f01090d223ca7d887d87edf86fcf15369e20913f08d176b8"
     },
     {
       "id": "lhs:conn.000503",
@@ -19265,7 +19717,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:eb72024c6c22b5ca9ddf66f346bc12c5157c0c1e4c50e35347c576cc79763803"
     },
     {
       "id": "lhs:conn.000504",
@@ -19302,7 +19755,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:64c593b9b7f2852f90a864cb92eeb9e012e12850e98d29a728e548b1c87a6dc3"
     },
     {
       "id": "lhs:conn.000505",
@@ -19339,7 +19793,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:79039fbae1c93b2b4eac90c6bf9afa208736fc1590a02c2852a8c5af8e32e334"
     },
     {
       "id": "lhs:conn.000506",
@@ -19376,7 +19831,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:79e6fd8a1f3e63f68d9f7d21ee2ea00de0d606f34573732e66a42f6f8789a03c"
     },
     {
       "id": "lhs:conn.000507",
@@ -19413,7 +19869,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:52a9f1996efebd3f3c69d9f4c468e897600dfc6a0d865be1f4a5c837ce48b653"
     },
     {
       "id": "lhs:conn.000508",
@@ -19450,7 +19907,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:78dc49434112298861f419afc7a226e8a41d5fd9836dedad6664414ca931ac32"
     },
     {
       "id": "lhs:conn.000509",
@@ -19487,7 +19945,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:eee0dcc93c5894b5f5ef3af5c31bb3bdec245a8bf8d4bac9b643f7cb01af1899"
     },
     {
       "id": "lhs:conn.000510",
@@ -19524,7 +19983,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:336c790c32a0efb8a07734dbafa170678c5d8da42247f60fa4c7f8e189e717a6"
     },
     {
       "id": "lhs:conn.000511",
@@ -19561,7 +20021,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b38d2e41a8131fd248948d182a2374b54dc848d3e39f0a713bb8381103c72e8a"
     },
     {
       "id": "lhs:conn.000512",
@@ -19598,7 +20059,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:db571a4f00456652e7b9e028cf8ac919624cf076e225dae3c24d39a7e91e5195"
     },
     {
       "id": "lhs:conn.000513",
@@ -19635,7 +20097,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2514ba0b7486aac870e4d91e710ad0b5ca9207b40552fd44fc4b84339e669fd1"
     },
     {
       "id": "lhs:conn.000514",
@@ -19672,7 +20135,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6fe93236d0b161bb01e57e4a12d0ba4b074cbc98a29160e25974d897cf38443f"
     },
     {
       "id": "lhs:conn.000515",
@@ -19709,7 +20173,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e92ce124965bbeb874904028670f29c6d86acc70d27d63acd532f554a4f80de7"
     },
     {
       "id": "lhs:conn.000516",
@@ -19746,7 +20211,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a9e319763c11cfba2aaf4fab5b3190b23cb1d53eaf2358f85a91d734a959514f"
     },
     {
       "id": "lhs:conn.000517",
@@ -19783,7 +20249,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7f691c1cdae8353536d00b65f329551bd1690e2576a4ae7063fb92f1c7e3bdd5"
     },
     {
       "id": "lhs:conn.000518",
@@ -19820,7 +20287,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:511600840f68a8f3cb7dc7733759b1e88e2a89c65e0f53afbcd6608090966441"
     },
     {
       "id": "lhs:conn.000519",
@@ -19857,7 +20325,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:69c7d9aa090b10fde4e5f124baf79bc2464f428aff1cdc91ce9aba0459f2d343"
     },
     {
       "id": "lhs:conn.000520",
@@ -19894,7 +20363,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7cebe8f92fc9d3dcfe2813e8d7883b563919d20bf93cebb9e4c02fd99d6382c4"
     },
     {
       "id": "lhs:conn.000521",
@@ -19931,7 +20401,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:974139902c763da78f2beff9c856cc55596cfc97802c59ad58d5799727b31382"
     },
     {
       "id": "lhs:conn.000522",
@@ -19968,7 +20439,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:83b8ceb6737a4574796c1f9a6c74cee2b1f8aa610060853dcfd772bb1f0de488"
     },
     {
       "id": "lhs:conn.000523",
@@ -20005,7 +20477,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a6c0b045c4fc7d505b2dc7281c816ee94fb138a04f96bf44bca10821c4aa2eef"
     },
     {
       "id": "lhs:conn.000524",
@@ -20042,7 +20515,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b360ffa371e385a36b68a9e15863445005ef15717bc035fdb6768d96609afc52"
     },
     {
       "id": "lhs:conn.000525",
@@ -20079,7 +20553,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:36198a3560c5f2b53aec6bb555ee3996d390181a0cd338caa312431f80007370"
     },
     {
       "id": "lhs:conn.000526",
@@ -20116,7 +20591,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:785817add8aac116ff2b329e5cf83c67a152d365cd338cb779c2f679659c6d83"
     },
     {
       "id": "lhs:conn.000527",
@@ -20153,7 +20629,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:909cfd0beb4a29587894895db4ace23342c146d02c2f9c64d6531f50e8c9897a"
     },
     {
       "id": "lhs:conn.000528",
@@ -20190,7 +20667,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:833b41a0b9e5c013ee42daaa70aa914e536ab6de31b0d4b94703161e2851505b"
     },
     {
       "id": "lhs:conn.000529",
@@ -20227,7 +20705,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:abd706ee656c4a0c3b2bce29ab49aa102bca58c6d79bf13fd028d01bfeaf373e"
     },
     {
       "id": "lhs:conn.000530",
@@ -20264,7 +20743,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:39e462289b7b161ad0912672e653d03267e49f99a749abc560ed26a822a8bab4"
     },
     {
       "id": "lhs:conn.000531",
@@ -20301,7 +20781,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:63420e7e73b0fbba99185bb461ba1fe3eabde706c1e867cf918d8f850b01159e"
     },
     {
       "id": "lhs:conn.000532",
@@ -20338,7 +20819,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5efddb04622c441a4b0ab196c323bf6e3edcf4ae17a4934be859a768aca9a5ea"
     },
     {
       "id": "lhs:conn.000533",
@@ -20375,7 +20857,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e25c83c8c0dd8b7d8a7633e071408e78294bb6badbfdc8db585111c45e28d750"
     },
     {
       "id": "lhs:conn.000534",
@@ -20412,7 +20895,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:35a8a28a626ed744806e2f227b5305d6d2fdc8e8d9f6f9c7b70aa2e85012256e"
     },
     {
       "id": "lhs:conn.000535",
@@ -20449,7 +20933,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ccd74eae767aef2c9122f992ea4e22a669e47ae80e1a6116554180e541e7339c"
     },
     {
       "id": "lhs:conn.000536",
@@ -20486,7 +20971,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:883c5aa9e57ba205af791bdb725fcdc6ccb082b4066b6c88ebade07e109ff927"
     },
     {
       "id": "lhs:conn.000537",
@@ -20523,7 +21009,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:eaefa7f2abe9ac0a55e7ea7e700f8519b8270d0a6a7ea1ff47b4e1918b244fbb"
     },
     {
       "id": "lhs:conn.000538",
@@ -20560,7 +21047,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:992f93cedb800a4440d279cefd57e44f010ba0eebcb10001dc91ea5ff31c8499"
     },
     {
       "id": "lhs:conn.000539",
@@ -20597,7 +21085,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6dd67d03ac67ce933b864a1aa00159a2b07ecf759d6a98551744299ff8804d12"
     },
     {
       "id": "lhs:conn.000540",
@@ -20634,7 +21123,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:48b0ff9d05357e021ffff9a72dcb1a2e862cba0193ac66b2f8adc1a95ff8f74e"
     },
     {
       "id": "lhs:conn.000541",
@@ -20671,7 +21161,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f99dea88cd4e25ede85eb2c2c6dc898cef8724afbe078315fa5404ebaecaff74"
     },
     {
       "id": "lhs:conn.000542",
@@ -20708,7 +21199,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b33d074c8479a46aafa124a50929502328b710a0a70d2fc67ddf838778757409"
     },
     {
       "id": "lhs:conn.000543",
@@ -20745,7 +21237,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1c102ab56048c1f89da4305ed0930342fbb7e33b40d0648f3d217992431b8dc4"
     },
     {
       "id": "lhs:conn.000544",
@@ -20782,7 +21275,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2775b6ffe60794981fc41b95069258ef6084c489c63537dcd3e7bbb99fc4ca63"
     },
     {
       "id": "lhs:conn.000545",
@@ -20819,7 +21313,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a777dbdca94ee8ddc1bb538d296a3017d68cf6892456de94b6e4a88435db6402"
     },
     {
       "id": "lhs:conn.000546",
@@ -20856,7 +21351,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8d5b28e56d3a967bb642244d865fb78706ab79456333453945e895c58ea8bd05"
     },
     {
       "id": "lhs:conn.000547",
@@ -20893,7 +21389,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b2d1da63b797dd79d34902f1b55874823f0abaf07aa0de1c7225cfcaf57d01c1"
     },
     {
       "id": "lhs:conn.000548",
@@ -20930,7 +21427,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bbee705f098dd271b45fa8377e8627ab27d0504b61f8d20ee40be5ce0ac232a3"
     },
     {
       "id": "lhs:conn.000549",
@@ -20967,7 +21465,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:23cdde52d0ff51c19aace41b9c1fb96d0771e4bcaf26c13e52a9cb81742ccaba"
     },
     {
       "id": "lhs:conn.000550",
@@ -21004,7 +21503,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8f2f43dfa75ade90744d3aece6ede397781d8a41a6aba42756d5a0665310e648"
     },
     {
       "id": "lhs:conn.000551",
@@ -21041,7 +21541,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1329859a0e392fc86741aebf90dbcd721e167998f2df708cd977b210726c6f2d"
     },
     {
       "id": "lhs:conn.000552",
@@ -21078,7 +21579,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:36f5c4ca22996598b9fae89cb5e68161f3fcebc74da282b1d6f2b88c5654bd05"
     },
     {
       "id": "lhs:conn.000553",
@@ -21115,7 +21617,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:af755ab1c5922370da7ef1b8e1315dad9a53a2f4ea26a56949b4377f1de68ff1"
     },
     {
       "id": "lhs:conn.000554",
@@ -21156,7 +21659,8 @@
       "lifecycle": {
         "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
         "replaced_by": "lhs:conn.000564"
-      }
+      },
+      "claim_signature": "sha256:ecb75c490c9a6d5cb927027779f23450c4ecddde23cdb46cf0050c5c3e075635"
     },
     {
       "id": "lhs:conn.000555",
@@ -21197,7 +21701,8 @@
       "lifecycle": {
         "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
         "replaced_by": "lhs:conn.000565"
-      }
+      },
+      "claim_signature": "sha256:899a4d1644668edba7e566e370bb0be72f108a464767146be1d3d1ceda55a565"
     },
     {
       "id": "lhs:conn.000556",
@@ -21234,7 +21739,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b1bf8cdccfa861b3b3b3370cd8203f6af5b2272331fa0461f3a7a609eebe04e9"
     },
     {
       "id": "lhs:conn.000557",
@@ -21271,7 +21777,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2901a08ec0b5c359ad10dfdfa891dc425ca6aafb4c41fff4d5fda7fc4e70a87a"
     },
     {
       "id": "lhs:conn.000558",
@@ -21308,7 +21815,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:49334ff95fba188975f76c5e5c61a1056cab64c554213871cb3705b40712ab3b"
     },
     {
       "id": "lhs:conn.000559",
@@ -21345,7 +21853,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0854d42b59de8c79fcc5732f79f6185cf97349ecdd140333f69661fad5932e91"
     },
     {
       "id": "lhs:conn.000560",
@@ -21382,7 +21891,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:fd23a3567bf94d77161ec0229240dc298614333d274d174c488f91cc44f7f72a"
     },
     {
       "id": "lhs:conn.000561",
@@ -21419,7 +21929,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b91e8f2c8a5e1733cb984f9941fef0bb2e606fe4d29d2b073fb0749aba110b9a"
     },
     {
       "id": "lhs:conn.000562",
@@ -21456,7 +21967,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:61ef3954b81b5e5a7cb53892b81f527cc2f6d2b38ccf2da022ebc0e83b6db7c4"
     },
     {
       "id": "lhs:conn.000563",
@@ -21493,7 +22005,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8f3348d3686ba8ec0a4bdd7dc66761b46812f123c3c258afaec3b80a57655121"
     },
     {
       "id": "lhs:conn.000564",
@@ -21530,7 +22043,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4f11985e6e3746a8e7b09093a0ca96b62ec848da0d83fd696a436202d3a79bf9"
     },
     {
       "id": "lhs:conn.000565",
@@ -21567,7 +22081,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bf0f6de1c37d0878fb231c850a25ecf0aa1f66d3b82e744f069eb899483e3b86"
     },
     {
       "id": "lhs:conn.000566",
@@ -21604,7 +22119,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6f36b44d90318a693e698d0733fe413d89b644c8abb0119d5a443fd0938f6bff"
     },
     {
       "id": "lhs:conn.000567",
@@ -21641,7 +22157,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e7bddced518b9748b719378b974382658f8a50022c04fdef799fcd1a6e6a80dc"
     },
     {
       "id": "lhs:conn.000568",
@@ -21678,7 +22195,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1cfe0ef0074caaa300eccdf6ae6979fe60e089c8dd9d3f515fb269cc4a7869bc"
     },
     {
       "id": "lhs:conn.000569",
@@ -21715,7 +22233,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:929be22e021483c09513f660647ac03ba8afe2d0e05b85eba02dcd7d9b352bcd"
     },
     {
       "id": "lhs:conn.000570",
@@ -21752,7 +22271,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:35470b202a40a56e132060b9f6526d23dc5812dddbb52684dc27ac11771e9b06"
     },
     {
       "id": "lhs:conn.000571",
@@ -21789,7 +22309,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bbef7590c2c7fd1490606c4ad69880e13b34f8e47577fa15386ab87c904f6c4e"
     },
     {
       "id": "lhs:conn.000572",
@@ -21826,7 +22347,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a0ab353598bb877075d93ab9a957a82a6dd9290674f5f432bfba5d7b45875050"
     },
     {
       "id": "lhs:conn.000573",
@@ -21863,7 +22385,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e622bcebe4d19d7e094b9af261719e2cef78033818035803bca4b5b1227c82fe"
     },
     {
       "id": "lhs:conn.000574",
@@ -21900,7 +22423,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:24ad16ee50cd24b1d376b2eb1bbf4d920d7f5634b63b0fd0751667a697be2a95"
     },
     {
       "id": "lhs:conn.000575",
@@ -21937,7 +22461,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b2a6c1ecdc0069ffe02f66b29a24462e5548ceaafcb791946dac801caab4e609"
     },
     {
       "id": "lhs:conn.000576",
@@ -21974,7 +22499,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b752f823209b1bbc8bbb16377d728f728315ecf50c345190e03fff419917602c"
     },
     {
       "id": "lhs:conn.000577",
@@ -22011,7 +22537,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ec9ffe599930d131d661b4cae405a21f1a0d3d78f9d1ccb9566e70b94b396930"
     },
     {
       "id": "lhs:conn.000578",
@@ -22048,7 +22575,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a2bedd132732eb5ffa8649eade108c411745c5cbb48d2f3a29838f4c38f3a7fd"
     },
     {
       "id": "lhs:conn.000579",
@@ -22085,7 +22613,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7edef6023da78f5964e5c7bb5923647cc78b669b46962818afa6ca2f10f3be5f"
     },
     {
       "id": "lhs:conn.000580",
@@ -22122,7 +22651,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:3ed9380fc672fdfde31d9d084ebb8b65e97642fc476176028e7c38d45bb6fe22"
     },
     {
       "id": "lhs:conn.000581",
@@ -22159,7 +22689,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:3ffdee4ff9881e91b311b3477e47e0a1388b63adf3338cc9a565d8866decf1ef"
     },
     {
       "id": "lhs:conn.000582",
@@ -22196,7 +22727,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:84c4b1877a1c899c077d9fe1ce032d09c308de2c99d54a296e8bd0d989bfb1b4"
     },
     {
       "id": "lhs:conn.000583",
@@ -22233,7 +22765,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:41768f45aa67517c77d77101699ed7eff5fdc1d33e11ca301510c99f6941391b"
     },
     {
       "id": "lhs:conn.000584",
@@ -22270,7 +22803,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5faddbf5cf97900fba5220c5cf12f7f0b9f66ba1af6d465dfd8839da53345dd1"
     },
     {
       "id": "lhs:conn.000585",
@@ -22307,7 +22841,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:b1192059367eeb1d76bcde88814dddd0808fc69c6014cae0e7c84e57afb41ff6"
     },
     {
       "id": "lhs:conn.000586",
@@ -22344,7 +22879,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6dce6214c225c5517c4c25683f967c7e1f40cfe8b8c992d7c5beba93e701e2db"
     },
     {
       "id": "lhs:conn.000587",
@@ -22381,7 +22917,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e34498b80fe1f1455b6bb8f2c1119a582cdd0c423df01e5a91c34da6bc04bede"
     },
     {
       "id": "lhs:conn.000588",
@@ -22418,7 +22955,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d7a0964dd1f751ab80cdc0a2a772a31d289fbeb7210f196a5e4261921aea7b63"
     },
     {
       "id": "lhs:conn.000589",
@@ -22455,7 +22993,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:ef8113a1b6f601a504b1a9762a7cd2a321550e707feb867a0e082cf8318e9217"
     },
     {
       "id": "lhs:conn.000590",
@@ -22492,7 +23031,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a930af78b7fed1934fa161bb10968524fefa0b7021ed6774c9658051895c849c"
     },
     {
       "id": "lhs:conn.000591",
@@ -22529,7 +23069,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bbe1c95b08c2ff236c5bdc92dbe41091b521db5b7b18f094a64d5271ff24564b"
     },
     {
       "id": "lhs:conn.000592",
@@ -22566,7 +23107,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c529b98a07468833456a233fab980656725045cbb3f10546152bc47f1b2d84b5"
     },
     {
       "id": "lhs:conn.000593",
@@ -22603,7 +23145,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:befc32ea3573276b5d9d080eef7961e883b55018f43abc46c3143300f47b5d97"
     },
     {
       "id": "lhs:conn.000594",
@@ -22640,7 +23183,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:55e9aab9dd237b7d4194afab8f64b08ed48b50714508e5c97edbf9d1019623ab"
     },
     {
       "id": "lhs:conn.000595",
@@ -22677,7 +23221,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bb109940b163e26db3030083e65114f25cc3c79b702d1bbaf321151b7b26cd70"
     },
     {
       "id": "lhs:conn.000596",
@@ -22714,7 +23259,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a78783db75e36700dd3b910c89f8043e560abfaaf82516cc7060ee5bef021997"
     },
     {
       "id": "lhs:conn.000597",
@@ -22751,7 +23297,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4708c18a746ac44927ee640619396e5f627ad6a98d891a42fcbb28b8d6a9b645"
     },
     {
       "id": "lhs:conn.000598",
@@ -22788,7 +23335,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c829fb77206e7e48930afc73c8275ef1beca0cad10c4d958f84578e6ddc1e9c2"
     },
     {
       "id": "lhs:conn.000599",
@@ -22825,7 +23373,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:006b4dedba9150ef16ac157cc90197e4369f83599df0a4346b6dbfde85a54d9a"
     },
     {
       "id": "lhs:conn.000600",
@@ -22862,7 +23411,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:310cce1970b5ade41afeb5d683b78a9eda081a5790698bcc1f3ca4e2cef5b5d8"
     },
     {
       "id": "lhs:conn.000601",
@@ -22899,7 +23449,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4aaf65290237e232fdfe8dc4f209226c3dd8ffe997d96e5c39d1ed47a647118b"
     },
     {
       "id": "lhs:conn.000602",
@@ -22936,7 +23487,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:35994cc6ca158b0c2c70eeac3346cd6a10fcc1f96609ecacffaf3c8c52885142"
     },
     {
       "id": "lhs:conn.000603",
@@ -22973,7 +23525,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8f86fe6b189537f166e9d83334834fbc4ac1d8d828b9aa15c47e397b71e4b618"
     },
     {
       "id": "lhs:conn.000604",
@@ -23010,7 +23563,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:345b4576deab978c25727af716157aec2447eb6c965577a039891919d950b061"
     },
     {
       "id": "lhs:conn.000605",
@@ -23047,7 +23601,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f7cf53935c0943c2bb8d2e3eeac33118ca1418e0110c91587a1319a32d7391be"
     },
     {
       "id": "lhs:conn.000606",
@@ -23084,7 +23639,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:a11e6cefd0d46caaec351960755d6f3be3a5eaa9fd6ed279964b50e786701682"
     },
     {
       "id": "lhs:conn.000607",
@@ -23121,7 +23677,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:efc0eba154d18598bcfe852d4d2aa8078cb750509e5a39abdf9c183b438d6d55"
     },
     {
       "id": "lhs:conn.000608",
@@ -23158,7 +23715,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0e7418b7d821bc61f43a9e32730c14ff190ab298f0ed6ca478624704be8b49cc"
     },
     {
       "id": "lhs:conn.000609",
@@ -23195,7 +23753,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8c3cd6b9d245f30a89a71fc0d41e7bb4c906f1cc84c1c448821068e9b21f2ce8"
     },
     {
       "id": "lhs:conn.000610",
@@ -23232,7 +23791,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8f30d759b3650009fa2787c13fbacc162ec0907099fdd44bfcd8f71b24050d22"
     },
     {
       "id": "lhs:conn.000611",
@@ -23269,7 +23829,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:fdd7ba7942c425857d18bb862cfb46690ca3a900f0d0380c5bcf04dd8c64e240"
     },
     {
       "id": "lhs:conn.000612",
@@ -23306,7 +23867,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5ca100b46ea989b21e04fc3b7e2a8c13222ff95343a912e5baf171d9fe88fcfb"
     },
     {
       "id": "lhs:conn.000613",
@@ -23343,7 +23905,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:11c5933b00f0a64b7bb558ff35d1cfa86ced366205475019ce170b0a0ca1418f"
     },
     {
       "id": "lhs:conn.000614",
@@ -23380,7 +23943,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:7ed668364c87cccc58221c5e3149f6b400735036b731fe67ffa5549e8feb9a7a"
     },
     {
       "id": "lhs:conn.000615",
@@ -23417,7 +23981,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8889000e02edad1a757aab287c7cbdef3289a24f482be2fc38efbc444b5db209"
     },
     {
       "id": "lhs:conn.000616",
@@ -23454,7 +24019,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d112ebed2df91304427e0fc3ecf68345a1548dddb9bfc2a6c7749ca35acaeffe"
     },
     {
       "id": "lhs:conn.000617",
@@ -23491,7 +24057,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0c2c03775f49f908a04825c78933d56f4d2e35fe5b09124a885b0619d26ce2af"
     },
     {
       "id": "lhs:conn.000618",
@@ -23528,7 +24095,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:88480108e0b0b4c2563d3e1affce976b205f93d5459b6a0a637e525693dae077"
     },
     {
       "id": "lhs:conn.000619",
@@ -23565,7 +24133,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:d405f81affcc06b31153b3daafaa4421bb74bf49599eb03e8d00a87f89bb8714"
     },
     {
       "id": "lhs:conn.000620",
@@ -23602,7 +24171,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:868638d9de6b880aac697387ffc895829772cc052d73736000751a836ca433ee"
     },
     {
       "id": "lhs:conn.000621",
@@ -23639,7 +24209,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2fa107a8dd08564073b047abf77d31c1e23d0ee5badd94826e5058e39922ed98"
     },
     {
       "id": "lhs:conn.000622",
@@ -23676,7 +24247,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:93a2757572224fadeb55e110e5358ad6473eceeaa209d7da8829021e94afa208"
     },
     {
       "id": "lhs:conn.000623",
@@ -23713,7 +24285,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:312372d65db66fa728d78afe0fa162ace4f4ad69e8114eb9cd47c01453067f58"
     },
     {
       "id": "lhs:conn.000624",
@@ -23750,7 +24323,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:2ecdf4d4460dcad6a930d5121f66093923084d56e76b123b7bf45f33dd6ff282"
     },
     {
       "id": "lhs:conn.000625",
@@ -23787,7 +24361,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:0c2605cf9253b00820f67a4f3c539e01f99fcc476a7bdd2dbe52b1709806f639"
     },
     {
       "id": "lhs:conn.000626",
@@ -23824,7 +24399,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:834b752c497c82f038d6e4d0fcb734b3e76f1969f9602b15e4e03a969836380b"
     },
     {
       "id": "lhs:conn.000627",
@@ -23861,7 +24437,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e4b113297a8568b441bbb997e35780dfaa9c0f4a713d6728e78b6bba0353f739"
     },
     {
       "id": "lhs:conn.000628",
@@ -23898,7 +24475,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bf4c8e12aa5c8fcffdef85efffdd8be85f14cec79cba3829b079d9e289d504da"
     },
     {
       "id": "lhs:conn.000629",
@@ -23935,7 +24513,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bd936984567541bd7a06e5441f9c5f4080992a40480a8317ff9c60e239b2a72a"
     },
     {
       "id": "lhs:conn.000630",
@@ -23972,7 +24551,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e212bd5192b3598b0cec65f9023d7db4703c0a37ef02b8d9b2dcd04850977eca"
     },
     {
       "id": "lhs:conn.000631",
@@ -24009,7 +24589,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8fba8faf81aee7b64f878851e44a67491b953fc84d3116b0a3e68c13148ef67f"
     },
     {
       "id": "lhs:conn.000632",
@@ -24046,7 +24627,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4807dc0f894b6b494fadf2d8c24cdf8e92f31086d49c851dc0949f3bf64836ec"
     },
     {
       "id": "lhs:conn.000633",
@@ -24083,7 +24665,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:8078505fc90bed48661d454ab43e406c2e2ec7471524bd39b6200042a872f32c"
     },
     {
       "id": "lhs:conn.000634",
@@ -24120,7 +24703,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f5be9b60f2c32488336c100971559a75517588b166b1988c4f1cd060617c4012"
     },
     {
       "id": "lhs:conn.000635",
@@ -24157,7 +24741,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4d262329dd0574e769d4edd7ebd41ac5091467be1cd9c03a2c8db925bbfd494e"
     },
     {
       "id": "lhs:conn.000636",
@@ -24194,7 +24779,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1f36822e91cd645cdb66604ef5930dd008d8bdd404f12623a43b2219e9208889"
     },
     {
       "id": "lhs:conn.000637",
@@ -24231,7 +24817,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4f4198f176bf685c6afb8e3ec6e46f567bcf36ff3cebd41b8cc98324bbb0a013"
     },
     {
       "id": "lhs:conn.000638",
@@ -24268,7 +24855,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f85687ba87fc0321e408420dabeefd8f9952bc538cffed026c5c9f9582c05b9a"
     },
     {
       "id": "lhs:conn.000639",
@@ -24305,7 +24893,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:6bf7dce795a2661c12c174ee0852c3a9028d3545ad0f0732a0f71dee83cca145"
     },
     {
       "id": "lhs:conn.000640",
@@ -24342,7 +24931,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e2b10dfde7f3e21c5777b27d5fd76259ed42711bc5ebab2d00f8c30a65ca74da"
     },
     {
       "id": "lhs:conn.000641",
@@ -24379,7 +24969,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:91a5885eff0757896c5b3727df2fcad68aae5d557e1e4307d60c556dc6c103e5"
     },
     {
       "id": "lhs:conn.000642",
@@ -24416,7 +25007,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:25ef8086a7dc7221e9a801da921747cd76afb755c767d461786caac77acdc517"
     },
     {
       "id": "lhs:conn.000643",
@@ -24453,7 +25045,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:738d701ad888e279068592d3966a81e79181c2cc4dbb34aa70438d7019b704fa"
     },
     {
       "id": "lhs:conn.000644",
@@ -24490,7 +25083,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:f645cb30ca0986c4b419e7c2dd82e6b5a942e4c849ce132c3c887cadee02e5a8"
     },
     {
       "id": "lhs:conn.000645",
@@ -24527,7 +25121,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:15660d2b223c1c202ec09774dc87278a5b706ec231d692048c7849dcc2868e0a"
     },
     {
       "id": "lhs:conn.000646",
@@ -24564,7 +25159,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:cfcb5fe682672b8888fba0a63b798df776946180b57c80dcd3d25c8a91de08a7"
     },
     {
       "id": "lhs:conn.000647",
@@ -24601,7 +25197,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:4924b843fa0f60c5b2a2bdea0c2935e8b959024728fb7c41dd0bd14c2acfe7cb"
     },
     {
       "id": "lhs:conn.000648",
@@ -24638,7 +25235,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bc790e865483f26c4e83782e8025d9a52aff74f74f297d00e64b7a03219a5ad3"
     },
     {
       "id": "lhs:conn.000649",
@@ -24675,7 +25273,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:c45b1ab519c82a4335b0884dafae7ac07faf2de3fbf69799f2f1508482464eca"
     },
     {
       "id": "lhs:conn.000650",
@@ -24712,7 +25311,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:47e4107c881429be16030ab2927ba95f40ba26741051ae19c4e728673c1e8580"
     },
     {
       "id": "lhs:conn.000651",
@@ -24749,7 +25349,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:1ca39b1bc51161df254c13cc96a3684a4e99bbac3d9f61b3a73676432cab5c3d"
     },
     {
       "id": "lhs:conn.000652",
@@ -24786,7 +25387,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:5173e98488ae3825924e27f7ca11700c7c13b6054f327b5397330c397e7f411b"
     },
     {
       "id": "lhs:conn.000653",
@@ -24823,7 +25425,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:e7fd9ba78a5a5e8dbcce3ad98cfa73e8bd59f5527eddee0d33c5fdde70c2d471"
     },
     {
       "id": "lhs:conn.000654",
@@ -24860,7 +25463,8 @@
         "method": {
           "type": "migration"
         }
-      }
+      },
+      "claim_signature": "sha256:bb4d0af26d3801b3f6392c9aecd53b1308656842d01b993873df21727db354c8"
     }
   ]
 }

@@ -1,5 +1,5 @@
-import { LhsKnowledgeExport, LhsEntity } from './knowledge-export-loader';
-import { getDomainTheme, GRAPH_THEME } from '../styles/theme';
+import { LhsKnowledgeExport, LhsEntity, LhsConnection } from './knowledge-export-loader';
+import { getDomainTheme, getTrustStyle, GRAPH_THEME } from '../styles/theme';
 
 export interface GraphNode {
   id: string;
@@ -26,7 +26,19 @@ export interface GraphLink {
   directional: boolean;
   curvature: number;
   width: number;
+  /** ADR-0023: `assertion.review.status` of the connection this edge was drawn from. */
+  trust: string;
+  /** Human label for the trust level (legend/inspector). */
+  trustLabel: string;
+  /** Per-link base opacity from the trust scale (unreviewed claims render faint). */
+  trustOpacity: number;
+  /** Connection id + derived claim signature (ADR-0026) when the edge came from connections[]. */
+  connectionId?: string;
+  claimSignature?: string;
 }
+
+/** Which source the edges were projected from (E1.6: connections[] is canonical). */
+export type EdgeSource = 'connections' | 'inline';
 
 export interface ClusterInfo {
   id: string;
@@ -41,6 +53,8 @@ export interface GraphProjection {
   nodes: GraphNode[];
   links: GraphLink[];
   clusters: ClusterInfo[];
+  /** Where the links came from: `connections` (canonical, E1.6) or `inline` (fallback). */
+  edgeSource: EdgeSource;
 }
 
 // Map a physics entity slug to a topic cluster.
@@ -157,6 +171,60 @@ const CLUSTER_POSITIONS: Record<string, [number, number, number]> = {
   other: [0, -26, -20],
 };
 
+interface EdgeSeed {
+  source: string;
+  target: string;
+  relation: string;
+  trust: string;
+  connectionId?: string;
+  claimSignature?: string;
+}
+
+/**
+ * E1.6 / ADR-0020: `connections[]` is the canonical relationship source. Edges are drawn
+ * from it — carrying review status (trust) and the derived claim signature (ADR-0026) —
+ * and only fall back to the deprecated inline `entities[].relationships` projection when
+ * an export predates contract v1.0 or carries no connections.
+ */
+export function collectEdges(
+  exportData: LhsKnowledgeExport,
+  entityMap: Map<string, LhsEntity>
+): { edges: EdgeSeed[]; source: EdgeSource } {
+  const connections = (exportData.connections ?? []).filter(
+    (c): c is LhsConnection => !!c && typeof c.source === 'string' && typeof c.target === 'string'
+  );
+  const live = connections.filter(
+    c =>
+      c.assertion?.status !== 'deprecated' &&
+      c.assertion?.status !== 'superseded' &&
+      entityMap.has(c.source) &&
+      entityMap.has(c.target)
+  );
+  if (live.length) {
+    return {
+      source: 'connections',
+      edges: live.map(c => ({
+        source: c.source,
+        target: c.target,
+        relation: c.relation,
+        // A missing review block means unreviewed — never silently "trusted".
+        trust: c.assertion?.review?.status ?? 'unreviewed',
+        connectionId: c.id,
+        claimSignature: c.claim_signature
+      }))
+    };
+  }
+  const edges: EdgeSeed[] = [];
+  for (const entity of exportData.entities) {
+    for (const rel of entity.relationships ?? []) {
+      if (rel.target && entityMap.has(rel.target)) {
+        edges.push({ source: entity.id, target: rel.target, relation: rel.type, trust: 'unknown' });
+      }
+    }
+  }
+  return { source: 'inline', edges };
+}
+
 const DOMAIN_COLOR: Record<string, string> = {
   physics: '#38bdf8',
   chemistry: '#34d399',
@@ -195,14 +263,15 @@ export function projectKnowledgeGraph(
 
   const validIds = new Set<string>(filteredEntities.map(e => e.id));
 
+  // E1.6: edges come from canonical connections[] (fallback: inline projection).
+  const { edges, source: edgeSource } = collectEdges(exportData, entityMap);
+
   // degree centrality for node size
   const degreeMap = new Map<string, number>();
-  for (const entity of exportData.entities) {
-    for (const rel of entity.relationships ?? []) {
-      if (validIds.has(entity.id) && validIds.has(rel.target)) {
-        degreeMap.set(entity.id, (degreeMap.get(entity.id) ?? 0) + 1);
-        degreeMap.set(rel.target, (degreeMap.get(rel.target) ?? 0) + 1);
-      }
+  for (const edge of edges) {
+    if (validIds.has(edge.source) && validIds.has(edge.target)) {
+      degreeMap.set(edge.source, (degreeMap.get(edge.source) ?? 0) + 1);
+      degreeMap.set(edge.target, (degreeMap.get(edge.target) ?? 0) + 1);
     }
   }
 
@@ -243,27 +312,34 @@ export function projectKnowledgeGraph(
   });
 
   const links: GraphLink[] = [];
-  for (const entity of filteredEntities) {
-    for (const rel of entity.relationships ?? []) {
-      if (!validIds.has(rel.target)) continue;
-      if (activeMode === 'prerequisites') {
-        if (rel.type !== 'logically_requires' && rel.type !== 'mathematically_requires') continue;
-      }
-      if (relationshipFilter !== 'all' && rel.type !== relationshipFilter) continue;
-
-      const style = GRAPH_THEME.edges[rel.type as keyof typeof GRAPH_THEME.edges] ?? GRAPH_THEME.edges.default;
-      links.push({
-        source: entity.id,
-        target: rel.target,
-        relationship: rel.type,
-        color: style.color,
-        directional: !!style.directional,
-        curvature: rel.type === 'logically_requires' ? 0 : 0.1,
-        width: style.width
-      });
+  for (const edge of edges) {
+    if (!validIds.has(edge.source) || !validIds.has(edge.target)) continue;
+    if (activeMode === 'prerequisites') {
+      if (edge.relation !== 'logically_requires' && edge.relation !== 'mathematically_requires') continue;
     }
+    if (relationshipFilter !== 'all' && edge.relation !== relationshipFilter) continue;
+
+    const style =
+      GRAPH_THEME.edges[edge.relation as keyof typeof GRAPH_THEME.edges] ?? GRAPH_THEME.edges.default;
+    const trust = getTrustStyle(edge.trust);
+    links.push({
+      source: edge.source,
+      target: edge.target,
+      relationship: edge.relation,
+      color: style.color,
+      directional: !!style.directional,
+      curvature: edge.relation === 'logically_requires' ? 0 : 0.1,
+      // Trust modulates the relation's own weight: a reviewed claim reads heavier
+      // than an unreviewed one, but the relation colour still says *what* it is.
+      width: style.width * trust.widthScale,
+      trust: edge.trust,
+      trustLabel: trust.label,
+      trustOpacity: trust.opacity,
+      connectionId: edge.connectionId,
+      claimSignature: edge.claimSignature
+    });
   }
 
   const clusters = Array.from(clusterMap.values());
-  return { nodes, links, clusters };
+  return { nodes, links, clusters, edgeSource };
 }

@@ -23,6 +23,7 @@ so the repo is self-contained.
 | `INGESTION.md` | Document → review-ready proposal ingestion pipeline. |
 | `AXIOM-KERNEL-PLAN.md` | Axiom-kernel plan (FAIR principles, release gates). |
 | `grade12-curriculum-mapping.md` | Consumer-owned grade-12 curriculum mapping (never canonical). |
+| `MIGRATIONS.md` | Schema/contract/canonical change log — every change records what happens to old data (plan v2 E5.5). |
 | `GLOSSARY.md` | Terms that recur across the ecosystem. |
 | `REVIEW-RESPONSE.md` | Architectural reconciliation record (decision trail). |
 | `CONTRIBUTING.md` | Contribution rules; IDs & stability contract. |

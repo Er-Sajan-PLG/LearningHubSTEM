@@ -40,6 +40,7 @@ Each record follows the same shape:
 | 0023 | [0023-export-contract-v1-identity-hardening.md](0023-export-contract-v1-identity-hardening.md) | Export contract **v1.0** (connections/sources required; gate G-A) + `external_ids` format checks + agent registry (plan v2 E1.5/E4.1/E4.2) | decided (implemented) |
 | 0024 | [0024-math-layer.md](0024-math-layer.md) | STEM math layer: canonical LaTeX + symbol bindings + ISQ dimensions + unit entities (plan v2 E3.1) | **PROPOSED — gate G-C** |
 | 0025 | [0025-activation-phrase.md](0025-activation-phrase.md) | Retire "ACTIVATE LEARNINGHUBSTEM MVP"; active phrase is "ACTIVATE STEMMA MVP" (plan v2 E0.3 / R2) | decided (implemented) |
+| 0026 | [0026-claim-identity.md](0026-claim-identity.md) | Claim identity: derived `claim_signature` + duplicate-claim gate + immutable connection triples (plan v2 E4.3/E4.5, E1.6 explorer trust view) | decided (implemented) |
 
 **Freeze rule:** a change to any subject above requires a documented decision (see specification
 §17). Minor editorial improvements do not.

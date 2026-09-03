@@ -1,6 +1,6 @@
 import { ConceptDetails } from '../services/concept-data';
 import { LhsEntity } from '../services/knowledge-export-loader';
-import { getDomainTheme } from '../styles/theme';
+import { getDomainTheme, getTrustStyle } from '../styles/theme';
 
 declare const katex: any;
 
@@ -165,29 +165,38 @@ export class ConceptInspectorView {
   }
 
   private renderRelations(details: ConceptDetails): string {
-    const { prerequisites, dependents, related } = details;
+    const { prerequisites, dependents, related, trust, edgeSource } = details;
     let html = '';
     html += `
       <div class="inspector-section">
         <div class="section-title">⬅️ Prerequisites (${prerequisites.length})</div>
         ${prerequisites.length === 0
           ? `<div class="muted">Foundational core concept (no prerequisites).</div>`
-          : `<ul class="entity-list">${prerequisites.map(p => this.entityLink(p, 'Pan ➔')).join('')}</ul>`}
+          : `<ul class="entity-list">${prerequisites.map(p => this.entityLink(p, 'Pan ➔', trust[p.id])).join('')}</ul>`}
       </div>`;
     html += `
       <div class="inspector-section">
         <div class="section-title">➡️ Enables (${dependents.length})</div>
         ${dependents.length === 0
           ? `<div class="muted">No downstream dependents linked yet.</div>`
-          : `<ul class="entity-list">${dependents.map(d => this.entityLink(d, 'Pan ➔')).join('')}</ul>`}
+          : `<ul class="entity-list">${dependents.map(d => this.entityLink(d, 'Pan ➔', trust[d.id])).join('')}</ul>`}
       </div>`;
     if (related.length) {
       html += `
         <div class="inspector-section">
           <div class="section-title">🔗 Related (${related.length})</div>
-          <ul class="entity-list">${related.map(r => this.entityLink(r, r.domain)).join('')}</ul>
+          <ul class="entity-list">${related.map(r => this.entityLink(r, r.domain, trust[r.id])).join('')}</ul>
         </div>`;
     }
+    html += `
+      <div class="inspector-section">
+        <div class="section-title">🛡️ Edge source</div>
+        <div style="font-size:0.78rem;color:var(--text-secondary);">
+          ${edgeSource === 'connections'
+            ? 'Drawn from canonical <code>connections[]</code> (export contract v1.0) — each edge carries an assertion review status.'
+            : 'Fallback: deprecated inline <code>entities[].relationships</code> projection (no review status available).'}
+        </div>
+      </div>`;
     if (!prerequisites.length && !dependents.length && !related.length) {
       html += `<div class="muted">No relationships recorded for this concept yet.</div>`;
     }
@@ -231,15 +240,24 @@ export class ConceptInspectorView {
       return html;
     }
 
-    private entityLink(p: LhsEntity, right: string): string {
+    private entityLink(p: LhsEntity, right: string, trust?: string): string {
     const theme = getDomainTheme(p.domain);
+    const badge = this.trustBadge(trust);
     return `
       <li class="entity-link" data-id="${p.id}">
         <div style="display:flex;align-items:center;gap:8px;">
-          <span>${theme.icon}</span><span>${this.escapeHtml(p.name)}</span>
+          <span>${theme.icon}</span><span>${this.escapeHtml(p.name)}</span>${badge}
         </div>
         <span style="font-size:0.72rem;color:${theme.color};">${right}</span>
       </li>`;
+  }
+
+  /** E1.6: every edge is an assertion — show how far the review process got. */
+  private trustBadge(trust?: string): string {
+    if (!trust || trust === 'unknown') return '';
+    const style = getTrustStyle(trust);
+    const color = trust === 'canonical' ? '#22d3ee' : trust === 'reviewed' ? '#a3e635' : '#94a3b8';
+    return `<span title="${style.label}" style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.04em;border:1px solid ${color}66;color:${color};padding:1px 5px;border-radius:999px;opacity:${Math.max(0.55, style.opacity)};">${style.short}</span>`;
   }
 
   private escapeHtml(str: string): string {

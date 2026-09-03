@@ -147,6 +147,25 @@ lhs:<domain>.<slug>
 - **ID reuse**: **never.** A deprecated identifier may never silently be assigned to a different
   concept.
 
+### Assertion (connection) identity — ADR-0026
+
+A connection (`lhs:conn.NNNNNN`, §ADR-0011) is an assertion, and what it *means* is the triple
+`(source, relation, target)` plus `polarity` and `context.qualifiers`:
+
+- **Claim signature (derived).** `sha256(source | relation | target | polarity | sorted qualifiers)`
+  identifies the *proposition*, not the record. It is never stored in canonical YAML; the export
+  emits it as `connections[].claim_signature` so consumers can detect duplicate or changed claims
+  without recomputing. Two **active** connections with the same signature are a validation error.
+- **The triple is immutable.** Correcting a claim is a supersession, never an in-place edit:
+  `assertion.status: superseded` + `lifecycle.replaced_by`, with the corrected claim asserted
+  under a **new** connection ID. Evidence, review status, confidence and context metadata may
+  change freely — only the claim itself is frozen.
+- **Removal requires retirement.** A connection that disappears from `connections/` without having
+  been `superseded` (or `deprecated`) is a gate failure, because consumers may still hold its ID.
+
+Enforced by `scripts/validate.py` (duplicate-claim gate) and `scripts/check_id_immutability.py`
+(git-history triple guard); see `docs/decisions/0026-claim-identity.md`.
+
 ---
 
 ## 4. Entity model
