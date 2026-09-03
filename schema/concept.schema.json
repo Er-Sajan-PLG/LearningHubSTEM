@@ -12,7 +12,7 @@
       "description": "Stable identifier, namespace lhs:<domain>.<slug>. Never reused."
     },
     "type": {
-      "enum": ["concept", "quantity", "unit", "law", "equation", "misconception"]
+      "enum": ["concept", "quantity", "unit", "law", "equation", "misconception", "phenomenon", "model", "experiment", "regime"]
     },
     "name": { "type": "string" },
     "domain": { "type": "string", "description": "Subject area, e.g. physics" },

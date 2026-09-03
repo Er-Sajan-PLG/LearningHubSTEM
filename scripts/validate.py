@@ -13,6 +13,7 @@ Dependencies: PyYAML (required). jsonschema (optional — used when importable).
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -48,7 +49,7 @@ EXPORT = ROOT / "exports" / "knowledge.json"
 ID_RE = re.compile(r"^lhs:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
 CONN_ID_RE = re.compile(r"^lhs:conn\.[0-9]{6}$")
 SRC_ID_RE = re.compile(r"^lhs:src\.[a-z0-9][a-z0-9-]*$")
-TYPES = {"concept", "quantity", "unit", "law", "equation", "misconception"}
+TYPES = {"concept", "quantity", "unit", "law", "equation", "misconception", "phenomenon", "model", "experiment", "regime"}
 STATUSES = {"draft", "machine_validated", "human_reviewed", "canonical", "deprecated", "superseded"}
 REL_TYPES = {
     "logically_requires", "mathematically_requires", "part_of", "derived_from",
@@ -497,15 +498,57 @@ def main() -> int:
 
     # Report
     if errors:
+        # Build SHACL-style validation report with errors
+        validation_results = []
+        for line in errors:
+            # Parse the line to extract focus node and message
+            # Format: "path: message"
+            parts = line.split(": ", 1)
+            focus_node = parts[0] if len(parts) > 1 else "unknown"
+            message = parts[1] if len(parts) > 1 else line
+            validation_results.append({
+                "resultSeverity": "Violation",
+                "focusNode": focus_node,
+                "resultPath": None,
+                "resultMessage": message,
+                "sourceConstraintComponent": "STEMMAValidator",
+            })
+        validation_report = {
+            "conforms": False,
+            "results": validation_results,
+            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "kernel_version": kernel_version,
+            "content_hash": content_hash.hexdigest(),
+        }
+        report_path = ROOT / "reports" / "validation-report.json"
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(
+            json.dumps(validation_report, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
         print(f"FAIL: {len(errors)} problem(s) found", file=sys.stderr)
         for line in errors:
             print(f"  - {line}", file=sys.stderr)
         return 1
 
     # Regenerate derived export (sorted for determinism)
+    # Compute content hash from all canonical content files
+    content_hash = hashlib.sha256()
+    for path in sorted(CONTENT.rglob("*.md")):
+        content_hash.update(path.read_bytes())
+    for path in sorted(CONNECTIONS.glob("*.yaml")):
+        content_hash.update(path.read_bytes())
+    for path in sorted(SOURCES.glob("*.yaml")):
+        content_hash.update(path.read_bytes())
+    kernel_version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+    # schema_version comes from schema/concept.schema.json version if present, else default
+    schema_version = "0.2"  # ADR-011 connection schema + ADR-017 extensions
+
     payload = {
         "export_version": "0.1",
-        "schema_version": "0.1",
+        "schema_version": schema_version,
+        "kernel_version": kernel_version,
+        "content_hash": content_hash.hexdigest(),
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": "content/",
         "entity_count": len(entities),
@@ -543,6 +586,23 @@ def main() -> int:
             encoding="utf-8",
         )
         print(f"OK: explorer export synced to {explorer_target.relative_to(ROOT)}")
+
+    # Write SHACL-style validation report (machine-readable)
+    validation_report = {
+        "conforms": True,
+        "results": [],
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "kernel_version": kernel_version,
+        "content_hash": content_hash.hexdigest(),
+    }
+    report_path = ROOT / "reports" / "validation-report.json"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(
+        json.dumps(validation_report, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"OK: validation report written to {report_path.relative_to(ROOT)}")
+
     return 0
 
 
