@@ -13,8 +13,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: thermodynamics
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

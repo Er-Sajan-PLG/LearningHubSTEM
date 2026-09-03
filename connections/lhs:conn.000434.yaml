@@ -4,17 +4,16 @@ source: lhs:math.integer
 relation: generalizes
 target: lhs:math.natural-number
 assertion:
-  status: active
+  status: deprecated
   type: proposed
   review:
     status: unreviewed
   confidence: null
   confidence_basis: null
 context:
-  domain: math
+  domain: mathematics
   subdomain: foundations
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []
@@ -27,3 +26,6 @@ provenance:
     id: process:migration.relationships-v0.2
   method:
     type: migration
+lifecycle:
+  reason: "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)"
+  replaced_by: lhs:conn.000439

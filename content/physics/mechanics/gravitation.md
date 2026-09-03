@@ -32,12 +32,14 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
-  - type: related_to
-    target: lhs:phys.force
-  - type: related_to
-    target: lhs:phys.weight
-  - type: related_to
-    target: lhs:phys.free-fall
+- type: bridges
+  target: lhs:earth.atmosphere
+- type: related_to
+  target: lhs:phys.force
+- type: related_to
+  target: lhs:phys.free-fall
+- type: related_to
+  target: lhs:phys.weight
 ---
 
 ## Notes

@@ -14,8 +14,7 @@ assertion:
 context:
   domain: physics
   subdomain: thermal-physics
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

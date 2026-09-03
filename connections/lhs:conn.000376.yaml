@@ -14,8 +14,7 @@ assertion:
 context:
   domain: scientific-practice
   subdomain: inquiry-observation
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

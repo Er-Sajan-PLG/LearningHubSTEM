@@ -36,14 +36,16 @@ real_world_applications:
 provenance:
   ai_drafted: true
 relationships:
-- type: related_to
-  target: lhs:phys.wavelength
-- type: related_to
-  target: lhs:phys.frequency
+- type: analogous_to
+  target: lhs:phys.sound
 - type: related_to
   target: lhs:phys.amplitude
 - type: related_to
+  target: lhs:phys.frequency
+- type: related_to
   target: lhs:phys.wave-speed
+- type: related_to
+  target: lhs:phys.wavelength
 
 ---
 

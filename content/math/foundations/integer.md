@@ -38,10 +38,6 @@ provenance:
   reviewer: null
   reviewed_at: null
 relationships:
-  - type: generalizes
-    target: lhs:math.natural-number
-  - type: special_case_of
-    target: lhs:math.rational-number
-  - type: related_to
-    target: lhs:math.irrational-number
+- type: related_to
+  target: lhs:math.irrational-number
 ---

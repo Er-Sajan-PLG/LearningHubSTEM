@@ -1,8 +1,8 @@
 {
   "export_version": "0.1",
-  "schema_version": "0.1",
-  "generated_at": "2026-09-02T14:57:08+00:00",
-  "source": "content/",
+  "schema_version": "0.2",
+  "content_hash": "sha256:0485e1adf62a9712b8d53dd440f1c047ae49bd4f3224d7259a41246882d01719",
+  "source": "content/ + connections/ + sources/ (canonical)",
   "entity_count": 224,
   "connection_count": 654,
   "source_count": 3,
@@ -1982,12 +1982,7 @@
         "where": "19th-century hydrocarbon chemistry",
         "note": "The saturated hydrocarbons were recognised as a family (the paraffins) during the 19th century; the term 'paraffin' was coined by Carl von Reichenbach (c. 1830). The systematic 'alkane' nomenclature came later with the development of organic nomenclature, so no single discoverer is attributed."
       },
-      "relationships": [
-        {
-          "type": "special_case_of",
-          "target": "lhs:chem.hydrocarbon"
-        }
-      ]
+      "relationships": []
     },
     {
       "id": "lhs:chem.alkene",
@@ -2030,12 +2025,7 @@
         "where": "early structural (constitutional) chemistry",
         "note": "Alkenes were recognised as a class as organic structural chemistry grew in the mid-19th century. No single individual 'discovered' the class; Emil Erlenmeyer and others developed representations of the carbon-carbon double bond, and the systematic nomenclature/term 'alkene' came later. Attribution is therefore kept deliberately conservative."
       },
-      "relationships": [
-        {
-          "type": "special_case_of",
-          "target": "lhs:chem.hydrocarbon"
-        }
-      ]
+      "relationships": []
     },
     {
       "id": "lhs:chem.atom",
@@ -2073,6 +2063,10 @@
         "source": "IUPAC Compendium of Chemical Terminology"
       },
       "relationships": [
+        {
+          "type": "bridges",
+          "target": "lhs:phys.atomic-structure"
+        },
         {
           "type": "logically_requires",
           "target": "lhs:chem.matter"
@@ -2560,16 +2554,20 @@
       },
       "relationships": [
         {
+          "type": "bridges",
+          "target": "lhs:bio.osmosis"
+        },
+        {
           "type": "logically_requires",
           "target": "lhs:chem.matter"
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.temperature"
+          "target": "lhs:bio.osmosis"
         },
         {
           "type": "related_to",
-          "target": "lhs:bio.osmosis"
+          "target": "lhs:phys.temperature"
         }
       ]
     },
@@ -5410,14 +5408,6 @@
       },
       "relationships": [
         {
-          "type": "generalizes",
-          "target": "lhs:math.natural-number"
-        },
-        {
-          "type": "special_case_of",
-          "target": "lhs:math.rational-number"
-        },
-        {
           "type": "related_to",
           "target": "lhs:math.irrational-number"
         }
@@ -7188,12 +7178,16 @@
       },
       "relationships": [
         {
-          "type": "related_to",
+          "type": "approximates",
           "target": "lhs:phys.atomic-structure"
         },
         {
           "type": "related_to",
           "target": "lhs:chem.atom"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.atomic-structure"
         }
       ]
     },
@@ -7561,6 +7555,14 @@
       },
       "relationships": [
         {
+          "type": "analogous_to",
+          "target": "lhs:chem.diffusion"
+        },
+        {
+          "type": "appears_in_law",
+          "target": "lhs:phys.ohms-law"
+        },
+        {
           "type": "mathematically_requires",
           "target": "lhs:phys.electric-charge"
         },
@@ -7570,15 +7572,11 @@
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.voltage"
-        },
-        {
-          "type": "related_to",
           "target": "lhs:phys.resistance"
         },
         {
-          "type": "appears_in_law",
-          "target": "lhs:phys.ohms-law"
+          "type": "related_to",
+          "target": "lhs:phys.voltage"
         }
       ]
     },
@@ -7862,16 +7860,20 @@
       },
       "relationships": [
         {
+          "type": "bridges",
+          "target": "lhs:chem.ionic-bond"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.coulombs-law"
+        },
+        {
           "type": "related_to",
           "target": "lhs:phys.current"
         },
         {
           "type": "related_to",
           "target": "lhs:phys.voltage"
-        },
-        {
-          "type": "related_to",
-          "target": "lhs:phys.coulombs-law"
         }
       ]
     },
@@ -8220,8 +8222,12 @@
       },
       "relationships": [
         {
+          "type": "bridges",
+          "target": "lhs:chem.chemical-reaction"
+        },
+        {
           "type": "related_to",
-          "target": "lhs:phys.work"
+          "target": "lhs:phys.conservation-of-energy"
         },
         {
           "type": "related_to",
@@ -8233,7 +8239,7 @@
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.conservation-of-energy"
+          "target": "lhs:phys.work"
         }
       ]
     },
@@ -8783,16 +8789,20 @@
       },
       "relationships": [
         {
+          "type": "bridges",
+          "target": "lhs:earth.atmosphere"
+        },
+        {
           "type": "related_to",
           "target": "lhs:phys.force"
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.weight"
+          "target": "lhs:phys.free-fall"
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.free-fall"
+          "target": "lhs:phys.weight"
         }
       ]
     },
@@ -8930,6 +8940,10 @@
       },
       "relationships": [
         {
+          "type": "analogous_to",
+          "target": "lhs:phys.current"
+        },
+        {
           "type": "mathematically_requires",
           "target": "lhs:phys.mass"
         },
@@ -8939,11 +8953,11 @@
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.thermal-energy"
+          "target": "lhs:phys.specific-heat"
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.specific-heat"
+          "target": "lhs:phys.thermal-energy"
         }
       ]
     },
@@ -9072,12 +9086,16 @@
       },
       "relationships": [
         {
-          "type": "related_to",
+          "type": "approximates",
           "target": "lhs:earth.atmosphere"
         },
         {
           "type": "related_to",
           "target": "lhs:chem.matter"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:earth.atmosphere"
         }
       ]
     },
@@ -9332,8 +9350,16 @@
       },
       "relationships": [
         {
+          "type": "bridges",
+          "target": "lhs:bio.photosynthesis"
+        },
+        {
           "type": "related_to",
-          "target": "lhs:phys.wave"
+          "target": "lhs:bio.photosynthesis"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.electromagnetic-spectrum"
         },
         {
           "type": "related_to",
@@ -9345,11 +9371,7 @@
         },
         {
           "type": "related_to",
-          "target": "lhs:phys.electromagnetic-spectrum"
-        },
-        {
-          "type": "related_to",
-          "target": "lhs:bio.photosynthesis"
+          "target": "lhs:phys.wave"
         }
       ]
     },
@@ -10049,6 +10071,10 @@
       "relationships": [
         {
           "type": "applies_to",
+          "target": "lhs:phys.acceleration"
+        },
+        {
+          "type": "applies_to",
           "target": "lhs:phys.force"
         },
         {
@@ -10057,11 +10083,11 @@
         },
         {
           "type": "applies_to",
-          "target": "lhs:phys.acceleration"
+          "target": "lhs:phys.momentum"
         },
         {
-          "type": "applies_to",
-          "target": "lhs:phys.momentum"
+          "type": "mathematically_requires",
+          "target": "lhs:phys.force"
         }
       ]
     },
@@ -10910,6 +10936,10 @@
       },
       "relationships": [
         {
+          "type": "approximates",
+          "target": "lhs:phys.light"
+        },
+        {
           "type": "logically_requires",
           "target": "lhs:phys.light"
         },
@@ -11738,12 +11768,8 @@
       },
       "relationships": [
         {
-          "type": "related_to",
-          "target": "lhs:phys.wavelength"
-        },
-        {
-          "type": "related_to",
-          "target": "lhs:phys.frequency"
+          "type": "analogous_to",
+          "target": "lhs:phys.sound"
         },
         {
           "type": "related_to",
@@ -11751,7 +11777,15 @@
         },
         {
           "type": "related_to",
+          "target": "lhs:phys.frequency"
+        },
+        {
+          "type": "related_to",
           "target": "lhs:phys.wave-speed"
+        },
+        {
+          "type": "related_to",
+          "target": "lhs:phys.wavelength"
         }
       ]
     },
@@ -12140,9 +12174,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12215,9 +12247,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12261,9 +12291,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12307,9 +12335,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12353,9 +12379,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12428,9 +12452,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12474,9 +12496,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12520,9 +12540,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12566,9 +12584,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12612,9 +12628,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12658,9 +12672,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12704,9 +12716,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12779,9 +12789,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12825,9 +12833,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12900,9 +12906,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12946,9 +12950,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -12992,9 +12994,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13038,9 +13038,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "cell-biology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13084,9 +13082,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13130,9 +13126,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13176,9 +13170,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13222,9 +13214,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13268,9 +13258,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13314,9 +13302,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13360,9 +13346,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13435,9 +13419,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13481,9 +13463,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13527,9 +13507,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13573,9 +13551,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13619,9 +13595,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13665,9 +13639,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13711,9 +13683,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13757,9 +13727,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13803,9 +13771,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13849,9 +13815,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13895,9 +13859,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13941,9 +13903,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -13987,9 +13947,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14033,9 +13991,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14079,9 +14035,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14125,9 +14079,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14171,9 +14123,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14217,9 +14167,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14263,9 +14211,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14309,9 +14255,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14355,9 +14299,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14401,9 +14343,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "acids-bases",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14447,9 +14387,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14524,9 +14462,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14601,9 +14537,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14647,9 +14581,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14693,9 +14625,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14739,9 +14669,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14816,9 +14744,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14862,9 +14788,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14908,9 +14832,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -14954,9 +14876,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15000,9 +14920,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "atomic-structure-periodicity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15046,9 +14964,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15092,9 +15008,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15169,9 +15083,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15215,9 +15127,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15261,9 +15171,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15307,9 +15215,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15353,9 +15259,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "bonding-structure",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15399,9 +15303,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15445,9 +15347,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15491,9 +15391,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15537,9 +15435,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15614,9 +15510,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15660,9 +15554,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15706,9 +15598,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15752,9 +15642,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "matter-foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15798,9 +15686,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15844,9 +15730,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15890,9 +15774,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15936,9 +15818,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -15982,9 +15862,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16028,9 +15906,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16074,9 +15950,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16120,9 +15994,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16166,9 +16038,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16212,9 +16082,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "reactions-stoichiometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16258,9 +16126,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16304,9 +16170,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16350,9 +16214,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16396,9 +16258,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16442,9 +16302,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16488,9 +16346,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16534,9 +16390,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16580,9 +16434,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16626,9 +16478,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16672,9 +16522,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16718,9 +16566,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16764,9 +16610,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16810,9 +16654,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16856,9 +16698,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16902,9 +16742,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "atmosphere-climate",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16948,9 +16786,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -16994,9 +16830,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17040,9 +16874,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17086,9 +16918,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17132,9 +16962,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17178,9 +17006,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17224,9 +17050,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17270,9 +17094,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17316,9 +17138,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17362,9 +17182,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17408,9 +17226,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "earth-systems-geology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17454,9 +17270,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17500,9 +17314,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17546,9 +17358,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17592,9 +17402,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17638,9 +17446,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17684,9 +17490,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17730,9 +17534,7 @@
       "context": {
         "domain": "earth-space",
         "subdomain": "space-cosmology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17776,9 +17578,7 @@
       "context": {
         "domain": "engineering",
         "subdomain": "design-process",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17822,9 +17622,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17868,9 +17666,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17914,9 +17710,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -17960,9 +17754,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18006,9 +17798,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18052,9 +17842,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18098,9 +17886,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18144,9 +17930,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18190,9 +17974,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18236,9 +18018,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18282,9 +18062,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18328,9 +18106,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18374,9 +18150,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18451,9 +18225,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18528,9 +18300,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18574,9 +18344,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18620,9 +18388,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18666,9 +18432,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18712,9 +18476,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18758,9 +18520,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18804,9 +18564,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18850,9 +18608,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18896,9 +18652,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18942,9 +18696,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -18988,9 +18740,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19034,9 +18784,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19080,9 +18828,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19126,9 +18872,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19172,9 +18916,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19218,9 +18960,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19264,9 +19004,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19310,9 +19048,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19356,9 +19092,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19402,9 +19136,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19448,9 +19180,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19494,9 +19224,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19540,9 +19268,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19586,9 +19312,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19632,9 +19356,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19678,9 +19400,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19724,9 +19444,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19770,9 +19488,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19816,9 +19532,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19862,9 +19576,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19908,9 +19620,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -19954,9 +19664,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20000,9 +19708,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20046,9 +19752,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20123,9 +19827,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20169,9 +19871,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20215,9 +19915,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20261,9 +19959,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20307,9 +20003,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20353,9 +20047,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20399,9 +20091,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20445,9 +20135,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20520,9 +20208,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20566,9 +20252,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20612,9 +20296,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20658,9 +20340,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20735,9 +20415,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20781,9 +20459,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20827,9 +20503,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20904,9 +20578,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "measurement-units",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20950,9 +20622,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -20996,9 +20666,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21073,9 +20741,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21150,9 +20816,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21196,9 +20860,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21242,9 +20904,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21288,9 +20948,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21334,9 +20992,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21380,9 +21036,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21426,9 +21080,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21472,9 +21124,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21518,9 +21168,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21595,9 +21243,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21641,9 +21287,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21687,9 +21331,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21764,9 +21406,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21810,9 +21450,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21887,9 +21525,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21933,9 +21569,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -21979,9 +21613,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22025,9 +21657,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22071,9 +21701,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22117,9 +21745,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22163,9 +21789,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22209,9 +21833,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22255,9 +21877,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22301,9 +21921,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22347,9 +21965,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22393,9 +22009,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22439,9 +22053,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22485,9 +22097,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22531,9 +22141,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22577,9 +22185,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22623,9 +22229,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22669,9 +22273,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22715,9 +22317,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22761,9 +22361,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22807,9 +22405,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22853,9 +22449,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -22930,9 +22524,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23007,9 +22599,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23084,9 +22674,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23130,9 +22718,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23207,9 +22793,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23253,9 +22837,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23299,9 +22881,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23345,9 +22925,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23391,9 +22969,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23437,9 +23013,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23483,9 +23057,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23560,9 +23132,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23606,9 +23176,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23652,9 +23220,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23698,9 +23264,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23744,9 +23308,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23790,9 +23352,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23836,9 +23396,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23882,9 +23440,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -23928,9 +23484,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24005,9 +23559,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24051,9 +23603,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24097,9 +23647,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24143,9 +23691,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24220,9 +23766,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24266,9 +23810,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24343,9 +23885,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24389,9 +23929,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24435,9 +23973,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24481,9 +24017,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24558,9 +24092,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24604,9 +24136,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24650,9 +24180,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24696,9 +24224,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24742,9 +24268,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24788,9 +24312,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24865,9 +24387,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24911,9 +24431,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -24957,9 +24475,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25003,9 +24519,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25049,9 +24563,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25095,9 +24607,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25141,9 +24651,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25187,9 +24695,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25233,9 +24739,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25279,9 +24783,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25325,9 +24827,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25371,9 +24871,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25448,9 +24946,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25494,9 +24990,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25540,9 +25034,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25586,9 +25078,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25663,9 +25153,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25740,9 +25228,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25786,9 +25272,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25832,9 +25316,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25878,9 +25360,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25924,9 +25404,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -25970,9 +25448,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26047,9 +25523,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26093,9 +25567,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26139,9 +25611,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26185,9 +25655,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26231,9 +25699,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26277,9 +25743,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26323,9 +25787,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26369,9 +25831,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26446,9 +25906,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26492,9 +25950,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26538,9 +25994,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26584,9 +26038,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26630,9 +26082,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26676,9 +26126,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26722,9 +26170,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26768,9 +26214,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26814,9 +26258,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26860,9 +26302,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26906,9 +26346,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26952,9 +26390,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -26998,9 +26434,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27044,9 +26478,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27090,9 +26522,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27136,9 +26566,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27182,9 +26610,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27228,9 +26654,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27274,9 +26698,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27320,9 +26742,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27366,9 +26786,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27412,9 +26830,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27458,9 +26874,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27504,9 +26918,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27581,9 +26993,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27627,9 +27037,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27673,9 +27081,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27719,9 +27125,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27765,9 +27169,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27811,9 +27213,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27857,9 +27257,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27934,9 +27332,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -27980,9 +27376,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28026,9 +27420,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28072,9 +27464,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28118,9 +27508,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28164,9 +27552,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28210,9 +27596,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28287,9 +27671,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28333,9 +27715,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28379,9 +27759,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28425,9 +27803,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28471,9 +27847,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28517,9 +27891,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28563,9 +27935,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28609,9 +27979,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28655,9 +28023,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28701,9 +28067,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28778,9 +28142,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28824,9 +28186,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28870,9 +28230,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28916,9 +28274,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -28962,9 +28318,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29008,9 +28362,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29054,9 +28406,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29131,9 +28481,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29177,9 +28525,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29223,9 +28569,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29269,9 +28613,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29315,9 +28657,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29361,9 +28701,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29407,9 +28745,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29453,9 +28789,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29499,9 +28833,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29545,9 +28877,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29591,9 +28921,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29637,9 +28965,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29683,9 +29009,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29729,9 +29053,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29775,9 +29097,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29821,9 +29141,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29867,9 +29185,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29913,9 +29229,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -29959,9 +29273,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30005,9 +29317,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30051,9 +29361,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30097,9 +29405,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30172,9 +29478,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30218,9 +29522,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30264,9 +29566,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30310,9 +29610,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30356,9 +29654,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30402,9 +29698,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30448,9 +29742,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30494,9 +29786,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30540,9 +29830,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30586,9 +29874,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30632,9 +29918,7 @@
       "context": {
         "domain": "scientific-practice",
         "subdomain": "epistemology-nature-of-science",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -30678,9 +29962,7 @@
       "context": {
         "domain": "scientific-practice",
         "subdomain": "inquiry-observation",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31633,9 +30915,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31679,9 +30959,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31725,9 +31003,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31771,9 +31047,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31817,9 +31091,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31863,9 +31135,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31909,9 +31179,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31955,9 +31223,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": [],
         "qualifiers": []
@@ -31998,11 +31264,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32037,11 +31301,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32076,11 +31338,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32115,11 +31375,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32154,11 +31412,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32193,11 +31449,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32232,11 +31486,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32271,11 +31523,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32310,11 +31560,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32349,11 +31597,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32388,11 +31634,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32427,11 +31671,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32466,11 +31708,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32505,11 +31745,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32544,11 +31782,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32583,11 +31819,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32622,11 +31856,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32661,11 +31893,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32700,11 +31930,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32739,11 +31967,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32778,11 +32004,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32817,11 +32041,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32856,11 +32078,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32895,11 +32115,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32934,11 +32152,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -32973,11 +32189,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33012,11 +32226,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33051,11 +32263,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33090,11 +32300,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33129,11 +32337,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33168,11 +32374,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33207,11 +32411,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33246,11 +32448,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33285,11 +32485,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33324,11 +32522,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33363,11 +32559,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "arithmetic",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33393,7 +32587,7 @@
       "relation": "generalizes",
       "target": "lhs:math.natural-number",
       "assertion": {
-        "status": "active",
+        "status": "deprecated",
         "type": "proposed",
         "review": {
           "status": "unreviewed"
@@ -33402,11 +32596,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33423,6 +32615,10 @@
         "method": {
           "type": "migration"
         }
+      },
+      "lifecycle": {
+        "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
+        "replaced_by": "lhs:conn.000439"
       }
     },
     {
@@ -33432,7 +32628,7 @@
       "relation": "special_case_of",
       "target": "lhs:math.rational-number",
       "assertion": {
-        "status": "active",
+        "status": "deprecated",
         "type": "proposed",
         "review": {
           "status": "unreviewed"
@@ -33441,11 +32637,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33462,6 +32656,10 @@
         "method": {
           "type": "migration"
         }
+      },
+      "lifecycle": {
+        "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
+        "replaced_by": "lhs:conn.000441"
       }
     },
     {
@@ -33480,11 +32678,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33519,11 +32715,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33558,11 +32752,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33597,11 +32789,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33636,11 +32826,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33675,11 +32863,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33714,11 +32900,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33753,11 +32937,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33792,11 +32974,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "foundations",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33831,11 +33011,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33870,11 +33048,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33909,11 +33085,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33948,11 +33122,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -33987,11 +33159,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34026,11 +33196,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34065,11 +33233,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34104,11 +33270,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34143,11 +33307,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34182,11 +33344,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34221,11 +33381,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34260,11 +33418,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34299,11 +33455,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34338,11 +33492,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34377,11 +33529,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34416,11 +33566,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34455,11 +33603,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34494,11 +33640,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34533,11 +33677,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34572,11 +33714,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34611,11 +33751,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34650,11 +33788,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34689,11 +33825,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34728,11 +33862,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34767,11 +33899,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34806,11 +33936,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34845,11 +33973,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34884,11 +34010,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34923,11 +34047,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "geometry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -34962,11 +34084,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35001,11 +34121,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35040,11 +34158,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35079,11 +34195,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35118,11 +34232,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35157,11 +34269,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "measurement",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35196,11 +34306,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35235,11 +34343,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35274,11 +34380,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35313,11 +34417,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35352,11 +34454,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35391,11 +34491,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35430,11 +34528,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35469,11 +34565,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35510,9 +34604,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35549,9 +34641,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35588,9 +34678,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35627,9 +34715,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35666,9 +34752,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35705,9 +34789,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35744,9 +34826,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35783,9 +34863,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35822,9 +34900,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35861,9 +34937,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "evolution-ecology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35900,9 +34974,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35939,9 +35011,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -35978,9 +35048,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36017,9 +35085,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36056,9 +35122,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36095,9 +35159,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36134,9 +35196,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36173,9 +35233,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36212,9 +35270,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36251,9 +35307,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36290,9 +35344,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36329,9 +35381,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36368,9 +35418,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36407,9 +35455,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36446,9 +35492,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36485,9 +35529,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36524,9 +35566,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36563,9 +35603,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36602,9 +35640,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36641,9 +35677,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36680,9 +35714,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36719,9 +35751,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36758,9 +35788,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36797,9 +35825,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36836,9 +35862,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "genetics-heredity",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36875,9 +35899,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36914,9 +35936,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "metabolism-processes",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36953,9 +35973,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -36992,9 +36010,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37031,9 +36047,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37070,9 +36084,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37109,9 +36121,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37148,9 +36158,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37187,9 +36195,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37226,9 +36232,7 @@
       "context": {
         "domain": "biology",
         "subdomain": "physiology",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37265,9 +36269,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37304,9 +36306,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37343,9 +36343,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37382,9 +36380,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37421,9 +36417,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37460,9 +36454,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37499,9 +36491,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "electrochemistry-redox",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37538,9 +36528,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37577,9 +36565,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37616,9 +36602,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37655,9 +36639,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37694,9 +36676,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37733,9 +36713,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37772,9 +36750,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37811,9 +36787,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37850,9 +36824,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37889,9 +36861,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37928,9 +36898,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -37967,9 +36935,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "equilibrium-kinetics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38006,9 +36972,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38045,9 +37009,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38073,7 +37035,7 @@
       "relation": "special_case_of",
       "target": "lhs:chem.hydrocarbon",
       "assertion": {
-        "status": "active",
+        "status": "deprecated",
         "type": "proposed",
         "review": {
           "status": "unreviewed"
@@ -38084,9 +37046,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38103,6 +37063,10 @@
         "method": {
           "type": "migration"
         }
+      },
+      "lifecycle": {
+        "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
+        "replaced_by": "lhs:conn.000564"
       }
     },
     {
@@ -38112,7 +37076,7 @@
       "relation": "special_case_of",
       "target": "lhs:chem.hydrocarbon",
       "assertion": {
-        "status": "active",
+        "status": "deprecated",
         "type": "proposed",
         "review": {
           "status": "unreviewed"
@@ -38123,9 +37087,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38142,6 +37104,10 @@
         "method": {
           "type": "migration"
         }
+      },
+      "lifecycle": {
+        "reason": "materialized inverse duplicate (ADR-0012: inverses are derived, never stored canonically; repaired ADR-0021/plan v2 E2.1)",
+        "replaced_by": "lhs:conn.000565"
       }
     },
     {
@@ -38162,9 +37128,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38201,9 +37165,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38240,9 +37202,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38279,9 +37239,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38318,9 +37276,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38357,9 +37313,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38396,9 +37350,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38435,9 +37387,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38474,9 +37424,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38513,9 +37461,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38552,9 +37498,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38591,9 +37535,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38630,9 +37572,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "organic-chemistry",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38669,9 +37609,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38708,9 +37646,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38747,9 +37683,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38786,9 +37720,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38825,9 +37757,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38864,9 +37794,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38903,9 +37831,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38942,9 +37868,7 @@
       "context": {
         "domain": "chemistry",
         "subdomain": "thermodynamics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -38979,11 +37903,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39018,11 +37940,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39057,11 +37977,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39096,11 +38014,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39135,11 +38051,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39174,11 +38088,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39213,11 +38125,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "algebra",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39252,11 +38162,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39291,11 +38199,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39330,11 +38236,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39369,11 +38273,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39408,11 +38310,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39447,11 +38347,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39486,11 +38384,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39525,11 +38421,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39564,11 +38458,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39603,11 +38495,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39642,11 +38532,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39681,11 +38569,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39720,11 +38606,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39759,11 +38643,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39798,11 +38680,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39837,11 +38717,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "calculus",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39876,11 +38754,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39915,11 +38791,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39954,11 +38828,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -39993,11 +38865,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40032,11 +38902,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40071,11 +38939,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40110,11 +38976,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "functions",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40149,11 +39013,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40188,11 +39050,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40227,11 +39087,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40266,11 +39124,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40305,11 +39161,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40344,11 +39198,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40383,11 +39235,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40422,11 +39272,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40461,11 +39309,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40500,11 +39346,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40539,11 +39383,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40578,11 +39420,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "number-theory",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40617,11 +39457,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40656,11 +39494,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40695,11 +39531,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40734,11 +39568,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40773,11 +39605,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40812,11 +39642,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40851,11 +39679,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40890,11 +39716,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40929,11 +39753,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -40968,11 +39790,9 @@
         "confidence_basis": null
       },
       "context": {
-        "domain": "math",
+        "domain": "mathematics",
         "subdomain": "statistics-probability",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41009,9 +39829,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41048,9 +39866,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41087,9 +39903,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41126,9 +39940,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41165,9 +39977,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41204,9 +40014,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "atomic-nuclear",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41243,9 +40051,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41282,9 +40088,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41321,9 +40125,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41360,9 +40162,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41399,9 +40199,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41438,9 +40236,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "electricity-magnetism",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41477,9 +40273,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41516,9 +40310,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41555,9 +40347,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "mechanics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41594,9 +40384,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41633,9 +40421,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41672,9 +40458,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41711,9 +40495,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41750,9 +40532,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41789,9 +40569,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "thermal-physics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41828,9 +40606,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41867,9 +40643,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41906,9 +40680,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41945,9 +40717,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },
@@ -41984,9 +40754,7 @@
       "context": {
         "domain": "physics",
         "subdomain": "waves-optics",
-        "regime": [
-          "classical"
-        ],
+        "regime": [],
         "scale": "macroscopic",
         "assumptions": []
       },

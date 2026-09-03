@@ -14,8 +14,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: matter-foundations
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

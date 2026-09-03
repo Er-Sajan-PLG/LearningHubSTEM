@@ -13,8 +13,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: electrochemistry-redox
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

@@ -13,8 +13,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: organic-chemistry
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []

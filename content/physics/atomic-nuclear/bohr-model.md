@@ -24,10 +24,12 @@ historical:
       by: "Niels Bohr"
       event: "Publishes On the Constitution of Atoms and Molecules, introducing quantized electron orbits and the hydrogen spectrum"
 relationships:
-- type: related_to
+- type: approximates
   target: lhs:phys.atomic-structure
 - type: related_to
   target: lhs:chem.atom
+- type: related_to
+  target: lhs:phys.atomic-structure
 _notes: Model approximates atomic structure; superseded by quantum mechanical model.
 ---
 

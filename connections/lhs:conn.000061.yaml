@@ -14,8 +14,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: bonding-structure
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
   qualifiers: []

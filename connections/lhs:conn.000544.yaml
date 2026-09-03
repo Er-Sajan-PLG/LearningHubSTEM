@@ -13,8 +13,7 @@ assertion:
 context:
   domain: chemistry
   subdomain: equilibrium-kinetics
-  regime:
-  - classical
+  regime: []
   scale: macroscopic
   assumptions: []
 evidence: []
