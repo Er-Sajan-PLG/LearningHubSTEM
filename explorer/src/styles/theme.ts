@@ -88,7 +88,7 @@ export const GRAPH_THEME = {
 /**
  * Assertion-trust scale (plan v2 E1.6 / ADR-0023).
  *
- * The explorer draws edges from canonical `connections[]`, not the deprecated inline
+ * The explorer draws edges from canonical `connections[]`.
  * projection, so every edge carries `assertion.review.status` — the graph can show HOW
  * TRUSTED a claim is, not only what it says. Trust modulates the relation's own style
  * (thicker/brighter = reviewed; thin/dim = unreviewed), never replaces it.
@@ -104,8 +104,7 @@ export const ASSERTION_TRUST: Record<string, TrustStyle> = {
   canonical: { label: 'Canonical assertion (human-reviewed)', short: 'Canonical', widthScale: 1.35, opacity: 0.95 },
   reviewed: { label: 'Human-reviewed assertion', short: 'Reviewed', widthScale: 1.0, opacity: 0.7 },
   unreviewed: { label: 'Unreviewed / machine-migrated assertion', short: 'Unreviewed', widthScale: 0.6, opacity: 0.3 },
-  // Fallback: an edge drawn from the deprecated inline projection carries no review status.
-  unknown: { label: 'Trust unknown (inline projection)', short: 'Unknown', widthScale: 0.6, opacity: 0.3 }
+  unknown: { label: 'Trust unknown', short: 'Unknown', widthScale: 0.6, opacity: 0.3 }
 };
 
 export function getTrustStyle(status: string | undefined): TrustStyle {

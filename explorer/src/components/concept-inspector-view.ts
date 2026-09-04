@@ -1,5 +1,5 @@
 import { ConceptDetails } from '../services/concept-data';
-import { LhsEntity } from '../services/knowledge-export-loader';
+import { StemmaEntity } from '../services/knowledge-export-loader';
 import { getDomainTheme, getTrustStyle } from '../styles/theme';
 
 declare const katex: any;
@@ -192,9 +192,7 @@ export class ConceptInspectorView {
       <div class="inspector-section">
         <div class="section-title">🛡️ Edge source</div>
         <div style="font-size:0.78rem;color:var(--text-secondary);">
-          ${edgeSource === 'connections'
-            ? 'Drawn from canonical <code>connections[]</code> (export contract v1.0) — each edge carries an assertion review status.'
-            : 'Fallback: deprecated inline <code>entities[].relationships</code> projection (no review status available).'}
+          Drawn from canonical <code>connections[]</code> (export contract v2.0) — each edge carries an assertion review status.
         </div>
       </div>`;
     if (!prerequisites.length && !dependents.length && !related.length) {
@@ -203,7 +201,7 @@ export class ConceptInspectorView {
     return html;
   }
 
-  private renderExamples(entity: LhsEntity): string {
+  private renderExamples(entity: StemmaEntity): string {
       let html = '';
       if (entity.real_world_applications && entity.real_world_applications.length) {
         html += `
@@ -230,7 +228,7 @@ export class ConceptInspectorView {
       return html;
     }
 
-    private renderMisconceptions(entity: LhsEntity): string {
+    private renderMisconceptions(entity: StemmaEntity): string {
       let html = '';
       if (entity.common_misconceptions && entity.common_misconceptions.length) {
         html = entity.common_misconceptions.map((m: string) => `<div class="misconception-card">${this.escapeHtml(m)}</div>`).join('');
@@ -240,7 +238,7 @@ export class ConceptInspectorView {
       return html;
     }
 
-    private entityLink(p: LhsEntity, right: string, trust?: string): string {
+    private entityLink(p: StemmaEntity, right: string, trust?: string): string {
     const theme = getDomainTheme(p.domain);
     const badge = this.trustBadge(trust);
     return `

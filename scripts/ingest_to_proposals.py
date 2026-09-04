@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""STEMMA (`lhs:` namespace) ingestion → proposal staging runner.
+"""STEMMA (`stemma:` namespace) ingestion → proposal staging runner.
 
 Ties the pipeline together: ingest a document (PDF/image/scanned) and stage
 review-ready candidate knowledge (source + proposed entities/connections) under
@@ -50,7 +50,7 @@ def _default_draft(blueprint: "Any", data: dict, **kw: Any) -> dict:
         return data  # the source itself
     # Entity/connection proposal from extracted text (clearly flagged draft).
     return {
-        "id": bp.kind == "connection" and "lhs:conn.000000" or "lhs:<domain>.<proposed-slug>",
+        "id": bp.kind == "connection" and "stemma:conn.000000" or "stemma:<domain>.<proposed-slug>",
         "type": "concept",
         "name": f"<proposed> {bp.source_ref or ''}".strip(),
         "domain": "general",

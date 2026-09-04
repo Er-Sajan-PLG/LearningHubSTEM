@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Apply a human-filled E6.1 decision sheet (plan v2 E6.1).
 
-  python3 scripts/apply_review_decisions.py reports/e61-dependency-campaign/batch-01.yaml \
+  python3 scripts/apply_review_decisions.py reports/dependency-review-campaign/batch-01.yaml \
           --reviewer human:reviewer.physics-001 [--dry-run]
 
 Rules (all enforced, none bypassable):

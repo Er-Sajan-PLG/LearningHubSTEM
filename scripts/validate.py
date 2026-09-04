@@ -6,7 +6,6 @@ assertions) and sources/ (citations) against their schemas, the relation
 registry, the controlled vocabularies, and the cross-object invariants added by
 plan v2 (ADR-0020/0021):
 
-  - inline relationships[] MUST equal the projection of canonical connections/
     (connections/ is the single source of truth; regenerate with
     scripts/sync_relationships.py)
   - registry inverse coherence (mutual inverses, mirrored domain/range,
@@ -67,11 +66,10 @@ VOCAB_SUBDOMAINS = SCHEMA / "vocabularies" / "subdomains.yaml"
 VOCAB_REGIMES = SCHEMA / "vocabularies" / "regimes.yaml"
 EXPORT = ROOT / "exports" / "knowledge.json"
 EXPORT_SCHEMA = SCHEMA / "export.schema.json"
-EXPORT_COMPAT = ROOT / "exports" / "knowledge.compat-0.1.json"
 
-ID_RE = re.compile(r"^lhs:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
-CONN_ID_RE = re.compile(r"^lhs:conn\.[0-9]{6}$")
-SRC_ID_RE = re.compile(r"^lhs:src\.[a-z0-9][a-z0-9-]*$")
+ID_RE = re.compile(r"^stemma:[a-z][a-z0-9-]*\.[a-z0-9][a-z0-9-]*$")
+CONN_ID_RE = re.compile(r"^stemma:conn\.[0-9]{6}$")
+SRC_ID_RE = re.compile(r"^stemma:src\.[a-z0-9][a-z0-9-]*$")
 STATUSES = {"draft", "machine_validated", "human_reviewed", "canonical", "deprecated", "superseded"}
 # Entity types — must match the enum in concept.schema.json (v0.3 adds
 # phenomenon/model/experiment per ADR-0021; check_registry_coherence reads the
@@ -388,7 +386,7 @@ def validate_entity(entity: dict, errors: list, filename_slug: str | None = None
     # ID format
     _id = entity.get("id")
     if isinstance(_id, str) and not ID_RE.fullmatch(_id):
-        errors.append(f"{here} invalid stable ID format: {_id!r} (expected lhs:<domain>.<slug>)")
+        errors.append(f"{here} invalid stable ID format: {_id!r} (expected stemma:<domain>.<slug>)")
 
     # Filename must equal the final ID slug (canonical representation rule)
     if isinstance(_id, str) and filename_slug:
@@ -427,20 +425,7 @@ def validate_entity(entity: dict, errors: list, filename_slug: str | None = None
         elif alias == _id:
             errors.append(f"{here} alias must not equal the entity's own id: {alias!r}")
 
-    # Relationships (inline = generated projection of canonical connections, ADR-0020).
-    # Relation names are governed by the relation registry (not a local enum); the
-    # inline-equals-projection invariant is enforced in main() once connections are known.
-    registry_relations = load_relation_registry().get("relations", {})
-    for rel in entity.get("relationships", []) or []:
-        if not isinstance(rel, dict):
-            errors.append(f"{here} relationship must be an object")
-            continue
-        rtype = rel.get("type")
-        if rtype not in registry_relations:
-            errors.append(f"{here} relationship type not in relation-registry.yaml: {rtype!r}")
-        target = rel.get("target")
-        if not isinstance(target, str) or not target.startswith("lhs:"):
-            errors.append(f"{here} relationship target must be an 'lhs:' ID: {target!r}")
+    # Relationships live ONLY in connections/ (ADR-0020/0028); entities carry none.
 
     # Deprecation hygiene
     if entity.get("status") in ("deprecated", "superseded") and not entity.get("deprecated_by"):
@@ -480,7 +465,7 @@ def validate_connection(conn: dict, entities: dict, sources: dict, errors: list)
     if cid is None:
         errors.append(f"{here} missing required 'id'")
     elif not isinstance(cid, str) or not CONN_ID_RE.fullmatch(cid):
-        errors.append(f"{here} invalid connection ID: {cid!r} (expected lhs:conn.NNNNNN)")
+        errors.append(f"{here} invalid connection ID: {cid!r} (expected stemma:conn.NNNNNN)")
 
     if conn.get("type") != "connection":
         errors.append(f"{here} connection type must be 'connection' (found {conn.get('type')!r})")
@@ -541,7 +526,7 @@ def validate_source(src: dict, errors: list) -> None:
     if sid is None:
         errors.append(f"{here} missing required 'id'")
     elif not isinstance(sid, str) or not SRC_ID_RE.fullmatch(sid):
-        errors.append(f"{here} invalid source ID: {sid!r} (expected lhs:src.<slug>)")
+        errors.append(f"{here} invalid source ID: {sid!r} (expected stemma:src.<slug>)")
     check_extensions(src, "source", errors, here)
 
 
@@ -738,7 +723,7 @@ def check_relationship_cycles(connections: dict, registry: dict, errors: list) -
                 for nxt in sorted(graph.get(node, ())):
                     if nxt == start:
                         errors.append(
-                            "cycle detected: " + " -> ".join(p.replace("lhs:", "") for p in path + [nxt])
+                            "cycle detected: " + " -> ".join(p.replace("stemma:", "") for p in path + [nxt])
                             + f" (relation '{rel}')"
                         )
                         break
@@ -781,36 +766,26 @@ def write_validation_report(conforms: bool, results: list, content_hash: str | N
     )
 
 
-def check_inline_projection(entities: dict, connections: dict, errors: list) -> None:
-    """Inline relationships[] must equal the projection of canonical connections
-    (ADR-0020: connections/ is the single relationship source; audit F1)."""
-    projection: dict[str, list[tuple[str, str]]] = {}
-    for conn in connections.values():
-        if conn.get("assertion", {}).get("status") != "active":
-            continue
-        projection.setdefault(conn["source"], []).append((conn["relation"], conn["target"]))
-    for edges in projection.values():
-        edges.sort()
-
-    for eid, entity in entities.items():
-        actual = sorted(
-            (rel.get("type"), rel.get("target"))
-            for rel in (entity.get("relationships") or [])
-            if isinstance(rel, dict)
+def check_legacy_namespace(raw_text: str, where: str, errors: list) -> None:
+    """ADR-0027 migration completeness: the retired `lhs:` namespace must never
+    reappear in canonical files (an `stemma:` ID would be unresolvable and would
+    silently fork the identity space)."""
+    if "lhs:" in raw_text:
+        errors.append(
+            f"{where}: retired `lhs:` namespace reference found — canonical IDs use "
+            "`stemma:` (ADR-0027); see docs/MIGRATIONS.md"
         )
-        expected = projection.get(eid, [])
-        if actual != expected:
-            missing = [e for e in expected if e not in actual]
-            extra = [e for e in actual if e not in expected]
-            detail = []
-            if missing:
-                detail.append(f"missing in inline: {missing[:3]}")
-            if extra:
-                detail.append(f"not in connections: {extra[:3]}")
+
+
+def check_inline_projection(entities: dict, connections: dict, errors: list) -> None:
+    """ADR-0028: entities carry NO relationship data at all — connections/ is the
+    single relationship source. Any relationship-shaped block on an entity is an
+    authoring error (the generated projection was removed with export contract 2.0)."""
+    for eid, entity in entities.items():
+        if "relationships" in entity:
             errors.append(
-                f"{entity['_file']}: inline relationships[] out of sync with canonical "
-                f"connections/ for {eid} ({'; '.join(detail)}). "
-                f"Run: python3 scripts/sync_relationships.py"
+                f"{entity['_file']}: `relationships` is not an entity field — assert "
+                "relationships as first-class objects in connections/ (ADR-0020/0028)"
             )
 
 
@@ -837,13 +812,25 @@ def load_canonical_yaml_dir(directory: Path, schema_path: Path, errors: list,
 
     for path in sorted(directory.glob("*.yaml")):
         try:
-            data = load_yaml_strict(path.read_text(encoding="utf-8"), where=str(path.relative_to(ROOT)))
+            raw = path.read_text(encoding="utf-8")
+            data = load_yaml_strict(raw, where=str(path.relative_to(ROOT)))
         except ValueError as exc:
             errors.append(f"{path.relative_to(ROOT)}: {exc}")
             continue
         if not isinstance(data, dict):
             errors.append(f"{path.relative_to(ROOT)}: expected a YAML mapping")
             continue
+        check_legacy_namespace(raw, str(path.relative_to(ROOT)), errors)
+        # Filename ↔ ID consistency (ADR-0027): colon-free filenames carry the ID
+        # minus the namespace segment — stemma:conn.000001 → conn.000001.yaml.
+        _id = data.get("id")
+        if isinstance(_id, str) and _id.startswith("stemma:"):
+            expected_stem = _id.split(":", 1)[1]
+            if path.stem != expected_stem:
+                errors.append(
+                    f"{path.relative_to(ROOT)}: filename must be '{expected_stem}.yaml' "
+                    f"for id {_id!r} (colon-free form of the ID)"
+                )
         data["_file"] = str(path.relative_to(ROOT))
         if validator:
             obj = {k: v for k, v in data.items() if not k.startswith("_")}
@@ -877,6 +864,7 @@ def main() -> int:
         except ValueError as exc:
             errors.append(f"{path.relative_to(ROOT)}: {exc}")
             continue
+        check_legacy_namespace(path.read_text(encoding="utf-8"), str(path.relative_to(ROOT)), errors)
         validate_entity(entity, errors, filename_slug=path.stem)
         check_extensions(entity, "entity", errors, f"{entity['_file']}:")
         check_historical(entity, errors, f"{entity['_file']}:")
@@ -896,21 +884,12 @@ def main() -> int:
             for err in validator.iter_errors(data):
                 errors.append(f"{entity['_file']}: schema violation: {err.message}")
 
-    # Dangling relationship targets + semantic type rules
+    # Dangling entity→entity pointers (aliases, deprecated_by) + semantic type rules
+    # (relationship targets are checked on connections below — entities carry none).
     for _id, entity in entities.items():
-        etype = entity.get("type")
-        for rel in entity.get("relationships", []) or []:
-            target = rel.get("target")
-            if isinstance(target, str) and target not in entities:
-                errors.append(f"{entity['_file']}: dangling relationship target: {target} (from {_id})")
-                continue
-            rtype = rel.get("type")
-            target_type = entities.get(target, {}).get("type")
-            # Core semantic rules (specification §5.1)
-            if rtype == "applies_to" and etype != "law":
-                errors.append(f"{entity['_file']}: applies_to requires a 'law' source (found {etype})")
-            if rtype == "appears_in_law" and target_type != "law":
-                errors.append(f"{entity['_file']}: appears_in_law target must be a 'law' (found {target_type})")
+        for alias in entity.get("aliases", []) or []:
+            if isinstance(alias, str) and alias not in entities and not alias.startswith("stemma:"):
+                errors.append(f"{entity['_file']}: alias is not a valid stemma: ID: {alias!r}")
 
     # Q2: load + validate first-class connections and sources (ADR-011). These are
     # first-class canonical inputs — the gate now covers content/ + connections/ + sources/.
@@ -1032,27 +1011,6 @@ def main() -> int:
         encoding="utf-8",
     )
     print(f"OK: {len(entities)} entities valid; export written to {EXPORT.relative_to(ROOT)}")
-
-    # Co-release window artifact (ADR-0023 §Consequences): an entities-only view
-    # stamped with the legacy contract version so a consumer still pinned to the
-    # previous contract can be repointed while its adapter upgrades. Removed when
-    # `legacy_export_version` disappears from schema/VERSION.yaml.
-    legacy = versions.get("legacy_export_version")
-    if legacy:
-        compat = {
-            "export_version": legacy,
-            "schema_version": payload["schema_version"],
-            "content_hash": payload["content_hash"],
-            "kernel_version": payload["kernel_version"],
-            "source": payload["source"] + " — COMPATIBILITY VIEW; upgrade to export_version "
-                      + payload["export_version"],
-            "entity_count": payload["entity_count"],
-            "entities": payload["entities"],
-        }
-        EXPORT_COMPAT.write_text(json.dumps(compat, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(f"OK: legacy {legacy} compatibility view written to {EXPORT_COMPAT.relative_to(ROOT)}")
-    elif EXPORT_COMPAT.exists():
-        EXPORT_COMPAT.unlink()
     write_validation_report(conforms=True, results=[], content_hash=content_hash_value)
     print("OK: validation report written to reports/validation-report.json")
 

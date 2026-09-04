@@ -50,13 +50,13 @@ def test_content_hash_tracks_canonical_content():
     print(f"PASS: export stamped with deterministic content_hash ({export['content_hash'][:19]}…)")
 
 
-def test_export_contract_v1_required_members():
+def test_export_contract_required_members():
     """ADR-0023 / gate G-A: connections + sources are required contract members."""
     import jsonschema
     schema = json.loads((ROOT / "schema" / "export.schema.json").read_text())
     export = json.loads((ROOT / "exports" / "knowledge.json").read_text())
     jsonschema.Draft202012Validator(schema).validate(export)
-    assert export["export_version"].startswith("1."), export["export_version"]
+    assert export["export_version"].startswith("2."), export["export_version"]
     assert export["connection_count"] == len(export["connections"]) > 0
     assert export["source_count"] == len(export["sources"]) > 0
     broken = dict(export); broken.pop("connections")
@@ -83,6 +83,6 @@ if __name__ == "__main__":
     test_no_version_literals_in_exporters()
     test_export_regeneration_is_byte_identical()
     test_content_hash_tracks_canonical_content()
-    test_export_contract_v1_required_members()
+    test_export_contract_required_members()
     test_legacy_compat_view_during_co_release_window()
     print("ALL DETERMINISTIC EXPORT TESTS PASS")

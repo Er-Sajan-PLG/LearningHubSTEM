@@ -49,7 +49,7 @@ def main():
     reviewed = [c for c in conns if c["assertion"]["review"]["status"] in ("reviewed", "canonical")]
     reviewed_sorted = sorted(reviewed, key=lambda x: x["id"])
     # Remaining highest priority (from review_queue)
-    rq_path = ROOT / "reports/review-queue-v0.2.json"
+    rq_path = ROOT / "reports/review-queue.json"
     remaining = []
     if rq_path.exists():
         rq = json.loads(rq_path.read_text())
@@ -94,12 +94,12 @@ def main():
         "provenance_gaps_sample": provenance_gaps[:5],
     }
 
-    out_json = ROOT / "reports/curation-status-v0.2.json"
+    out_json = ROOT / "reports/curation-status.json"
     out_json.write_text(json.dumps(report, indent=2) + "\n")
 
     top_lines = "\n".join(f"- {c['id']}: {c['relation']} {c['source']} -> {c['target']}" for c in reviewed_sorted[:15])
     rem_lines = "\n".join(f"- {r['connection_id']}: {r['proposed_relation']}" for r in remaining[:10]) if remaining else "none"
-    out_md = ROOT / "reports/curation-status-v0.2.md"
+    out_md = ROOT / "reports/curation-status.md"
     out_md.write_text(
         f"# Curation Status — v0.2\n\n"
         f"- Total connections: {total} (canonical objects)\n"
@@ -122,7 +122,7 @@ def main():
     print(f"OK: curation status total {total} canonical {report['canonical_assertions']}")
 
     # Pilot retrospective
-    pilot_md = ROOT / "reports/curation-pilot-v0.2.md"
+    pilot_md = ROOT / "reports/curation-pilot.md"
     pilot_md.write_text(
         """# Curation Pilot — v0.2 (15 canonical)
 

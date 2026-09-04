@@ -4,7 +4,7 @@
 scanned docs and stage *review-ready candidate* content (source + proposed entities/
 connections) for the canonical knowledge graph. Nothing becomes canonical automatically.
 
-Related: `docs/ARCHITECTURE-REVIEW-v0.3.md` §P (curation pipeline), `scripts/ingest.py`,
+Related: `scripts/ingest.py`,
 `scripts/curation_pipeline.py`, `scripts/ingest_to_proposals.py`.
 
 ---
@@ -26,7 +26,7 @@ document (PDF / image / scanned PDF)
 Extraction{kind, text, pages, is_scanned, ocr_used, source_name}
    │  scripts/ingest.py to_curation_request()
    ▼
-CurationRequest(kind=entity|connection, source_ref=lhs:src.*, data[extracted_text])
+CurationRequest(kind=entity|connection, source_ref=stemma:src.*, data[extracted_text])
    │  scripts/curation_pipeline.py run_pipeline() with a Draft seam (LLM)
    ▼
 PublicationDecision{propose | request_review | hold | reject}
@@ -81,7 +81,7 @@ import ingest, curation_pipeline as cp
 ex = ingest.extract(Path("doc.pdf"))
 req = ingest.to_curation_request(ex, kind="entity")
 def draft(bp, data, **kw):   # your LLM seam
-    return {"id":"lhs:phys.draft-x","type":"concept","name":"X","domain":"physics",
+    return {"id":"stemma:phys.draft-x","type":"concept","name":"X","domain":"physics",
             "status":"draft","definition":data["_extracted_text"][:200],
             "provenance":{"ai_drafted":True,"source":bp.source_ref},"relationships":[]}
 dec = cp.run_pipeline(req, draft_callback=draft,

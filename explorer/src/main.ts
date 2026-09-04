@@ -1,5 +1,5 @@
 import './styles/explorer.css';
-import { loadKnowledgeExport, LhsKnowledgeExport } from './services/knowledge-export-loader';
+import { loadKnowledgeExport, StemmaKnowledgeExport } from './services/knowledge-export-loader';
 import { projectKnowledgeGraph } from './services/graph-projection';
 import { getConceptDetails } from './services/concept-data';
 import { ExplorerStateManager, ExplorerState } from './state/explorer-state';
@@ -11,7 +11,7 @@ import { AccessibleListView } from './components/accessible-list-view';
 
 class ExplorerApp {
   private stateManager: ExplorerStateManager;
-  private exportData: LhsKnowledgeExport | null = null;
+  private exportData: StemmaKnowledgeExport | null = null;
   private graphView: GraphView | null = null;
   private inspectorView: ConceptInspectorView | null = null;
   private searchFilterBar: SearchFilterBar | null = null;
