@@ -30,5 +30,6 @@ the linked documents.
 | **independence invariant** | No coupling to any private ecosystem anywhere in the repo. | GOVERNANCE §12 |
 | **freeze** | Foundational changes require an ADR — not "never change". | GOVERNANCE §3 |
 | **baseline** | The declared authoritative state of all architecture documents (currently 3.0.0). | ADR-0029 |
+| **adapter** | A consumer-side library, CLI, or API layer that reads the export and reshapes it for downstream use without becoming canonical truth. | CONSUMERS §5 |
 | **consumer** | Any external system reading the export; owns adapters, curriculum, presentation. | CONSUMERS |
 | **draft / machine_validated / human_reviewed / canonical / deprecated / superseded** | Entity lifecycle states. | DOMAIN-MODEL §6 |

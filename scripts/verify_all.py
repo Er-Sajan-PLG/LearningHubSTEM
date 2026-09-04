@@ -36,6 +36,7 @@ steps = [
     ["python3", str(ROOT / "tests/curation/test_connection_immutability.py")],
     ["python3", str(ROOT / "scripts/dependency_review_campaign.py")],
     ["python3", str(ROOT / "scripts/check_id_immutability.py")],
+    ["python3", str(ROOT / "adapters/python/tests/test_adapter.py")],
     ["python3", str(ROOT / "tests/repo/test_independence.py")],
     ["python3", str(ROOT / "tests/repo/test_docs_consistency.py")],
 ]

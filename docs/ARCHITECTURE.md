@@ -63,6 +63,7 @@ layer depends on nothing.
 | Ingestion | `scripts/ingest.py`, `scripts/ingest_to_proposals.py`, `scripts/curation_pipeline.py` | Document → review-ready proposal (never canonical directly). | workflow |
 | Analysis | `scripts/graph_analysis.py`, `scripts/epistemic_summary.py`, `scripts/integrity_anomalies.py`, `scripts/curation_status.py`, `scripts/dependency_review_campaign.py` | Derived reporting on corpus state. | derived |
 | Explorer | `explorer/` | First-party 3-D graph visualizer; a *consumer* that reads only the published export. | consumer |
+| Python adapter | `adapters/python/` | First-party read-only consumer adapter: Python SDK, CLI, and local JSON API over the export. | consumer |
 | Test suite | `tests/` | Layered invariant tests (see `docs/TESTING.md`). | gate |
 | CI | `.github/workflows/ci.yml` | Runs the full verification chain + freshness + security scans. | gate |
 

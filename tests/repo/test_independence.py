@@ -34,6 +34,7 @@ CHECKED = [
     "schema",
     "scripts",
     "tests",
+    "adapters",
     "explorer/src",
     "explorer/scripts",
     "explorer/package.json",

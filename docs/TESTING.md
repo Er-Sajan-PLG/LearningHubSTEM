@@ -30,6 +30,7 @@ is the release gate.
 | **Provenance tests** | Agent registry resolution; `external_ids` formats; consumer docs state the current export version | `tests/provenance/` |
 | **Determinism/compatibility** | Byte-identical regeneration; export conforms to contract; contract rejects missing members | `tests/versioning/` |
 | **Repository integrity** | Ecosystem independence; docs set complete and non-contradictory (index↔files); README status truth | `tests/repo/` (new with the refoundation) |
+| **Adapter integration** | The first-party Python adapter loads the real export, mirrors policy counts, resolves aliases, traverses prerequisites, exercises CLI, and serves the local JSON API | `adapters/python/tests/test_adapter.py` |
 | **End-to-end (consumer)** | The explorer projects the graph from `connections[]` with trust annotation; rejects contract-violating exports | `explorer/scripts/verify-graph-projection.mjs` |
 
 ## 3. The verify chain
@@ -39,7 +40,8 @@ summary → integrity anomalies → graph analysis → review-aware exports →
 curation status → phase-b domain/boundary tests → registry coherence →
 deterministic export tests → curation tests → generality → id-immutability →
 provenance/agent tests → claim-identity → connection-immutability → campaign
-determinism → git-history immutability guard → repository-integrity tests.
+determinism → git-history immutability guard → Python adapter integration
+tests → repository-integrity tests.
 Any failure stops the chain.
 
 ## 4. CI enforcement (`.github/workflows/ci.yml`)
