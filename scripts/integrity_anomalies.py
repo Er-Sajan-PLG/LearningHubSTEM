@@ -80,9 +80,9 @@ def main():
     for a in anomalies:
         by_level[a["level"]] += 1
 
-    out_json = ROOT / "reports" / "integrity-anomalies-v0.2.json"
+    out_json = ROOT / "reports" / "integrity-anomalies.json"
     out_json.write_text(json.dumps({"anomalies": anomalies, "counts": by_level, "total": len(anomalies)}, indent=2) + "\n")
-    out_md = ROOT / "reports" / "integrity-anomalies-v0.2.md"
+    out_md = ROOT / "reports" / "integrity-anomalies.md"
     out_md.write_text(
         f"""# Integrity Anomalies — v0.2
 
@@ -92,7 +92,7 @@ def main():
 |-------|------|---------|
 """
         + "\n".join(f"| {a['level']} | {a['type']} | {a['message']} |" for a in anomalies[:50])
-        + "\n\nFull: `reports/integrity-anomalies-v0.2.json`\n"
+        + "\n\nFull: `reports/integrity-anomalies.json`\n"
     )
     print(f"OK: anomalies total={len(anomalies)} ERROR={by_level['ERROR']} WARNING={by_level['WARNING']} INFO={by_level['INFO']}")
     return 0 if by_level["ERROR"] == 0 else 0  # Do not fail; report only

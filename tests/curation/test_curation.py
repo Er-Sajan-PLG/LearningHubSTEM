@@ -39,7 +39,7 @@ def test_reviewer_required():
 
 def test_origin_preserved():
     # Pick a migrated canonical
-    p = ROOT / "connections/lhs:conn.000001.yaml"
+    p = ROOT / "connections/conn.000001.yaml"
     d = yaml.safe_load(p.read_text())
     assert d["provenance"]["asserted_by"]["id"] == "unknown:legacy-relationship"
     assert d["provenance"]["method"]["type"] == "migration" or d["provenance"]["generated_by"]["id"] == "process:migration.relationships-v0.2"
@@ -50,7 +50,7 @@ def test_origin_preserved():
 def test_rejected_auditable():
     # Create a rejected example in memory
     conn = {
-        "id": "lhs:conn.999999",
+        "id": "stemma:conn.999999",
         "assertion": {"status": "rejected", "type": "proposed", "review": {"status": "rejected"}},
         "provenance": {"asserted_by": {"type": "human", "id": "human:test"}, "generated_by": {"type": "human", "id": "human:test"}, "method": {"type": "manual"}},
     }

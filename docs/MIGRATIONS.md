@@ -19,6 +19,20 @@ Template:
 
 ---
 
+## 2026-09-04 — Refoundation: `stemma:` namespace, colon-free filenames, contract v2.0.0 (ADR-0027/0028)
+- **Tag:** ADR-0027 / ADR-0028 · **Kind:** breaking (bulk canonical rewrite)
+- **Changed:** every canonical ID `lhs:`→`stemma:` (881 objects; identity fields untouched);
+  `connections/lhs:conn.NNNNNN.yaml`→`connections/conn.NNNNNN.yaml`; `sources/lhs:src.*`→`sources/src.*`;
+  entity-side generated `relationships[]` projection **removed** (entities carry no relationship data);
+  schemas → 1.0.0; export contract → 2.0.0; relation registry → 1.0.0 (4 duplicate reserved relations pruned);
+  legacy `knowledge.compat-0.1.json` retired; curriculum-body provenance citations normalized; one law's
+  type-inconsistent `dimensions` extension removed.
+- **Old data:** rewritten in place by a one-time governed migration; validated green post-migration
+  (`scripts/verify_all.py`). Git history is the audit trail; the immutability guard reconciles the old
+  prefix through one documented alias rule.
+- **Consumer impact:** adapters must use `stemma:` IDs and read the graph from `connections[]`
+  (see `docs/CONSUMERS.md`). No compatibility artifact ships with 2.0.0.
+
 ## 2026-09-04 — Derived `claim_signature` in the export + duplicate-claim gate
 - **Tag:** ADR-0026 · plan v2 E4.3 · **Kind:** additive (derived) + new gate
 - **Changed:** `exports/knowledge.json` `connections[].claim_signature` (derived

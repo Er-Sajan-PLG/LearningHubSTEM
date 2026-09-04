@@ -44,7 +44,7 @@ def test_evaluate_and_publishable():
 
 def test_good_entity_reaches_request_review():
     req = cp.CurationRequest(kind="entity", intent="t", data={
-        "id": "lhs:test.p1", "type": "concept", "name": "P", "domain": "test",
+        "id": "stemma:test.p1", "type": "concept", "name": "P", "domain": "test",
         "status": "draft", "definition": "def", "provenance": {"ai_drafted": True},
         "relationships": [],
     })
@@ -78,7 +78,7 @@ def test_bad_entity_is_hold_and_never_publishable():
 def test_intent_failure_forces_reject_or_hold():
     """If the semantic/intent gate fails, the change is not publishable and is not
     forwarded for canonicalization."""
-    req = cp.CurationRequest(kind="entity", intent="nonsense", data={"id": "lhs:x.y", "type": "concept"})
+    req = cp.CurationRequest(kind="entity", intent="nonsense", data={"id": "stemma:x.y", "type": "concept"})
     dec = cp.run_pipeline(
         req,
         draft_callback=lambda bp, data, **kw: data,
@@ -97,7 +97,7 @@ def test_repair_loop_bounded_and_recovers():
         if calls["n"] == 1:  # first draft is bad -> repair
             return {"id": "bad", "type": "concept", "name": "", "domain": "test",
                     "status": "draft", "definition": "", "provenance": {}}
-        return {"id": "lhs:test.fixed", "type": "concept", "name": "Fixed", "domain": "test",
+        return {"id": "stemma:test.fixed", "type": "concept", "name": "Fixed", "domain": "test",
                 "status": "draft", "definition": "ok", "provenance": {"ai_drafted": True},
                 "relationships": []}
 
@@ -117,7 +117,7 @@ def test_never_emits_canonical_action():
     assert "canonical" not in cp.DecisionAction.__args__
     # run on a valid proposal; action must be request_review, not canonical
     req = cp.CurationRequest(kind="entity", intent="t", data={
-        "id": "lhs:t.c", "type": "concept", "name": "C", "domain": "test",
+        "id": "stemma:t.c", "type": "concept", "name": "C", "domain": "test",
         "status": "draft", "definition": "d", "provenance": {"ai_drafted": True}, "relationships": []})
     dec = cp.run_pipeline(
         req,
@@ -129,9 +129,9 @@ def test_never_emits_canonical_action():
 
 
 def test_blueprint_carries_source_ref():
-    req = cp.CurationRequest(kind="entity", intent="t", data={}, source_ref="lhs:src.x")
+    req = cp.CurationRequest(kind="entity", intent="t", data={}, source_ref="stemma:src.x")
     bp = cp.blueprint_from_request(req)
-    assert bp.source_ref == "lhs:src.x"
+    assert bp.source_ref == "stemma:src.x"
 
 
 if __name__ == "__main__":

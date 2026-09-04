@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
-"""Verify hook chain — ECC verify analogue."""
-import subprocess
+"""The authoritative verification chain — what CI runs, what you run.
+
+Stages: gate (validate + export) → status truth → derived analyses →
+review-aware exports → domain/boundary invariants → registry coherence →
+determinism/contract tests → curation + generality → identity immutability
+(present-tree + git-history) → provenance/claim-identity → connection-triple
+immutability → campaign determinism → repository integrity (independence,
+docs consistency).
+"""
 import pathlib
+import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
 steps = [
     ["python3", str(ROOT / "scripts/validate.py")],
     ["python3", str(ROOT / "scripts/status_truth.py")],
@@ -16,21 +25,32 @@ steps = [
     ["python3", str(ROOT / "tests/phase-b/test_phase_b.py")],
     ["python3", str(ROOT / "tests/phase-b/test_boundary.py")],
     ["python3", str(ROOT / "tests/registry/test_registry_coherence.py")],
-    ["python3", str(ROOT / "tests/relationships/test_projection_sync.py")],
     ["python3", str(ROOT / "tests/versioning/test_deterministic_export.py")],
     ["python3", str(ROOT / "tests/curation/test_curation.py")],
     ["python3", str(ROOT / "tests/curation/test_generality.py")],
     ["python3", str(ROOT / "tests/curation/test_id_immutability.py")],
+    ["python3", str(ROOT / "tests/metadata/test_metadata_semantics.py")],
+    ["python3", str(ROOT / "tests/metadata/test_metadata_urgent.py")],
     ["python3", str(ROOT / "tests/provenance/test_agents_external_ids.py")],
     ["python3", str(ROOT / "tests/provenance/test_claim_identity.py")],
     ["python3", str(ROOT / "tests/curation/test_connection_immutability.py")],
     ["python3", str(ROOT / "scripts/dependency_review_campaign.py")],
     ["python3", str(ROOT / "scripts/check_id_immutability.py")],
+    ["python3", str(ROOT / "tests/repo/test_independence.py")],
+    ["python3", str(ROOT / "tests/repo/test_docs_consistency.py")],
 ]
-for cmd in steps:
-    print(f"RUN: {' '.join(cmd)}")
-    r = subprocess.run(cmd)
-    if r.returncode != 0:
-        print(f"FAIL: {' '.join(cmd)}", file=sys.stderr)
-        sys.exit(1)
-print("OK: all verify steps pass")
+
+
+def main() -> int:
+    for cmd in steps:
+        print(f"RUN: {' '.join(cmd)}")
+        r = subprocess.run(cmd)
+        if r.returncode != 0:
+            print(f"FAIL: {' '.join(cmd)}", file=sys.stderr)
+            return 1
+    print("OK: all verify steps pass")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

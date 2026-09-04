@@ -19,10 +19,13 @@
   "properties": {
     "export_version": {
       "type": "string",
-      "pattern": "^1\\.[0-9]+$"
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the export contract (semver). v2.0.0: stemma: namespace, connections[] is the only relationship source, entities[].relationships removed (ADR-0027/0028)."
     },
     "schema_version": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the canonical schemas."
     },
     "content_hash": {
       "type": "string",

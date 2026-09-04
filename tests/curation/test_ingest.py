@@ -96,8 +96,8 @@ def test_extract_scanned_pdf(tmp_path: pathlib.Path):
 
 def test_source_candidate_shape():
     ex = ingest.Extraction(kind="pdf", text="some knowledge", pages=2, source_name="doc.pdf")
-    src = ingest.build_source_candidate(ex, source_id="lhs:src.ingest-test")
-    assert src["id"] == "lhs:src.ingest-test"
+    src = ingest.build_source_candidate(ex, source_id="stemma:src.ingest-test")
+    assert src["id"] == "stemma:src.ingest-test"
     assert src["type"] == "source"
     assert src["provenance"]["ai_drafted"] is False
     # The extracted text is carried on the request, not stuffed into the Source object.
@@ -112,7 +112,7 @@ def test_make_ingest_request():
     assert req["kind"] == "source"
     assert "extracted_text" in req
     assert req["extracted_text"] == "full text body"
-    assert req["data"]["id"].startswith("lhs:src.")
+    assert req["data"]["id"].startswith("stemma:src.")
 
 
 def test_ingest_never_writes_canonical(tmp_path: pathlib.Path):
@@ -139,7 +139,7 @@ def test_to_curation_request_defaults_to_entity():
 
     req = to_curation_request(ex)
     assert req.kind == "entity"
-    assert req.source_ref and req.source_ref.startswith("lhs:src.")
+    assert req.source_ref and req.source_ref.startswith("stemma:src.")
     assert "_extracted_text" in req.data
     assert req.data["_extracted_text"] == "content"
 

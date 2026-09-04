@@ -1,0 +1,80 @@
+# STEMMA — Consumers & Integration
+
+**Status:** Authoritative. How any external system consumes STEMMA.
+**Contract:** `schema/export.schema.json` · current contract line:
+`export_version: 2.0.0` (verified against `schema/VERSION.yaml` by the test
+suite — a stale version here fails CI).
+
+---
+
+## 1. The consumption model
+
+STEMMA publishes one thing: a **versioned, validated, deterministic JSON
+export** of its canonical knowledge. Consumers read the export, adapt it to
+their own needs, and own everything downstream:
+
+```
+STEMMA (canonical, gated) ──▶ exports/knowledge.json (contract v2.x)
+                                      │
+                                      ▼
+                      consumer adapter (consumer-owned)
+                                      │
+                                      ▼
+           curricula, apps, tutors, simulators, AI systems
+```
+
+Consumers are external by design. STEMMA records no consumer as a dependency,
+and nothing in this repository may assume a particular consumer exists
+(machine-checked: `tests/repo/test_independence.py`).
+
+## 2. Reading the export
+
+- Pin the **contract major version** (`export_version` starts with `2.`).
+  Reject exports whose major version you do not support rather than guessing.
+- Required members: `entities[]`, `connections[]`, `sources[]`, counts,
+  `content_hash`, versions (see `docs/SCHEMA-SPECIFICATION.md` §6).
+- **The graph is `connections[]` only** — entities carry no relationship data
+  (contract v2.0). Draw edges from connections; annotate with
+  `assertion.review.status`.
+- **Trust policy:** filter by review status for your use case. Ready-made
+  views exist (`knowledge.canonical.json`, `knowledge.trusted.json`,
+  `knowledge.reviewed.json`, `knowledge.proposed.json`); semantics in
+  `scripts/graph_policy.py`. A conservative consumer uses `canonical` only.
+- Deprecated/superseded objects remain exported (with successors) — never
+  assume absence.
+- `claim_signature` lets you deduplicate claims across views without
+  recomputing hashes.
+
+## 3. Consumer responsibilities
+
+| Yours | STEMMA's |
+|---|---|
+| Curriculum mapping & sequencing | Stable IDs + explicit prerequisite relations |
+| Presentation, pedagogy, assessment | Neutral knowledge data |
+| Localization strategy | Language-independent identity |
+| Caching & freshness | `content_hash` + deterministic regeneration |
+| Filtering by trust | Per-assertion review status + policy views |
+
+## 4. Adapter checklist
+
+1. Validate the export against `schema/export.schema.json` on load.
+2. Check `export_version` major; fail closed on mismatch.
+3. Build your graph from `connections[]`; keep the review status on every
+   edge; decide and document your trust policy.
+4. Reference entities by ID, never by label (labels change; IDs never do).
+5. Handle `deprecated`/`superseded` via successor pointers.
+6. (Reference implementation: `explorer/` in this repo — a first-party
+   consumer that obeys every rule above.)
+
+## 5. Contributing corrections
+
+Found a scientific error or a missing relationship? That is a canonical
+change: propose it through contribution (`docs/CONTRIBUTING.md`) — assertions
+are superseded, never edited in place. Consumer-specific needs (ordering,
+grouping, presentation) never belong in canonical data.
+
+---
+
+*Historical note: earlier consumer-integration documents specific to a
+particular external product were retired with the 2026-09 refoundation
+(ADR-0027); their content is generalised here.*

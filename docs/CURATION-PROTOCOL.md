@@ -1,6 +1,6 @@
-# Curation Protocol — v0.2
+# Curation Protocol
 
-**Status:** Authoritative review protocol for STEMMA Phase D.
+**Status:** Authoritative review protocol (human review workflow).
 
 ## 1. Status definitions
 

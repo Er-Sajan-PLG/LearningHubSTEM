@@ -5,7 +5,7 @@
 # in scripts are forbidden.
 #
 # schema_version   — '1.0.0' version of the canonical JSON Schemas. Major bump from
-#                    0.2: the stemma: namespace replaces lhs: in every ID pattern and
+#                    0.2: the stemma: namespace replaces the retired prefix in every ID pattern and
 #                    the deprecated entity-side relationships[] projection is removed
 #                    from concept.schema.json (ADR-0027/0028).
 # export_version   — '2.0.0' version of the exports/knowledge.json consumer contract.
