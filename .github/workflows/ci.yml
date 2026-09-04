@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   verify:
-    name: Verify Knowledge Foundation
+    name: Validate Knowledge Base
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
