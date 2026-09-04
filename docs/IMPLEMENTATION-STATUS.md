@@ -21,6 +21,7 @@ Claims here are backed by the verification chain, not by older documents.
 | Ingestion pipeline (PDF/image/OCR → staged proposals; never canonical) | `ingest.py`, `ingest_to_proposals.py`, `curation_pipeline.py` |
 | Extension registry + agent registry (gate-resolved) | `schema/*-registry.yaml` |
 | 3-D explorer reading only the export, trust-annotated, contract-pinned | `explorer/` (`npm run verify`) |
+| First-party read-only Python adapter (SDK, CLI, local JSON API), export-major pinned and policy-mirroring | `adapters/python/`, `adapters/python/tests/test_adapter.py` |
 | Layered test suite + CI chain + freshness + gitleaks | `tests/`, `.github/workflows/ci.yml` |
 | Ecosystem-independence and docs-consistency gates | `tests/repo/` |
 

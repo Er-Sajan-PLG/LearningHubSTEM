@@ -38,6 +38,7 @@ its enforcement (validator rule and/or test) in the same change set.
 | 0027 | [0027-ecosystem-decoupling-and-namespace.md](0027-ecosystem-decoupling-and-namespace.md) | Ecosystem decoupling; `stemma:` namespace; doc refoundation | decided & implemented — **ratification requested** |
 | 0028 | [0028-single-relationship-source-contract-v2.md](0028-single-relationship-source-contract-v2.md) | Entity projection removed; contract v2.0; registry v1.0 | decided & implemented |
 | 0029 | [0029-refoundation-baseline-and-freeze.md](0029-refoundation-baseline-and-freeze.md) | Baseline 3.0.0 architectural freeze; open human decisions | decided |
+| 0030 | [0030-first-party-consumer-adapter.md](0030-first-party-consumer-adapter.md) | First-party consumer adapter (Python SDK, CLI, local JSON API) | decided & implemented |
 
 ## Historical note
 

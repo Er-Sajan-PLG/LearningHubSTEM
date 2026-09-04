@@ -79,7 +79,9 @@ authoring ──▶ ingestion ──▶ normalization ──▶ validation ─�
   (**requires the public-IRI human decision**, ADR-0029).
 
 ### 2.8 Consumption
-- First-party: the explorer (reads only the export; contract-version pinned).
+- First-party: the explorer and the read-only Python adapter
+  (`adapters/python/`), both reading only the export and pinning the contract
+  major.
 - External: any consumer via the versioned export contract
   (`docs/CONSUMERS.md`). Consumers own their adapters, curriculum mappings,
   and presentation.

@@ -66,7 +66,26 @@ and nothing in this repository may assume a particular consumer exists
 6. (Reference implementation: `explorer/` in this repo — a first-party
    consumer that obeys every rule above.)
 
-## 5. Contributing corrections
+## 5. First-party Python adapter
+
+STEMMA now ships a first-party **read-only** Python adapter in
+`adapters/python/`:
+
+- standard-library only (`python>=3.10`),
+- SDK (`stemma_adapter.Stemma`),
+- CLI (`stemma-adapter`),
+- local JSON API (`python3 -m stemma_adapter serve ...`).
+
+This is a **consumer adapter**, not a new source of truth: it validates and
+reads the export, mirrors `scripts/graph_policy.py` policy semantics, and
+never writes canonical data. Adapter `0.1.x` ships in-repo; promotion to
+adapter `1.0` and any PyPI publication remain human-gated release decisions.
+
+Known gap: the export does not currently embed the relation registry, so
+relation-family semantics remain producer-side knowledge rather than something
+the adapter can discover from the export alone.
+
+## 6. Contributing corrections
 
 Found a scientific error or a missing relationship? That is a canonical
 change: propose it through contribution (`docs/CONTRIBUTING.md`) — assertions

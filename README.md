@@ -43,6 +43,7 @@ STEMMA/
 ├── connections/      canonical relationship assertions (one YAML object per claim)
 ├── sources/          canonical citation records
 ├── schema/           JSON Schema contracts, relation/agent/extension registries, vocabularies
+├── adapters/python/  first-party read-only Python consumer adapter (SDK, CLI, local JSON API)
 ├── scripts/          the validation gate, review workflow, ingestion, derived-artifact builders
 ├── exports/          DERIVED artifacts (regenerable; never the source of truth)
 ├── tests/            invariant test suite (layered)
@@ -59,6 +60,14 @@ python3 scripts/validate.py          # validate canonical data + regenerate the 
 ```
 
 Exit code `0` = valid. To explore visually: `npm --prefix explorer run dev`.
+
+## Get the content out
+
+```bash
+PYTHONPATH=adapters/python python3 -m stemma_adapter serve exports/knowledge.json --port 8080
+curl http://127.0.0.1:8080/v2/stats
+curl "http://127.0.0.1:8080/v2/search?q=force&domain=physics"
+```
 
 ## Documentation
 
@@ -83,7 +92,7 @@ Start with [`docs/README.md`](docs/README.md). Key entry points:
 
 - **Knowledge content** (`content/`, `connections/`, `sources/`, `docs/`):
   **Creative Commons Attribution 4.0** — see [`LICENSE`](LICENSE).
-- **Code** (`scripts/`, `schema/`, `tests/`, `explorer/`): **MIT** — see
+- **Code** (`scripts/`, `schema/`, `tests/`, `explorer/`, `adapters/`): **MIT** — see
   [`LICENSE-CODE`](LICENSE-CODE).
 
 Rationale: ADR-0001.

@@ -49,6 +49,10 @@ reviewed.
 
 ## R5 — Developer & consumer ecosystem
 
+- **Shipped:** first-party read-only Python adapter (`adapters/python/`) with
+  SDK, CLI, and local JSON API.
+- Adapter `1.0` promotion and any PyPI publication remain explicit human
+  release decisions.
 - `docs/CONSUMERS.md` expansion with adapter examples in > 1 language.
 - CLI packaging of the gate (`pipx`-able) so consumers validate without
   cloning the repo.
