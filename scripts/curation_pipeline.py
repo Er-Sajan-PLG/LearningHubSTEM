@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""STEMMA (`lhs:` namespace) canonical-knowledge curation pipeline (architecture review §P).
+"""STEMMA (`stemma:` namespace) canonical-knowledge curation pipeline (architecture review §P).
 
 A staged, hard-gate pipeline that turns a *curation request* into a governed
 decision over canonical knowledge (entities, connections, sources). It mirrors the
@@ -143,7 +143,7 @@ def _entity_gates(data: dict, blueprint: CurationBlueprint) -> list[GateResult]:
     results.append(_gate(
         "identity",
         isinstance(_id, str) and bool(validate.ID_RE.fullmatch(_id)),
-        f"invalid stable ID {_id!r} (expected lhs:<domain>.<slug>)",
+        f"invalid stable ID {_id!r} (expected stemma:<domain>.<slug>)",
     ))
     # schema: required fields + enums (reuse validate_entity's deterministic checks)
     errs: list[str] = []
@@ -182,7 +182,7 @@ def _source_gates(data: dict, blueprint: CurationBlueprint) -> list[GateResult]:
     results.append(_gate(
         "identity",
         isinstance(_id, str) and bool(validate.SRC_ID_RE.fullmatch(_id)),
-        f"invalid source ID {_id!r} (expected lhs:src.<slug>)",
+        f"invalid source ID {_id!r} (expected stemma:src.<slug>)",
     ))
     return results
 
@@ -224,7 +224,7 @@ def route_repair(failed: list[GateResult]) -> list[str]:
 def blueprint_from_request(request: CurationRequest) -> CurationBlueprint:
     """Plan the change deterministically (no LLM)."""
     kind = request.kind
-    target_id = request.data.get("id") or (f"lhs:conn.???" if kind == "connection" else None)
+    target_id = request.data.get("id") or (f"stemma:conn.???" if kind == "connection" else None)
     gates = list(GATE) if kind != "source" else GATE - {"relations", "conditions"}
     bp = CurationBlueprint(
         kind=kind,

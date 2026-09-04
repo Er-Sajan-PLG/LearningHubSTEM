@@ -1,5 +1,5 @@
 ---
-id: lhs:phys.our-environment
+id: stemma:phys.our-environment
 type: concept
 name: Our Environment
 domain: physics
@@ -30,11 +30,6 @@ real_world_applications:
   - Conservation efforts.
 provenance:
   ai_drafted: true
-relationships:
-  - type: related_to
-    target: lhs:phys.energy-sources
-  - type: related_to
-    target: lhs:phys.conservation-of-energy
 ---
 
 ## Notes

@@ -3,10 +3,10 @@
 
 Commands:
   python3 scripts/review.py list
-  python3 scripts/review.py show lhs:conn.000042
-  python3 scripts/review.py accept lhs:conn.000042 --reviewer human:reviewer.physics-001
-  python3 scripts/review.py canonicalize lhs:conn.000042 --reviewer human:reviewer.physics-001
-  python3 scripts/review.py reject lhs:conn.000042 --reviewer human:reviewer.physics-001 --reason "..."
+  python3 scripts/review.py show stemma:conn.000042
+  python3 scripts/review.py accept stemma:conn.000042 --reviewer human:reviewer.physics-001
+  python3 scripts/review.py canonicalize stemma:conn.000042 --reviewer human:reviewer.physics-001
+  python3 scripts/review.py reject stemma:conn.000042 --reviewer human:reviewer.physics-001 --reason "..."
 """
 from __future__ import annotations
 
@@ -25,8 +25,8 @@ from curation_state import validate_transition  # type: ignore
 
 def load_conn(cid):
     # Accept with or without prefix
-    if not cid.startswith("lhs:conn."):
-        cid = f"lhs:conn.{cid}"
+    if not cid.startswith("stemma:conn."):
+        cid = f"stemma:conn.{cid}"
     p = CONNECTIONS / f"{cid}.yaml"
     if not p.exists():
         print(f"not found: {cid}", file=sys.stderr)

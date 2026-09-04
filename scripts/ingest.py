@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""STEMMA (`lhs:` namespace) knowledge ingestion — extract text from PDFs, images, and scanned docs.
+"""STEMMA (`stemma:` namespace) knowledge ingestion — extract text from PDFs, images, and scanned docs.
 
 This is the **extraction layer** of the canonical-knowledge pipeline. It turns an
 arbitrary document (PDF of any size, PNG/JPG/TIFF image, scanned PDF) into
@@ -208,7 +208,7 @@ def build_source_candidate(ext: Extraction, *, source_id: str | None = None) -> 
     extracted text itself is NOT stuffed into canonical fields; it is carried in the
     CurationRequest so the Draft stage (LLM seam) proposes entities/connections.
     """
-    _id = source_id or "lhs:src.ingest-%08x" % (abs(hash((ext.source_name, ext.pages))) & 0xFFFFFFF)
+    _id = source_id or "stemma:src.ingest-%08x" % (abs(hash((ext.source_name, ext.pages))) & 0xFFFFFFF)
     return {
         "id": _id,
         "type": "source",
@@ -269,15 +269,15 @@ def _empty_object(kind: str) -> dict[str, Any]:
     """A minimal shape the seam will fill in — enough to pass identity/type checks."""
     if kind == "connection":
         return {
-            "id": "lhs:conn.000000", "type": "connection",
-            "source": "lhs:unknown", "relation": "related_to", "target": "lhs:unknown",
+            "id": "stemma:conn.000000", "type": "connection",
+            "source": "stemma:unknown", "relation": "related_to", "target": "stemma:unknown",
             "assertion": {"status": "active", "type": "proposed", "review": {"status": "unreviewed"}},
             "context": {}, "provenance": {},
         }
     if kind == "source":
-        return {"id": "lhs:src.<slug>", "type": "source"}
+        return {"id": "stemma:src.<slug>", "type": "source"}
     return {
-        "id": "lhs:<domain>.<slug>", "type": "concept", "name": "", "domain": "general",
+        "id": "stemma:<domain>.<slug>", "type": "concept", "name": "", "domain": "general",
         "status": "draft", "definition": "", "provenance": {"ai_drafted": True},
     }
 
