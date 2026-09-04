@@ -32,16 +32,16 @@ export class ConceptInspectorView {
     this.currentDetails = null;
     this.container.innerHTML = `
       <div class="empty-inspector">
-        <div class="empty-icon">⚛</div>
-        <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:#ffffff;">Explore STEMMA</h3>
-        <p style="font-size:0.9rem;line-height:1.5;color:var(--text-secondary);">Select any concept in the 3D graph or search for one above.</p>
-        <div style="font-size:0.84rem;text-align:left;background:rgba(15, 23, 42, 0.6);padding:14px 16px;border-radius:12px;border:1px solid var(--border-glass);margin-top:12px;width:100%;">
-          <div style="font-weight:700;color:var(--accent-cyan);font-family:'Outfit',sans-serif;margin-bottom:8px;">Explore the constellation:</div>
-          <div>✨ <strong>3D clusters</strong> — answers/s-drag, or click a cluster to fly to it</div>
-          <div>📖 <strong>Overview</strong> — definition, formula, quantities</div>
-          <div>🔗 <strong>Relations</strong> — prerequisites & dependents</div>
-          <div>🌐 <strong>Examples</strong> — real-world applications & experiments</div>
-          <div>💡 <strong>Misconceptions</strong> — common traps</div>
+        <div class="empty-icon">⚛️</div>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;color:#ffffff;text-shadow:0 0 20px rgba(0,229,255,0.35);">Welcome to stemma</h3>
+        <p style="font-size:0.92rem;line-height:1.55;color:var(--text-secondary);max-width:300px;">Twist. Click. Learn. This is your colorful universe of STEM — mapped, linked, and ready to light up.</p>
+        <div style="font-size:0.84rem;text-align:left;background:rgba(12, 7, 34, 0.72);padding:14px 16px;border-radius:12px;border:1px solid rgba(0,229,255,0.22);margin-top:12px;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+          <div style="font-weight:800;color:var(--accent-cyan);font-family:'Outfit',sans-serif;margin-bottom:8px;">Explore the constellation</div>
+          <div>✨ <strong>3D clusters</strong> — spin, drag, and click a cluster to fly there</div>
+          <div>📖 <strong>Overview</strong> — definition, formula, and quantities</div>
+          <div>🔗 <strong>Relations</strong> — prerequisites & downstream ideas</div>
+          <div>🌐 <strong>Examples</strong> — real-world science you can picture</div>
+          <div>💡 <strong>Misconceptions</strong> — the traps to dodge</div>
         </div>
       </div>
     `;

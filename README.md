@@ -47,7 +47,7 @@ STEMMA/
 ├── scripts/          the validation gate, review workflow, ingestion, derived-artifact builders
 ├── exports/          DERIVED artifacts (regenerable; never the source of truth)
 ├── tests/            invariant test suite (layered)
-├── explorer/         reference 3-D graph explorer (a consumer; reads only the export)
+├── explorer/         stemma — reference 3-D graph explorer (a consumer; reads only the export)
 └── docs/             the authoritative documentation set
 ```
 
